@@ -81,10 +81,10 @@ List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
 5;poitto;Action\poitto.png;Action\poitto.hex;;;10;inajob
 5;ecomd;arg\ecomd.png;arg\ecomd.hex;;;10;TEAMarg
 5;supercrate;Platformer\supercrate.png;Platformer\supercrate.hex;;;4;uXe
-5;ninjafuzz;Platformer\ninjafuzz.png;Platformer\ninjafuzz.hex;;;9;Hundstrasse
+5;ninjafuzz;Platformer<br/>injafuzz.png;Platformer<br/>injafuzz.hex;;;9;Hundstrasse
 5;bounce;Platformer\bounce.png;Platformer\bounce.hex;;;9;Joshimuz
 5;BigBlackBox;Platformer\BigBlackBox.png;Platformer\BigBlackBox.hex;;;;STUDIOCRAFTapps
-5;njahr;Platformer\njahr.png;Platformer\njahr.hex;;;;
+5;njahr;Platformer<br/>jahr.png;Platformer<br/>jahr.hex;;;;
 5;tinytower;Puzzle\tinytower.png;Puzzle\tinytower.hex;;;;akkera102
 6;Strategy;category-screens\Strategy.png;;;;;
 6;microcity;Arcade\microcity.png;Arcade\microcity.hex;;;37;jhhoward
@@ -211,7 +211,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
 14;abSynthFM;Misc\abSynthFM.png;Misc\abSynthFM.hex;;;18;boochow
 14;musicgenpocket;Application\musicgenpocket.png;Application\musicgenpocket.hex;;;11;inajob
 14;ArduMetronome;Application\ArduMetronome.png;Application\ArduMetronome.hex;;;6;raspberrybrain
-14;nanoseq;Misc\nanoseq.png;Misc\nanoseq.hex;;;7;inajob
+14;nanoseq;Misc<br/>anoseq.png;Misc<br/>anoseq.hex;;;7;inajob
 14;petitseq;Misc\petitseq.png;Misc\petitseq.hex;;;6;inajob
 14;arduloop;Misc\arduloop.png;Misc\arduloop.hex;;;;possan
 15;Application;category-screens\Application.png;;;;;

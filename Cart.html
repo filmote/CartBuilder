@@ -15,13 +15,15 @@
 </head>
 
 <body>
-  <form name="myform" id="myform" action="Cart_CreateCSV.php">
+  <form name="myform" id="myform" action="Cart_CreateCSV.php" method="post">
 
     <button type="button" id="btnAddCol">Add new column</button>
-    <button type="button" id="btnGetData">Get Data</button>
+    <button type="button" id="btnGetData">Download CSV</button>
+    <button type="button" id="btnGetBin">Download BIN</button>
 
     <div class="row" id="csv-display"></div>
-    <div class="row" id="output"></div>
+    <input type="hidden" id="output" name="output" />
+    <input type="hidden" id="mode" name="mode" />
 
   </form>
 
@@ -108,88 +110,121 @@
 
     $('#btnGetData').click(function () {
 
-      var output = '';
+      var colCount = $("#tab").find("tr:first td").length;
+
+      if (allHeadersOK(colCount)) {
+
+        $('#output').val(createCSV(colCount));
+        $('#mode').val('csv');
+
+        $("#myform").submit();
+
+      }
+
+    });
+
+    $('#btnGetBin').click(function () {
+
       var colCount = $("#tab").find("tr:first td").length;
 
 
-      // Do any categories not have a proper image?
+      if (allHeadersOK(colCount)) {
 
-      for (var i = 0; i < colCount - 2; i++) {
+        $('#output').val(createCSV(colCount));
+        $('#mode').val('bin');
 
-        var img = $("#tab").find("tr:first td:eq(" + (i + 2) + ") img:first");
-
-        var pos = cats.map(function (e) {
-          return e.name;
-        }).indexOf(img.attr('id'));
-
-        if (pos == -1) {
-          alert("You need to add a category image to every column!");
-          return;
-
-        }
-      }
-
-
-      // If all OK, generate data ..
-
-      output = 'List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer<br>';
-      output += '0;Bootloader;arduboy-fx-loader.png;;;;;<br>'
-
-      for (var i = 0; i < colCount - 2; i++) {
-
-        var img = $("#tab").find("tr:first td:eq(" + (i + 2) + ") img:first");
-
-        var pos = cats.map(function (e) {
-          return e.name;
-        }).indexOf(img.attr('id'));
-
-        console.log(img.attr('id'));
-        if (pos >= 0) {
-
-          var cat = cats[pos];
-
-          output += (i + 1); output += ";";
-          output += cat.name; output += ";";
-          output += cat.screen; output += ";";
-          output += cat.hex; output += ";";
-          output += cat.data; output += ";";
-          output += cat.save; output += ";;<br>";
-
-          var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
-          var idsInOrder = ul.sortable("toArray");
-
-          for (const value of idsInOrder) {
-
-            output += (i + 1);
-            output += ";";
-
-            var index = value.substring(2);
-
-            output += items[index - 1].name; output += ";";
-            output += items[index - 1].screen; output += ";";
-            output += items[index - 1].hex; output += ";";
-            output += items[index - 1].data; output += ";";
-            output += items[index - 1].save; output += ";;<br>";
-
-          }
-
-        }
-        else {
-
-          alert("Pos sux");
-
-        }
+        $("#myform").submit();
 
       }
-
-      $('#output').empty();
-      $('#output').append(output);
-
-      //$("#myform" ).submit();
 
     });
 
   });
+
+
+  function allHeadersOK(colCount) {
+
+
+    // Do any categories not have a proper image?
+
+    for (var i = 0; i < colCount - 2; i++) {
+
+      var img = $("#tab").find("tr:first td:eq(" + (i + 2) + ") img:first");
+
+      var pos = cats.map(function (e) {
+        return e.name;
+      }).indexOf(img.attr('id'));
+
+      if (pos == -1) {
+        alert("You need to add a category image to every column!");
+        return false;
+      }
+      
+    }
+
+    return true;
+  }
+
+  function createCSV(colCount) {
+
+
+    // If all OK, generate data ..
+
+    var output = '';
+
+    output = 'List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer<br/>';
+    output += '0;Bootloader;arduboy-fx-loader.png;;;;;<br/>'
+
+    for (var i = 0; i < colCount - 2; i++) {
+
+      var img = $("#tab").find("tr:first td:eq(" + (i + 2) + ") img:first");
+
+      var pos = cats.map(function (e) {
+        return e.name;
+      }).indexOf(img.attr('id'));
+
+      console.log(img.attr('id'));
+      if (pos >= 0) {
+
+        var cat = cats[pos];
+
+        output += (i + 1); output += ";";
+        output += cat.name; output += ";";
+        output += cat.screen; output += ";";
+        output += cat.hex; output += ";";
+        output += cat.data; output += ";";
+        output += cat.save; output += ";;<br/>";
+
+        var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
+        var idsInOrder = ul.sortable("toArray");
+
+        for (const value of idsInOrder) {
+
+          output += (i + 1);
+          output += ";";
+
+          var index = value.substring(2);
+
+          output += items[index - 1].name; output += ";";
+          output += items[index - 1].screen; output += ";";
+          output += items[index - 1].hex; output += ";";
+          output += items[index - 1].data; output += ";";
+          output += items[index - 1].save; output += ";;<br/>";
+
+        }
+
+      }
+      else {
+
+        alert("Pos sux");
+
+      }
+
+    }
+
+    return output;
+
+  }
 
 </script>
 <script src="Cart_DragDrop.js"></script>
