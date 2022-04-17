@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <form name="myform" id="myform">
+  <form name="myform" id="myform" action="Cart_CreateCSV.php">
 
     <button type="button" id="btnAddCol">Add new column</button>
     <button type="button" id="btnGetData">Get Data</button>
@@ -80,7 +80,7 @@
 
     });
 
-    
+
     $('#btnAddCol').click(function () {
 
       catCount++;
@@ -184,6 +184,8 @@
 
       $('#output').empty();
       $('#output').append(output);
+
+      //$("#myform" ).submit();
 
     });
 
