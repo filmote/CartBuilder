@@ -1,0 +1,19 @@
+List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
+1;Action;category-screens\Action.png;;;;;
+2;Adventure;category-screens\Adventure.png;;;;;
+3;Arcade;category-screens\Arcade.png;;;;;
+4;Runner;category-screens\Runner.png;;;;;
+5;Platformer;category-screens\Platformer.png;;;;;
+6;Strategy;category-screens\Strategy.png;;;;;
+7;Puzzle;category-screens\Puzzle.png;;;;;
+8;Skill;category-screens\Skill.png;;;;;
+9;Tabletop;category-screens\Tabletop.png;;;;;
+10;Racing;category-screens\Racing.png;;;;;
+11;RPG;category-screens\RPG.png;;;;;
+12;Shooter;category-screens\Shooter.png;;;;;
+13;Sports;category-screens\Sports.png;;;;;
+14;Music;category-screens\Music.png;;;;;
+15;Application;category-screens\Application.png;;;;;
+16;Tools;category-screens\Tools.png;;;;;
+17;Spare1;category-screens\Spare1.png;;;;;
+18;Spare2;category-screens\Spare2.png;;;;;

@@ -1,0 +1,40 @@
+
+  body {
+    background-color: #25AAE2;
+  }
+
+  table {
+    padding: 0px 0px 0px 0px;
+  }
+
+  li {
+    position: relative;
+    display: list-item;
+    filter: invert(0%);
+    margin: 4px 4px 12px 4px;
+    filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, .15));
+    list-style: none;
+  }
+
+  .game {
+    height: 64px;
+    width: 128px;
+    position: relative;
+    display: list-item;
+    filter: invert(0%);
+    margin: 4px 4px 12px 4px;
+    filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, .15));
+    list-style: none;
+  }
+
+  .sortableColumn {
+    padding: 5px;
+    border: 0px;
+    list-style-type: none;
+  }
+
+  .sortableColHeader {
+    padding: 5px;
+    border: 0px;
+    list-style-type: none;
+  }
