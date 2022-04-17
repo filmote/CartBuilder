@@ -5,7 +5,23 @@
 
   table {
     padding: 0px 0px 0px 0px;
+    border: none;
   }
+
+  table, tr, td {
+    border: none;
+}
+
+
+  /*  Define the background color for all the ODD table columns  */
+  .AltTable tr td:nth-child(odd){ 
+      background: #e2ebf9;
+  }
+  /*  Define the background color for all the EVEN table columns  */
+  .AltTable tr td:nth-child(even){
+      background: #ffffff;
+  }
+
 
   li {
     position: relative;

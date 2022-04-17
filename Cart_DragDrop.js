@@ -23,12 +23,12 @@
     // }
     // else {
 
-      //Move the image back to the unused catagories section ..
+      //Move the image back to the dvUnused catagories section ..
 
       element.parentNode.appendChild(document.getElementById(data));
       element.parentNode.removeChild(element);
 
-      var list = document.getElementById("dvSource");
+      var list = document.getElementById("dvCategories");
 
       if (element.id != "catQuestion") {
         list.appendChild(element);

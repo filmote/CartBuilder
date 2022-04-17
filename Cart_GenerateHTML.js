@@ -19,20 +19,20 @@ function generateHtmlCategories(data) {
 
         // Does the cateogries collection already contain this category?
 
-        var pos = cats.map(function(e) {
+        var pos = cats.map(function (e) {
           return e.name;
         }).indexOf(row[1]);
 
         if (pos < 0) {
 
-        catCount = row[0];
-        $("#dvSource").append(generateCatImage(catCount, row[2]));
+          catCount = row[0];
+          $("#dvCategories").append(generateCatImage(row[1], row[2]));
 
 
-        // Add category details to global collection..
+          // Add category details to global collection..
 
-        var cat = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5] };
-        cats.push(cat);
+          var cat = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5] };
+          cats.push(cat);
         }
 
       }
@@ -51,7 +51,7 @@ function generateHtmlTable(data) {
 
   }
 
-  var html = '<table id=tab border=1><tr><td valign="top" style="background-color: #156f96;">Categories</td><td valign="top" style="background-color: #156f96;">Unused</td>';
+  var html = '<table id=tab class="AltTable"><tr><td valign="top" style="background-color: #25AAE2; column-width:600px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top" style="background-color: #25AAE2; column-width:600px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>';
 
   catCount = 255;
 
@@ -64,7 +64,7 @@ function generateHtmlTable(data) {
       if (catCount != row[0] && row[0] != 0) {
 
         catCount = row[0];
-        html += generateCatHeader(catCount, row[2], false);
+        html += generateCatHeader(catCount, row[1], row[2], false);
 
 
         // Add category details to global collection..
@@ -81,8 +81,8 @@ function generateHtmlTable(data) {
 
   html += '</tr>';
   html += '<tr><td valign="top" style="background-color: #156f96; width: 145px;">';
-  html += '<div id="dvSource"></div>';
-  html += '</td><td valign="top" style="background-color: #156f96; width: 145px;"><ul id="unused" class="sortableColumn"></ul></td>';
+  html += '<div id="dvCategories" style="padding-top:21px"></div>';
+  html += '</td><td valign="top" style="background-color: #156f96; width: 145px;"><ul id="dvUnused" class="sortableColumn"></ul></td>';
 
 
   catCount = 255;
@@ -136,12 +136,7 @@ function generateHtmlTable(data) {
   $("#sortable").sortable();
   $("#sortable").disableSelection();
 
-
-  // $("#categories").sortable({
-  //   connectWith: ".sortableColumn2",
-  // }).disableSelection();
-
-  $("#unused").sortable({
+  $("#dvUnused").sortable({
     connectWith: ".sortableColumn",
   }).disableSelection();
 
@@ -155,23 +150,22 @@ function generateHtmlTable(data) {
 
 }
 
-
-function generateCatHeader(catCount, imgName, temporaryImage) {
+function generateCatHeader(catCount, catName, imgName, temporaryImage) {
 
   var html = '';
   html += '<td valign="top">';
-  html += '<div id="div' + catCount + '" ondrop="drop(event)" ondragover="allowDrop(event)">';
+  html += '<div id="div' + catName + '" ondrop="drop(event)" ondragover="allowDrop(event)">';
 
   if (temporaryImage) {
     html += '<img class="game" id="catQuestion" draggable="true" ondragstart="drag(event)" src="' + imgName + '" />';
   }
   else {
-    html += '<img class="game" id="cat' + catCount + '" draggable="true" ondragstart="drag(event)" src="' + imgName + '" />';
+    html += '<img class="game" id="' + catName + '" draggable="true" ondragstart="drag(event)" src="' + imgName + '" />';
   }
 
   html += '</div>';
-  html += '<div>&nbsp;<img size=16px src="ArrowLeft.png" onclick="moveLeft(this.parentNode.parentNode.cellIndex,' + catCount + ');">';
-  html += '&nbsp;<img size=16px src="ArrowRight.png">';
+  html += '<div>&nbsp;<img size=16px src="ArrowLeft.png" onclick="moveLeft(this.parentNode.parentNode.cellIndex);">';
+  html += '&nbsp;<img size=16px src="ArrowRight.png" onclick="moveRight(this.parentNode.parentNode.cellIndex);">';
   html += '&nbsp;<img size=16px src="Delete.png" onclick="deleteColumn(this.parentNode.parentNode,' + catCount + ');">';
   html += '</div></td>';
 
@@ -179,11 +173,11 @@ function generateCatHeader(catCount, imgName, temporaryImage) {
 
 }
 
-function generateCatImage(catCount, imgName) {
+function generateCatImage(catName, imgName) {
 
   var html = '';
 
-  html += '<img class="game" id="cat' + catCount + '" draggable="true" ondragstart="drag(event)" src="' + imgName + '" />';
+  html += '<img class="game" id="' + catName + '" draggable="true" ondragstart="drag(event)" src="' + imgName + '" />';
   return html;
 
 }

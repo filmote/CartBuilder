@@ -1,4 +1,5 @@
 List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
+0;Bootloader;arduboy-fx-loader.png;;;;;
 1;Action;category-screens\Action.png;;;;;
 2;Adventure;category-screens\Adventure.png;;;;;
 3;Arcade;category-screens\Arcade.png;;;;;

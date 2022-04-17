@@ -40,6 +40,9 @@
     var data;
     var myform = $('#myform');
 
+
+    // Read the cart file and create the table ..
+
     $.ajax({
 
       type: "GET",
@@ -57,6 +60,9 @@
 
     });
 
+
+    // Read the categories file and add any unused categories ..
+
     $.ajax({
 
       type: "GET",
@@ -64,7 +70,7 @@
       dataType: "text",
 
       success: function (response) {
-        
+
         tabledata = response.replace(/\;/g, ",");
         urldata = tabledata.replace(/\\/g, "/");
         csvdata = $.csv.toArrays(urldata);
@@ -74,6 +80,7 @@
 
     });
 
+    
     $('#btnAddCol').click(function () {
 
       catCount++;
@@ -82,8 +89,8 @@
 
         var trow = $(this);
         if (trow.index() === 0) {
-          trow.append(generateCatHeader(catCount, "catQuestion.png", true));
-        } 
+          trow.append(generateCatHeader(catCount, "catQuestion", "catQuestion.png", true));
+        }
         else {
           trow.append('<td valign="top"><ul id="col' + catCount + '" class="sortableColumn"></ul></td>');
         }
@@ -93,14 +100,8 @@
       $("#sortable").sortable();
       $("#sortable").disableSelection();
 
-      var cat = { name: "Unknown", screen: "", hex: "", data: "", save: "" };
-      cats.push(cat);
-
       $("#col" + catCount).sortable({
         connectWith: ".sortableColumn",
-        // receive: function (event, ui) {
-        //   alert("[" + this.id + "] received [" + ui.item.html() + "] from [" + ui.sender.attr("id") + "]");
-        // }
       }).disableSelection();
 
     });
@@ -110,42 +111,78 @@
       var output = '';
       var colCount = $("#tab").find("tr:first td").length;
 
+
+      // Do any categories not have a proper image?
+
+      for (var i = 0; i < colCount - 2; i++) {
+
+        var img = $("#tab").find("tr:first td:eq(" + (i + 2) + ") img:first");
+
+        var pos = cats.map(function (e) {
+          return e.name;
+        }).indexOf(img.attr('id'));
+
+        if (pos == -1) {
+          alert("You need to add a category image to every column!");
+          return;
+
+        }
+      }
+
+
+      // If all OK, generate data ..
+
       output = 'List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer<br>';
       output += '0;Bootloader;arduboy-fx-loader.png;;;;;<br>'
 
+      for (var i = 0; i < colCount - 2; i++) {
 
-      alert(colCount);
+        var img = $("#tab").find("tr:first td:eq(" + (i + 2) + ") img:first");
 
-      for (var i = 1; i <= colCount - 2; i++) {
+        var pos = cats.map(function (e) {
+          return e.name;
+        }).indexOf(img.attr('id'));
 
-        output += i;                            output += ";";
-        output += cats[i - 1].name;             output += ";";
-        output += cats[i - 1].screen;           output += ";";
-        output += cats[i - 1].hex;              output += ";";
-        output += cats[i - 1].data;             output += ";";
-        output += cats[i - 1].save;             output += ";;<br>";
+        console.log(img.attr('id'));
+        if (pos >= 0) {
 
-        var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
-        var idsInOrder = ul.sortable("toArray");
+          var cat = cats[pos];
 
-        for (const value of idsInOrder) {
+          output += (i + 1); output += ";";
+          output += cat.name; output += ";";
+          output += cat.screen; output += ";";
+          output += cat.hex; output += ";";
+          output += cat.data; output += ";";
+          output += cat.save; output += ";;<br>";
 
-          output += i;
-          output += ";";
+          var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
+          var idsInOrder = ul.sortable("toArray");
 
-          var index = value.substring(2);
+          for (const value of idsInOrder) {
 
-          output += items[index - 1].name;      output += ";";
-          output += items[index - 1].screen;    output += ";";
-          output += items[index - 1].hex;       output += ";";
-          output += items[index - 1].data;      output += ";";
-          output += items[index - 1].save;      output += ";;<br>";
+            output += (i + 1);
+            output += ";";
+
+            var index = value.substring(2);
+
+            output += items[index - 1].name; output += ";";
+            output += items[index - 1].screen; output += ";";
+            output += items[index - 1].hex; output += ";";
+            output += items[index - 1].data; output += ";";
+            output += items[index - 1].save; output += ";;<br>";
+
+          }
+
+        }
+        else {
+
+          alert("Pos sux");
 
         }
 
       }
 
-      // $('#output').remove();
+      $('#output').empty();
       $('#output').append(output);
 
     });
@@ -156,5 +193,3 @@
 <script src="Cart_DragDrop.js"></script>
 <script src="Cart_Actions.js"></script>
 <script src="Cart_GenerateHTML.js"></script>
-
-</html>
