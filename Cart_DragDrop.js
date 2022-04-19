@@ -13,6 +13,7 @@
   function drop(ev) {
 
     ev.preventDefault();
+
     var data = ev.dataTransfer.getData("imgID");
     var sourceElement = document.getElementById(data);
     var targetElement = document.getElementById(ev.target.id);
@@ -23,21 +24,9 @@
 
     if ($('#' + data).parent().prop("id") != "dvCategories") {
 
-      // Image moved from one column heading to another ..
-
-      var sourceParentElement = sourceElement.parentNode.parentNode;
+      var sourceParentElement = sourceElement.parentNode;
       targetElement.parentNode.appendChild(sourceElement);
-      targetElement.parentNode.removeChild(targetElement);
-
-      var t = sourceElement.parentNode;
-      catCount++;
-      var s = generateCatHeader(catCount, "catQuestion" + catCount, "", true);
-      sourceParentElement.outerHTML = generateCatHeader(catCount, "catQuestion" + catCount, "", true);
-//      sourceElement.parentNode.appendChild(generateCatImage("catQuestion", "catQuestion.png"));
-
-      if (targetElement.id != "catQuestion") {
-        list.appendChild(targetElement);
-      }
+      sourceParentElement.appendChild(targetElement);
 
     }
     else {

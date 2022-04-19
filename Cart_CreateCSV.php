@@ -31,7 +31,7 @@ if ($_POST["mode"] == "csv") {
 
     $path = "newfile.csv";
     $temp = fopen($path, "w") or die("Unable to open file!");
-    fwrite($temp, str_replace("<br/>", PHP_EOL, $_POST["output"]));
+    fwrite($temp, str_replace("<eol/>", PHP_EOL, $_POST["output"]));
     fclose($temp); 
 
 
