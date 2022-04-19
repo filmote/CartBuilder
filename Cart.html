@@ -22,13 +22,11 @@
 
   <div id="dialog-form" title="Create new Category">
     <p class="validateTips">Please enter a category name:</p>
-
     <form name="categoryForm" id="categoryForm" action="Cart_CreateCSV.php" method="post">
       <fieldset>
         <br />
         <label for="name">Name</label>&nbsp;&nbsp;
-        <input type="text" name="categoryName" id="categoryName" value="Category"
-          class="text ui-widget-content ui-corner-all" />
+        <input type="text" name="categoryName" id="categoryName" value="Category" class="text ui-widget-content ui-corner-all" />
         <input type="hidden" name="guid" id="guid" value="" />
 
         <!-- Allow form submission with keyboard without duplicating the dialog button -->
@@ -40,7 +38,7 @@
   </div>
 
 
-  <form name="myform" id="myform" action="Cart_CreateCSV.php" method="post">
+  <form name="cartForm" id="cartForm" action="Cart_CreateCSV.php" method="post">
 
     <button type="button" id="btnAddCol" class="ui-button ui-corner-all ui-widget">Add new column</button>
     <button type="button" id="btnGetData" class="ui-button ui-corner-all ui-widget">Download CSV</button>
@@ -61,6 +59,7 @@
   var cats = [];
   var items = [];
   var catCount = 0;
+  var data;
 
   $(document).ready(function () {
 
@@ -102,15 +101,12 @@
               guid: $guid,
               mode: "createCategory"
             },
-            function (data, status) {
+            function (data) {
 
-              if (status == "success") {
-                $("#dvCategories").append(generateCatImage($categoryName, "category-screens/temp/" + $guid + ".png"));
-                var cat = { name: $categoryName, screen: "category-screens/temp/" + $guid + ".png", hex: "", data: "", save: "" };
-                cats.push(cat);
-                $('#categoryName').val("");
-
-              }
+              $("#dvCategories").append(generateCatImage($categoryName, "category-screens/temp/" + $guid + ".png"));
+              var cat = { name: $categoryName, screen: "category-screens/temp/" + $guid + ".png", hex: "", data: "", save: "" };
+              cats.push(cat);
+              $('#categoryName').val("");
 
             }
 
@@ -158,38 +154,7 @@
 
 
 
-    // function generateGUID() {
-    //   var d = new Date().getTime();
 
-    //   var guid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    //     var r = (d + Math.random() * 16) % 16 | 0;
-    //     d = Math.floor(d / 16);
-
-    //     return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-    //   });
-
-    //   return guid;
-    // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    var data;
-    var myform = $('#myform');
 
 
     // Read the cart file and create the table ..
@@ -236,7 +201,7 @@
 
       catCount++;
 
-      myform.find('tr').each(function () {
+      $('#cartForm').find('tr').each(function () {
 
         var trow = $(this);
         if (trow.index() === 0) {
@@ -266,7 +231,7 @@
         $('#output').val(createCSV(colCount));
         $('#mode').val('csv');
 
-        $("#myform").submit();
+        $("#cartForm").submit();
 
       }
 
@@ -282,7 +247,7 @@
         $('#output').val(createCSV(colCount));
         $('#mode').val('bin');
 
-        $("#myform").submit();
+        $("#cartForm").submit();
 
       }
 
