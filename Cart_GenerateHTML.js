@@ -157,7 +157,7 @@ function generateCatHeader(catCount, catName, imgName, temporaryImage) {
   html += '<div id="div' + catName + '" ondrop="drop(event)" ondragover="allowDrop(event)">';
 
   if (temporaryImage) {
-    html += '<img class="game" id="catQuestion" draggable="true" ondragstart="drag(event)" src="' + imgName + '" />';
+    html += '<img class="game" id="catQuestion" draggable="true" ondragstart="drag(event)" src="catQuestion.png" />';
   }
   else {
     html += '<img class="game" id="' + catName + '" draggable="true" ondragstart="drag(event)" src="' + imgName + '" />';

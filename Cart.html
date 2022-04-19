@@ -7,8 +7,12 @@
   <meta http-equiv="Expires" content="0" />
   <meta charset="UTF-8">
   <title>Cart Builder</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
   <link rel="stylesheet" href="Cart.css" />
 
@@ -16,11 +20,32 @@
 
 <body>
 
+  <div id="dialog-form" title="Create new Category">
+    <p class="validateTips">Please enter a category name:</p>
+
+    <form name="categoryForm" id="categoryForm" action="Cart_CreateCSV.php" method="post">
+      <fieldset>
+        <br />
+        <label for="name">Name</label>&nbsp;&nbsp;
+        <input type="text" name="categoryName" id="categoryName" value="Category"
+          class="text ui-widget-content ui-corner-all" />
+        <input type="hidden" name="guid" id="guid" value="" />
+
+        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        <br />
+        <br />
+      </fieldset>
+    </form>
+  </div>
+
+
   <form name="myform" id="myform" action="Cart_CreateCSV.php" method="post">
 
-    <button type="button" id="btnAddCol">Add new column</button>
-    <button type="button" id="btnGetData">Download CSV</button>
-    <button type="button" id="btnGetBin">Download BIN</button>
+    <button type="button" id="btnAddCol" class="ui-button ui-corner-all ui-widget">Add new column</button>
+    <button type="button" id="btnGetData" class="ui-button ui-corner-all ui-widget">Download CSV</button>
+    <button type="button" id="btnCreateCategory">Create Category</button>
+    <button type="button" id="btnGetBin" class="ui-button ui-corner-all ui-widget">Download BIN</button>
 
     <div class="row" id="csv-display"></div>
     <input type="hidden" id="output" name="output" />
@@ -38,6 +63,150 @@
   var catCount = 0;
 
   $(document).ready(function () {
+
+    $(function () {
+      var dialog, form,
+
+        // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
+        emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+        name = $("#categoryName"),
+        allFields = $([]).add(name),
+        tips = $(".validateTips");
+
+      function updateTips(t) {
+        tips
+          .text(t)
+          .addClass("ui-state-highlight");
+        setTimeout(function () {
+          tips.removeClass("ui-state-highlight", 1500);
+        }, 500);
+      }
+
+      function checkLength(o, n, min, max) {
+        if (o.val().length > max || o.val().length < min) {
+          o.addClass("ui-state-error");
+          updateTips("Length of " + n + " must be between " +
+            min + " and " + max + ".");
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function checkRegexp(o, regexp, n) {
+        if (!(regexp.test(o.val()))) {
+          o.addClass("ui-state-error");
+          updateTips(n);
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function addCategory() {
+        event.preventDefault();
+        var valid = true;
+        allFields.removeClass("ui-state-error");
+
+        valid = valid && checkLength(name, "category name", 1, 99);
+        valid = valid && checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Category name may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
+
+        if (valid) {
+
+          var $categoryName = $('#categoryName').val();
+          var $guid = $('#guid').val();
+
+          $.post("Cart_CreateCSV.php",
+            {
+              categoryName: $categoryName,
+              guid: $guid,
+              mode: "createCategory"
+            },
+            function (data, status) {
+
+              if (status == "success") {
+                $("#dvCategories").append(generateCatImage($categoryName, "category-screens/temp/" + $guid + ".png"));
+                var cat = { name: $categoryName, screen: "category-screens/temp/" + $guid + ".png", hex: "", data: "", save: "" };
+                cats.push(cat);
+                $('#categoryName').val("");
+
+              }
+
+            }
+
+          );
+
+          dialog.dialog("close");
+
+        }
+        return valid;
+      }
+
+      dialog = $("#dialog-form").dialog({
+        autoOpen: false,
+        height: 260,
+        width: 360,
+        modal: true,
+        open: function (event, ui) {
+          console.log(generateGUID());
+          var t = $('#guid');
+          $('#guid').val(generateGUID());
+          $('#dialog-form').css('overflow', 'hidden'); //this line does the actual hiding
+        },
+        buttons: {
+          "Create": addCategory,
+          Cancel: function () {
+            dialog.dialog("close");
+          }
+        },
+        close: function () {
+          form[0].reset();
+          allFields.removeClass("ui-state-error");
+        }
+      });
+
+      form = dialog.find("form").on("submit", function (event) {
+        event.preventDefault();
+        addCategory();
+      });
+
+      $("#btnCreateCategory").button().on("click", function () {
+        dialog.dialog("open");
+      });
+
+    });
+
+
+
+    function generateGUID() {
+      var d = new Date().getTime();
+
+      var guid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = (d + Math.random() * 16) % 16 | 0;
+        d = Math.floor(d / 16);
+
+        return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+      });
+
+      return guid;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     var data;
     var myform = $('#myform');

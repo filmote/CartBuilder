@@ -19,7 +19,7 @@ function createHeaderImage($string, $fileName, $fontSize = 20) {
 
     imagettftext($img, $fontSize, $angle, $x, $y, -$white, $passion_one, $string);
  
-    $save = strtolower($fileName) .".png";
+    $save = "category-screens/temp/".strtolower($fileName) .".png";
     imagepng($img, $save);
 
     return $img;
@@ -30,6 +30,10 @@ function createHeaderImage($string, $fileName, $fontSize = 20) {
 if ($_POST["mode"] == "csv") {
 
     $path = "newfile.csv";
+    $temp = fopen($path, "w") or die("Unable to open file!");
+    fwrite($temp, str_replace("<br/>", PHP_EOL, $_POST["output"]));
+    fclose($temp); 
+
 
     // the file name of the download, change this if needed
     //$public_name = basename($path);
@@ -49,7 +53,8 @@ if ($_POST["mode"] == "csv") {
     fpassthru($fp);
 
 }
-else {
+
+if ($_POST["mode"] == "bin") {
 
     // $command = escapeshellcmd('python3 flashcart-builder.py newfile.csv');
     // $output = shell_exec($command);
@@ -62,6 +67,10 @@ else {
 
 }
 
+if ($_POST["mode"] == "createCategory") {
 
+    $img = createHeaderImage($_POST["categoryName"], $_POST["guid"]);
+
+}
 
 ?>

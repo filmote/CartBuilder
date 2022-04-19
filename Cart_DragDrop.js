@@ -14,26 +14,44 @@
 
     ev.preventDefault();
     var data = ev.dataTransfer.getData("imgID");
-    var element = document.getElementById(ev.target.id);
+    var sourceElement = document.getElementById(data);
+    var targetElement = document.getElementById(ev.target.id);
+    var list = document.getElementById("dvCategories");
 
-    // if (element.nodeName == "DIV") {
 
-    //   element.appendChild(document.getElementById(data));
+    //Move the image back to the dvUnused catagories section ..
 
-    // }
-    // else {
+    if ($('#' + data).parent().prop("id") != "dvCategories") {
 
-      //Move the image back to the dvUnused catagories section ..
+      // Image moved from one column heading to another ..
 
-      element.parentNode.appendChild(document.getElementById(data));
-      element.parentNode.removeChild(element);
+      var sourceParentElement = sourceElement.parentNode.parentNode;
+      targetElement.parentNode.appendChild(sourceElement);
+      targetElement.parentNode.removeChild(targetElement);
 
-      var list = document.getElementById("dvCategories");
+      var t = sourceElement.parentNode;
+      catCount++;
+      var s = generateCatHeader(catCount, "catQuestion" + catCount, "", true);
+      sourceParentElement.outerHTML = generateCatHeader(catCount, "catQuestion" + catCount, "", true);
+//      sourceElement.parentNode.appendChild(generateCatImage("catQuestion", "catQuestion.png"));
 
-      if (element.id != "catQuestion") {
-        list.appendChild(element);
+      if (targetElement.id != "catQuestion") {
+        list.appendChild(targetElement);
       }
 
-    // }
+    }
+    else {
+
+
+      // Image moved from the left hand column  ..
+
+      targetElement.parentNode.appendChild(sourceElement);
+      targetElement.parentNode.removeChild(targetElement);
+
+      if (targetElement.id != "catQuestion") {
+        list.appendChild(targetElement);
+      }
+
+    }
 
   }

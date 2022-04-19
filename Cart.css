@@ -15,11 +15,11 @@
 
   /*  Define the background color for all the ODD table columns  */
   .AltTable tr td:nth-child(odd){ 
-      background: #e2ebf9;
+      background: #dae5f8;
   }
   /*  Define the background color for all the EVEN table columns  */
   .AltTable tr td:nth-child(even){
-      background: #ffffff;
+      background: #e9eff9;
   }
 
 
