@@ -1,27 +1,24 @@
 
-      function checkLength(o, n, min, max) {
-        if (o.val().length > max || o.val().length < min) {
-          o.addClass("ui-state-error");
-          updateTips("Length of " + n + " must be between " +
-            min + " and " + max + ".");
-          return false;
-        } else {
-          return true;
-        }
-      }
+function checkLength(o, n, min, max) {
+  if (o.val().length > max || o.val().length < min) {
+    o.addClass("ui-state-error");
+    updateTips("Length of " + n + " must be between " +
+      min + " and " + max + ".");
+    return false;
+  } else {
+    return true;
+  }
+}
 
-      function checkRegexp(o, regexp, n) {
-        if (!(regexp.test(o.val()))) {
-          o.addClass("ui-state-error");
-          updateTips(n);
-          return false;
-        } else {
-          return true;
-        }
-      }
-
-      
-
+function checkRegexp(o, regexp, n) {
+  if (!(regexp.test(o.val()))) {
+    o.addClass("ui-state-error");
+    updateTips(n);
+    return false;
+  } else {
+    return true;
+  }
+}
 
 function generateGUID() {
 
@@ -44,8 +41,8 @@ function createCSV(colCount) {
 
   var output = '';
 
-  output = 'List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer<br/>';
-  output += '0;Bootloader;arduboy-fx-loader.png;;;;;<br/>'
+  output = 'List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer<eol/>';
+  output += '0;Bootloader;arduboy-fx-loader.png;;;;;<eol/>'
 
   for (var i = 0; i < colCount - 2; i++) {
 
@@ -65,7 +62,7 @@ function createCSV(colCount) {
       output += cat.screen; output += ";";
       output += cat.hex; output += ";";
       output += cat.data; output += ";";
-      output += cat.save; output += ";;<br/>";
+      output += cat.save; output += ";;<eol/>";
 
       var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
       var idsInOrder = ul.sortable("toArray");
@@ -81,7 +78,7 @@ function createCSV(colCount) {
         output += items[index - 1].screen; output += ";";
         output += items[index - 1].hex; output += ";";
         output += items[index - 1].data; output += ";";
-        output += items[index - 1].save; output += ";;<br/>";
+        output += items[index - 1].save; output += ";;<eol/>";
 
       }
 

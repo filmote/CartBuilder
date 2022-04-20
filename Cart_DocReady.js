@@ -62,8 +62,6 @@ $(document).ready(function () {
             width: 360,
             modal: true,
             open: function (event, ui) {
-                console.log(generateGUID());
-                var t = $('#guid');
                 $('#guid').val(generateGUID());
                 $('#categoryDialog-form').css('overflow', 'hidden'); //this line does the actual hiding
             },
@@ -115,46 +113,35 @@ $(document).ready(function () {
             event.preventDefault();
             var valid = true;
             allFields.removeClass("ui-state-error");
+            var session_id = /SESS\w*ID=([^;]+)/i.test(document.cookie) ? RegExp.$1 : false;
 
             // valid = valid && checkLength(name, "file name", 1, 99);
             // valid = valid && checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Category name may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
 
             if (valid) {
 
-                var $categoryName = $('#categoryName').val();
                 var $guid = $('#guid').val();
+                var formData = new FormData($("#uploadForm")[0]);
 
                 $.ajax({
-                    // Your server script to process the upload
-                    url: 'Cart_FileUpload.php',
+                    url: "./Cart_FileUpload.php",
                     type: 'POST',
-                
-                    // Form data
-                    data: new FormData($('uploadForm')[0]),
-                
-                    // Tell jQuery not to process data or worry about content-type
-                    // You *must* include these options!
-                    cache: false,
-                    contentType: false,
+                    data: formData,
                     processData: false,
-                
-                    // Custom XMLHttpRequest
-                    xhr: function () {
-                      var myXhr = $.ajaxSettings.xhr();
-                      if (myXhr.upload) {
-                        // For handling the progress of the upload
-                        myXhr.upload.addEventListener('progress', function (e) {
-                          if (e.lengthComputable) {
-                            $('progress').attr({
-                              value: e.loaded,
-                              max: e.total,
-                            });
-                          }
-                        }, false);
-                      }
-                      return myXhr;
+                    contentType: false,
+                }).done(function () {
+                    var url = String(window.location);
+                    if (url.indexOf("?") != -1) {
+                        url = url.substring(0, url.indexOf("?")) + "?file=" + session_id + ".csv";
                     }
-                  });
+                    else {
+                        url = url + "?file=" + session_id + ".csv";
+                    }
+                    window.location.replace(url);
+                }).fail(function () {
+                    alert("An error occurred, the files couldn't be sent!");
+                });
+
 
                 uploadDialog.dialog("close");
 
