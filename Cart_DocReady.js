@@ -4,11 +4,13 @@ var uploadHEXDialog;
 
 $(document).ready(function () {
 
+
+    // -------------------------------------------------------------------------------------------
+    //  Category Name
+    // -------------------------------------------------------------------------------------------
+
     $(function () {
         var form,
-
-            // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
-            emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
             name = $("#categoryName"),
             allFields = $([]).add(name),
             tips = $(".validateTips");
@@ -17,7 +19,7 @@ $(document).ready(function () {
             if (o.val().length > max || o.val().length < min) {
                 o.addClass("ui-state-error");
                 updateTips("Length of " + n + " must be between " +
-                min + " and " + max + ".");
+                    min + " and " + max + ".");
                 return false;
             } else {
                 return true;
@@ -83,7 +85,7 @@ $(document).ready(function () {
         categoryDialog = $("#dlgCatergory").dialog({
             autoOpen: false,
             height: "auto",
-            width: 360,
+            width: 380,
             modal: true,
             open: function (event, ui) {
                 $('#guid').val(generateGUID());
@@ -109,16 +111,16 @@ $(document).ready(function () {
     });
 
 
+    // -------------------------------------------------------------------------------------------
+    //  CSV File Upload 
+    // -------------------------------------------------------------------------------------------
 
     $(function () {
         var form,
-
-            // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
-            emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
             name = $("#fileName"),
             allFields = $([]).add(name),
             tips = $(".validateTips");
-        
+
         function updateTips(t) {
             tips
                 .text(t)
@@ -201,7 +203,7 @@ $(document).ready(function () {
         uploadDialog = $("#dlgUploadCSV").dialog({
             autoOpen: false,
             height: "auto",
-            width: 360,
+            width: 460,
             modal: true,
             open: function (event, ui) {
                 var t = $('#guid');
@@ -228,38 +230,17 @@ $(document).ready(function () {
     });
 
 
+    // -------------------------------------------------------------------------------------------
+    //  Hex File Upload 
+    // -------------------------------------------------------------------------------------------
 
     $(function () {
         var form,
-
-            // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
-            emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
             fileName = $("#hexName"),
             graphicName = $("#graphicName"),
             allFields = $([]).add(fileName).add(graphicName),
             tips = $(".validateTips");
 
-        function checkLength(o, n, min, max) {
-            if (o.val().length > max || o.val().length < min) {
-                o.addClass("ui-state-error");
-                updateTips("Length of " + n + " must be between " +
-                min + " and " + max + ".");
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function checkRegexp(o, regexp, n) {
-            if (!(regexp.test(o.val()))) {
-                o.addClass("ui-state-error");
-                updateTips(n);
-                return false;
-            } else {
-                return true;
-            }
-        }
-        
         function updateTips(t) {
             tips
                 .text(t)
@@ -276,8 +257,6 @@ $(document).ready(function () {
             allFields.removeClass("ui-state-error");
             var session_id = /SESS\w*ID=([^;]+)/i.test(document.cookie) ? RegExp.$1 : false;
 
-            // valid = valid && checkLength(name, "file name", 1, 99);
-            // valid = valid && checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Category name may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
             var a = $('#hexName')[0];
             var b = $('#hexName')[0].files[0]
 
@@ -487,49 +466,50 @@ $(document).ready(function () {
 
             });
 
-        }
-
-    });
 
 
 
 
-    $('#btnAddCol').click(function () {
+            $('#btnAddCol').click(function () {
 
-        catCount++;
+                catCount++;
 
-        $('#cartForm').find('tr').each(function () {
+                $('#cartForm').find('tr').each(function () {
 
-            var trow = $(this);
-            if (trow.index() === 0) {
-                trow.append(generateCatHeader(catCount, "catQuestion", "catQuestion.png", true));
-            }
-            else {
-                trow.append('<td valign="top"><ul id="col' + catCount + '" class="sortableColumn"></ul></td>');
-            }
+                    var trow = $(this);
+                    if (trow.index() === 0) {
+                        trow.append(generateCatHeader(catCount, "catQuestion", "catQuestion.png", true));
+                    }
+                    else {
+                        trow.append('<td valign="top"><ul id="col' + catCount + '" class="sortableColumn"></ul></td>');
+                    }
 
-        });
+                });
 
-        $("#sortable").sortable();
-        $("#sortable").disableSelection();
+                $("#sortable").sortable();
+                $("#sortable").disableSelection();
 
-        $("#col" + catCount).sortable({
-            connectWith: ".sortableColumn",
-        }).disableSelection();
+                $("#col" + catCount).sortable({
+                    connectWith: ".sortableColumn",
+                }).disableSelection();
 
-    });
+            });
 
-    $('#btnGetBin').click(function () {
+            $('#btnGetBin').click(function () {
 
-        var colCount = $("#tab").find("tr:first td").length;
+                var colCount = $("#tab").find("tr:first td").length;
 
 
-        if (allHeadersOK(colCount)) {
+                if (allHeadersOK(colCount)) {
 
-            $('#output').val(createCSV(colCount));
-            $('#mode').val('bin');
+                    $('#output').val(createCSV(colCount));
+                    $('#mode').val('bin');
 
-            $("#cartForm").submit();
+                    $("#cartForm").submit();
+
+                }
+
+            });
 
         }
 

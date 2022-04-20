@@ -54,7 +54,9 @@ function generateHtmlTable(data) {
   var html = '<table id=tab class="AltTable"><tr><td valign="top" style="background-color: #25AAE2; column-width:600px;">';
   html += '<button type="button" id="btnGetData" style="width: 135px; height: 25px; background-color: #156f96;border: 0px;">Download CSV</button><div style="height:4px;"></div>';
   html += '<button type="button" id="btnUploadFile" style="width: 135px; height: 25px; background-color: #156f96;border: 0px;">Upload CSV</button>';
-  html += '</td><td valign="top" style="background-color: #25AAE2; column-width:600px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>';
+  html += '</td><td valign="top" style="background-color: #25AAE2; column-width:600px;">';
+  html += '<button type="button" id="btnAddCol" style="width: 135px; height: 25px; background-color: #156f96;border: 0px;">Add Column</button>';
+  html += '</td>';
 
   catCount = 255;
 
