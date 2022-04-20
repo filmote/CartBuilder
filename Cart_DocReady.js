@@ -13,6 +13,27 @@ $(document).ready(function () {
             allFields = $([]).add(name),
             tips = $(".validateTips");
 
+        function checkLength(o, n, min, max) {
+            if (o.val().length > max || o.val().length < min) {
+                o.addClass("ui-state-error");
+                updateTips("Length of " + n + " must be between " +
+                min + " and " + max + ".");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function checkRegexp(o, regexp, n) {
+            if (!(regexp.test(o.val()))) {
+                o.addClass("ui-state-error");
+                updateTips(n);
+                return false;
+            } else {
+                return true;
+            }
+        }
+
         function updateTips(t) {
             tips
                 .text(t)
@@ -44,8 +65,8 @@ $(document).ready(function () {
                     },
                     function (data) {
 
-                        $("#dvCategories").append(generateCatImage($categoryName, "category-screens/temp/" + $guid + ".png"));
-                        var cat = { name: $categoryName, screen: "category-screens/temp/" + $guid + ".png", hex: "", data: "", save: "" };
+                        $("#dvCategories").append(generateCatImage($categoryName, "temp/" + $guid + ".png"));
+                        var cat = { name: $categoryName, screen: "temp/" + $guid + ".png", hex: "", data: "", save: "" };
                         cats.push(cat);
                         $('#categoryName').val("");
 
@@ -61,7 +82,7 @@ $(document).ready(function () {
 
         categoryDialog = $("#frmCategoryDialog").dialog({
             autoOpen: false,
-            height: 260,
+            height: "auto",
             width: 360,
             modal: true,
             open: function (event, ui) {
@@ -98,6 +119,27 @@ $(document).ready(function () {
             allFields = $([]).add(name),
             tips = $(".validateTips");
 
+        function checkLength(o, n, min, max) {
+            if (o.val().length > max || o.val().length < min) {
+                o.addClass("ui-state-error");
+                updateTips("Length of " + n + " must be between " +
+                min + " and " + max + ".");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function checkRegexp(o, regexp, n) {
+            if (!(regexp.test(o.val()))) {
+                o.addClass("ui-state-error");
+                updateTips(n);
+                return false;
+            } else {
+                return true;
+            }
+        }
+        
         function updateTips(t) {
             tips
                 .text(t)
@@ -162,11 +204,10 @@ $(document).ready(function () {
 
         uploadDialog = $("#dlgUploadCSV").dialog({
             autoOpen: false,
-            height: 260,
+            height: "auto",
             width: 360,
             modal: true,
             open: function (event, ui) {
-                console.log(generateGUID());
                 var t = $('#guid');
                 $('#guid').val(generateGUID());
                 $('#dlgUploadCSV').css('overflow', 'hidden'); //this line does the actual hiding
@@ -202,6 +243,27 @@ $(document).ready(function () {
             allFields = $([]).add(fileName).add(graphicName),
             tips = $(".validateTips");
 
+        function checkLength(o, n, min, max) {
+            if (o.val().length > max || o.val().length < min) {
+                o.addClass("ui-state-error");
+                updateTips("Length of " + n + " must be between " +
+                min + " and " + max + ".");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function checkRegexp(o, regexp, n) {
+            if (!(regexp.test(o.val()))) {
+                o.addClass("ui-state-error");
+                updateTips(n);
+                return false;
+            } else {
+                return true;
+            }
+        }
+        
         function updateTips(t) {
             tips
                 .text(t)
@@ -284,11 +346,10 @@ $(document).ready(function () {
 
         uploadHEXDialog = $("#dlgUploadHEX").dialog({
             autoOpen: false,
-            height: 320,
+            height: "auto",
             width: 460,
             modal: true,
             open: function (event, ui) {
-                console.log(generateGUID());
                 var t = $('#guid');
                 $('#guid').val(generateGUID());
                 $('#dlgUploadHEX').css('overflow', 'hidden'); //this line does the actual hiding
@@ -358,7 +419,7 @@ $(document).ready(function () {
 
             });
 
-            
+
             // Connect the events after the HTML table has been rendered ..
 
             $("#btnCreateCategory").on("click", function () {

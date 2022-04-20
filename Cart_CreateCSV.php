@@ -19,7 +19,7 @@ function createHeaderImage($string, $fileName, $fontSize = 15) {
 
     imagettftext($img, $fontSize, $angle, $x, $y, -$white, $font, $string);
  
-    $save = "category-screens/temp/".strtolower($fileName) .".png";
+    $save = "temp/".strtolower($fileName) .".png";
     imagepng($img, $save);
 
     return $img;
