@@ -80,14 +80,14 @@ $(document).ready(function () {
             return valid;
         }
 
-        categoryDialog = $("#frmCategoryDialog").dialog({
+        categoryDialog = $("#dlgCatergory").dialog({
             autoOpen: false,
             height: "auto",
             width: 360,
             modal: true,
             open: function (event, ui) {
                 $('#guid').val(generateGUID());
-                $('#frmCategoryDialog').css('overflow', 'hidden'); //this line does the actual hiding
+                $('#dlgCatergory').css('overflow', 'hidden'); //this line does the actual hiding
             },
             buttons: {
                 "Create": addCategory,
@@ -118,27 +118,6 @@ $(document).ready(function () {
             name = $("#fileName"),
             allFields = $([]).add(name),
             tips = $(".validateTips");
-
-        function checkLength(o, n, min, max) {
-            if (o.val().length > max || o.val().length < min) {
-                o.addClass("ui-state-error");
-                updateTips("Length of " + n + " must be between " +
-                min + " and " + max + ".");
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function checkRegexp(o, regexp, n) {
-            if (!(regexp.test(o.val()))) {
-                o.addClass("ui-state-error");
-                updateTips(n);
-                return false;
-            } else {
-                return true;
-            }
-        }
         
         function updateTips(t) {
             tips
@@ -156,8 +135,25 @@ $(document).ready(function () {
             allFields.removeClass("ui-state-error");
             var session_id = /SESS\w*ID=([^;]+)/i.test(document.cookie) ? RegExp.$1 : false;
 
-            // valid = valid && checkLength(name, "file name", 1, 99);
-            // valid = valid && checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Category name may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
+            if (typeof $('#fileName')[0].files[0] == "undefined") {
+                name.addClass("ui-state-error");
+                updateTips("Please select a CSV file to upload.");
+                valid = false;
+            }
+
+            if (valid) {
+
+                var size = $('#fileName')[0].files[0].size;
+                var mime = $('#fileName')[0].files[0].type;
+                var extension = $('#fileName').val().replace(/^.*\./, '');
+
+                if (size > 20000 || mime != "text/csv" || extension != "csv") {
+                    name.addClass("ui-state-error");
+                    updateTips("Invalid CSV file selected.");
+                    valid = false;
+                }
+
+            }
 
             if (valid) {
 
@@ -238,7 +234,7 @@ $(document).ready(function () {
 
             // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
             emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-            fileName = $("#fileName"),
+            fileName = $("#hexName"),
             graphicName = $("#graphicName"),
             allFields = $([]).add(fileName).add(graphicName),
             tips = $(".validateTips");
@@ -282,6 +278,48 @@ $(document).ready(function () {
 
             // valid = valid && checkLength(name, "file name", 1, 99);
             // valid = valid && checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Category name may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
+            var a = $('#hexName')[0];
+            var b = $('#hexName')[0].files[0]
+
+            if (typeof $('#hexName')[0].files[0] == "undefined") {
+                fileName.addClass("ui-state-error");
+                updateTips("Please select a HEX file to upload.");
+                valid = false;
+            }
+
+            if (valid) {
+
+                var size = $('#hexName')[0].files[0].size;
+                var mime = $('#hexName')[0].files[0].type;
+                var extension = $('#hexName').val().replace(/^.*\./, '');
+
+                if (size > 85000 || mime != "" || extension != "hex") { // mime application/octet-stream
+                    fileName.addClass("ui-state-error");
+                    updateTips("Invalid HEX file selected.");
+                    valid = false;
+                }
+
+            }
+
+            if (valid && typeof $('#graphicName')[0].files[0] == "undefined") {
+                graphicName.addClass("ui-state-error");
+                updateTips("Please select a PNG file to upload.");
+                valid = false;
+            }
+
+            if (valid) {
+
+                var size = $('#graphicName')[0].files[0].size;
+                var mime = $('#graphicName')[0].files[0].type;
+                var extension = $('#graphicName').val().replace(/^.*\./, '');
+
+                if (size > 10000 || mime != "image/png" || extension != "png") {
+                    graphicName.addClass("ui-state-error");
+                    updateTips("Invalid PNG file selected.");
+                    valid = false;
+                }
+
+            }
 
             if (valid) {
 

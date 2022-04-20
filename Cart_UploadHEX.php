@@ -2,11 +2,11 @@
 
 session_start();
 
-$hexFileName = $_FILES["fileName"]["name"]; // The file name
-$hexFileTmpLoc = $_FILES["fileName"]["tmp_name"]; // File in the PHP tmp folder
-$hexFileType = $_FILES["fileName"]["type"]; // The type of file it is
-$hexFileSize = $_FILES["fileName"]["size"]; // File size in bytes
-$hexFileErrorMsg = $_FILES["fileName"]["error"]; // 0 for false... and 1 for true
+$hexFileName = $_FILES["hexName"]["name"]; // The file name
+$hexFileTmpLoc = $_FILES["hexName"]["tmp_name"]; // File in the PHP tmp folder
+$hexFileType = $_FILES["hexName"]["type"]; // The type of file it is
+$hexFileSize = $_FILES["hexName"]["size"]; // File size in bytes
+$hexFileErrorMsg = $_FILES["hexName"]["error"]; // 0 for false... and 1 for true
 
 $graphicFileName = $_FILES["graphicName"]["name"]; // The file name
 $graphicFileTmpLoc = $_FILES["graphicName"]["tmp_name"]; // File in the PHP tmp folder
