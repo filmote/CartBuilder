@@ -6,7 +6,7 @@
     //cats.splice(index - 2, 1);
 
     var dvCategories = $('#dvCategories');
-    var img = cell.firstChild;
+    var img = cell.firstChild.firstChild;
 
     $('#col' + columnID).children().appendTo("#dvUnused");
     dvCategories.append(img);

@@ -1,11 +1,11 @@
 <?php
 
-function createHeaderImage($string, $fileName, $fontSize = 20) {
+function createHeaderImage($string, $fileName, $fontSize = 15) {
 
     $img_width = 128;
     $img_height = 64;
     $angle = 0;
-    $passion_one = 'Fonts/PassionOne-Regular.ttf';
+    $font = 'Fonts/DeadStock.ttf';
      
     $img = imagecreatetruecolor($img_width, $img_height);
     $black = imagecolorallocate($img, 0, 0, 0);
@@ -13,11 +13,11 @@ function createHeaderImage($string, $fileName, $fontSize = 20) {
      
     imagefill($img, 0, 0, $black);
  
-    $tb = imagettfbbox($fontSize, $angle, $passion_one, $string);
+    $tb = imagettfbbox($fontSize, $angle, $font, $string);
     $x = ceil(($img_width - $tb[2]) / 2);
     $y = ceil(($img_height / 2) - ($tb[5] / 2));
 
-    imagettftext($img, $fontSize, $angle, $x, $y, -$white, $passion_one, $string);
+    imagettftext($img, $fontSize, $angle, $x, $y, -$white, $font, $string);
  
     $save = "category-screens/temp/".strtolower($fileName) .".png";
     imagepng($img, $save);

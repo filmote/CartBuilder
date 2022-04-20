@@ -51,7 +51,10 @@ function generateHtmlTable(data) {
 
   }
 
-  var html = '<table id=tab class="AltTable"><tr><td valign="top" style="background-color: #25AAE2; column-width:600px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign="top" style="background-color: #25AAE2; column-width:600px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>';
+  var html = '<table id=tab class="AltTable"><tr><td valign="top" style="background-color: #25AAE2; column-width:600px;">';
+  html += '<button type="button" id="btnGetData" style="width: 135px; height: 25px; background-color: #156f96;border: 0px;">Download CSV</button><div style="height:4px;"></div>';
+  html += '<button type="button" id="btnUploadFile" style="width: 135px; height: 25px; background-color: #156f96;border: 0px;">Upload CSV</button>';
+  html += '</td><td valign="top" style="background-color: #25AAE2; column-width:600px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>';
 
   catCount = 255;
 
@@ -81,8 +84,8 @@ function generateHtmlTable(data) {
 
   html += '</tr>';
   html += '<tr><td valign="top" style="background-color: #156f96; width: 145px;">';
-  html += '<div id="dvCategories" style="padding-top:21px"></div>';
-  html += '</td><td valign="top" style="background-color: #156f96; width: 145px;"><ul id="dvUnused" class="sortableColumn"></ul></td>';
+  html += '<div id="dvCategories"><button type="button" id="btnCreateCategory" style="width: 140px; background-color: #25AAE2;border: 0px;">Create Category</button></div><br/>';
+  html += '</td><td valign="top" style="background-color: #156f96; width: 145px;"><button type="button" id="btnUploadHEXFile" style="width: 154px; background-color: #25AAE2;border: 0px;">Upload Game</button><ul id="dvUnused" class="sortableColumn" style="margin-top:-5px; margin-bottom: 75px;"></ul></td>';
 
 
   catCount = 255;

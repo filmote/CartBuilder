@@ -28,14 +28,19 @@ error_log("fileTmpLoc", 0);
 error_log($fileTmpLoc, 0);
 error_log("newName", 0);
 error_log($newName, 0);
+error_log("fileType", 0);
+error_log($fileType, 0);
 
-if (!$fileTmpLoc) { // if file not chosen
-    echo "ERROR: Please browse for a file before clicking the upload button.";
-    exit();
+if ($fileType == "text/csv") {
+    if(move_uploaded_file($fileTmpLoc, "temp/".$newName)){ // assuming the directory name 'test_uploads'
+        echo "$fileName upload is complete";
+    } 
+    else {
+        echo "move_uploaded_file function failed";
+    }
 }
-if(move_uploaded_file($fileTmpLoc, "temp/".$newName)){ // assuming the directory name 'test_uploads'
-    echo "$fileName upload is complete";
-} else {
-    echo "move_uploaded_file function failed";
+else {
+    echo "Invalid File";
 }
+
 ?>
