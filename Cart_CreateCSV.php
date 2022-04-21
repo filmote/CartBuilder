@@ -29,7 +29,7 @@ function createHeaderImage($string, $fileName, $fontSize = 15) {
 
 if ($_POST["mode"] == "csv") {
 
-    $path = "newfile.csv";
+    $path = "temp/newfile.csv";
     $temp = fopen($path, "w") or die("Unable to open file!");
     fwrite($temp, str_replace("<eol/>", PHP_EOL, $_POST["output"]));
     fclose($temp); 

@@ -1,4 +1,4 @@
-
+// V1.0
 function generateGUID() {
 
   var d = new Date().getTime();

@@ -1,4 +1,4 @@
-
+// V1.0
 function generateHtmlCategories(data) {
 
   if (typeof (data[0]) === 'undefined') {

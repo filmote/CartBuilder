@@ -1,3 +1,4 @@
+// V1.0
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -10,6 +11,7 @@ $(document).ready(function () {
     // -------------------------------------------------------------------------------------------
 
     $(function () {
+
         var form,
             name = $("#categoryName"),
             allFields = $([]).add(name),
@@ -405,7 +407,6 @@ $(document).ready(function () {
     $.ajax({
 
         type: "GET",
-        //      url: "./flashcart-index.csv",
         url: fileName,
         dataType: "text",
 
@@ -432,40 +433,40 @@ $(document).ready(function () {
                     csvdata = $.csv.toArrays(urldata);
                     generateHtmlCategories(csvdata);
 
+
+                    // Connect the events after the HTML table has been rendered ..
+
+                    $("#btnCreateCategory").on("click", function () {
+                        categoryDialog.dialog("open");
+                    });
+
+                    $("#btnUploadFile").on("click", function () {
+                        uploadDialog.dialog("open");
+                    });
+
+                    $("#btnUploadHEXFile").on("click", function () {
+                        uploadHEXDialog.dialog("open");
+                    });
+
+                    $('#btnGetData').click(function () {
+
+                        var colCount = $("#tab").find("tr:first td").length;
+
+                        if (allHeadersOK(colCount)) {
+
+                            $('#output').val(createCSV(colCount));
+                            $('#mode').val('csv');
+
+                            $("#cartForm").submit();
+
+                        }
+
+                    });
+
+
                 }
 
             });
-
-
-            // Connect the events after the HTML table has been rendered ..
-
-            $("#btnCreateCategory").on("click", function () {
-                categoryDialog.dialog("open");
-            });
-
-            $("#btnUploadFile").on("click", function () {
-                uploadDialog.dialog("open");
-            });
-
-            $("#btnUploadHEXFile").on("click", function () {
-                uploadHEXDialog.dialog("open");
-            });
-
-            $('#btnGetData').click(function () {
-
-                var colCount = $("#tab").find("tr:first td").length;
-
-                if (allHeadersOK(colCount)) {
-
-                    $('#output').val(createCSV(colCount));
-                    $('#mode').val('csv');
-
-                    $("#cartForm").submit();
-
-                }
-
-            });
-
 
 
 
