@@ -2,6 +2,7 @@
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
+var errorDialog;
 
 $(document).ready(function () {
 
@@ -174,6 +175,8 @@ $(document).ready(function () {
 
                 }).done(function (data) {
 
+                    uploadDialog.dialog("close");
+
                     if (data != "Invalid File") {
 
                         var url = String(window.location);
@@ -187,16 +190,19 @@ $(document).ready(function () {
 
                     }
                     else {
-                        alert("Invalid file type.");
+
+                        $('#errorMessage').text("Please select a valid CSV file.");
+                        errorDialog.dialog("open");
+
                     }
 
                 }).fail(function () {
 
-                    alert("An error occurred, the files couldn't be sent!");
+                    uploadDialog.dialog("close");
+                    $('#errorMessage').text("An error occurred, the files couldn't be sent!");
+                    errorDialog.dialog("open");
 
                 });
-
-                uploadDialog.dialog("close");
 
             }
             return valid;
@@ -321,26 +327,21 @@ $(document).ready(function () {
 
                 }).done(function (data) {
 
-                    if (data == "Invalid HEX File") {
+                    uploadHEXDialog.dialog("close");
 
-                        alert("Invalid HEX File");
 
-                    }
-                    else if (data == "Invalid PNG File") {
+                    // If an error occurred display a message ..
 
-                        alert("Invalid PNG File");
+                    if (data.substring(0, 5) == "ERR: ") {
 
-                    }
-                    else if (data == "Upload of HEX Failed") {
-
-                        alert("Upload of HEX Failed");
+                        $('#errorMessage').text(data.substring(5, 99999));
+                        errorDialog.dialog("open");
 
                     }
-                    else if (data == "Upload of PNG Failed") {
 
-                        alert("Upload of PNG Failed");
 
-                    }
+                    // Otherwise add the new game to the 'unused' list ..
+
                     else {
 
                         var newIndex = items.length + 1;
@@ -357,12 +358,11 @@ $(document).ready(function () {
 
                 }).fail(function () {
 
-                    alert("An error occurred, the files couldn't be sent!");
+                    uploadHEXDialog.dialog("close");
+                    $('#errorMessage').text("An error occurred, the files couldn't be sent!");
+                    errorDialog.dialog("open");
 
                 });
-
-
-                uploadHEXDialog.dialog("close");
 
             }
             return valid;
@@ -397,6 +397,22 @@ $(document).ready(function () {
 
     });
 
+
+    // -------------------------------------------------------------------------------------------
+    //  Error Dialogue
+    // -------------------------------------------------------------------------------------------
+
+    errorDialog = $( "#dlgErrorMessage" ).dialog({
+        autoOpen: false,
+        modal: true,
+        height: "auto",
+        width: 380,
+        buttons: {
+        Ok: function() {
+            $( this ).dialog( "close" );
+        }
+        }
+    });
 
 
     // Read the cart file and create the table ..
@@ -444,25 +460,6 @@ $(document).ready(function () {
                     csvdata = $.csv.toArrays(urldata);
                     generateHtmlTable_FullList(csvdata);
 
-            //     }
-
-            // });
-
-            // // Read the categories file and add any unused categories ..
-
-            // $.ajax({
-
-            //     type: "GET",
-            //     url: "./categories.csv",
-            //     dataType: "text",
-
-            //     success: function (response) {
-
-                    // tabledata = response.replace(/\;/g, ",");
-                    // urldata = tabledata.replace(/\\/g, "/");
-                    // csvdata = $.csv.toArrays(urldata);
-                    // generateHtmlCategories(csvdata);
-                    
 
                     // Connect the events after the HTML table has been rendered ..
 
@@ -486,19 +483,15 @@ $(document).ready(function () {
 
                             $('#output').val(createCSV(colCount));
                             $('#mode').val('csv');
-
                             $("#cartForm").submit();
 
                         }
 
                     });
 
-
                 }
 
             });
-
-
 
 
             $('#btnAddCol').click(function () {
@@ -563,8 +556,11 @@ function allHeadersOK(colCount) {
         }).indexOf(img.attr('id'));
 
         if (pos == -1) {
-            alert("You need to add a category image to every column!");
+
+            $('#errorMessage').text("You need to add a category image to every column!");
+            errorDialog.dialog("open");            
             return false;
+
         }
 
     }

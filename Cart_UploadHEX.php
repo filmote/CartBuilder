@@ -2,24 +2,28 @@
 
 session_start();
 
-$hexFileName = $_FILES["hexName"]["name"]; // The file name
-$hexFileTmpLoc = $_FILES["hexName"]["tmp_name"]; // File in the PHP tmp folder
-$hexFileType = $_FILES["hexName"]["type"]; // The type of file it is
-$hexFileSize = $_FILES["hexName"]["size"]; // File size in bytes
-$hexFileErrorMsg = $_FILES["hexName"]["error"]; // 0 for false... and 1 for true
+$hexFileName            = $_FILES["hexName"]["name"]; 
+$hexFileTmpLoc          = $_FILES["hexName"]["tmp_name"]; 
+$hexFileType            = $_FILES["hexName"]["type"]; 
+$hexFileSize            = $_FILES["hexName"]["size"]; 
+$hexFileErrorMsg        = $_FILES["hexName"]["error"]; 
 
-$graphicFileName = $_FILES["graphicName"]["name"]; // The file name
-$graphicFileTmpLoc = $_FILES["graphicName"]["tmp_name"]; // File in the PHP tmp folder
-$graphicFileType = $_FILES["graphicName"]["type"]; // The type of file it is
-$graphicFileSize = $_FILES["graphicName"]["size"]; // File size in bytes
-$graphicFileErrorMsg = $_FILES["graphicName"]["error"]; // 0 for false... and 1 for true
+$graphicFileName        = $_FILES["graphicName"]["name"];
+$graphicFileTmpLoc      = $_FILES["graphicName"]["tmp_name"];
+$graphicFileType        = $_FILES["graphicName"]["type"];
+$graphicFileSize        = $_FILES["graphicName"]["size"];
+$graphicFileErrorMsg    = $_FILES["graphicName"]["error"];
+
+
+// Check to see if the files are of the right type ..
 
 if ($hexFileType != "application/octet-stream" || $hexFileSize > 85000 || !str_ends_with(strtolower($hexFileName), ".hex")) {
-    echo "Invalid HEX File";
+    echo "ERR: Invalid HEX file.";
     exit(0);
 }
+
 if ($graphicFileType != "image/png" || $graphicFileSize > 10000 || !str_ends_with(strtolower($graphicFileName), ".png")) {
-    echo "Invalid PNG File";
+    echo "ERR: Invalid PNG file.";
     exit(0);
 }
 
@@ -36,12 +40,15 @@ else {
 $newHexName = session_id()."_".$_SESSION['fileCount'].".hex";
 $newGraphicName = session_id()."_".$_SESSION['fileCount'].".png";
 
+
+// Move the files to the 'trmp' directory ..
+
 if (!move_uploaded_file($hexFileTmpLoc, "temp/".$newHexName)) { 
-    echo "Upload of HEX Failed";
+    echo "ERR: Upload of HEX file failed.";
     exit(0);
 }
 if (!move_uploaded_file($graphicFileTmpLoc, "temp/".$newGraphicName)) {
-    echo "Upload of Graphic Failed";
+    echo "ERR: Upload of PNG icon failed.";
     exit(0);
 }
 
