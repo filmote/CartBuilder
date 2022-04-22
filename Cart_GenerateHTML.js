@@ -86,8 +86,8 @@ function generateHtmlTable(data) {
 
   html += '</tr>';
   html += '<tr><td valign="top" style="background-color: #156f96; width: 145px;">';
-  html += '<div id="dvCategories"><button type="button" id="btnCreateCategory" style="width: 140px; background-color: #25AAE2;border: 0px;">Create Category</button></div><br/>';
-  html += '</td><td valign="top" style="background-color: #156f96; width: 145px;"><button type="button" id="btnUploadHEXFile" style="width: 154px; background-color: #25AAE2;border: 0px;">Upload Game</button><ul id="dvUnused" class="sortableColumn" style="margin-top:-5px; margin-bottom: 75px;"></ul></td>';
+  html += '<div id="dvCategories" style="text-align:center;"><button type="button" id="btnCreateCategory" class="buttonColumn" style="width: 145px;">Create Category</button></div><br/>';
+  html += '</td><td valign="top" style="background-color: #156f96; width: 145px;"><button type="button" id="btnUploadHEXFile" class="buttonColumn" style="width: 154px;">Upload Game</button><ul id="dvUnused" class="sortableColumn" style="margin-top:-5px; margin-bottom: 75px;"></ul></td>';
 
 
   catCount = 255;
@@ -184,5 +184,99 @@ function generateCatImage(catName, imgName) {
 
   html += '<img class="game" id="' + catName + '" draggable="true" ondragstart="drag(event)" src="' + imgName + '" />';
   return html;
+
+}
+
+function generateHtmlTable_FullList(data) {
+
+  if (typeof (data[0]) === 'undefined') {
+
+    return null;
+
+  }
+
+  catCount = 255;
+
+  $.each(data, function (index, row) {
+
+    // ignore header
+
+    if (index == 0) { } else {
+
+      if (catCount != row[0] && row[0] != 0) {
+
+        catCount = row[0];
+
+
+        // Does the cateogries collection already contain this category?
+
+        var pos = cats.map(function (e) {
+          return e.name;
+        }).indexOf(row[1]);
+
+        if (pos < 0) {
+
+          catCount = row[0];
+          $("#dvCategories").append(generateCatImage(row[1], row[2]));
+
+          // Add category details to global collection..
+
+          var cat = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5] };
+          cats.push(cat);
+          
+        }
+
+      }
+
+    }
+
+  });
+
+
+  catCount = 255;
+  var itemIndex = 1;
+
+  $.each(data, function (index, row) {
+
+    //bind header
+
+    if (index == 0) {
+
+
+    } else {
+
+      if (catCount != row[0] && row[0] != 0) {
+
+        catCount = row[0];
+
+      }
+      else {
+
+        if (catCount != 255 && catCount != 0) {
+
+          var pos = items.map(function (e) {
+            return e.name;
+          }).indexOf(row[1]);
+  
+          if (pos < 0) {
+            var newIndex = items.length + 1;
+
+            html = '<li id="li' + newIndex + '"><img class="game" src="' + row[2] + '" /></li>';
+            $('#dvUnused').append(html);
+
+            // Add game details to global collection..
+
+            var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5] };
+            items.push(item);
+
+          };
+
+        }
+
+      }
+
+    }
+
+  });
 
 }

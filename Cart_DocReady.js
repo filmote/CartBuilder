@@ -139,7 +139,7 @@ $(document).ready(function () {
             allFields.removeClass("ui-state-error");
             var session_id = /SESS\w*ID=([^;]+)/i.test(document.cookie) ? RegExp.$1 : false;
 
-            if (typeof $('#fileName')[0].files[0] == "undefined") {
+            if (typeof $('#fileName')[0].files[0] === 'undefined') {
                 name.addClass("ui-state-error");
                 updateTips("Please select a CSV file to upload.");
                 valid = false;
@@ -257,12 +257,11 @@ $(document).ready(function () {
             event.preventDefault();
             var valid = true;
             allFields.removeClass("ui-state-error");
-            var session_id = /SESS\w*ID=([^;]+)/i.test(document.cookie) ? RegExp.$1 : false;
 
-            var a = $('#hexName')[0];
-            var b = $('#hexName')[0].files[0]
 
-            if (typeof $('#hexName')[0].files[0] == "undefined") {
+            // Hex file is mandatory and must be between < 85K, have no mime type and an extension of .hex ..
+
+            if (typeof $('#hexName')[0].files[0] === 'undefined') {
                 fileName.addClass("ui-state-error");
                 updateTips("Please select a HEX file to upload.");
                 valid = false;
@@ -281,6 +280,9 @@ $(document).ready(function () {
                 }
 
             }
+
+
+            // Grpahics file is mandatory and must be between < 10K, have a mime type of 'image/png' and an extension of .png ..
 
             if (valid && typeof $('#graphicName')[0].files[0] == "undefined") {
                 graphicName.addClass("ui-state-error");
@@ -301,6 +303,9 @@ $(document).ready(function () {
                 }
 
             }
+
+
+            // If the files are valid then upload them ..
 
             if (valid) {
 
@@ -345,7 +350,7 @@ $(document).ready(function () {
 
                         // Add game details to global collection..
 
-                        var item = { name: "sds", screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: "", save: "" };
+                        var item = { name: baseFileName, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: "", save: "" };
                         items.push(item);
 
                     }
@@ -397,12 +402,21 @@ $(document).ready(function () {
     // Read the cart file and create the table ..
 
     var fileName = "./flashcart-index.csv";
+    var fullList = "./flashcart-index.csv";
+    
     let searchParams = new URLSearchParams(window.location.search);
 
     if (searchParams.has('file')) {
         fileName = "temp/" + searchParams.get('file');
     }
+  
+    if (searchParams.has('list')) {
+        fullList = "./" + searchParams.get('list');
+    }
 
+    if (fileName == "./flashcart-index.csv") {
+        fullList = "";
+    }
 
     $.ajax({
 
@@ -417,22 +431,38 @@ $(document).ready(function () {
             csvdata = $.csv.toArrays(urldata);
             generateHtmlTable(csvdata);
 
-
-            // Read the categories file and add any unused categories ..
-
             $.ajax({
 
                 type: "GET",
-                url: "./categories.csv",
+                url: fullList,
                 dataType: "text",
-
+        
                 success: function (response) {
-
+        
                     tabledata = response.replace(/\;/g, ",");
                     urldata = tabledata.replace(/\\/g, "/");
                     csvdata = $.csv.toArrays(urldata);
-                    generateHtmlCategories(csvdata);
+                    generateHtmlTable_FullList(csvdata);
 
+            //     }
+
+            // });
+
+            // // Read the categories file and add any unused categories ..
+
+            // $.ajax({
+
+            //     type: "GET",
+            //     url: "./categories.csv",
+            //     dataType: "text",
+
+            //     success: function (response) {
+
+                    // tabledata = response.replace(/\;/g, ",");
+                    // urldata = tabledata.replace(/\\/g, "/");
+                    // csvdata = $.csv.toArrays(urldata);
+                    // generateHtmlCategories(csvdata);
+                    
 
                     // Connect the events after the HTML table has been rendered ..
 
