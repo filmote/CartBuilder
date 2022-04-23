@@ -6,13 +6,21 @@
     $hexFileTmpLoc          = $_FILES["hexName"]["tmp_name"]; 
     $hexFileType            = $_FILES["hexName"]["type"]; 
     $hexFileSize            = $_FILES["hexName"]["size"]; 
-    $hexFileErrorMsg        = $_FILES["hexName"]["error"]; 
 
     $graphicFileName        = $_FILES["graphicName"]["name"];
     $graphicFileTmpLoc      = $_FILES["graphicName"]["tmp_name"];
     $graphicFileType        = $_FILES["graphicName"]["type"];
     $graphicFileSize        = $_FILES["graphicName"]["size"];
-    $graphicFileErrorMsg    = $_FILES["graphicName"]["error"];
+
+    $dataFileName           = $_FILES["dataName"]["name"];
+    $dataFileTmpLoc         = $_FILES["dataName"]["tmp_name"];
+    $dataFileType           = $_FILES["dataName"]["type"];
+    $dataFileSize           = $_FILES["dataName"]["size"];
+
+    $saveFileName           = $_FILES["saveName"]["name"];
+    $saveFileTmpLoc         = $_FILES["saveName"]["tmp_name"];
+    $saveFileType           = $_FILES["saveName"]["type"];
+    $saveFileSize           = $_FILES["saveName"]["size"];
 
 
     // Check to see if the files are of the right type ..
@@ -24,6 +32,16 @@
 
     if ($graphicFileType != "image/png" || $graphicFileSize > 10000 || !str_ends_with(strtolower($graphicFileName), ".png")) {
         echo "ERR: Invalid PNG file.";
+        exit(0);
+    }
+
+    if ($dataFileName != "" && ($dataFileSize > 100000 || !str_ends_with(strtolower($dataFileName), ".bin"))) {
+        echo "ERR: Invalid data file.";
+        exit(0);
+    }
+
+    if ($saveFileName != "" && ($saveFileSize > 100000 || !str_ends_with(strtolower($saveFileName), ".bin"))) {
+        echo "ERR: Invalid save file.";
         exit(0);
     }
 
@@ -51,17 +69,38 @@
 
     $newHexName = session_id()."_".$_SESSION['fileCount'].".hex";
     $newGraphicName = session_id()."_".$_SESSION['fileCount'].".png";
+    $newDataName = session_id()."_".$_SESSION['fileCount']."_1.bin";
+    $newSaveName = session_id()."_".$_SESSION['fileCount']."_2.bin";
 
 
-    // Move the files to the 'trmp' directory ..
+    // Move the files to the 'temp' directory ..
 
     if (!move_uploaded_file($hexFileTmpLoc, "temp/".$newHexName)) { 
         echo "ERR: Upload of HEX file failed.";
         exit(0);
     }
+
     if (!move_uploaded_file($graphicFileTmpLoc, "temp/".$newGraphicName)) {
         echo "ERR: Upload of PNG icon failed.";
         exit(0);
+    }
+
+    if ($dataFileName !== '') {
+
+        if (!move_uploaded_file($dataFileTmpLoc, "temp/".$newDataName)) {
+            echo "ERR: Upload of data file failed.";
+            exit(0);
+        }
+
+    }
+
+    if ($saveFileName !== '') {
+
+        if (!move_uploaded_file($saveFileTmpLoc, "temp/".$newSaveName)) {
+            echo "ERR: Upload of save file failed.";
+            exit(0);
+        }
+
     }
 
     echo "Complete ".session_id()."_".$_SESSION['fileCount'];

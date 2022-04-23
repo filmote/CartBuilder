@@ -23,7 +23,8 @@
       <fieldset>
         <br />
         <label for="name">Name</label>&nbsp;&nbsp;
-        <input type="text" name="categoryName" id="categoryName" value="" class="text ui-widget-content ui-corner-all" />
+        <input type="text" name="categoryName" id="categoryName" value=""
+          class="text ui-widget-content ui-corner-all" />
         <input type="hidden" name="guid" id="guid" value="" />
 
         <!-- Allow form submission with keyboard without duplicating the dialog button -->
@@ -55,11 +56,29 @@
     <form name="frmUploadHEXForm" id="frmUploadHEXForm" enctype="multipart/form-data">
       <fieldset>
         <br />
-        <label for="name">Hex</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="file" name="hexName" id="hexName" value="" class="text ui-widget-content ui-corner-all" />
-        <br/><br/>
-        <label for="name">Graphic</label>&nbsp;&nbsp;
-        <input type="file" name="graphicName" id="graphicName" value="" class="text ui-widget-content ui-corner-all" />
+        <table>
+          <tr>
+            <td><label for="hexName">Hex File</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input type="file" name="hexName" id="hexName" value="" class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+          <tr>
+            <td><label for="graphicName">Graphic File</label></td>
+            <td><input type="file" name="graphicName" id="graphicName" value="" class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+          <tr>
+            <td><div><br /><b>Optional:</b></div></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><label for="dataName">Data File</label></td>
+            <td><input type="file" name="dataName" id="dataName" value="" class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+          <tr>
+            <td><label for="saveName">Save File</label></td>
+            <td><input type="file" name="saveName" id="saveName" value="" class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+        </table>
+
         <input type="hidden" name="guid" id="guid" value="" />
         <!-- Allow form submission with keyboard without duplicating the dialog button -->
         <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">

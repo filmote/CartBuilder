@@ -212,6 +212,8 @@ $(document).ready(function () {
         var form,
             fileName = $("#hexName"),
             graphicName = $("#graphicName"),
+            dataName = $("#dataName"),
+            saveName = $("#saveName"),
             allFields = $([]).add(fileName).add(graphicName),
             tips = $(".validateTips");
 
@@ -263,6 +265,48 @@ $(document).ready(function () {
                     graphicName.addClass("ui-state-error");
                     updateTips(tips, "Invalid PNG file selected.");
                     valid = false;
+                }
+
+            }
+
+
+            // Data file is not mandatory and must be between < 100K, have no mime type and an extension of .bin ..
+
+            if (typeof $('#dataName')[0].files[0] !== 'undefined') {
+
+                if (valid) {
+
+                    var size = $('#dataName')[0].files[0].size;
+                    var mime = $('#dataName')[0].files[0].type;
+                    var extension = $('#dataName').val().replace(/^.*\./, '');
+
+                    if (size > 100000 || extension != "bin") { // mime application/octet-stream
+                        dataName.addClass("ui-state-error");
+                        updateTips(tips, "Invalid data file selected.");
+                        valid = false;
+                    }
+
+                }
+
+            }
+
+
+            // Save file is not mandatory and must be between < 100K, have no mime type and an extension of .bin ..
+
+            if (typeof $('#saveName')[0].files[0] !== 'undefined') {
+
+                if (valid) {
+
+                    var size = $('#saveName')[0].files[0].size;
+                    var mime = $('#saveName')[0].files[0].type;
+                    var extension = $('#saveName').val().replace(/^.*\./, '');
+
+                    if (size > 100000 || extension != "bin") { // mime application/octet-stream
+                        saveName.addClass("ui-state-error");
+                        updateTips(tips, "Invalid save file selected.");
+                        valid = false;
+                    }
+
                 }
 
             }
