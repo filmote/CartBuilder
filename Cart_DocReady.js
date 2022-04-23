@@ -1,4 +1,4 @@
-// V1.02
+// V1.03
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
