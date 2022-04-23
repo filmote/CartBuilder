@@ -33,25 +33,18 @@
 
     if ($_POST["mode"] == "csv") {
 
-        $path = "temp/streamCSV.csv";
-        $temp = fopen($path, "w") or die("Unable to open file!");
-
-        fwrite($temp, str_replace("<eol/>", PHP_EOL, $_POST["output"]));
-        fclose($temp); 
-
+        $csv = str_replace("<eol/>", PHP_EOL, $_POST["output"]);
 
         // Send the headers ..
 
         $public_name = 'flashcart-custom.csv';
         header("Content-Disposition: attachment; filename=$public_name;");
         header("Content-Type: text/csv");
-        header('Content-Length: ' . filesize($path));
+        header('Content-Length: ' . strlen($csv));
 
+        // Stream the CSV to the client ..
 
-        // Stream the file back to the client ..
-
-        $fp = fopen($path, 'rb');
-        fpassthru($fp);
+        echo $csv;
 
     }
 
