@@ -293,9 +293,11 @@ function generateCatHeader(catCount, catName, imgName, temporaryImage) {
     }
 
     html += '</div>';
-    html += '<div>&nbsp;<img size=16px src="ArrowLeft.png" onclick="moveLeft(this.parentNode.parentNode.cellIndex);">';
+    html += '<div>&nbsp;<img size=16px src="ArrowLeftMost.png" onclick="moveLeftMost(this.parentNode.parentNode.cellIndex);">';
+    html += '&nbsp;<img size=16px src="ArrowLeft.png" onclick="moveLeft(this.parentNode.parentNode.cellIndex);">';
     html += '&nbsp;<img size=16px src="ArrowRight.png" onclick="moveRight(this.parentNode.parentNode.cellIndex);">';
-    html += '&nbsp;<img size=16px src="Delete.png" onclick="deleteColumn(this.parentNode.parentNode,' + catCount + ');">';
+    html += '&nbsp;<img size=16px src="ArrowRightMost.png" onclick="moveRightMost(this.parentNode.parentNode.cellIndex);">';
+    html += '&nbsp;&nbsp;&nbsp;<img size=16px src="Delete.png" onclick="deleteColumn(this.parentNode.parentNode,' + catCount + ');">';
     html += '</div></td>';
 
     return html;

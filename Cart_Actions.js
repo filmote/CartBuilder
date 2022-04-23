@@ -22,10 +22,24 @@ function deleteColumn(cell, columnID) {
 jQuery.moveColumn = function (table, oldPos, newPos) {
     var rows = jQuery('tr', table);
     var cols;
-    rows.each(function () {
-        cols = jQuery(this).children('th, td');
-        cols.eq(oldPos).detach().insertBefore(cols.eq(newPos));
-    });
+
+    if (newPos < $("#tab").find("tr:first td").length) {
+
+        rows.each(function () {
+            cols = jQuery(this).children('th, td');
+            cols.eq(oldPos).detach().insertBefore(cols.eq(newPos));
+        });
+
+    }
+    else {
+
+        rows.each(function () {
+            cols = jQuery(this).children('th, td');
+            cols.eq(oldPos).detach().insertAfter(cols.eq(newPos - 1));
+        });
+
+    }
+
 }
 
 
@@ -37,12 +51,29 @@ function moveLeft(index) {
 }
 
 
+// Move a column to the left most position (valid for columns 3+) ..
+
+function moveLeftMost(index) {
+    if (index == 2) return;
+    jQuery.moveColumn($('#tab'), index, 2);
+}
+
+
 // Move a column right (unless its the rightmost column) ..
 
 function moveRight(index) {
     var colCount = $("#tab").find("tr:first td").length;
     if (index == colCount - 1) return;
     jQuery.moveColumn($('#tab'), index, index + 2);
+}
+
+
+// Move a column to the right most position (unless its the rightmost column) ..
+
+function moveRightMost(index) {
+    var colCount = $("#tab").find("tr:first td").length;
+    if (index == colCount - 1) return;
+    jQuery.moveColumn($('#tab'), index, colCount);
 }
 
 
