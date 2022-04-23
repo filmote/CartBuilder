@@ -352,7 +352,22 @@ $(document).ready(function () {
 
                         // Add game details to global collection..
 
-                        var item = { name: baseFileName, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: "", save: "" };
+                        var dataFile = "";
+                        var saveFile = "";
+
+                        if (typeof $('#dataName')[0].files[0] !== 'undefined') { 
+
+                            dataFile = baseFileName + "_1.bin";
+
+                        }
+
+                        if (typeof $('#saveName')[0].files[0] !== 'undefined') { 
+
+                            saveFile = baseFileName + "_2.bin";
+
+                        }
+
+                        var item = { name: baseFileName, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile };
                         items.push(item);
 
                     }
