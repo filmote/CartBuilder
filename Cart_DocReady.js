@@ -1,15 +1,19 @@
-// V1.0
+// V1.02
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
 var errorDialog;
+
+
+// -------------------------------------------------------------------------------------------
+//  Category Name
+// -------------------------------------------------------------------------------------------
 
 $(document).ready(function () {
 
 
     // -------------------------------------------------------------------------------------------
     //  Category Name
-    // -------------------------------------------------------------------------------------------
 
     $(function () {
 
@@ -18,44 +22,14 @@ $(document).ready(function () {
             allFields = $([]).add(name),
             tips = $(".validateTips");
 
-        function checkLength(o, n, min, max) {
-            if (o.val().length > max || o.val().length < min) {
-                o.addClass("ui-state-error");
-                updateTips("Length of " + n + " must be between " +
-                    min + " and " + max + ".");
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function checkRegexp(o, regexp, n) {
-            if (!(regexp.test(o.val()))) {
-                o.addClass("ui-state-error");
-                updateTips(n);
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function updateTips(t) {
-            tips
-                .text(t)
-                .addClass("ui-state-highlight");
-            setTimeout(function () {
-                tips.removeClass("ui-state-highlight", 1500);
-            }, 500);
-        }
-
         function addCategory() {
 
             event.preventDefault();
             var valid = true;
             allFields.removeClass("ui-state-error");
 
-            valid = valid && checkLength(name, "category name", 1, 99);
-            valid = valid && checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Category name may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
+            valid = valid && checkLength(tips, name, "category name", 1, 99);
+            valid = valid && checkRegexp(tips, name, /^[a-z](.)*$/i, "Category names must begin with a letter.");
 
             if (valid) {
 
@@ -116,22 +90,12 @@ $(document).ready(function () {
 
     // -------------------------------------------------------------------------------------------
     //  CSV File Upload 
-    // -------------------------------------------------------------------------------------------
 
     $(function () {
         var form,
             name = $("#fileName"),
             allFields = $([]).add(name),
             tips = $(".validateTips");
-
-        function updateTips(t) {
-            tips
-                .text(t)
-                .addClass("ui-state-highlight");
-            setTimeout(function () {
-                tips.removeClass("ui-state-highlight", 1500);
-            }, 500);
-        }
 
         function uploadFile() {
 
@@ -142,9 +106,12 @@ $(document).ready(function () {
 
             if (typeof $('#fileName')[0].files[0] === 'undefined') {
                 name.addClass("ui-state-error");
-                updateTips("Please select a CSV file to upload.");
+                updateTips(tips, "Please select a CSV file to upload.");
                 valid = false;
             }
+
+
+            // CSV file is mandatory and must be between < 20K, have a mime type of "text/csv" and an extension of .csv ..
 
             if (valid) {
 
@@ -154,7 +121,7 @@ $(document).ready(function () {
 
                 if (size > 20000 || mime != "text/csv" || extension != "csv") {
                     name.addClass("ui-state-error");
-                    updateTips("Invalid CSV file selected.");
+                    updateTips(tips, "Invalid CSV file selected.");
                     valid = false;
                 }
 
@@ -240,7 +207,6 @@ $(document).ready(function () {
 
     // -------------------------------------------------------------------------------------------
     //  Hex File Upload 
-    // -------------------------------------------------------------------------------------------
 
     $(function () {
         var form,
@@ -248,15 +214,6 @@ $(document).ready(function () {
             graphicName = $("#graphicName"),
             allFields = $([]).add(fileName).add(graphicName),
             tips = $(".validateTips");
-
-        function updateTips(t) {
-            tips
-                .text(t)
-                .addClass("ui-state-highlight");
-            setTimeout(function () {
-                tips.removeClass("ui-state-highlight", 1500);
-            }, 500);
-        }
 
         function uploadFile() {
 
@@ -269,7 +226,7 @@ $(document).ready(function () {
 
             if (typeof $('#hexName')[0].files[0] === 'undefined') {
                 fileName.addClass("ui-state-error");
-                updateTips("Please select a HEX file to upload.");
+                updateTips(tips, "Please select a HEX file to upload.");
                 valid = false;
             }
 
@@ -281,18 +238,18 @@ $(document).ready(function () {
 
                 if (size > 85000 || mime != "" || extension != "hex") { // mime application/octet-stream
                     fileName.addClass("ui-state-error");
-                    updateTips("Invalid HEX file selected.");
+                    updateTips(tips, "Invalid HEX file selected.");
                     valid = false;
                 }
 
             }
 
 
-            // Grpahics file is mandatory and must be between < 10K, have a mime type of 'image/png' and an extension of .png ..
+            // Graphics file is mandatory and must be between < 10K, have a mime type of 'image/png' and an extension of .png ..
 
             if (valid && typeof $('#graphicName')[0].files[0] == "undefined") {
                 graphicName.addClass("ui-state-error");
-                updateTips("Please select a PNG file to upload.");
+                updateTips(tips, "Please select a PNG file to upload.");
                 valid = false;
             }
 
@@ -304,7 +261,7 @@ $(document).ready(function () {
 
                 if (size > 10000 || mime != "image/png" || extension != "png") {
                     graphicName.addClass("ui-state-error");
-                    updateTips("Invalid PNG file selected.");
+                    updateTips(tips, "Invalid PNG file selected.");
                     valid = false;
                 }
 
@@ -400,7 +357,6 @@ $(document).ready(function () {
 
     // -------------------------------------------------------------------------------------------
     //  Error Dialogue
-    // -------------------------------------------------------------------------------------------
 
     errorDialog = $( "#dlgErrorMessage" ).dialog({
         autoOpen: false,
@@ -415,10 +371,11 @@ $(document).ready(function () {
     });
 
 
+    // -------------------------------------------------------------------------------------------
     // Read the cart file and create the table ..
 
     var fileName = "./flashcart-index.csv";
-    var fullList = "./flashcart-index.csv";
+    fullList = "./flashcart-index.csv";
     
     let searchParams = new URLSearchParams(window.location.search);
 
@@ -431,7 +388,14 @@ $(document).ready(function () {
     }
 
     if (fileName == "./flashcart-index.csv") {
-        fullList = "";
+
+        if (fullList == "./flashcart-index.csv") {
+            fullList = "";
+        }
+        else if (fullList != "") {
+            fileName = fullList;
+        }
+
     }
 
     $.ajax({
@@ -447,52 +411,54 @@ $(document).ready(function () {
             csvdata = $.csv.toArrays(urldata);
             generateHtmlTable(csvdata);
 
-            $.ajax({
+            if (typeof fullList !== "undefined" && fullList != "") {
+                    
+                $.ajax({
 
-                type: "GET",
-                url: fullList,
-                dataType: "text",
-        
-                success: function (response) {
-        
-                    tabledata = response.replace(/\;/g, ",");
-                    urldata = tabledata.replace(/\\/g, "/");
-                    csvdata = $.csv.toArrays(urldata);
-                    generateHtmlTable_FullList(csvdata);
+                    type: "GET",
+                    url: fullList,
+                    dataType: "text",
+            
+                    success: function (response) {
+            
+                        tabledata = response.replace(/\;/g, ",");
+                        urldata = tabledata.replace(/\\/g, "/");
+                        csvdata = $.csv.toArrays(urldata);
+                        generateHtmlTable_FullList(csvdata);
 
 
-                    // Connect the events after the HTML table has been rendered ..
+                        // Connect the events after the HTML table has been rendered ..
 
-                    $("#btnCreateCategory").on("click", function () {
-                        categoryDialog.dialog("open");
-                    });
+                        $("#btnCreateCategory").on("click", function ()     { categoryDialog.dialog("open"); });
+                        $("#btnUploadFile").on("click", function ()         { uploadDialog.dialog("open"); });
+                        $("#btnUploadHEXFile").on("click", function ()      { uploadHEXDialog.dialog("open"); });
 
-                    $("#btnUploadFile").on("click", function () {
-                        uploadDialog.dialog("open");
-                    });
+                    }
 
-                    $("#btnUploadHEXFile").on("click", function () {
-                        uploadHEXDialog.dialog("open");
-                    });
+                });
 
-                    $('#btnGetData').click(function () {
+            }
+            else {
 
-                        var colCount = $("#tab").find("tr:first td").length;
+                $("#btnCreateCategory").on("click", function ()     { categoryDialog.dialog("open"); });
+                $("#btnUploadFile").on("click", function ()         { uploadDialog.dialog("open"); });
+                $("#btnUploadHEXFile").on("click", function ()      { uploadHEXDialog.dialog("open"); });
 
-                        if (allHeadersOK(colCount)) {
+            }
 
-                            $('#output').val(createCSV(colCount));
-                            $('#mode').val('csv');
-                            $("#cartForm").submit();
+            $('#btnGetData').click(function () {
 
-                        }
+                var colCount = $("#tab").find("tr:first td").length;
 
-                    });
+                if (allHeadersOK(colCount)) {
+
+                    $('#output').val(createCSV(colCount));
+                    $('#mode').val('csv');
+                    $("#cartForm").submit();
 
                 }
 
             });
-
 
             $('#btnAddCol').click(function () {
 
@@ -541,29 +507,3 @@ $(document).ready(function () {
 
 });
 
-
-function allHeadersOK(colCount) {
-
-
-    // Do any categories not have a proper image?
-
-    for (var i = 0; i < colCount - 2; i++) {
-
-        var img = $("#tab").find("tr:first td:eq(" + (i + 2) + ") img:first");
-
-        var pos = cats.map(function (e) {
-            return e.name;
-        }).indexOf(img.attr('id'));
-
-        if (pos == -1) {
-
-            $('#errorMessage').text("You need to add a category image to every column!");
-            errorDialog.dialog("open");            
-            return false;
-
-        }
-
-    }
-
-    return true;
-}
