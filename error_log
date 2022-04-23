@@ -22,3 +22,28 @@
 [19-Apr-2022 05:13:03 UTC] Field categoryName is Category
 [19-Apr-2022 05:13:03 UTC] Field guid is 8422011d-8920-43e4-bc37-db073b3ac896
 [19-Apr-2022 05:13:03 UTC] Field mode is createCategory
+[19-Apr-2022 05:14:19 UTC] ---------------------------
+[19-Apr-2022 05:14:19 UTC] Field categoryName is AAAAA
+[19-Apr-2022 05:14:19 UTC] Field guid is b1220c9c-7798-4dd8-b1cf-31a83d677b8e
+[19-Apr-2022 05:14:19 UTC] Field mode is createCategory
+[19-Apr-2022 05:15:02 UTC] ---------------------------
+[19-Apr-2022 05:15:02 UTC] Field categoryName is CCCsfsdfsdfsdfsdf
+[19-Apr-2022 05:15:02 UTC] Field guid is 83137dc9-cb07-4cc5-953e-f03ba508fb6c
+[19-Apr-2022 05:15:02 UTC] Field mode is createCategory
+[19-Apr-2022 05:27:52 UTC] ---------------------------
+[19-Apr-2022 05:27:52 UTC] Field categoryName is dddd
+[19-Apr-2022 05:27:52 UTC] Field guid is bfe9cb2b-0105-40f1-a2f6-cfeb78c64820
+[19-Apr-2022 05:27:52 UTC] Field mode is createCategory
+[19-Apr-2022 05:32:52 UTC] ---------------------------
+[19-Apr-2022 05:32:52 UTC] Field categoryName is PPPP
+[19-Apr-2022 05:32:52 UTC] Field guid is e5e4e870-6570-4da2-83ad-25e8b5c3fc34
+[19-Apr-2022 05:32:52 UTC] Field mode is createCategory
+[19-Apr-2022 05:38:58 UTC] PHP Notice:  Undefined index: mode in /home/blogging/public_html/cart2/Cart_CreateCSV.php on line 30
+[19-Apr-2022 05:38:58 UTC] PHP Notice:  Undefined index: mode in /home/blogging/public_html/cart2/Cart_CreateCSV.php on line 53
+[19-Apr-2022 05:38:58 UTC] PHP Notice:  Undefined index: mode in /home/blogging/public_html/cart2/Cart_CreateCSV.php on line 66
+[19-Apr-2022 05:39:26 UTC] PHP Notice:  Undefined index: mode in /home/blogging/public_html/cart2/Cart_CreateCSV.php on line 30
+[19-Apr-2022 05:39:26 UTC] PHP Notice:  Undefined index: mode in /home/blogging/public_html/cart2/Cart_CreateCSV.php on line 53
+[19-Apr-2022 05:39:26 UTC] PHP Notice:  Undefined index: mode in /home/blogging/public_html/cart2/Cart_CreateCSV.php on line 66
+[19-Apr-2022 05:39:51 UTC] PHP Notice:  Undefined index: mode in /home/blogging/public_html/cart2/Cart_CreateCSV.php on line 30
+[19-Apr-2022 05:39:51 UTC] PHP Notice:  Undefined index: mode in /home/blogging/public_html/cart2/Cart_CreateCSV.php on line 53
+[19-Apr-2022 05:39:51 UTC] PHP Notice:  Undefined index: mode in /home/blogging/public_html/cart2/Cart_CreateCSV.php on line 66

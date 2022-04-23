@@ -54,3 +54,15 @@
     border: 0px;
     list-style-type: none;
   }
+
+  .buttonColumn {    
+    background-color: #25AAE2;
+    border: 0px;
+  }
+
+  .buttonHeader {    
+    width: 135px; 
+    height: 25px; 
+    background-color: #156f96;
+    border: 0px;
+  }

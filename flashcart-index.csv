@@ -113,6 +113,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
 7;termtwirl;Puzzle\termtwirl.png;Puzzle\termtwirl.hex;;;;Corruptio
 8;Skill;category-screens\Skill.png;;;;;
 8;curse;Puzzle\curse.png;Puzzle\curse.hex;;;17;PressPlayOnTape
+8;Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;17;PressPlayOnTape
 8;KnightMove;Puzzle\knightmove.png;Puzzle\knightmove.hex;;;21;obono
 8;Samegame;Arcade\Samegame.png;Arcade\Samegame.hex;;;13;obono
 8;stairssweep;Puzzle\stairssweep.png;Puzzle\stairssweep.hex;;;;obono
@@ -152,6 +153,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
 10;Racing;category-screens\Racing.png;;;;;
 10;Arddriving;Racing\Arddriving.png;Racing\Arddriving.hex;;;23;Rem
 10;ArduRacer;Racing\ArduRacer.png;Racing\ArduRacer.hex;;;9;tonym128
+10;Road Trip;Racing/RoadTrip.png;Racing/RoadTrip.hex;;;;;;
 10;BoneShakers;Racing\BoneShakers.png;Racing\BoneShakers.hex;;;15;jhhoward
 10;CrazyKart;Racing\CrazyKart.png;Racing\CrazyKart.hex;;;11;Alberto
 10;Randocity;Racing\Randocity.png;Racing\Randocity.hex;;;15;pmwasson
@@ -173,6 +175,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
 11;tqft;RPG\tqft.png;RPG\tqft.hex;;;;
 12;Shooter;category-screens\Shooter.png;;;;;
 12;microtank;Arcade\microtank.png;Arcade\microtank.hex;;;22;hartmann1301
+12;1nvader;Shooter\1nvader.png;Shooter\1nvader.hex;;;22;PressPlayOnTape
 12;1944;Arcade\1944.png;Arcade\1944.hex;;;20;PressPlayOnTape
 12;Sirene;arg\Sirene.png;arg\Sirene.hex;;;;TEAMarg
 12;Junofirst;Action\Junofirst.png;Action\Junofirst.hex;;;19;PressPlayOnTape

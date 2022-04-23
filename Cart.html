@@ -8,23 +8,22 @@
   <meta charset="UTF-8">
   <title>Cart Builder</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="Cart.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-  <link rel="stylesheet" href="Cart.css" />
 </head>
 
 <body>
 
-  <div id="dialog-form" title="Create new Category">
+  <div id="dlgCatergory" title="Create new Category">
     <p class="validateTips">Please enter a category name:</p>
-    <form name="categoryForm" id="categoryForm" action="Cart_CreateCSV.php" method="post">
+    <form name="frmCategoryForm" id="frmCategoryForm" action="Cart_CreateCSV.php" method="post">
       <fieldset>
         <br />
         <label for="name">Name</label>&nbsp;&nbsp;
-        <input type="text" name="categoryName" id="categoryName" value="Category" class="text ui-widget-content ui-corner-all" />
+        <input type="text" name="categoryName" id="categoryName" value="" class="text ui-widget-content ui-corner-all" />
         <input type="hidden" name="guid" id="guid" value="" />
 
         <!-- Allow form submission with keyboard without duplicating the dialog button -->
@@ -35,19 +34,53 @@
     </form>
   </div>
 
+  <div id="dlgUploadCSV" title="Upload an Existing CSV">
+    <p class="validateTips">Please select a CSV file:</p>
+    <form name="frmUploadCSVForm" id="frmUploadCSVForm" enctype="multipart/form-data">
+      <fieldset>
+        <br />
+        <label for="name">Name</label>&nbsp;&nbsp;
+        <input type="file" name="fileName" id="fileName" value="" class="text ui-widget-content ui-corner-all" />
+        <input type="hidden" name="guid" id="guid" value="" />
+        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        <br />
+        <br />
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="dlgUploadHEX" title="Upload an Existing Game">
+    <p class="validateTips">Please select a HEX and Graphic file:</p>
+    <form name="frmUploadHEXForm" id="frmUploadHEXForm" enctype="multipart/form-data">
+      <fieldset>
+        <br />
+        <label for="name">Hex</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="file" name="hexName" id="hexName" value="" class="text ui-widget-content ui-corner-all" />
+        <br/><br/>
+        <label for="name">Graphic</label>&nbsp;&nbsp;
+        <input type="file" name="graphicName" id="graphicName" value="" class="text ui-widget-content ui-corner-all" />
+        <input type="hidden" name="guid" id="guid" value="" />
+        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        <br />
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="dlgErrorMessage" title="An Error Occurred">
+    <p id="errorMessage">sssss
+    </p>
+  </div>
 
   <form name="cartForm" id="cartForm" action="Cart_CreateCSV.php" method="post">
-
-    <button type="button" id="btnAddCol" class="ui-button ui-corner-all ui-widget">Add new column</button>
-    <button type="button" id="btnGetData" class="ui-button ui-corner-all ui-widget">Download CSV</button>
-    <button type="button" id="btnCreateCategory">Create Category</button>
-    <button type="button" id="btnGetBin" class="ui-button ui-corner-all ui-widget">Download BIN</button>
 
     <div class="row" id="csv-display"></div>
     <input type="hidden" id="output" name="output" />
     <input type="hidden" id="mode" name="mode" />
 
   </form>
+  <button type="button" id="btnGetBin" class="ui-button ui-corner-all ui-widget">Download BIN</button>
 
 </body>
 
@@ -58,9 +91,9 @@
   var items = [];
   var catCount = 0;
   var data;
+  var fullList;
 </script>
-<script src="Cart_DocReady.js"></script>
-<script src="Cart_DragDrop.js"></script>
-<script src="Cart_Actions.js"></script>
-<script src="Cart_GenerateHTML.js"></script>
-<script src="Cart_Utils.js"></script>
+<script src="Cart_DocReady.js?V=V1.02"></script>
+<script src="Cart_Actions.js?V=V1.02"></script>
+<script src="Cart_GenerateHTML.js?V=V1.02"></script>
+<script src="Cart_Utils.js?V=V1.02"></script>

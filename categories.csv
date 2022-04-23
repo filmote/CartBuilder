@@ -16,5 +16,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
 14;Music;category-screens\Music.png;;;;;
 15;Application;category-screens\Application.png;;;;;
 16;Tools;category-screens\Tools.png;;;;;
-17;Spare1;category-screens\Spare1.png;;;;;
-18;Spare2;category-screens\Spare2.png;;;;;
+17;Good;category-screens\Good.png;;;;;
+18;Bad;category-screens\Bad.png;;;;;
+19;Ugly;category-screens\Ugly.png;;;;;
+20;TeamARG;category-screens\TeamARG.png;;;;;
+21;PPOT;category-screens\Ppot.png;;;;;
