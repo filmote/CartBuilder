@@ -16,6 +16,23 @@
     $blankimage = str_repeat(chr(0xFF), 1024);
     $blankprogram = str_repeat(chr(0xFF), 29 * 1024);
 
+    $MenuButtonPatch = hex2bin("0f920fb68f939f93ef93ff938091cc01" .
+                              "8d5f8d3708f08d578093cc01e2e4f3e0" .
+                              "80818e4f808391819f4f918382818f4f" .
+                              "828383818f4f8383edecf1e080818f5f" .
+                              "808381818f4f818382818f4f82838381" .
+                              "8f4f83838fb18f6066991c9b88278f36" .
+                              "81f48091FF0A981b963068f0e0e0f8e0" .
+                              "87e78083818388e180936000f0936000" .
+                              "ffcf9093FF0Aff91ef919f918f910fbe" .
+                              "0f901895");
+    const MBP_fract_lds = 14;
+    const MBP_fract_sts = 26;
+    const MBP_millis_r30 = 28;
+    const MBP_millis_r31 = 30;
+    const MBP_overflow_r30 = 56;
+    const MBP_overflow_r31 = 58;
+
     function FixPath($filename)
     {
       return str_replace("\\", "/", $filename);
@@ -66,7 +83,7 @@
         while(!feof($file))
         {
           $rcd = fgets($file);
-          if ($rcd[0] == ":")
+          if ($rcd !== false && $rcd[0] == ":")
           {
             $rcd = @pack("H*",substr($rcd,1));
             $rcd_len  = ord($rcd[0]);
@@ -116,6 +133,77 @@
         return $bytes . str_repeat(chr(0xFF), 4096 - strlen($bytes) % 4096);
       }
       return false;
+    }
+
+    function PatchMenuButton(&$program)
+    {
+      global $MenuButtonPatch;
+      if (strlen($program) < 256) return false;
+      $vector_23 = (ord($program[0x5E]) << 1) + (ord($program[0x5F])  << 9); #ISR timer0 vector addr
+      $p = $vector_23;
+      $l = 0;
+      $lds = 0;
+      $branch = 0;
+      $timer0_millis = 0 ;
+      $timer0_fract  = 0;
+      $timer0_overflow_count = 0;
+      while ($p < (strlen($program) - 2))
+      {
+        $p += 2; #handle 2 byte instructions
+        $p2  = ord($program[$p-2]);
+        $p1  = ord($program[$p-1]);
+        if ($p2 == 0x08 && $p1 == 0x95) return false; #ret instruction
+        if (($p1 & 0xFC) == 0xF4 && ($p2 & 0x07) == 0x00) # brcc instruction may jump beyond reti
+        {
+          $branch = (($p1 & 0x03) << 6) + (($p2 & 0xf8) >> 2);
+          if ($branch < 128) $branch = $p + $branch;
+          else $branch = $p - 256 + $branch;
+        }
+        if ($p2 == 0x18 && $p1 == 0x95) #reti instruction
+        {
+          $l = $p - $vector_23;
+          if ($p > $branch) break;  # there was no branch beyond reti instruction
+        }
+        if ($l != 0) #branced beyond reti, look for rjmp instruction
+        {
+          if (($p1 & 0xF0) == 0xC0)
+          {
+            $l = $p - $vector_23;
+            break;
+          }
+        }
+        #handle 4 byte instructions
+        if (($p1 & 0xFE) == 0x90 && ($p2 & 0x0F) == 0x00) # lds instruction
+        {
+          $lds++;
+          if     ($lds == 1) $timer0_millis = ord($program[$p]) | (ord($program[$p+1]) << 8);
+          elseif ($lds == 5) $timer0_fract = ord($program[$p]) | (ord($program[$p+1]) << 8);
+          elseif ($lds == 6) $timer0_overflow_count = ord($program[$p]) | (ord($program[$p+1]) << 8);
+          $p += 2;
+        }
+        if (($p1 & 0xFE) == 0x92 && ($p2 & 0x0F) == 0x00) # sts instruction
+        {
+          $p+=2;
+        }
+      }
+      if ($l < strlen($MenuButtonPatch)) return false;
+      if ($timer0_millis == 0 || $timer0_fract == 0 || $timer0_overflow_count == 0) return false;
+      #patch the new ISR code with 'hold UP + DOWN for 2 seconds to start bootloader menu' feature
+      for ($i = 0; $i < strlen($MenuButtonPatch); $i++) $program[$vector_23 + $i] = $MenuButtonPatch[$i];
+      #fix timer variables
+      $program[$vector_23 + MBP_fract_lds + 0] = chr($timer0_fract & 0xFF);
+      $program[$vector_23 + MBP_fract_lds + 1] = chr($timer0_fract >> 8);
+      $program[$vector_23 + MBP_fract_sts + 0] = chr($timer0_fract & 0xFF);
+      $program[$vector_23 + MBP_fract_sts + 1] = chr($timer0_fract >> 8);
+      $program[$vector_23 + MBP_millis_r30 + 0] = chr(0xE0 | (($timer0_millis >> 0) & 0x0F));
+      $program[$vector_23 + MBP_millis_r30 + 1] = chr(0xE0 | (($timer0_millis >> 4) & 0x0F));
+      $program[$vector_23 + MBP_millis_r31 + 0] = chr(0xF0 | (($timer0_millis >> 8) & 0x0F));
+      $program[$vector_23 + MBP_millis_r31 + 1] = chr(0xE0 | (($timer0_millis >>12) & 0x0F));
+      $program[$vector_23 + MBP_overflow_r30 +0] = chr(0xE0 | (($timer0_overflow_count >> 0) & 0x0F));
+      $program[$vector_23 + MBP_overflow_r30 +1] = chr(0xE0 | (($timer0_overflow_count >> 4) & 0x0F));
+      $program[$vector_23 + MBP_overflow_r31 +0] = chr(0xF0 | (($timer0_overflow_count >> 8) & 0x0F));
+      $program[$vector_23 + MBP_overflow_r31 +1] = chr(0xE0 | (($timer0_overflow_count >>12) & 0x0F));
+      return true;
     }
 
     function CreateFlashImage($csv)
@@ -192,6 +280,7 @@
           }
           if (strlen($stringdata) > 199) $stringdata = substr($stringdata,0,199);
           for ($i = 0; $i < strlen($stringdata); $i++) $header[57 + $i] = $stringdata[$i];
+          PatchMenuButton($program);
           $binfile .= $header . $title . $program . $datafile . str_repeat(chr(0xFF), $alignsize) . $savefile;
           $previouspage = $currentpage;
           $currentpage = $nextpage;
