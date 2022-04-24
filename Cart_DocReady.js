@@ -542,6 +542,9 @@ $(document).ready(function () {
                     connectWith: ".sortableColumn",
                 }).disableSelection();
 
+                var colCount = $("#tab").find("tr:first td").length;
+                jQuery.moveColumn($('#tab'), colCount - 1, 2);
+
             });
 
             $('#btnGetBin').click(function () {
