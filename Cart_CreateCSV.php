@@ -12,28 +12,30 @@
     const ID_INFO = 8;
     const ID_LIKES = 9;
     const ID_MAX = 10;
-    
+
+    $blankimage = str_repeat(chr(0xFF), 1024);
+    $blankprogram = str_repeat(chr(0xFF), 29 * 1024);
+
     function FixPath($filename)
     {
       return str_replace("\\", "/", $filename);
     }
-    
+
     function DefaultHeader()
     {
       return "ARDUBOY" . str_repeat(chr(0xFF),249);
     }
-    
+
     function LoadTitleScreenData($filename)
     {
+      global $blankimage;
       if (!is_file($filename)) return false;
-    
+
       $tmp = @imageCreateFromPng($filename);
-      $width  = @imagesx($tmp);
-      $height = @imagesy($tmp);
       $img = imagecreatetruecolor(128,64);
-      @imagecopyresampled($img, $tmp, 0, 0, 0, 0, 128, 64, $width, $height);
+      @imagecopyresampled($img, $tmp, 0, 0, 0, 0, 128, 64, @imagesx($tmp), @imagesy($tmp));
       imageDestroy($tmp);
-      $bytes = str_repeat(chr(0xFF), 1024);
+      $bytes = $blankimage;
       $i = 0;
       $b = 0;
       for ($y = 0; $y < 64; $y += 8 )
@@ -52,51 +54,48 @@
       imageDestroy($img);
       return $bytes;
     }
-    
+
     function LoadHexFileData($filename)
     {
+      global $blankprogram;
       if (!is_file($filename)) return false;
       if ($file = fopen($filename, "r"))
       {
-        $bytes = str_repeat(chr(0xFF), 29696);
+        $bytes = $blankprogram;
         $flash_end = 0;
         while(!feof($file))
         {
           $rcd = fgets($file);
-          if ($rcd == ":00000001FF") break;
           if ($rcd[0] == ":")
           {
-            $rcd_len  = hexdec(substr($rcd, 1, 2));
-            $rcd_typ  = hexdec(substr($rcd, 7, 2));
-            $rcd_addr = hexdec(substr($rcd, 3, 4));
-            $rcd_sum  = hexdec(substr($rcd, 9 + $rcd_len * 2, 2));
+            $rcd = @pack("H*",substr($rcd,1));
+            $rcd_len  = ord($rcd[0]);
+            $rcd_typ  = ord($rcd[3]);
+            $rcd_addr = ord($rcd[1]) * 256 + ord($rcd[2]);
+            $checksum = ord($rcd[4 + $rcd_len]);
             if (($rcd_typ == 0) && ($rcd_len > 0))
             {
               $flash_addr = $rcd_addr;
-              $checksum = $rcd_sum;
-              for ($i = 1; $i < 9 + $rcd_len * 2; $i += 2)
+              for ($i = 0; $i < 4 + $rcd_len; $i++)
               {
-                  $byte = hexdec(substr($rcd, $i, 2));
-                  $checksum = ($checksum + $byte) & 0xFF;
-                  if ($i >= 9)
-                  {
-                    $bytes[$flash_addr] = chr($byte);
-                    $flash_addr ++;
-                    if ($flash_addr > $flash_end) $flash_end = $flash_addr;
-                  }
+                $checksum += ord($rcd[$i]);
+                if ($i >= 4)
+                {
+                  $bytes[$flash_addr] = $rcd[$i];
+                  $flash_addr ++;
+                }
               }
-              if ($checksum != 0) return false;
+              if ($flash_addr > $flash_end) $flash_end = $flash_addr;
+              if ($checksum & 0xFF != 0) return false;
             }
           }
         }
-        fclose($file);
         $flash_end = ($flash_end + 255) & 0xFF00;
-        $bytes = substr($bytes, 0, $flash_end);
-        return $bytes;
+        return substr($bytes, 0, $flash_end);
       }
       else return false;
     }
-    
+
     function LoadDataFile($filename)
     {
       if (!is_file($filename)) return false;
@@ -107,7 +106,7 @@
       }
       return false;
     }
-    
+
     function LoadSaveFile($filename)
     {
       if (!is_file($filename)) return false;
@@ -118,36 +117,26 @@
       }
       return false;
     }
-    
-    #function CreateFlashImage($filename)
+
     function CreateFlashImage($csv)
     {
-      #if (!is_file($filename)) return false;
-      #if ($file = fopen($filename, "r"))
       {
         $binfile = "";
+        $emptypage = str_repeat(chr(0xFF), 128);
         $previouspage = 0xFFFF;
         $currentpage = 0;
         $nextpage = 0;
         $sep = ';';
-        #$head = fgets($file);
         $head = current($csv);
         if (substr_count($head, ',') > substr_count($head, ';')) $sep = ',';
-        #while(!feof($file))
         while (next($csv) !== false)
         {
-          #$row = fgetcsv($file, 0, $sep);
           $row = str_getcsv(current($csv), $sep);
           if (count($row) == 1 && $row[ID_LIST] == "") continue; #ignore blank lines
           while (count($row) < 10) $row[] = "";
           $header = DefaultHeader();
           $title = LoadTitleScreenData(FixPath($row[ID_TITLESCREEN]));
-          if (strlen($title) != 1024)
-          {
-            #fclose($file);
-            echo var_dump($row);
-            return false;
-          }
+          if (strlen($title) != 1024) return false;
           $program = LoadHexFileData(FixPath($row[ID_HEXFILE]));
           $programsize = strlen($program);
           $datafile = LoadDataFile(FixPath($row[ID_DATAFILE]));
@@ -170,7 +159,7 @@
           $header[11] = chr($nextpage & 0xFF);
           $header[12] = chr($slotsize >> 8);
           $header[13] = chr($slotsize & 0xFF);
-          if (substr($program, -128) == str_repeat(chr(0xFF), 128)) $header[14] = chr(($programsize >> 7) - 1); #no need to flash unused 128 byte page
+          if (substr($program, -128) == $emptypage) $header[14] = chr(($programsize >> 7) - 1); #no need to flash unused 128 byte page
           else $header[14] = chr($programsize >> 7); #program size in 128 byte pages
           if ($programsize > 0)
           {
@@ -203,16 +192,10 @@
           }
           if (strlen($stringdata) > 199) $stringdata = substr($stringdata,0,199);
           for ($i = 0; $i < strlen($stringdata); $i++) $header[57 + $i] = $stringdata[$i];
-          $binfile .= $header;
-          $binfile .= $title;
-          $binfile .= $program;
-          $binfile .= $datafile;
-          $binfile .= str_repeat(chr(0xFF), $alignsize);
-          $binfile .= $savefile;
+          $binfile .= $header . $title . $program . $datafile . str_repeat(chr(0xFF), $alignsize) . $savefile;
           $previouspage = $currentpage;
           $currentpage = $nextpage;
         }
-        #fclose($file);
         $binfile .= str_repeat(chr(0xFF), 256); #use blank header to signal end of FX file system
         $filename = "flashcart-image.bin";
         header('Content-Description: File Transfer');
@@ -232,19 +215,19 @@
         $img_height = 64;
         $angle = 0;
         $font = 'Fonts/DeadStock.ttf';
-        
+
         $img = imagecreatetruecolor($img_width, $img_height);
         $black = imagecolorallocate($img, 0, 0, 0);
         $white = imagecolorallocate($img, 255, 255, 255);
-        
+
         imagefill($img, 0, 0, $black);
-    
+
         $tb = imagettfbbox($fontSize, $angle, $font, $string);
         $x = ceil(($img_width - $tb[2]) / 2);
         $y = ceil(($img_height / 2) - ($tb[5] / 2));
 
         imagettftext($img, $fontSize, $angle, $x, $y, -$white, $font, $string);
-    
+
         $save = "temp/".strtolower($fileName) .".png";
         imagepng($img, $save);
 
@@ -273,7 +256,7 @@
     }
 
     // Create flash image file from CSV data
-    
+
     if ($_POST["mode"] == "bin") {
         set_time_limit(0);
         $csv = explode("<eol/>", $_POST["output"]);
