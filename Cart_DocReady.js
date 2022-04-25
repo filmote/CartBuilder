@@ -438,7 +438,12 @@ $(document).ready(function () {
         autoOpen: false,
         modal: true,
         height: "auto",
-        width: "665px"
+        width: "665px",
+        buttons: {
+            Ok: function() {
+                $( this ).dialog( "close" );
+            }
+            }
     });
 
     
