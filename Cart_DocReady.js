@@ -506,8 +506,10 @@ $(document).ready(function () {
                         // Connect the events after the HTML table has been rendered ..
 
                         $("#btnCreateCategory").on("click", function ()     { categoryDialog.dialog("open"); });
+                        $("#btnCreateCategory2").on("click", function ()    { categoryDialog.dialog("open"); });
                         $("#btnUploadFile").on("click", function ()         { uploadDialog.dialog("open"); });
                         $("#btnUploadHEXFile").on("click", function ()      { uploadHEXDialog.dialog("open"); });
+                        $("#btnUploadHEXFile2").on("click", function ()     { uploadHEXDialog.dialog("open"); });
 
                         resizeColumnHeights();
 
@@ -519,8 +521,10 @@ $(document).ready(function () {
             else {
 
                 $("#btnCreateCategory").on("click", function ()     { categoryDialog.dialog("open"); });
+                $("#btnCreateCategory2").on("click", function ()    { categoryDialog.dialog("open"); });
                 $("#btnUploadFile").on("click", function ()         { uploadDialog.dialog("open"); });
                 $("#btnUploadHEXFile").on("click", function ()      { uploadHEXDialog.dialog("open"); });
+                $("#btnUploadHEXFile2").on("click", function ()     { uploadHEXDialog.dialog("open"); });
 
                 resizeColumnHeights();
 
