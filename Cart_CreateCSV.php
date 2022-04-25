@@ -33,9 +33,20 @@
     const MBP_overflow_r30 = 56;
     const MBP_overflow_r31 = 58;
 
+    function BuildFailed($reason)
+    {
+      Echo "<h1>5FX - Flash image build error</h1><p>Reason:" . $reason;
+      die();
+    }
+
     function FixPath($filename)
     {
-      return str_replace("\\", "/", $filename);
+      $filename = str_replace("\\", "/", $filename);
+      If ($filename != "" && !is_file($filename))
+      {
+        BuildFailed('<p>Unable to load file "' . $filename . '".</p><p>Check your CSV file for correct filename and case.</p>');
+      }
+      return $filename;
     }
 
     function DefaultHeader()
@@ -223,8 +234,11 @@
           if (count($row) == 1 && $row[ID_LIST] == "") continue; #ignore blank lines
           while (count($row) < 10) $row[] = "";
           $header = DefaultHeader();
+          if ($row[ID_TITLESCREEN] == "")
+          {
+            BuildFailed('<P>Missing PNG image filename in CSV file at line ' . key($csv) . ' "' . current($csv) . '"</p><p>PNG image files are mandatory.');
+          }
           $title = LoadTitleScreenData(FixPath($row[ID_TITLESCREEN]));
-          if (strlen($title) != 1024) return false;
           $program = LoadHexFileData(FixPath($row[ID_HEXFILE]));
           $programsize = strlen($program);
           $datafile = LoadDataFile(FixPath($row[ID_DATAFILE]));
@@ -292,7 +306,6 @@
         header('Content-Disposition: attachment; filename="'. $filename .'"');
         header('Content-Length: ' . strlen($binfile));
         echo $binfile;
-        return true;
       }
     }
 
@@ -349,7 +362,7 @@
     if ($_POST["mode"] == "bin") {
         set_time_limit(0);
         $csv = explode("<eol/>", $_POST["output"]);
-        if (!CreateFlashImage($csv)) echo "Error creating flash image.";
+        CreateFlashImage($csv);
     }
 
 
