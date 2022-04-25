@@ -1,4 +1,4 @@
-// V1.04
+// V1.05
 
 // First pass:  Render the categories and items used in the selected cart. 
 
@@ -10,13 +10,13 @@ function generateHtmlTable(data) {
 
     }
 
-    var html = '<table id=tab class="AltTable"><tr><td valign="top" style="background-color: #25AAE2; column-width:600px;">';
+    var html = '<table id=tab class="AltTable"><thead><tr><th valign="top" style="background-color: #25AAE2; column-width:600px;">';
     html += '<button type="button" id="btnGetData" class="buttonHeader">Download CSV</button><div style="height:4px;"></div>';
     html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button>';
-    html += '</td><td valign="top" style="background-color: #25AAE2; column-width:600px;">';
+    html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;">';
     html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:4px;"></div>';
     html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button>';
-    html += '</td>';
+    html += '</th>';
 
     catCount = 255;
 
@@ -61,7 +61,7 @@ function generateHtmlTable(data) {
     });
 
 
-    html += '</tr>';
+    html += '</tr></thead>';
     html += '<tr><td valign="top" style="background-color: #156f96; width: 144px;">';
     html += '<div id="dvCategories" style="text-align:center;"><button type="button" id="btnCreateCategory" class="buttonColumn" style="width: 145px;">Create Category</button></div><br/>';
     html += '</td><td valign="top" style="background-color: #156f96; width: 144px;"><button type="button" id="btnUploadHEXFile" class="buttonColumn" style="width: 145px;">Upload Game</button><ul id="dvUnused" class="sortableColumn" style="margin-top:-5px; margin-bottom: 75px;"></ul></td>';
@@ -115,6 +115,7 @@ function generateHtmlTable(data) {
     html += '</ul></td></tr></table>';
 
     $('#csv-display').append(html);
+
     $("#sortable").sortable();
     $("#sortable").disableSelection();
 
@@ -128,6 +129,12 @@ function generateHtmlTable(data) {
             connectWith: ".sortableColumn",
         }).disableSelection();
 
+
+        $(columnName    ).sortable({
+            receive : function (event, ui) {
+                resizeColumnHeights();
+            },
+        });
     }
 
 }
@@ -231,63 +238,17 @@ function generateHtmlTable_FullList(data) {
 
 }
 
-// // Generate 
-
-// function generateHtmlCategories(data) {
-
-//   if (typeof (data[0]) === 'undefined') {
-
-//     return null;
-
-//   }
-
-//   catCount = 255;
-
-//   $.each(data, function (index, row) {
-
-//     // ignore header
-
-//     if (index == 0) { } else {
-
-//       if (catCount != row[0] && row[0] != 0) {
-
-//         // Does the cateogries collection already contain this category?
-
-//         var pos = cats.map(function (e) {
-//           return e.name;
-//         }).indexOf(row[1]);
-
-//         if (pos < 0) {
-
-//           catCount = row[0];
-//           $("#dvCategories").append(generateCatImage(row[1], row[2]));
-
-
-//           // Add category details to global collection..
-
-//           var cat = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5] };
-//           cats.push(cat);
-//         }
-
-//       }
-
-//     }
-
-//   });
-
-// }
-
 
 // Generate a category header for use in the table.  Fully contained <td> ..
 
 function generateCatHeader(catCount, catName, imgName, temporaryImage) {
 
     var html = '';
-    html += '<td valign="top">';
+    html += '<th valign="top">';
     html += '<div id="div' + catName + '" ondrop="drop(event)" ondragover="allowDrop(event)" style="padding-left:5px;">';
 
     if (temporaryImage) {
-        html += '&nbsp;dd<img class="game" id="catQuestion" draggable="true" ondragstart="drag(event)" src="catQuestion.png" />';
+        html += '<img class="game" id="catQuestion" draggable="true" ondragstart="drag(event)" src="catQuestion.png" />';
     }
     else {
         html += generateCatImage(catName, imgName);
@@ -299,7 +260,7 @@ function generateCatHeader(catCount, catName, imgName, temporaryImage) {
     html += '&nbsp;<img size=16px src="ArrowRight.png" onclick="moveRight(this.parentNode.parentNode.cellIndex);">';
     html += '&nbsp;<img size=16px src="ArrowRightMost.png" onclick="moveRightMost(this.parentNode.parentNode.cellIndex);">';
     html += '&nbsp;&nbsp;&nbsp;<img size=16px src="Delete.png" onclick="deleteColumn(this.parentNode.parentNode,' + catCount + ');">';
-    html += '</div></td>';
+    html += '</div></th>';
 
     return html;
 

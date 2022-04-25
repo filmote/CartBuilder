@@ -1,75 +1,90 @@
-
-  body {
-    background-color: #25AAE2;
-  }
-
-  table {
-    padding: 0px 0px 0px 0px;
-    border: none;
-  }
-
-  table, tr, td {
-    border: none;
+body {
+  background-color: #25AAE2;
 }
 
+table {
+  padding: 0px 0px 0px 0px;
+  border: none;
+}
 
-  /*  Define the background color for all the ODD table columns  */
-  .AltTable tr td:nth-child(odd){ 
-      background: #dae5f8;
-  }
-  /*  Define the background color for all the EVEN table columns  */
-  .AltTable tr td:nth-child(even){
-      background: #e9eff9;
-  }
+table, tr, td {
+  border: none;
+  position: relative;
 
+}
 
-  li {
-    position: relative;
-    display: list-item;
-    filter: invert(0%);
-    margin: 4px 4px 12px 4px;
-    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, .15));
-    list-style: none;
-  }
+thead {
+  position: sticky;
+  top: 0;
+  /* Don't forget this, required for the stickiness */
+  border: none;
+  z-index: 100;
+}
 
-  .game {
-    height: 64px;
-    width: 128px;
-    position: relative;
-    display: list-item;
-    filter: invert(0%);
-    margin: 4px 4px 12px 4px;
-    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, .15));
-    list-style: none;
-  }
+.AltTable tr th:nth-child(odd) {
+  background: #dae5f8;
+}
 
-  .sortableColumn {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 0px;
-    padding-right: 3px;
-    border: 0px;
-    width: 142px;
-    list-style-type: none;
-  }
+.AltTable tr th:nth-child(even) {
+  background: #e9eff9;
+}
 
-  .sortableColHeader {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 0px;
-    padding-right: 3px;
-    border: 0px;
-    list-style-type: none;
-  }
+.AltTable tr td:nth-child(odd) {
+  background: #dae5f8;
+}
 
-  .buttonColumn {    
-    background-color: #25AAE2;
-    border: 0px;
-  }
+.AltTable tr td:nth-child(even) {
+  background: #e9eff9;
+}
 
-  .buttonHeader {    
-    width: 138px; 
-    height: 25px; 
-    background-color: #156f96;
-    border: 0px;
-  }
+li {
+  position: relative;
+  display: list-item;
+  filter: invert(0%);
+  margin: 4px 4px 12px 4px;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, .15));
+  list-style: none;
+}
+
+.game {
+  height: 64px;
+  width: 128px;
+  position: relative;
+  display: list-item;
+  filter: invert(0%);
+  margin: 4px 4px 12px 4px;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, .15));
+  list-style: none;
+}
+
+.sortableColumn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 3px;
+  border: 0px;
+  width: 142px;
+  height: 4000px;
+  list-style-type: none;
+}
+
+.sortableColHeader {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 3px;
+  border: 0px;
+  list-style-type: none;
+}
+
+.buttonColumn {
+  background-color: #25AAE2;
+  border: 0px;
+}
+
+.buttonHeader {
+  width: 138px;
+  height: 25px;
+  background-color: #156f96;
+  border: 0px;
+}

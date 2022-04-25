@@ -1,4 +1,4 @@
-// V1.04
+// V1.05
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -504,6 +504,8 @@ $(document).ready(function () {
                         $("#btnUploadFile").on("click", function ()         { uploadDialog.dialog("open"); });
                         $("#btnUploadHEXFile").on("click", function ()      { uploadHEXDialog.dialog("open"); });
 
+                        resizeColumnHeights();
+
                     }
 
                 });
@@ -515,11 +517,13 @@ $(document).ready(function () {
                 $("#btnUploadFile").on("click", function ()         { uploadDialog.dialog("open"); });
                 $("#btnUploadHEXFile").on("click", function ()      { uploadHEXDialog.dialog("open"); });
 
+                resizeColumnHeights();
+
             }
 
             $('#btnGetData').click(function () {
 
-                var colCount = $("#tab").find("tr:first td").length;
+                var colCount = $("#tab").find("tr:first th").length;
 
                 if (allHeadersOK(colCount)) {
 
@@ -535,15 +539,17 @@ $(document).ready(function () {
 
                 catCount++;
 
-                $('#cartForm').find('tr').each(function () {
+                $('#cartForm').find('thead tr').each(function () {
 
                     var trow = $(this);
-                    if (trow.index() === 0) {
-                        trow.append(generateCatHeader(catCount, "catQuestion", "catQuestion.png", true));
-                    }
-                    else {
-                        trow.append('<td valign="top"><ul id="col' + catCount + '" class="sortableColumn"></ul></td>');
-                    }
+                    trow.append(generateCatHeader(catCount, "catQuestion", "catQuestion.png", true));
+
+                });
+                
+                $('#cartForm').find('tbody tr').each(function () {
+
+                    var trow = $(this);
+                    trow.append('<td valign="top"><ul id="col' + catCount + '" class="sortableColumn"></ul></td>');
 
                 });
 
@@ -553,15 +559,21 @@ $(document).ready(function () {
                 $("#col" + catCount).sortable({
                     connectWith: ".sortableColumn",
                 }).disableSelection();
+        
+                $("#col" + catCount).sortable({
+                    receive : function (event, ui) {
+                        resizeColumnHeights();
+                    },
+                });
 
-                var colCount = $("#tab").find("tr:first td").length;
+                var colCount = $("#tab").find("tr:first th").length;
                 jQuery.moveColumn($('#tab'), colCount - 1, 2);
 
             });
 
             $('#btnGetBin').click(function () {
 
-                var colCount = $("#tab").find("tr:first td").length;
+                var colCount = $("#tab").find("tr:first th").length;
 
 
                 if (allHeadersOK(colCount)) {
@@ -576,6 +588,7 @@ $(document).ready(function () {
                 }
 
             });
+
 
         }
 

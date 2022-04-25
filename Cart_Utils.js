@@ -1,4 +1,4 @@
-// V1.04
+// V1.05
 
 // Do all columns have a valid category image?
 
@@ -9,7 +9,7 @@ function allHeadersOK(colCount) {
 
     for (var i = 0; i < colCount - 2; i++) {
 
-        var img = $("#tab").find("tr:first td:eq(" + (i + 2) + ") img:first");
+        var img = $("#tab").find("tr:first th:eq(" + (i + 2) + ") img:first");
 
         var pos = cats.map(function (e) {
             return e.name;
@@ -106,7 +106,7 @@ function createCSV(colCount) {
 
     for (var i = 0; i < colCount - 2; i++) {
 
-        var img = $("#tab").find("tr:first td:eq(" + (i + 2) + ") img:first");
+        var img = $("#tab").find("tr:first th:eq(" + (i + 2) + ") img:first");
 
         var pos = cats.map(function (e) {
             return e.name;
@@ -151,5 +151,42 @@ function createCSV(colCount) {
     }
 
     return output;
+
+}
+
+function resizeColumnHeights() {
+
+    var maxHeight = 0;
+    var colCount = $("#tab").find("tr:first th").length;
+
+    for (var i = 0; i < colCount; i++) {
+
+        var numberOfImages = $("#tab").find("tr:last td:eq(" + i + ") img").length;
+
+        if (numberOfImages * 76 > maxHeight) {
+            maxHeight = numberOfImages * 76;
+        }
+
+    }
+
+    for (var i = 0; i < colCount; i++) {
+
+        switch (i) {
+
+            case 0:
+                $("#dvCategories").height(maxHeight) - 80;
+                break;
+
+            case 1:
+                $("#dvUnused").height(maxHeight) - 80;
+                break;
+
+            default:
+                $("#col" + (i - 1)).height(maxHeight) - 80;
+                break;
+
+        }
+
+    }
 
 }

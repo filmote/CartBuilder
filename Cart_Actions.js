@@ -1,4 +1,4 @@
-// V1.04
+// V1.05
 
 // Delete a column and move all the games to the 'unsued' column ..
 
@@ -23,7 +23,7 @@ jQuery.moveColumn = function (table, oldPos, newPos) {
     var rows = jQuery('tr', table);
     var cols;
 
-    if (newPos < $("#tab").find("tr:first td").length) {
+    if (newPos < $("#tab").find("tr:first th").length) {
 
         rows.each(function () {
             cols = jQuery(this).children('th, td');
@@ -62,7 +62,7 @@ function moveLeftMost(index) {
 // Move a column right (unless its the rightmost column) ..
 
 function moveRight(index) {
-    var colCount = $("#tab").find("tr:first td").length;
+    var colCount = $("#tab").find("tr:first th").length;
     if (index == colCount - 1) return;
     jQuery.moveColumn($('#tab'), index, index + 2);
 }
@@ -71,7 +71,7 @@ function moveRight(index) {
 // Move a column to the right most position (unless its the rightmost column) ..
 
 function moveRightMost(index) {
-    var colCount = $("#tab").find("tr:first td").length;
+    var colCount = $("#tab").find("tr:first th").length;
     if (index == colCount - 1) return;
     jQuery.moveColumn($('#tab'), index, colCount);
 }
