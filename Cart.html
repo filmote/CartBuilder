@@ -17,6 +17,44 @@
 
 <body>
 
+  <div id="dlgWhatNext" title="How to upload your BIN file" style="font-size: 13px;">
+    <p>In a few seconds time, a BIN file will automatically download. This needs to be flashed to your Arduboy using the following steps:</p>
+    <br />
+    <p><b style="font-size: 16px;">Installing Dependencies</b><br /><br />
+      <b>&bull;</b>&nbsp;&nbsp;Download and install Python 3 from <a target="_new"
+        href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br />
+      &nbsp;&nbsp;&nbsp;(for Windows, make sure the option 'Add python.exe to path' is checked on install
+      options)<br /><br />
+      <b>&bull;</b>&nbsp;&nbsp;Install PySerial.&nbsp;&nbsp;For Windows, run 'python -m pip install pyserial' from
+      command line.
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For
+      OSX run 'easy_install pyserial' from a terminal window.<br /><br />
+      <b>&bull;</b>&nbsp;&nbsp;Install Pillow.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Windows, run 'python -m pip
+      install pillow' from command
+      line.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For
+      OSX run 'easy_install pillow' from a terminal window.<br />
+    </p>
+    <br />
+    <p><b style="font-size: 16px;">Download Mr.Blinky's Python Utilities</b><br /><br />Download the the Python
+      Utilities from the GitHub repo, <a
+        href="https://github.com/MrBlinky/Arduboy-Python-Utilities/archive/refs/heads/master.zip">here</a>. This is a
+      zip file and can be expanded into a convenient directory.
+    </p>
+    <br />
+    <p><b style="font-size: 16px;">Flash the BIN file to the Arduboy</b><br /><br />
+      Open a command line and navigate to the Python Utilities directory that was created in the previous step. Ensure
+      your Arduboy is connected and powered on. Execute the command using the template below - you will need to
+      substitute the correct path and file name.
+<pre>
+python flashcart-writer.py {path to bin file}/flashcart-image.bin
+</pre>
+
+    </p>
+    You will see the flashing progress in the command window. Once successfully complete, enjoy your new cart!
+    </p>
+    <br/><br/>
+  </div>
+
   <div id="dlgCatergory" title="Create new Category">
     <p class="validateTips">Please enter a category name:</p>
     <form name="frmCategoryForm" id="frmCategoryForm" action="Cart_CreateCSV.php" method="post">
@@ -59,23 +97,29 @@
         <table>
           <tr>
             <td><label for="hexName">Hex File</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td><input type="file" name="hexName" id="hexName" value="" class="text ui-widget-content ui-corner-all" /></td>
+            <td><input type="file" name="hexName" id="hexName" value="" class="text ui-widget-content ui-corner-all" />
+            </td>
           </tr>
           <tr>
             <td><label for="graphicName">Graphic File</label></td>
-            <td><input type="file" name="graphicName" id="graphicName" value="" class="text ui-widget-content ui-corner-all" /></td>
+            <td><input type="file" name="graphicName" id="graphicName" value=""
+                class="text ui-widget-content ui-corner-all" /></td>
           </tr>
           <tr>
-            <td><div><br /><b>Optional:</b></div></td>
+            <td>
+              <div><br /><b>Optional:</b></div>
+            </td>
             <td></td>
           </tr>
           <tr>
             <td><label for="dataName">Data File</label></td>
-            <td><input type="file" name="dataName" id="dataName" value="" class="text ui-widget-content ui-corner-all" /></td>
+            <td><input type="file" name="dataName" id="dataName" value=""
+                class="text ui-widget-content ui-corner-all" /></td>
           </tr>
           <tr>
             <td><label for="saveName">Save File</label></td>
-            <td><input type="file" name="saveName" id="saveName" value="" class="text ui-widget-content ui-corner-all" /></td>
+            <td><input type="file" name="saveName" id="saveName" value=""
+                class="text ui-widget-content ui-corner-all" /></td>
           </tr>
         </table>
 

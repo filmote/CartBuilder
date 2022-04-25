@@ -3,6 +3,7 @@ var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
 var errorDialog;
+var whatNext;
 
 
 // -------------------------------------------------------------------------------------------
@@ -431,6 +432,17 @@ $(document).ready(function () {
 
 
     // -------------------------------------------------------------------------------------------
+    //  What Next Dialogue
+
+    whatNext = $( "#dlgWhatNext" ).dialog({
+        autoOpen: false,
+        modal: true,
+        height: "auto",
+        width: "665px"
+    });
+
+    
+    // -------------------------------------------------------------------------------------------
     // Read the cart file and create the table ..
 
     var fileName = "./flashcart-index.csv";
@@ -553,6 +565,8 @@ $(document).ready(function () {
 
 
                 if (allHeadersOK(colCount)) {
+
+                    whatNext.dialog("open");
 
                     $('#output').val(createCSV(colCount));
                     $('#mode').val('bin');
