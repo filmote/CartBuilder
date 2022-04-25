@@ -1,4 +1,4 @@
-// V1.03
+// V1.04
 
 // Do all columns have a valid category image?
 
