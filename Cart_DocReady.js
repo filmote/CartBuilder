@@ -542,7 +542,7 @@ $(document).ready(function () {
                 $('#cartForm').find('thead tr').each(function () {
 
                     var trow = $(this);
-                    trow.append(generateCatHeader(catCount, "catQuestion", "catQuestion.png", true));
+                    trow.append(generateCatHeader(catCount, "catQuestion", "icons/catQuestion.png", true));
 
                 });
                 

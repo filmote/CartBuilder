@@ -9,10 +9,14 @@ function deleteColumn(cell, columnID) {
     var img = cell.firstChild.firstChild;
 
     $('#col' + columnID).children().appendTo("#dvUnused");
-    dvCategories.append(img);
+    if (img.currentSrc.indexOf('catQuestion.png') == -1) {
+        dvCategories.append(img);
+    }
     $('#tab').find('tr').each(function () {
         this.removeChild(this.cells[index]);
     });
+
+    resizeColumnHeights();
 
 }
 

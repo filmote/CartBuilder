@@ -10,10 +10,10 @@ function generateHtmlTable(data) {
 
     }
 
-    var html = '<table id=tab class="AltTable"><thead><tr><th valign="top" style="background-color: #25AAE2; column-width:600px;">';
+    var html = '<table id=tab class="AltTable"><thead><tr><th valign="top" style="background-color: #25AAE2; column-width:600px;"><div style="height:6px;"></div>';
     html += '<button type="button" id="btnGetData" class="buttonHeader">Download CSV</button><div style="height:4px;"></div>';
     html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button>';
-    html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;">';
+    html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;"><div style="height:6px;"></div>';
     html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:4px;"></div>';
     html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button>';
     html += '</th>';
@@ -248,18 +248,18 @@ function generateCatHeader(catCount, catName, imgName, temporaryImage) {
     html += '<div id="div' + catName + '" ondrop="drop(event)" ondragover="allowDrop(event)" style="padding-left:5px;">';
 
     if (temporaryImage) {
-        html += '<img class="game" id="catQuestion" draggable="true" ondragstart="drag(event)" src="catQuestion.png" />';
+        html += '<img class="game" id="catQuestion" draggable="true" ondragstart="drag(event)" src="icons/catQuestion.png" />';
     }
     else {
         html += generateCatImage(catName, imgName);
     }
 
     html += '</div>';
-    html += '<div>&nbsp;&nbsp;<img size=16px src="ArrowLeftMost.png" onclick="moveLeftMost(this.parentNode.parentNode.cellIndex);">';
-    html += '&nbsp;<img size=16px src="ArrowLeft.png" onclick="moveLeft(this.parentNode.parentNode.cellIndex);">';
-    html += '&nbsp;<img size=16px src="ArrowRight.png" onclick="moveRight(this.parentNode.parentNode.cellIndex);">';
-    html += '&nbsp;<img size=16px src="ArrowRightMost.png" onclick="moveRightMost(this.parentNode.parentNode.cellIndex);">';
-    html += '&nbsp;&nbsp;&nbsp;<img size=16px src="Delete.png" onclick="deleteColumn(this.parentNode.parentNode,' + catCount + ');">';
+    html += '<div>&nbsp;&nbsp;<img size=16px src="icons/ArrowLeftMost.png" onclick="moveLeftMost(this.parentNode.parentNode.cellIndex);">';
+    html += '&nbsp;<img size=16px src="icons/ArrowLeft.png" onclick="moveLeft(this.parentNode.parentNode.cellIndex);">';
+    html += '&nbsp;<img size=16px src="icons/ArrowRight.png" onclick="moveRight(this.parentNode.parentNode.cellIndex);">';
+    html += '&nbsp;<img size=16px src="icons/ArrowRightMost.png" onclick="moveRightMost(this.parentNode.parentNode.cellIndex);">';
+    html += '&nbsp;&nbsp;&nbsp;<img size=16px src="icons/Delete.png" onclick="deleteColumn(this.parentNode.parentNode,' + catCount + ');">';
     html += '</div></th>';
 
     return html;
