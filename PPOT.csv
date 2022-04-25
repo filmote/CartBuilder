@@ -25,7 +25,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 4;LeWord;Puzzle/LeWord.png;Puzzle/LeWord.hex;Puzzle/LeWord.bin;;;;;
 4;Logix;Puzzle/Logix.png;Puzzle/Logix.hex;;;;;;
 4;Pipes;Puzzle/Pipes.png;Puzzle/Pipes.hex;;;;;;
-4;PiCross;Puzzle/PiCross.png;Puzzle/PiCross.hex;;;;;;
+4;PiCross;Puzzle/Picross.png;Puzzle/Picross.hex;;;;;;
 5;Racing;category-screens/ppot/Racing.png;;;;;;;
 5;Road Trip;Racing/RoadTrip.png;Racing/RoadTrip.hex;;;;;;
 6;Tabletop;category-screens/ppot/Tabletop.png;;;;;;;
