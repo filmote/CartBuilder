@@ -28,7 +28,7 @@
     display: list-item;
     filter: invert(0%);
     margin: 4px 4px 12px 4px;
-    filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, .15));
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, .15));
     list-style: none;
   }
 
@@ -39,18 +39,25 @@
     display: list-item;
     filter: invert(0%);
     margin: 4px 4px 12px 4px;
-    filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, .15));
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, .15));
     list-style: none;
   }
 
   .sortableColumn {
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 3px;
     border: 0px;
+    width: 142px;
     list-style-type: none;
   }
 
   .sortableColHeader {
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 3px;
     border: 0px;
     list-style-type: none;
   }
@@ -61,7 +68,7 @@
   }
 
   .buttonHeader {    
-    width: 135px; 
+    width: 138px; 
     height: 25px; 
     background-color: #156f96;
     border: 0px;

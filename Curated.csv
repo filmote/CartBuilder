@@ -8,6 +8,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 1;Karatega;Action/Karatega.png;Action/Karatega.hex;;;;;;
 1;FestiveFight;Misc/FestiveFight.png;Misc/FestiveFight.hex;;;;;;
 1;To;Action/To.png;Action/To.hex;;;;;;
+1;LodeRunner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;;;;
 2;Adventure;category-screens/Adventure.png;;;;;;;
 2;Catacombsofthedamned;Action/Cotd.png;Action/Cotd.hex;;;;;;
 2;virus;arg/virus.png;arg/virus.hex;;;;;;
@@ -16,6 +17,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 2;ArduIndy;Action/ArduIndy.png;Action/ArduIndy.hex;;;;;;
 2;Raynetherogue;Action/Raynetherogue.png;Action/Raynetherogue.hex;;;;;;
 2;ZooatMidnight;Action/zooatmidnight.png;Action/zooatmidnight.hex;;;;;;
+2;CyberHack;Arcade/CyberHack.png;Puzzle/CyberHack.hex;;;;;;
 3;Arcade;category-screens/Arcade.png;;;;;;;
 3;FirePanic;Action/FirePanic.png;Action/FirePanic.hex;;;;;;
 3;Kong;Arcade/Kong.png;Arcade/Kong.hex;;;;;;

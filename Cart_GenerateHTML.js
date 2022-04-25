@@ -14,7 +14,8 @@ function generateHtmlTable(data) {
     html += '<button type="button" id="btnGetData" class="buttonHeader">Download CSV</button><div style="height:4px;"></div>';
     html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button>';
     html += '</td><td valign="top" style="background-color: #25AAE2; column-width:600px;">';
-    html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button>';
+    html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:4px;"></div>';
+    html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button>';
     html += '</td>';
 
     catCount = 255;
@@ -61,9 +62,9 @@ function generateHtmlTable(data) {
 
 
     html += '</tr>';
-    html += '<tr><td valign="top" style="background-color: #156f96; width: 145px;">';
+    html += '<tr><td valign="top" style="background-color: #156f96; width: 144px;">';
     html += '<div id="dvCategories" style="text-align:center;"><button type="button" id="btnCreateCategory" class="buttonColumn" style="width: 145px;">Create Category</button></div><br/>';
-    html += '</td><td valign="top" style="background-color: #156f96; width: 145px;"><button type="button" id="btnUploadHEXFile" class="buttonColumn" style="width: 154px;">Upload Game</button><ul id="dvUnused" class="sortableColumn" style="margin-top:-5px; margin-bottom: 75px;"></ul></td>';
+    html += '</td><td valign="top" style="background-color: #156f96; width: 144px;"><button type="button" id="btnUploadHEXFile" class="buttonColumn" style="width: 145px;">Upload Game</button><ul id="dvUnused" class="sortableColumn" style="margin-top:-5px; margin-bottom: 75px;"></ul></td>';
 
 
     catCount = 255;
@@ -283,17 +284,17 @@ function generateCatHeader(catCount, catName, imgName, temporaryImage) {
 
     var html = '';
     html += '<td valign="top">';
-    html += '<div id="div' + catName + '" ondrop="drop(event)" ondragover="allowDrop(event)">';
+    html += '<div id="div' + catName + '" ondrop="drop(event)" ondragover="allowDrop(event)" style="padding-left:5px;">';
 
     if (temporaryImage) {
-        html += '<img class="game" id="catQuestion" draggable="true" ondragstart="drag(event)" src="catQuestion.png" />';
+        html += '&nbsp;dd<img class="game" id="catQuestion" draggable="true" ondragstart="drag(event)" src="catQuestion.png" />';
     }
     else {
         html += generateCatImage(catName, imgName);
     }
 
     html += '</div>';
-    html += '<div>&nbsp;<img size=16px src="ArrowLeftMost.png" onclick="moveLeftMost(this.parentNode.parentNode.cellIndex);">';
+    html += '<div>&nbsp;&nbsp;<img size=16px src="ArrowLeftMost.png" onclick="moveLeftMost(this.parentNode.parentNode.cellIndex);">';
     html += '&nbsp;<img size=16px src="ArrowLeft.png" onclick="moveLeft(this.parentNode.parentNode.cellIndex);">';
     html += '&nbsp;<img size=16px src="ArrowRight.png" onclick="moveRight(this.parentNode.parentNode.cellIndex);">';
     html += '&nbsp;<img size=16px src="ArrowRightMost.png" onclick="moveRightMost(this.parentNode.parentNode.cellIndex);">';

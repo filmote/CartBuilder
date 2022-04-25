@@ -19,6 +19,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
 1;Technomonkey;Arcade\Technomonkey.png;Arcade\Technomonkey.hex;;;5;RetrobitCoder
 1;Quadrastic;Action\Quadrastic.png;Action\Quadrastic.hex;;;0;dragula96
 1;snake3;Arcade\snake3.png;Arcade\snake3.hex;;;2;WojciechKo
+1;LodeRunner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;;;;
 2;Adventure;category-screens\Adventure.png;;;;;
 2;Catacombsofthedamned;Action\Cotd.png;Action\Cotd.hex;;;40;jhhoward
 2;virus;arg\virus.png;arg\virus.hex;;;24;TEAMarg
@@ -27,6 +28,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Likes;Developer
 2;ArduIndy;Action\ArduIndy.png;Action\ArduIndy.hex;;;8;JacosteCode
 2;Raynetherogue;Action\Raynetherogue.png;Action\Raynetherogue.hex;;;8;shdwwzrd
 2;ZooatMidnight;Action\zooatmidnight.png;Action\zooatmidnight.hex;;;5;Hundstrasse
+2;CyberHack;Arcade/CyberHack.png;Puzzle/CyberHack.hex;;;;;;
 3;Arcade;category-screens\Arcade.png;;;;;
 3;FirePanic;Action\FirePanic.png;Action\FirePanic.hex;;;25;PressPlayOnTape
 3;Kong;Arcade\Kong.png;Arcade\Kong.hex;;;24;PressPlayOnTape

@@ -148,10 +148,10 @@ $(document).ready(function () {
 
                         var url = String(window.location);
                         if (url.indexOf("?") != -1) {
-                            url = url.substring(0, url.indexOf("?")) + "?file=" + session_id + ".csv";
+                            url = url.substring(0, url.indexOf("?")) + "?file=temp/" + session_id + ".csv";
                         }
                         else {
-                            url = url + "?file=" + session_id + ".csv";
+                            url = url + "?file=temp/" + session_id + ".csv";
                         }
                         window.location.replace(url);
 
@@ -439,7 +439,7 @@ $(document).ready(function () {
     let searchParams = new URLSearchParams(window.location.search);
 
     if (searchParams.has('file')) {
-        fileName = "temp/" + searchParams.get('file');
+        fileName = searchParams.get('file');
     }
   
     if (searchParams.has('list')) {
