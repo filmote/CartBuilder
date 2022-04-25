@@ -25,22 +25,22 @@
 
     // Check to see if the files are of the right type ..
 
-    if ($hexFileType != "application/octet-stream" || $hexFileSize > 85000 || !str_ends_with(strtolower($hexFileName), ".hex")) {
+    if ($hexFileType != "application/octet-stream" || $hexFileSize > 85000 || strtolower(substr($hexFileName, -4)) != ".hex") {
         echo "ERR: Invalid HEX file.";
         exit(0);
     }
 
-    if ($graphicFileType != "image/png" || $graphicFileSize > 10000 || !str_ends_with(strtolower($graphicFileName), ".png")) {
+    if ($graphicFileType != "image/png" || $graphicFileSize > 10000 || strtolower(substr($graphicFileName, -4)) != ".png") {
         echo "ERR: Invalid PNG file.";
         exit(0);
     }
 
-    if ($dataFileName != "" && ($dataFileSize > 100000 || !str_ends_with(strtolower($dataFileName), ".bin"))) {
+    if ($dataFileName != "" && ($dataFileSize > 100000 || strtolower(substr($dataFileName, -4)) != ".bin")) {
         echo "ERR: Invalid data file.";
         exit(0);
     }
 
-    if ($saveFileName != "" && ($saveFileSize > 100000 || !str_ends_with(strtolower($saveFileName), ".bin"))) {
+    if ($saveFileName != "" && ($saveFileSize > 100000 || strtolower(substr($saveFileName, -4)) != ".bin")) {
         echo "ERR: Invalid save file.";
         exit(0);
     }
