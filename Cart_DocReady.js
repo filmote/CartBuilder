@@ -4,6 +4,7 @@ var uploadDialog;
 var uploadHEXDialog;
 var errorDialog;
 var whatNext;
+var infoPanel;
 
 
 // -------------------------------------------------------------------------------------------
@@ -356,7 +357,7 @@ $(document).ready(function () {
 
                         var newIndex = items.length + 1;
                         var baseFileName = data.substring(9, 99999);
-                        html = '<li id="li' + newIndex + '"><img class="game" src="temp/' + baseFileName + '.png" /></li>';
+                        html = '<li id="li' + newIndex + '"><img class="game" onclick="openInfo();" src="temp/' + baseFileName + '.png" /></li>';
                         $('#dvUnused').append(html);
 
                         // Add game details to global collection..
@@ -461,6 +462,22 @@ $(document).ready(function () {
 
 
     // -------------------------------------------------------------------------------------------
+    //  Info Panel
+
+    infoPanel = $( "#dlgInfoPanel" ).dialog({
+        autoOpen: false,
+        modal: true,
+        height: "auto",
+        width: 380,
+        buttons: {
+        Ok: function() {
+            $( this ).dialog( "close" );
+        }
+        }
+    });
+    
+
+  // -------------------------------------------------------------------------------------------
     // Read the cart file and create the table ..
 
     var fileName = "./flashcart-index.csv";
@@ -580,13 +597,13 @@ $(document).ready(function () {
 
                 $("#col" + catCount).sortable({
                     connectWith: ".sortableColumn",
-                }).disableSelection();
-
-                $("#col" + catCount).sortable({
                     receive : function (event, ui) {
                         resizeColumnHeights();
                     },
-                });
+                    update: function(event, ui) {
+                        suppressOpenInfoDlg = true;
+                    }
+                }).disableSelection();;
 
                 var colCount = $("#tab").find("tr:first th").length;
                 jQuery.moveColumn($('#tab'), colCount - 1, 2);
@@ -610,7 +627,6 @@ $(document).ready(function () {
                 }
 
             });
-
 
         }
 

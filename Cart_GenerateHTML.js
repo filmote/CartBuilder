@@ -97,7 +97,7 @@ function generateHtmlTable(data) {
 
                 if (catCount != 255 && catCount != 0) {
 
-                    html += '<li id="li' + itemIndex + '"><img class="game" src="' + row[2] + '" /></li>';
+                    html += '<li id="li' + itemIndex + '"><img class="game" onclick="openInfo();" src="' + row[2] + '" /></li>';
                     itemIndex++;
 
 
@@ -129,14 +129,14 @@ function generateHtmlTable(data) {
         var columnName = "#col" + i;
         $(columnName).sortable({
             connectWith: ".sortableColumn",
-        }).disableSelection();
-
-
-        $(columnName    ).sortable({
             receive : function (event, ui) {
                 resizeColumnHeights();
             },
+            update: function(event, ui) {
+                suppressOpenInfoDlg = true;
+å            }
         });
+
     }
 
 }
@@ -219,7 +219,7 @@ function generateHtmlTable_FullList(data) {
                     if (pos < 0) {
 
                         var newIndex = items.length + 1;
-                        html = '<li id="li' + newIndex + '"><img class="game" src="' + row[2] + '" /></li>';
+                        html = '<li id="li' + newIndex + '"><img class="game" onclick="openInfo();" src="' + row[2] + '" /></li>';
                         $('#dvUnused').append(html);
 
 

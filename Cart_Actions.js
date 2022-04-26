@@ -2,6 +2,8 @@
 
 // Delete a column and move all the games to the 'unsued' column ..
 
+var suppressOpenInfoDlg = false;
+
 function deleteColumn(cell, columnID) {
 
     var index = cell.cellIndex;
@@ -135,5 +137,15 @@ function drop(ev) {
         }
 
     }
+
+}
+
+function openInfo() {
+    
+    if (suppressOpenInfoDlg == false) {
+        infoPanel.dialog("open");
+    }
+
+    suppressOpenInfoDlg = false;
 
 }
