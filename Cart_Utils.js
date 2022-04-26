@@ -18,7 +18,7 @@ function allHeadersOK(colCount) {
         if (pos == -1) {
 
             $('#errorMessage').text("You need to add a category image to every column!");
-            errorDialog.dialog("open");            
+            errorDialog.dialog("open");
             return false;
 
         }
@@ -38,7 +38,7 @@ function checkLength(tip, o, n, min, max) {
         o.addClass("ui-state-error");
         updateTips(tip, "Length of " + n + " must be between " + min + " and " + max + ".");
         return false;
-    } 
+    }
     else {
         return true;
     }
@@ -54,7 +54,7 @@ function checkRegexp(tip, o, regexp, n) {
         o.addClass("ui-state-error");
         updateTips(tip, n);
         return false;
-    } 
+    }
     else {
         return true;
     }
@@ -137,7 +137,9 @@ function createCSV(colCount) {
                 output += items[index - 1].screen; output += ";";
                 output += items[index - 1].hex; output += ";";
                 output += items[index - 1].data; output += ";";
-                output += items[index - 1].save; output += ";;;;<eol/>";
+                output += items[index - 1].save; output += ";";
+                output += items[index - 1].version; output += ";";
+                output += items[index - 1].developer; output += ";;<eol/>";
 
             }
 

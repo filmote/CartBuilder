@@ -95,7 +95,33 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
         <br />
         <table>
           <tr>
-            <td><label for="hexName">Hex File</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td colspan="2">
+              <div><b>Optional game info:</b></div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="gameTitle">Title</label></td>
+            <td><input type="text" name="gameTitle" id="gameTitle" value="" class="text ui-widget-content ui-corner-all" />
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <td><label for="versionNumber">Version</label></td>
+            <td><input type="text" name="versionNumber" id="versionNumber" value="" class="text ui-widget-content ui-corner-all" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="developerName">Developer</label></td>
+            <td><input type="text" name="developerName" id="developerName" value="" class="text ui-widget-content ui-corner-all" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div><br /><b>Mandatory files:</b></div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="hexName">Hex File</label></td>
             <td><input type="file" name="hexName" id="hexName" value="" class="text ui-widget-content ui-corner-all" />
             </td>
           </tr>
@@ -105,10 +131,9 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
                 class="text ui-widget-content ui-corner-all" /></td>
           </tr>
           <tr>
-            <td>
-              <div><br /><b>Optional:</b></div>
+            <td colspan="2">
+              <div><br /><b>Optional FX files:</b></div>
             </td>
-            <td></td>
           </tr>
           <tr>
             <td><label for="dataName">Data File</label></td>

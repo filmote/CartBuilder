@@ -90,7 +90,7 @@ $(document).ready(function () {
 
 
     // -------------------------------------------------------------------------------------------
-    //  CSV File Upload 
+    //  CSV File Upload
 
     $(function () {
         var form,
@@ -207,15 +207,18 @@ $(document).ready(function () {
 
 
     // -------------------------------------------------------------------------------------------
-    //  Hex File Upload 
+    //  Hex File Upload
 
     $(function () {
         var form,
+            name = $("#gameTitle"),
+            version = $("#versionNumber"),
+            developer = $("#developerName"),
             fileName = $("#hexName"),
             graphicName = $("#graphicName"),
             dataName = $("#dataName"),
             saveName = $("#saveName"),
-            allFields = $([]).add(fileName).add(graphicName),
+            allFields = $([]).add(name).add(fileName).add(graphicName).add(version).add(developer),
             tips = $(".validateTips");
 
         function uploadFile() {
@@ -224,6 +227,11 @@ $(document).ready(function () {
             var valid = true;
             allFields.removeClass("ui-state-error");
 
+            // Get optional game info
+
+            var $gameTitle = $('#gameTitle').val();
+            var $versionNumber = $('#versionNumber').val();
+            var $developerName = $('#developerName').val();
 
             // Hex file is mandatory and must be between < 85K, have no mime type and an extension of .hex ..
 
@@ -356,19 +364,24 @@ $(document).ready(function () {
                         var dataFile = "";
                         var saveFile = "";
 
-                        if (typeof $('#dataName')[0].files[0] !== 'undefined') { 
+                        if (typeof $('#dataName')[0].files[0] !== 'undefined') {
 
                             dataFile = baseFileName + "_1.bin";
 
                         }
 
-                        if (typeof $('#saveName')[0].files[0] !== 'undefined') { 
+                        if (typeof $('#saveName')[0].files[0] !== 'undefined') {
 
                             saveFile = baseFileName + "_2.bin";
 
                         }
 
-                        var item = { name: baseFileName, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile };
+                        if ($gameTitle == "") {
+
+                            $gameTitle = baseFileName;
+                        }
+
+                        var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName };
                         items.push(item);
 
                     }
@@ -446,19 +459,19 @@ $(document).ready(function () {
             }
     });
 
-    
+
     // -------------------------------------------------------------------------------------------
     // Read the cart file and create the table ..
 
     var fileName = "./flashcart-index.csv";
     fullList = "./flashcart-index.csv";
-    
+
     let searchParams = new URLSearchParams(window.location.search);
 
     if (searchParams.has('file')) {
         fileName = searchParams.get('file');
     }
-  
+
     if (searchParams.has('list')) {
         fullList = "./" + searchParams.get('list');
     }
@@ -488,15 +501,15 @@ $(document).ready(function () {
             generateHtmlTable(csvdata);
 
             if (typeof fullList !== "undefined" && fullList != "") {
-                    
+
                 $.ajax({
 
                     type: "GET",
                     url: fullList,
                     dataType: "text",
-            
+
                     success: function (response) {
-            
+
                         tabledata = response.replace(/\;/g, ",");
                         urldata = tabledata.replace(/\\/g, "/");
                         csvdata = $.csv.toArrays(urldata);
@@ -554,7 +567,7 @@ $(document).ready(function () {
                     trow.append(generateCatHeader(catCount, "catQuestion", "icons/catQuestion.png", true));
 
                 });
-                
+
                 $('#cartForm').find('tbody tr').each(function () {
 
                     var trow = $(this);
@@ -568,7 +581,7 @@ $(document).ready(function () {
                 $("#col" + catCount).sortable({
                     connectWith: ".sortableColumn",
                 }).disableSelection();
-        
+
                 $("#col" + catCount).sortable({
                     receive : function (event, ui) {
                         resizeColumnHeights();
