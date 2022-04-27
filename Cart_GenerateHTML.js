@@ -103,7 +103,7 @@ function generateHtmlTable(data) {
 
                     // Add game details to global collection..
 
-                    var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7] };
+                    var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8] };
                     items.push(item);
 
                 }
@@ -225,7 +225,7 @@ function generateHtmlTable_FullList(data) {
 
                         // Add game details to global collection..
 
-                        var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7] };
+                        var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8] };
                         items.push(item);
 
                     };

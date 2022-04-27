@@ -382,7 +382,7 @@ $(document).ready(function () {
                             $gameTitle = baseFileName;
                         }
 
-                        var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName };
+                        var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: "" };
                         items.push(item);
 
                     }
