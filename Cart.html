@@ -225,7 +225,7 @@ function doSearch() {
 
         var index = value.substring(2);
 
-        if (items[index - 1].name.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1) {
+        if (items[index - 1].name.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1 || items[index - 1].developer.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1) {
 
           matches.set(value, value);
 
