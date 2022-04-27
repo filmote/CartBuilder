@@ -147,6 +147,7 @@ function openInfo(itemIndex) {
         var item = items[itemIndex - 1];
 
         $('#infoImg').attr("src", item.screen);
+        $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + "&skin=BareFit");
         infoPanel.dialog("open");
     }
 

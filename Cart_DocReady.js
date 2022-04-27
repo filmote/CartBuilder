@@ -468,7 +468,7 @@ $(document).ready(function () {
         autoOpen: false,
         modal: true,
         height: "auto",
-        width: 380,
+        width: "auto",
         buttons: {
         Ok: function() {
             $( this ).dialog( "close" );
