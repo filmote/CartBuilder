@@ -146,6 +146,7 @@ function openInfo(itemIndex) {
 
         var item = items[itemIndex - 1];
 
+        if (item.name !="") $('#ui-id-3').text(item.name);
         $('#infoImg').attr("src", item.screen);
         $('#infoDeveloper').text(item.developer);
         $('#infoVersion').text(item.version);
