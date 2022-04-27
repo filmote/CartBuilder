@@ -31,13 +31,13 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 2;ZooatMidnight;Action\zooatmidnight.png;Action\zooatmidnight.hex;;;;Hundstrasse;;5
 2;CyberHack;Arcade/CyberHack.png;Arcade/CyberHack.hex;;;;;;
 3;Arcade;category-screens\Arcade.png;;;;;;;
-3;FirePanic;Action\FirePanic.png;Action\FirePanic.hex;;;;PressPlayOnTape;;25
-3;Kong;Arcade\Kong.png;Arcade\Kong.hex;;;;PressPlayOnTape;;24
-3;Kong2;Arcade\Kong2.png;Arcade\Kong2.hex;;;;PressPlayOnTape;;19
-3;Turtlebridge;Arcade\Turtlebridge.png;Arcade\Turtlebridge.hex;;;;PressPlayOnTape;;19
-3;SpaceCab;Arcade\SpaceCab.png;Arcade\SpaceCab.hex;;;;PressPlayOnTape;;12
-3;LionTamer;Arcade\LionTamer.png;Arcade\LionTamer.hex;;;;PressPlayOnTape;;
-3;OilPanic;Arcade\OilPanic.png;Arcade\OilPanic.hex;;;;PressPlayOnTape;;
+3;FirePanic;Action\FirePanic.png;Action\FirePanic.hex;;;Version 1.0;Press Play On Tape;A remake of the classic Game and Watch game 'Fire'. Save the residents of the burning tower by catching them in your safety net and bouncing them into the awaiting ambulance before rushing them to hospital.;25
+3;Kong;Arcade\Kong.png;Arcade\Kong.hex;;;;Press Play On Tape;;24
+3;Kong2;Arcade\Kong2.png;Arcade\Kong2.hex;;;;Press Play On Tape;;19
+3;Turtlebridge;Arcade\Turtlebridge.png;Arcade\Turtlebridge.hex;;;;Press Play On Tape;;19
+3;SpaceCab;Arcade\SpaceCab.png;Arcade\SpaceCab.hex;;;;Press Play On Tape;;12
+3;LionTamer;Arcade\LionTamer.png;Arcade\LionTamer.hex;;;;Press Play On Tape;;
+3;OilPanic;Arcade\OilPanic.png;Arcade\OilPanic.hex;;;;Press Play On Tape;;
 3;Rooftop;Action\rooftop.png;Action\rooftop.hex;;;;Prototype;;21
 3;BiriBiriBeat;Arcade\biribiribeat.png;Arcade\biribiribeat.hex;;;;shiyouganai;;12
 3;Backtothejungle;Arcade\Backtothejungle.png;Arcade\Backtothejungle.hex;;;;eried;;11
@@ -115,8 +115,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;1010;Puzzle\1010.png;Puzzle\1010.hex;;;;;;
 7;termtwirl;Puzzle\termtwirl.png;Puzzle\termtwirl.hex;;;;Corruptio;;
 8;Skill;category-screens\Skill.png;;;;;;;
-8;curse;Puzzle\curse.png;Puzzle\curse.hex;;;;PressPlayOnTape;;17
-8;Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;;PressPlayOnTape;;17
+8;curse;Puzzle\curse.png;Puzzle\curse.hex;;;;Press Play On Tape;;17
+8;Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;;Press Play On Tape;;17
 8;KnightMove;Puzzle\knightmove.png;Puzzle\knightmove.hex;;;;obono;;21
 8;Samegame;Arcade\Samegame.png;Arcade\Samegame.hex;;;;obono;;13
 8;stairssweep;Puzzle\stairssweep.png;Puzzle\stairssweep.hex;;;;obono;;
@@ -145,12 +145,12 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 9;reversi;Puzzle\reversi.png;Puzzle\reversi.hex;;;;obono;;15
 9;quarto;Puzzle\quarto.png;Puzzle\quarto.hex;;;;obono;;10
 9;littlerookchess;Demos\littlerookchess.png;Demos\littlerookchess.hex;;;;olikraus;;13
-9;Farkle;Puzzle\Farkle.png;Puzzle\Farkle.hex;;;;PressPlayOnTape;;11
+9;Farkle;Puzzle\Farkle.png;Puzzle\Farkle.hex;;;;Press Play On Tape;;11
 9;MicroCheckers;Puzzle\MicroCheckers.png;Puzzle\MicroCheckers.hex;;;;Jezzamon;;11
-9;GermanWhist;Puzzle\Whist.png;Puzzle\Whist.hex;;;;PressPlayOnTape;;7
-9;Cribbage;Puzzle\Cribbage.png;Puzzle\Cribbage.hex;;;;PressPlayOnTape;;6
+9;GermanWhist;Puzzle\Whist.png;Puzzle\Whist.hex;;;;Press Play On Tape;;7
+9;Cribbage;Puzzle\Cribbage.png;Puzzle\Cribbage.hex;;;;Press Play On Tape;;6
 9;Pocketothello;Puzzle\Pocketothello.png;Puzzle\Pocketothello.hex;;;;WangRenxin;;1
-9;Dominoes;Puzzle\Dominoes.png;Puzzle\Dominoes.hex;;;;PressPlayOnTape;;
+9;Dominoes;Puzzle\Dominoes.png;Puzzle\Dominoes.hex;;;;Press Play On Tape;;
 9;Yatzy;Puzzle\Yatzy.png;Puzzle\Yatzy.hex;;;;shdwwzrd;;
 9;Cripplemronion;Puzzle\Cripplemronion.png;Puzzle\Cripplemronion.hex;;;;fentonc;;3
 10;Racing;category-screens\Racing.png;;;;;;;
@@ -167,7 +167,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Arduventure;RPG\Arduventure.png;RPG\Arduventure.hex;;;;TEAMarg;;34
 11;starhonor;RPG\starhonor.png;RPG\starhonor.hex;;;;Wenceslao;;20
 11;tacklebox;Arcade\tacklebox.png;Arcade\tacklebox.hex;;;;city41;;19
-11;MiniRogue;RPG\MiniRogue.png;RPG\MiniRogue.hex;;;;PressPlayOnTape;;16
+11;MiniRogue;RPG\MiniRogue.png;RPG\MiniRogue.hex;;;;Press Play On Tape;;16
 11;underthetower;RPG\underthetower.png;RPG\underthetower.hex;;;;wuuff;;14
 11;Arduminer;RPG\Arduminer.png;RPG\Arduminer.hex;;;;bergasms;;13
 11;HelloCommander;RPG\HelloCommander.png;RPG\HelloCommander.hex;;;;Fmanga;;13
@@ -178,10 +178,10 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;tqft;RPG\tqft.png;RPG\tqft.hex;;;;;;
 12;Shooter;category-screens\Shooter.png;;;;;;;
 12;microtank;Arcade\microtank.png;Arcade\microtank.hex;;;;hartmann1301;;22
-12;1nvader;Shooter\1nvader.png;Shooter\1nvader.hex;;;;PressPlayOnTape;;22
-12;1944;Arcade\1944.png;Arcade\1944.hex;;;;PressPlayOnTape;;20
+12;1nvader;Shooter\1nvader.png;Shooter\1nvader.hex;;;;Press Play On Tape;;22
+12;1944;Arcade\1944.png;Arcade\1944.hex;;;;Press Play On Tape;;20
 12;Sirene;arg\Sirene.png;arg\Sirene.hex;;;;TEAMarg;;
-12;Junofirst;Action\Junofirst.png;Action\Junofirst.hex;;;;PressPlayOnTape;;19
+12;Junofirst;Action\Junofirst.png;Action\Junofirst.hex;;;;Press Play On Tape;;19
 12;Evade;Arcade\Evade.png;Arcade\Evade.hex;;;;ModusCreate;;14
 12;Evade2;Arcade\Evade2.png;Arcade\Evade2.hex;;;;ModusCreate;;13
 12;ardubullets;Shooter\ardubullets.png;Shooter\ardubullets.hex;;;;obono;;19

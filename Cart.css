@@ -102,3 +102,19 @@ li {
   width: 256px; 
   height:128px;
 }
+
+.infoDeveloper {
+  color: #156f96;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.infoVersion {
+  padding-top: 12px;
+  font-size: 12px;
+}
+
+.infoInfo {
+  padding-top: 12px;
+  font-size: 12px;
+}
