@@ -606,7 +606,7 @@ $(document).ready(function () {
                 }).disableSelection();;
 
                 var colCount = $("#tab").find("tr:first th").length;
-                jQuery.moveColumn($('#tab'), colCount - 1, 2);
+                // jQuery.moveColumn($('#tab'), colCount - 1, 2);
 
             });
 

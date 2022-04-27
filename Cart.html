@@ -206,6 +206,13 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
 <script src="Cart_Utils.js?V=V1.06"></script>
 <script>
 
+function clearSearch() {
+
+  $('#search').val("");
+  $('#dvHidden').children().appendTo("#dvUnused");
+
+}
+
 function doSearch() {
 
   if ($('#search').val() == "") {
@@ -242,7 +249,7 @@ function doSearch() {
 
   }
 
-  resizeColumnHights();
+  resizeColumnHeights();
 
 }
 </script>
