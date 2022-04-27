@@ -94,3 +94,11 @@ li {
   background-color: #156f96;
   border: 0px;
 }
+
+.infoImg {
+  border: 1px solid rgb(198, 198, 198);
+  filter: invert(0%);
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, .15));
+  width: 256px; 
+  height:128px;
+}

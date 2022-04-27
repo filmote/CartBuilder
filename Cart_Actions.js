@@ -140,9 +140,13 @@ function drop(ev) {
 
 }
 
-function openInfo() {
-    
+function openInfo(itemIndex) {
+
     if (suppressOpenInfoDlg == false) {
+
+        var item = items[itemIndex - 1];
+
+        $('#infoImg').attr("src", item.screen);
         infoPanel.dialog("open");
     }
 

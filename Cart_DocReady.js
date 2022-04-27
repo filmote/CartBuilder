@@ -357,7 +357,7 @@ $(document).ready(function () {
 
                         var newIndex = items.length + 1;
                         var baseFileName = data.substring(9, 99999);
-                        html = '<li id="li' + newIndex + '"><img class="game" onclick="openInfo();" src="temp/' + baseFileName + '.png" /></li>';
+                        html = '<li id="li' + newIndex + '"><img class="game" onclick="openInfo(' + newIndex + ');" src="temp/' + baseFileName + '.png" /></li>';
                         $('#dvUnused').append(html);
 
                         // Add game details to global collection..
