@@ -150,8 +150,11 @@ function openInfo(itemIndex) {
         $('#infoDeveloper').text(item.developer);
         $('#infoVersion').text(item.version);
         $('#infoInfo').html(item.info);
-        $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + "&skin=BareFit");
+        var data = item.data;
+        if  (data != "") data = "&data=../" + data;
+        $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
         infoPanel.dialog("open");
+        infoPreview.focus();
     }
 
     suppressOpenInfoDlg = false;
