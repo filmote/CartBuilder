@@ -186,7 +186,9 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
     <input type="hidden" id="mode" name="mode" />
 
   </form>
+<div id="dvHidden" name="dvHidden" style="visibility: hidden;" >
 
+</div>
 </body>
 
 </html>
@@ -202,3 +204,46 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
 <script src="Cart_Actions.js?V=V1.06"></script>
 <script src="Cart_GenerateHTML.js?V=V1.06"></script>
 <script src="Cart_Utils.js?V=V1.06"></script>
+<script>
+
+function doSearch() {
+
+  if ($('#search').val() == "") {
+    $('#dvHidden').children().appendTo("#dvUnused");
+
+  }
+  else {
+    
+    $('#dvUnused').children().appendTo("#dvHidden");
+
+
+    var ul = $("#dvHidden");
+    var idsInOrder = ul.sortable("toArray");
+    const matches = new Map();
+
+    for (const value of idsInOrder) {
+
+        var index = value.substring(2);
+
+        if (items[index - 1].name.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1) {
+
+          matches.set(value, value);
+
+        }
+
+    }
+
+
+    for (const match of matches) {
+
+      var item = $('#' + match);
+      $('#dvUnused').append(item);
+    }
+
+  }
+
+  resizeColumnHights();
+
+}
+</script>
+

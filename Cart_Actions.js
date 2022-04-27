@@ -10,6 +10,7 @@ function deleteColumn(cell, columnID) {
     var dvCategories = $('#dvCategories');
     var img = cell.firstChild.firstChild;
 
+    $('#search').val("");
     $('#col' + columnID).children().appendTo("#dvUnused");
     if (img.currentSrc.indexOf('catQuestion.png') == -1) {
         dvCategories.append(img);
