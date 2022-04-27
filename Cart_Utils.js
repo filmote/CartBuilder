@@ -139,7 +139,8 @@ function createCSV(colCount) {
                 output += items[index - 1].data; output += ";";
                 output += items[index - 1].save; output += ";";
                 output += items[index - 1].version; output += ";";
-                output += items[index - 1].developer; output += ";;<eol/>";
+                output += items[index - 1].developer; output += ";";
+                output += items[index - 1].info; output += ";<eol/>";
 
             }
 
