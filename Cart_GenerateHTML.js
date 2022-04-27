@@ -18,7 +18,7 @@ function generateHtmlTable(data) {
     html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;"><div style="height:6px;"></div>';
     html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:4px;"></div>';
     html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button><div style="height:10px;"></div>';
-    html += '<input name="search" id="search" onInput="doSearch()" style="width: 130px"/>';
+    html += '<input name="search" id="search" onInput="doSearch()" class ="searchBox" onkeydown="return event.key != \'Enter\';"/>';
     // html += '<button type="button" id="btnUploadHEXFile2" class="buttonHeader">Upload Game</button>'
     html += '</th>';
 
