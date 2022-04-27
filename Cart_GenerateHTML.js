@@ -12,12 +12,14 @@ function generateHtmlTable(data) {
 
     var html = '<table id=tab class="AltTable"><thead><tr><th valign="top" style="background-color: #25AAE2; column-width:600px;"><div style="height:6px;"></div>';
     html += '<button type="button" id="btnGetData" class="buttonHeader">Download CSV</button><div style="height:4px;"></div>';
-    html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button><div style="height:4px;"></div>';
-    html += '<button type="button" id="btnCreateCategory2" class="buttonHeader">Create Category</button>';
+    html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button><div style="height:12px;"></div>';
+    //html += '<button type="button" id="btnCreateCategory2" class="buttonHeader">Create Category</button>';
+    html += '<span class="search">Search Unused:</span>';
     html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;"><div style="height:6px;"></div>';
     html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:4px;"></div>';
-    html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button><div style="height:4px;"></div>';
-    html += '<button type="button" id="btnUploadHEXFile2" class="buttonHeader">Upload Game</button>'
+    html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button><div style="height:10px;"></div>';
+    html += '<input name="search" id="search" onInput="doSearch()" style="width: 130px"/>';
+    // html += '<button type="button" id="btnUploadHEXFile2" class="buttonHeader">Upload Game</button>'
     html += '</th>';
 
     catCount = 255;
@@ -67,7 +69,7 @@ function generateHtmlTable(data) {
     html += '<tr><td valign="top" style="background-color: #156f96; width: 144px;">';
     html += '<div id="dvCategories" style="text-align:center;"><button type="button" id="btnCreateCategory" class="buttonColumn" style="width: 145px;">Create Category</button></div><br/>';
     html += '</td><td valign="top" style="background-color: #156f96; width: 144px;"><button type="button" id="btnUploadHEXFile" class="buttonColumn" style="width: 145px;">Upload Game</button>';
-    html += 'Search :<input name="search" id="search" onInput="doSearch()" style="width: 130px"/>';
+    // html += 'Search :<input name="search" id="search" onInput="doSearch()" style="width: 130px"/>';
     html += '<ul id="dvUnused" class="sortableColumn" style="margin-top:-5px; margin-bottom: 75px;"></ul></td>';
 
 
