@@ -1,4 +1,4 @@
-// V1.05
+// V1.06
 
 // Delete a column and move all the games to the 'unsued' column ..
 
