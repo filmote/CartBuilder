@@ -134,7 +134,7 @@ function generateHtmlTable(data) {
             },
             update: function(event, ui) {
                 suppressOpenInfoDlg = true;
-å            }
+            }
         });
 
     }
