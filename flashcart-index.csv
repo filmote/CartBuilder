@@ -1,28 +1,28 @@
 List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Info;Likes
 0;Bootloader;arduboy-fx-loader.png;;;;;;;
 1;Action;category-screens\Action.png;;;;;;;
-1;Hopper;Action\hopper.png;Action\hopper.hex;;;;obono;;24
-1;Lasers;Arcade\Lasers.png;Arcade\Lasers.hex;;;;obono;;19
-1;chribocchi;Arcade\chribocchi.png;Arcade\chribocchi.hex;;;;obono;;12
-1;Bangi;Action\Bangi.png;Action\Bangi.hex;;;;igvina;;14
-1;Helii;Action\Helii.png;Action\Helii.hex;;;;BHSPitMonkey;;8
-1;Choplifter;Action\Choplifter.png;Action\Choplifter.hex;;;;filmote;;9
-1;Karatega;Action\Karatega.png;Action\Karatega.hex;;;;filmote;;12
-1;FestiveFight;Misc\FestiveFight.png;Misc\FestiveFight.hex;;;;crait;;14
-1;Kungfuescape;Arcade\Kungfuescape.png;Arcade\Kungfuescape.hex;;;;Sazazel;;12
-1;pocketfighter;Arcade\pocketfighter.png;Arcade\pocketfighter.hex;;;;WangRenxin;;2
-1;Bounce;Arcade\bounce.png;Arcade\bounce.hex;;;;RetrobitCoder;;7
-1;ArduBoyng;Arcade\ArduBoyng.png;Arcade\ArduBoyng.hex;;;;Troubadixx;;5
-1;To;Action\To.png;Action\To.hex;;;;waday;;4
-1;BipBipBip;Arcade\BipBipBip.png;Arcade\BipBipBip.hex;;;;JuiceLizard;;5
-1;ArduBreakout;Arcade\ArduBreakout.png;Arcade\ArduBreakout.hex;;;;SebGoscik;;5
-1;Technomonkey;Arcade\Technomonkey.png;Arcade\Technomonkey.hex;;;;RetrobitCoder;;5
-1;Quadrastic;Action\Quadrastic.png;Action\Quadrastic.hex;;;;dragula96;;0
-1;snake3;Arcade\snake3.png;Arcade\snake3.hex;;;;WojciechKo;;2
-1;LodeRunner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;;;;
+1;Hopper;Action\hopper.png;Action\hopper.hex;;;Version 1.0;obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;24
+1;Lasers;Arcade\Lasers.png;Arcade\Lasers.hex;;;Version 1.0;obono;Lasers - A simple Ikaruga-like game.;19
+1;chribocchi;Arcade\chribocchi.png;Arcade\chribocchi.hex;;Version 1.0;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;obono;;12
+1;Bangi;Action\Bangi.png;Action\Bangi.hex;;;Version 1.0;igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level. ;14
+1;Helii;Action\Helii.png;Action\Helii.hex;;;Version 1.0;BHSPitMonkey;Helii is a port of my homebrew clone of the old Flash “Helicopter Game” and its ilk (i.e. game type that Flappy Bird is a variation of). As you fly through the tunnel the gap becomes more narrow and more challenging - How far can you go?;8
+1;Choplifter;Action\Choplifter.png;Action\Choplifter.hex;;Version 1.1.1;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;Press Play on Tape;;9
+1;Karatega;Action\Karatega.png;Action\Karatega.hex;;;Version 0.9;Press Play on Tape;Rescue Princess Mariko from within the Akum'a castle fortress.;12
+1;FestiveFight;Misc\FestiveFight.png;Misc\FestiveFight.hex;;;Version 1.0;crait;Holiday mascots from throughout the calendar must fight in order to compete for the affection of the children throughout the world for some weird reason.;14
+1;Kungfuescape;Arcade\Kungfuescape.png;Arcade\Kungfuescape.hex;;;Version 1.0;Sazazel;Enter the dragon! Battle enemies using an array of flying kicks, normal kicks and punches.;12
+1;pocketfighter;Arcade\pocketfighter.png;Arcade\pocketfighter.hex;;;Version 1.0;WangRenxin;Pocket Fighter is an FTG, you can compete with your Arduboy. The CPU will repeat your actions at previous level.;2
+1;Bounce;Arcade\bounce.png;Arcade\bounce.hex;;;Version 1.0;RetrobitCoder;Air hockey for the Arduboy!  Two players pick their dogsand battle to the end.;7
+1;ArduBoyng;Arcade\ArduBoyng.png;Arcade\ArduBoyng.hex;;;Version 1.0;Troubadixx;Pong. What more do you need to say?;5
+1;To;Action\To.png;Action\To.hex;;;Version 1.0;waday;You are the developer of the door with the teleport function. But just before completion, someone is trying to destroy the door. There seems to be no choice but to distort the space with the power of the door and to prevent destruction.;4
+1;BipBipBip;Arcade\BipBipBip.png;Arcade\BipBipBip.hex;;;Version 1.0;JuiceLizard;A “Pong” demake named “Bip Bipbip” for two players. How to win? It is simple. If the ball touchs your opponent when he doesn’t press his button or if his rectangle reaches the middle of the screen before yours then he loses.;5
+1;ArduBreakout;Arcade\ArduBreakout.png;Arcade\ArduBreakout.hex;;;Version 1.0;SebGoscik;An Arduboy version of the classic game Breakout!;5
+1;Technomonkey;Arcade\Technomonkey.png;Arcade\Technomonkey.hex;;;Version 1.0;RetrobitCoder;A meteor crashes in a zoo during the night. An alien virus spreads to the residents in the zoo and causes them to mutate into robot hybrids called Technoids. Do to the outbreak the zoo has been under quarantine. It is a fight for survival inside. Can you beat the opposing Technoids and survive?;5
+1;Quadrastic;Action\Quadrastic.png;Action\Quadrastic.hex;;;Version 1.01;dragula96;Quadrastic a simple addicting game based off a favorite psp homebrew game called Squarez.;0
+1;snake3;Arcade\snake3.png;Arcade\snake3.hex;;;Version 1.0;WojciechKo;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
+1;LodeRunner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;Version 1.0;Press Play on Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
 2;Adventure;category-screens\Adventure.png;;;;;;;
-2;Catacombsofthedamned;Action\Cotd.png;Action\Cotd.hex;;;;jhhoward;;40
-2;virus;arg\virus.png;arg\virus.hex;;;;TEAMarg;;24
+2;Catacombsofthedamned;Action\Cotd.png;Action\Cotd.hex;;;Version 1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
+2;virus;arg\virus.png;arg\virus.hex;;;Version 1.0;TEAMa ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
 2;Glove;Action\Glove.png;Action\Glove.hex;;;;fuopy;;18
 2;Mazogs;Action\Mazogs.png;Action\Mazogs.hex;;;;Brian;;9
 2;ArduIndy;Action\ArduIndy.png;Action\ArduIndy.hex;;;;JacosteCode;;8
@@ -65,7 +65,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 4;Flappyball;Arcade\Flappyball.png;Arcade\Flappyball.hex;;;;chris;;6
 4;Flappybird;Arcade\Flappybird.png;Arcade\Flappybird.hex;;;;GameExpress;;
 4;ZooEscape;Action\ZooEscape.png;Action\ZooEscape.hex;;;;FerJerez;;9
-4;ShadowRunner;arg\ShadowRunner.png;arg\ShadowRunner.hex;;;;TEAMarg;;7
+4;ShadowRunner;arg\ShadowRunner.png;arg\ShadowRunner.hex;;;;Team ARG;;7
 4;Roorun;Arcade\Roorun.png;Arcade\Roorun.hex;;;;crait;;5
 4;Leannathelion;Arcade\Leannathelion.png;Arcade\Leannathelion.hex;;;;shdwwzrd;;10
 4;ArduBuggy;Arcade\ArduBuggy.png;Arcade\ArduBuggy.hex;;;;Nono_Nono;;10
@@ -75,14 +75,14 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 5;Platformer;category-screens\Platformer.png;;;;;;;
 5;CasteBoy;Platformer\CastleBoy.png;Platformer\CastleBoy.hex;;;;jlauener;;33
 5;SanSan;Action\Sansan.png;Action\Sansan.hex;;;;chame;;18
-5;MysticBalloon;arg\MysticBalloon.png;arg\MysticBalloon.hex;;;;TEAMarg;;17
+5;MysticBalloon;arg\MysticBalloon.png;arg\MysticBalloon.hex;;;;Team ARG;;17
 5;MidnightWild;Misc\MidnightWild.png;Misc\MidnightWild.hex;;;;crait;;28
 5;OmegaHorizon;Platformer\OmegaHorizon.png;Platformer\OmegaHorizon.hex;;;;shdwwzrd;;15
 5;SquareNose;Platformer\SquareNose.png;Platformer\SquareNose.hex;;;;JuiceLizard;;16
 5;Jetpac;Action\Jetpac.png;Action\Jetpac.hex;;;;TheArduinoGuy;;5
 5;joustish;Arcade\joustish.png;Arcade\joustish.hex;;;;wuuff;;8
 5;poitto;Action\poitto.png;Action\poitto.hex;;;;inajob;;10
-5;ecomd;arg\ecomd.png;arg\ecomd.hex;;;;TEAMarg;;10
+5;ecomd;arg\ecomd.png;arg\ecomd.hex;;;;Team ARG;;10
 5;supercrate;Platformer\supercrate.png;Platformer\supercrate.hex;;;;uXe;;4
 5;ninjafuzz;Platformer\ninjafuzz.png;Platformer\ninjafuzz.hex;;;;Hundstrasse;;9
 5;bounce;Platformer\bounce.png;Platformer\bounce.hex;;;;Joshimuz;;9
@@ -122,8 +122,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;stairssweep;Puzzle\stairssweep.png;Puzzle\stairssweep.hex;;;;obono;;
 8;psicolo;Puzzle\psicolo.png;Puzzle\psicolo.hex;;;;obono;;10
 8;Minesweeper;Puzzle\Minesweeper.png;Puzzle\Minesweeper.hex;;;;Pharap;;13
-8;begemmed;arg\begemmed.png;arg\begemmed.hex;;;;TEAMarg;;10
-8;Blobattack;arg\Blobattack.png;arg\Blobattack.hex;;;;TEAMarg;;9
+8;begemmed;arg\begemmed.png;arg\begemmed.hex;;;;Team ARG;;10
+8;Blobattack;arg\Blobattack.png;arg\Blobattack.hex;;;;Team ARG;;9
 8;sudoku;Puzzle\sudoku.png;Puzzle\sudoku.hex;;;;neilsunw;;5
 8;Boxstacker;Puzzle\Boxstacker.png;Puzzle\Boxstacker.hex;;;;dragula96;;4
 8;Arduboysays;Puzzle\Arduboysays.png;Puzzle\Arduboysays.hex;;;;Slade;;4
@@ -141,7 +141,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;NBOTK;Puzzle\NBOTK.png;Puzzle\NBOTK.hex;;;;bateske;;
 9;Tabletop;category-screens\Tabletop.png;;;;;;;
 9;Blackjack;Misc\Blackjack.png;Misc\Blackjack.hex;;;;filmote;;11
-9;Diceoffate;arg\Diceoffate.png;arg\Diceoffate.hex;;;;TEAMarg;;5
+9;Diceoffate;arg\Diceoffate.png;arg\Diceoffate.hex;;;;Team ARG;;5
 9;reversi;Puzzle\reversi.png;Puzzle\reversi.hex;;;;obono;;15
 9;quarto;Puzzle\quarto.png;Puzzle\quarto.hex;;;;obono;;10
 9;littlerookchess;Demos\littlerookchess.png;Demos\littlerookchess.hex;;;;olikraus;;13
@@ -164,7 +164,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;RPG;category-screens\RPG.png;;;;;;;
 11;ardynia;RPG\ardynia.png;RPG\ardynia.hex;;;;city41;;49
 11;darkandunder;RPG\darkandunder.png;RPG\darkandunder.hex;;;;GarageCollective;;39
-11;Arduventure;RPG\Arduventure.png;RPG\Arduventure.hex;;;;TEAMarg;;34
+11;Arduventure;RPG\Arduventure.png;RPG\Arduventure.hex;;;;Team ARG;;34
 11;starhonor;RPG\starhonor.png;RPG\starhonor.hex;;;;Wenceslao;;20
 11;tacklebox;Arcade\tacklebox.png;Arcade\tacklebox.hex;;;;city41;;19
 11;MiniRogue;RPG\MiniRogue.png;RPG\MiniRogue.hex;;;;Press Play On Tape;;16
@@ -173,14 +173,14 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;HelloCommander;RPG\HelloCommander.png;RPG\HelloCommander.hex;;;;Fmanga;;13
 11;Rogue;RPG\Rogue.png;RPG\Rogue.hex;;;;BlueMax;;13
 11;shatteredlands;RPG\shatteredlands.png;RPG\shatteredlands.hex;;;;tuxinator2009;;12
-11;Fantasy;arg\Fantasy.png;arg\Fantasy.hex;;;;TEAMarg;;10
+11;Fantasy;arg\Fantasy.png;arg\Fantasy.hex;;;;Team ARG;;10
 11;tamaguino;Misc\tamaguino.png;Misc\tamaguino.hex;;;;Keyboard_Camper;;7
 11;tqft;RPG\tqft.png;RPG\tqft.hex;;;;;;
 12;Shooter;category-screens\Shooter.png;;;;;;;
 12;microtank;Arcade\microtank.png;Arcade\microtank.hex;;;;hartmann1301;;22
 12;1nvader;Shooter\1nvader.png;Shooter\1nvader.hex;;;;Press Play On Tape;;22
 12;1944;Arcade\1944.png;Arcade\1944.hex;;;;Press Play On Tape;;20
-12;Sirene;arg\Sirene.png;arg\Sirene.hex;;;;TEAMarg;;
+12;Sirene;arg\Sirene.png;arg\Sirene.hex;;;;Team ARG;;
 12;Junofirst;Action\Junofirst.png;Action\Junofirst.hex;;;;Press Play On Tape;;19
 12;Evade;Arcade\Evade.png;Arcade\Evade.hex;;;;ModusCreate;;14
 12;Evade2;Arcade\Evade2.png;Arcade\Evade2.hex;;;;ModusCreate;;13
@@ -190,7 +190,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;TinyAsteroids;Shooter\TinyAsteroids.png;Shooter\TinyAsteroids.hex;;;;akkera102;;13
 12;l4arduboy;Shooter\l4arduboy.png;Shooter\l4arduboy.hex;;;;Yomogimaru;;12
 12;Loverush;Arcade\Loverush.png;Arcade\Loverush.hex;;;;Vampirics;;11
-12;trollyfish;arg\trollyfish.png;arg\trollyfish.hex;;;;TEAMarg;;10
+12;trollyfish;arg\trollyfish.png;arg\trollyfish.hex;;;;Team ARG;;10
 12;HumanityRevenge;Shooter\HumanityRevenge.png;Shooter\HumanityRevenge.hex;;;;giangregorioc;;9
 12;NightRaid;Shooter\NightRaid.png;Shooter\NightRaid.hex;;;;epbarger;;8
 12;Arcodia;Shooter\Arcodia.png;Shooter\Arcodia.hex;;;;TheArduinoGuy;;5
