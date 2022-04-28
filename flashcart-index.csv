@@ -23,7 +23,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 2;Adventure;category-screens\Adventure.png;;;;;;;
 2;Catacombsofthedamned;Action\Cotd.png;Action\Cotd.hex;;;Version 1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
 2;virus;arg\virus.png;arg\virus.hex;;;Version 1.0;TEAMa ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
-2;Glove;Action\Glove.png;Action\Glove.hex;;;;fuopy;;18
+2;Glove;Action\Glove.png;Action\Glove.hex;;;Version 1.0;fuopy;Glove is an action-adventure game created in the style of the classic Gauntlet series. Navigate from room to room, blasting bad guys and collecting treasure along the way;18
 2;Mazogs;Action\Mazogs.png;Action\Mazogs.hex;;;;Brian;;9
 2;ArduIndy;Action\ArduIndy.png;Action\ArduIndy.hex;;;;JacosteCode;;8
 2;Raynetherogue;Action\Raynetherogue.png;Action\Raynetherogue.hex;;;;shdwwzrd;;8
