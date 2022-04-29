@@ -145,7 +145,7 @@ $(document).ready(function () {
 
                     uploadDialog.dialog("close");
 
-                    if (data != "Invalid File") {
+                    if (data.substr(0,12) != "Invalid File") {
 
                         var url = String(window.location);
                         var session_id = /SESS\w*ID=([^;]+)/i.test(document.cookie) ? RegExp.$1 : false;
@@ -160,7 +160,7 @@ $(document).ready(function () {
                     }
                     else {
 
-                        $('#errorMessage').text("Please select a valid CSV file.");
+                        $('#errorMessage').text("CSV file error:" +data.substr(12));
                         errorDialog.dialog("open");
 
                     }

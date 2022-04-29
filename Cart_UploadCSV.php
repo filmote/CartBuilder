@@ -35,7 +35,7 @@ function badFile($filename, $ext)
   return $result;
 }
 
-if (($fileType != "text/csv" && $fileType != "application/vnd.ms-excel") || $fileSize > 131072) echo "Invalid File";
+if (($fileType != "text/csv" && $fileType != "application/vnd.ms-excel") || $fileSize > 131072) echo "Invalid File Wrong file format";
 else {
     $csv = explode("\n", file_get_contents($fileTmpLoc));
     $head = current($csv);
@@ -50,8 +50,7 @@ else {
            (badFile($row[ID_HEXFILE] , ".hex" ))  ||
            (badFile($row[ID_DATAFILE], ".bin" ))  ||
            (badFile($row[ID_SAVEFILE], ".bin" ))  ) {
-                error_log(current($csv) . " " . realpath($fileTmpLoc),4,0);
-                echo "Invalid File";
+                echo "Invalid File Check filenames at line " . ((int)key($csv) + 1);
                 die();
             }
     }
@@ -59,7 +58,7 @@ else {
         echo "$fileName upload is complete";
     } 
     else {
-        echo "move_uploaded_file function failed";
+        echo "Invalid file Upload failed";
     }
 
 }

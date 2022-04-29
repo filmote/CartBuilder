@@ -3,7 +3,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 1;Adventure;category-screens/ppot/Adventure.png;;;;;;;
 1;curse;Puzzle/curse.png;Puzzle/curse.hex;;;;;;
 1;Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;;;;
-1;CyberHack;Arcade/CyberHack.png;Puzzle/CyberHack.hex;;;;;;
+1;CyberHack;Arcade/CyberHack.png;Arcade/CyberHack.hex;;;;;;
 1;MiniRogue;RPG/MiniRogue.png;RPG/MiniRogue.hex;;;;;;
 2;Arcade;category-screens/ppot/Arcade.png;;;;;;;
 2;1944;Arcade/1944.png;Arcade/1944.hex;;;;;;
