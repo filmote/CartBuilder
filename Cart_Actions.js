@@ -150,7 +150,7 @@ function openInfo(itemIndex) {
         if (item.name !="") $('#ui-id-3').text(item.name);
         $('#infoImg').attr("src", item.screen);
         $('#infoDeveloper').text(item.developer);
-        $('#infoVersion').text(item.version);
+        if (item.version != "") $('#infoVersion').text("Version " + item.version);
         $('#infoInfo').html(item.info);
         var data = item.data;
         if  (data != "") data = "&data=../" + data;

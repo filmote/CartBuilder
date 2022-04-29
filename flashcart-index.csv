@@ -1,45 +1,45 @@
 List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Info;Likes
 0;Bootloader;arduboy-fx-loader.png;;;;;;;
 1;Action;category-screens\Action.png;;;;;;;
-1;Hopper;Action\hopper.png;Action\hopper.hex;;;Version 1.0;obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;24
-1;Lasers;Arcade\Lasers.png;Arcade\Lasers.hex;;;Version 1.0;obono;Lasers - A simple Ikaruga-like game.;19
-1;chribocchi;Arcade\chribocchi.png;Arcade\chribocchi.hex;;;Version 1.0;obono;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;12
-1;Bangi;Action\Bangi.png;Action\Bangi.hex;;;Version 1.0;igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;14
-1;Helii;Action\Helii.png;Action\Helii.hex;;;Version 1.0;BHSPitMonkey;Helii is a port of my homebrew clone of the old Flash “Helicopter Game” and its ilk (i.e. game type that Flappy Bird is a variation of). As you fly through the tunnel the gap becomes more narrow and more challenging - How far can you go?;8
-1;Choplifter;Action\Choplifter.png;Action\Choplifter.hex;;;Version 1.1.1;Press Play On Tape;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;9
-1;Karatega;Action\Karatega.png;Action\Karatega.hex;;;Version 0.9;Press Play On Tape;Rescue Princess Mariko from within the Akum'a castle fortress.;12
-1;FestiveFight;Misc\FestiveFight.png;Misc\FestiveFight.hex;;;Version 1.0;crait;Holiday mascots from throughout the calendar must fight in order to compete for the affection of the children throughout the world for some weird reason.;14
-1;Kungfuescape;Arcade\Kungfuescape.png;Arcade\Kungfuescape.hex;;;Version 1.0;Sazazel;Enter the dragon! Battle enemies using an array of flying kicks, normal kicks and punches.;12
-1;pocketfighter;Arcade\pocketfighter.png;Arcade\pocketfighter.hex;;;Version 1.0;WangRenxin;Pocket Fighter is an FTG, you can compete with your Arduboy. The CPU will repeat your actions at previous level.;2
-1;Bounce;Arcade\bounce.png;Arcade\bounce.hex;;;Version 1.0;RetrobitCoder;Air hockey for the Arduboy!  Two players pick their dogsand battle to the end.;7
-1;ArduBoyng;Arcade\ArduBoyng.png;Arcade\ArduBoyng.hex;;;Version 1.0;Troubadixx;Pong. What more do you need to say?;5
-1;To;Action\To.png;Action\To.hex;;;Version 1.0;waday;You are the developer of the door with the teleport function. But just before completion, someone is trying to destroy the door. There seems to be no choice but to distort the space with the power of the door and to prevent destruction.;4
-1;BipBipBip;Arcade\BipBipBip.png;Arcade\BipBipBip.hex;;;Version 1.0;JuiceLizard;A “Pong” demake named “Bip Bipbip” for two players. How to win? It is simple. If the ball touchs your opponent when he doesn’t press his button or if his rectangle reaches the middle of the screen before yours then he loses.;5
-1;ArduBreakout;Arcade\ArduBreakout.png;Arcade\ArduBreakout.hex;;;Version 1.0;SebGoscik;An Arduboy version of the classic game Breakout!;5
-1;Technomonkey;Arcade\Technomonkey.png;Arcade\Technomonkey.hex;;;Version 1.0;RetrobitCoder;A meteor crashes in a zoo during the night. An alien virus spreads to the residents in the zoo and causes them to mutate into robot hybrids called Technoids. Do to the outbreak the zoo has been under quarantine. It is a fight for survival inside. Can you beat the opposing Technoids and survive?;5
-1;Quadrastic;Action\Quadrastic.png;Action\Quadrastic.hex;;;Version 1.01;dragula96;Quadrastic a simple addicting game based off a favorite psp homebrew game called Squarez.;0
-1;snake3;Arcade\snake3.png;Arcade\snake3.hex;;;Version 1.0;WojciechKo;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
-1;LodeRunner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;Version 1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
+1;Hopper;Action\hopper.png;Action\hopper.hex;;;1.0;obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;24
+1;Lasers;Arcade\Lasers.png;Arcade\Lasers.hex;;;1.0;obono;Lasers - A simple Ikaruga-like game.;19
+1;chribocchi;Arcade\chribocchi.png;Arcade\chribocchi.hex;;;1.0;obono;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;12
+1;Bangi;Action\Bangi.png;Action\Bangi.hex;;;1.0;igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;14
+1;Helii;Action\Helii.png;Action\Helii.hex;;;1.0;BHSPitMonkey;Helii is a port of my homebrew clone of the old Flash “Helicopter Game” and its ilk (i.e. game type that Flappy Bird is a variation of). As you fly through the tunnel the gap becomes more narrow and more challenging - How far can you go?;8
+1;Choplifter;Action\Choplifter.png;Action\Choplifter.hex;;;1.1.1;Press Play On Tape;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;9
+1;Karatega;Action\Karatega.png;Action\Karatega.hex;;;0.9;Press Play On Tape;Rescue Princess Mariko from within the Akum'a castle fortress.;12
+1;FestiveFight;Misc\FestiveFight.png;Misc\FestiveFight.hex;;;1.0;crait;Holiday mascots from throughout the calendar must fight in order to compete for the affection of the children throughout the world for some weird reason.;14
+1;Kungfuescape;Arcade\Kungfuescape.png;Arcade\Kungfuescape.hex;;;1.0;Sazazel;Enter the dragon! Battle enemies using an array of flying kicks, normal kicks and punches.;12
+1;pocketfighter;Arcade\pocketfighter.png;Arcade\pocketfighter.hex;;;1.0;WangRenxin;Pocket Fighter is an FTG, you can compete with your Arduboy. The CPU will repeat your actions at previous level.;2
+1;Bounce;Arcade\bounce.png;Arcade\bounce.hex;;;1.0;RetrobitCoder;Air hockey for the Arduboy!  Two players pick their dogsand battle to the end.;7
+1;ArduBoyng;Arcade\ArduBoyng.png;Arcade\ArduBoyng.hex;;;1.0;Troubadixx;Pong. What more do you need to say?;5
+1;To;Action\To.png;Action\To.hex;;;1.0;waday;You are the developer of the door with the teleport function. But just before completion, someone is trying to destroy the door. There seems to be no choice but to distort the space with the power of the door and to prevent destruction.;4
+1;BipBipBip;Arcade\BipBipBip.png;Arcade\BipBipBip.hex;;;1.0;JuiceLizard;A “Pong” demake named “Bip Bipbip” for two players. How to win? It is simple. If the ball touchs your opponent when he doesn’t press his button or if his rectangle reaches the middle of the screen before yours then he loses.;5
+1;ArduBreakout;Arcade\ArduBreakout.png;Arcade\ArduBreakout.hex;;;1.0;SebGoscik;An Arduboy version of the classic game Breakout!;5
+1;Technomonkey;Arcade\Technomonkey.png;Arcade\Technomonkey.hex;;;1.0;RetrobitCoder;A meteor crashes in a zoo during the night. An alien virus spreads to the residents in the zoo and causes them to mutate into robot hybrids called Technoids. Do to the outbreak the zoo has been under quarantine. It is a fight for survival inside. Can you beat the opposing Technoids and survive?;5
+1;Quadrastic;Action\Quadrastic.png;Action\Quadrastic.hex;;;1.01;dragula96;Quadrastic a simple addicting game based off a favorite psp homebrew game called Squarez.;0
+1;snake3;Arcade\snake3.png;Arcade\snake3.hex;;;1.0;WojciechKo;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
+1;LodeRunner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
 2;Adventure;category-screens\Adventure.png;;;;;;;
-2;Catacombsofthedamned;Action\Cotd.png;Action\Cotd.hex;;;Version 1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
-2;virus;arg\virus.png;arg\virus.hex;;;Version 1.0;TEAMa ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
-2;Glove;Action\Glove.png;Action\Glove.hex;;;Version 1.0;fuopy;Glove is an action-adventure game created in the style of the classic Gauntlet series. Navigate from room to room, blasting bad guys and collecting treasure along the way;18
-2;Mazogs;Action\Mazogs.png;Action\Mazogs.hex;;;Version 1.0;Brian;A port of the 1982 game ‘Mazogs’ for the ZX81 adapted for the Arduboy;9
-2;ArduIndy;Action\ArduIndy.png;Action\ArduIndy.hex;;;Version 2.5;JacosteCode;ArduIndy - Inspired by ZX Spectrum game “Sabre Wulf”.;8
-2;Raynetherogue;Action\Raynetherogue.png;Action\Raynetherogue.hex;;;Version 1.0;shdwwzrd;As a child Rayne watched the rich from the streets of the village and burned with jealousy. After years and years of poverty an idea formed. Rayne has decided to sneak into the lairs of dragons and steel their treasures. Rayne need your help to navigate the dangerous caves and avoid the dragon’s breath to become the wealthiest person in the village - but take heed the further Rayne gets the more treacherous it will be!;8
-2;Rayne2;Action\RAYNE2.png;Action\RAYNE2.hex;;;Version 1.0;shdwwzrd;After barely escaping the dragon’s lairs Rayne traveled the world in search for the next big adventure. Rayne came across a rumor of a magic lamp hidden within a castle. The lamp is guarded by vicious creatures hunting down any interlopers. Help Rayne navigate the castle and avoid the beasts to get the lamp.;8
-2;ZooatMidnight;Action\zooatmidnight.png;Action\zooatmidnight.hex;;;Version 1.0;Hundstrasse;Scrawf must sneak around the zoo to collect the food ans feed the animals before and escaping - all without being caught in the flashlight beam of the zoo wardens!;5
-2;CyberHack;Arcade/CyberHack.png;Arcade/CyberHack.hex;;;Version 1.0;Press Play On Tape;The corrupted Corpo has to be stopped and your hacking skills will be invaluable. Inspired by the game CyberPunk.;
+2;Catacombsofthedamned;Action\Cotd.png;Action\Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
+2;virus;arg\virus.png;arg\virus.hex;;;1.0;TEAMa ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
+2;Glove;Action\Glove.png;Action\Glove.hex;;;1.0;fuopy;Glove is an action-adventure game created in the style of the classic Gauntlet series. Navigate from room to room, blasting bad guys and collecting treasure along the way;18
+2;Mazogs;Action\Mazogs.png;Action\Mazogs.hex;;;1.0;Brian;A port of the 1982 game ‘Mazogs’ for the ZX81 adapted for the Arduboy;9
+2;ArduIndy;Action\ArduIndy.png;Action\ArduIndy.hex;;;2.5;JacosteCode;ArduIndy - Inspired by ZX Spectrum game “Sabre Wulf”.;8
+2;Raynetherogue;Action\Raynetherogue.png;Action\Raynetherogue.hex;;;1.0;shdwwzrd;As a child Rayne watched the rich from the streets of the village and burned with jealousy. After years and years of poverty an idea formed. Rayne has decided to sneak into the lairs of dragons and steel their treasures. Rayne need your help to navigate the dangerous caves and avoid the dragon’s breath to become the wealthiest person in the village - but take heed the further Rayne gets the more treacherous it will be!;8
+2;Rayne2;Action\RAYNE2.png;Action\RAYNE2.hex;;;1.0;shdwwzrd;After barely escaping the dragon’s lairs Rayne traveled the world in search for the next big adventure. Rayne came across a rumor of a magic lamp hidden within a castle. The lamp is guarded by vicious creatures hunting down any interlopers. Help Rayne navigate the castle and avoid the beasts to get the lamp.;8
+2;ZooatMidnight;Action\zooatmidnight.png;Action\zooatmidnight.hex;;;1.0;Hundstrasse;Scrawf must sneak around the zoo to collect the food ans feed the animals before and escaping - all without being caught in the flashlight beam of the zoo wardens!;5
+2;CyberHack;Arcade/CyberHack.png;Arcade/CyberHack.hex;;;1.0;Press Play On Tape;The corrupted Corpo has to be stopped and your hacking skills will be invaluable. Inspired by the game CyberPunk.;
 3;Arcade;category-screens\Arcade.png;;;;;;;
-3;FirePanic;Action\FirePanic.png;Action\FirePanic.hex;;;Version 1.0;Press Play On Tape;A remake of the classic Game and Watch game 'Fire'. Save the residents of the burning tower by catching them in your safety net and bouncing them into the awaiting ambulance before rushing them to hospital.;25
-3;Kong;Arcade\Kong.png;Arcade\Kong.hex;;;Version 1.0.3;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong. Kong has stolen your lunch again. Avoid the barrels and topple the gorilla to retrieve it!;24
-3;Kong2;Arcade\Kong2.png;Arcade\Kong2.hex;;;Version 1.0;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong II. Kong has been locked up but Kong Jnr can save him!;19
-3;Turtlebridge;Arcade\Turtlebridge.png;Arcade\Turtlebridge.hex;;;Version 1.3;Press Play On Tape;A remake of the classic Game and Watch game Turtle Bridge. Carry the package to the awaiting truck by jumping across the turtle’s backs. Watch out as they may dive for a snack!;19
-3;SpaceCab;Arcade\SpaceCab.png;Arcade\SpaceCab.hex;;;Version 1.0;Press Play On Tape;A tribute to the classic Commodore 64 game Space Taxi! Collect and deliver customers to their destination as quickly as possible to make the most money! But be careful and make sure you do not run out of fuel land without deploying your landing gear or squash a customer.;12
-3;LionTamer;Arcade\LionTamer.png;Arcade\LionTamer.hex;;;Version 1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Lion Tamer. Someone has left the lion’s cage doors open! Keep them from escaping by blocking their path with your trusty chair. Play alone or with a second lion tamer!;
-3;OilPanic;Arcade\OilPanic.png;Arcade\OilPanic.hex;;;Version 1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;
-3;Rooftop;Action\rooftop.png;Action\rooftop.hex;;;Version 1.0;Prototype;Rescue the trapped people as fire consumes the city.;21
-3;BiriBiriBeat;Arcade\biribiribeat.png;Arcade\biribiribeat.hex;;;Version 1.0;shiyouganai;BiriBiriBeat is a rhythm game! Its title is derived from ビリビリ - a Japanese onomatopoeia used to describe an electric shock or vibration.;12
+3;FirePanic;Action\FirePanic.png;Action\FirePanic.hex;;;1.0;Press Play On Tape;A remake of the classic Game and Watch game 'Fire'. Save the residents of the burning tower by catching them in your safety net and bouncing them into the awaiting ambulance before rushing them to hospital.;25
+3;Kong;Arcade\Kong.png;Arcade\Kong.hex;;;1.0.3;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong. Kong has stolen your lunch again. Avoid the barrels and topple the gorilla to retrieve it!;24
+3;Kong2;Arcade\Kong2.png;Arcade\Kong2.hex;;;1.0;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong II. Kong has been locked up but Kong Jnr can save him!;19
+3;Turtlebridge;Arcade\Turtlebridge.png;Arcade\Turtlebridge.hex;;;1.3;Press Play On Tape;A remake of the classic Game and Watch game Turtle Bridge. Carry the package to the awaiting truck by jumping across the turtle’s backs. Watch out as they may dive for a snack!;19
+3;SpaceCab;Arcade\SpaceCab.png;Arcade\SpaceCab.hex;;;1.0;Press Play On Tape;A tribute to the classic Commodore 64 game Space Taxi! Collect and deliver customers to their destination as quickly as possible to make the most money! But be careful and make sure you do not run out of fuel land without deploying your landing gear or squash a customer.;12
+3;LionTamer;Arcade\LionTamer.png;Arcade\LionTamer.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Lion Tamer. Someone has left the lion’s cage doors open! Keep them from escaping by blocking their path with your trusty chair. Play alone or with a second lion tamer!;
+3;OilPanic;Arcade\OilPanic.png;Arcade\OilPanic.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;
+3;Rooftop;Action\rooftop.png;Action\rooftop.hex;;;1.0;Prototype;Rescue the trapped people as fire consumes the city.;21
+3;BiriBiriBeat;Arcade\biribiribeat.png;Arcade\biribiribeat.hex;;;1.0;shiyouganai;BiriBiriBeat is a rhythm game! Its title is derived from ビリビリ - a Japanese onomatopoeia used to describe an electric shock or vibration.;12
 3;Backtothejungle;Arcade\Backtothejungle.png;Arcade\Backtothejungle.hex;;;;eried;;11
 3;Fatsche;Arcade\Fatsche.png;Arcade\Fatsche.hex;;;;veritazz;;10
 3;BurgardTime;Arcade\BurgardTime.png;Arcade\BurgardTime.hex;;;;pixelplatforms;;9
@@ -98,14 +98,14 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;CircuitDude;Puzzle\CircuitDude.png;Puzzle\CircuitDude.hex;;;;crait;;30
 7;Logix;Puzzle\Logix.png;Puzzle\Logix.hex;;;;filmote;;21
 7;Atomicpuzzlepack;Puzzle\Atomicpuzzlepack.png;Puzzle\Atomicpuzzlepack.hex;;;;Atomic;;19
-7;Darkstar;Misc\Darkstar.png;Misc\Darkstar.hex;;;;MrBlinky;;14
+7;Darkstar;Misc\Darkstar.png;Misc\Darkstar.hex;;;1.0;MrBlinky;A little puzzle game based on the HP48 / TI83 calculator game Dstar.;14
 7;Sensitive;Puzzle\Sensitive.png;Puzzle\Sensitive.hex;;;;spinal;;13
 7;Blocks;Puzzle\Blocks.png;Puzzle\Blocks.hex;;;;w3woody;;10
 7;tinysokoban;Puzzle\tinysokoban.png;Puzzle\tinysokoban.hex;;;;akkera102;;5
 7;MAZEZAM;Puzzle\MAZEZAM.png;Puzzle\MAZEZAM.hex;;;;ardubeast;;10
 7;chiemagari;Puzzle\chiemagari.png;Puzzle\chiemagari.hex;;;;obono;;11
 7;Pipes;Puzzle\Pipes.png;Puzzle\Pipes.hex;;;;filmote;;7
-7;xmastree;Misc\xmastree.png;Misc\xmastree.hex;;;;MrBlinky;;10
+7;Xmas Tree;Misc\xmastree.png;Misc\xmastree.hex;;;1.1;MrBlinky;A Christmas themed version of the classic Towers of Hanoi game.;10
 7;AMaze;Puzzle\AMaze.png;Puzzle\AMaze.hex;;;;Keyboard_Camper;;6
 7;Arduslide;Puzzle\Arduslide.png;Puzzle\Arduslide.hex;;;;gooberdlx;;6
 7;Crates3d;Puzzle\Crates3d.png;Puzzle\Crates3d.hex;;;;Brian;;6
