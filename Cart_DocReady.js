@@ -104,7 +104,6 @@ $(document).ready(function () {
             event.preventDefault();
             var valid = true;
             allFields.removeClass("ui-state-error");
-            var session_id = /SESS\w*ID=([^;]+)/i.test(document.cookie) ? RegExp.$1 : false;
 
             if (typeof $('#fileName')[0].files[0] === 'undefined') {
                 name.addClass("ui-state-error");
@@ -121,7 +120,7 @@ $(document).ready(function () {
                 var mime = $('#fileName')[0].files[0].type;
                 var extension = $('#fileName').val().replace(/^.*\./, '');
 
-                if (size > 20000 || mime != "text/csv" || extension != "csv") {
+                if (size > 131072 || (mime != "text/csv" && mime != "application/vnd.ms-excel") || extension != "csv") {
                     name.addClass("ui-state-error");
                     updateTips(tips, "Invalid CSV file selected.");
                     valid = false;
@@ -149,6 +148,7 @@ $(document).ready(function () {
                     if (data != "Invalid File") {
 
                         var url = String(window.location);
+                        var session_id = /SESS\w*ID=([^;]+)/i.test(document.cookie) ? RegExp.$1 : false;
                         if (url.indexOf("?") != -1) {
                             url = url.substring(0, url.indexOf("?")) + "?file=temp/" + session_id + ".csv";
                         }

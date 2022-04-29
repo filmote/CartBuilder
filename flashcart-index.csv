@@ -3,10 +3,10 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Action;category-screens\Action.png;;;;;;;
 1;Hopper;Action\hopper.png;Action\hopper.hex;;;Version 1.0;obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;24
 1;Lasers;Arcade\Lasers.png;Arcade\Lasers.hex;;;Version 1.0;obono;Lasers - A simple Ikaruga-like game.;19
-1;chribocchi;Arcade\chribocchi.png;Arcade\chribocchi.hex;;Version 1.0;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;obono;;12
-1;Bangi;Action\Bangi.png;Action\Bangi.hex;;;Version 1.0;igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level. ;14
+1;chribocchi;Arcade\chribocchi.png;Arcade\chribocchi.hex;;;Version 1.0;obono;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;12
+1;Bangi;Action\Bangi.png;Action\Bangi.hex;;;Version 1.0;igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;14
 1;Helii;Action\Helii.png;Action\Helii.hex;;;Version 1.0;BHSPitMonkey;Helii is a port of my homebrew clone of the old Flash “Helicopter Game” and its ilk (i.e. game type that Flappy Bird is a variation of). As you fly through the tunnel the gap becomes more narrow and more challenging - How far can you go?;8
-1;Choplifter;Action\Choplifter.png;Action\Choplifter.hex;;Version 1.1.1;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;Press Play On Tape;;9
+1;Choplifter;Action\Choplifter.png;Action\Choplifter.hex;;;Version 1.1.1;Press Play On Tape;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;9
 1;Karatega;Action\Karatega.png;Action\Karatega.hex;;;Version 0.9;Press Play On Tape;Rescue Princess Mariko from within the Akum'a castle fortress.;12
 1;FestiveFight;Misc\FestiveFight.png;Misc\FestiveFight.hex;;;Version 1.0;crait;Holiday mascots from throughout the calendar must fight in order to compete for the affection of the children throughout the world for some weird reason.;14
 1;Kungfuescape;Arcade\Kungfuescape.png;Arcade\Kungfuescape.hex;;;Version 1.0;Sazazel;Enter the dragon! Battle enemies using an array of flying kicks, normal kicks and punches.;12
