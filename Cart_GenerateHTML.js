@@ -220,8 +220,8 @@ function generateHtmlTable_FullList(data) {
                     // Does the games collection already contain this game ?
 
                     var pos = items.map(function (e) {
-                        return e.name;
-                    }).indexOf(row[1]);
+                        return e.hex;
+                    }).indexOf(row[3]);
 
                     if (pos < 0) {
 

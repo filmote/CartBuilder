@@ -121,7 +121,11 @@ function createCSV(colCount) {
             output += cat.screen; output += ";";
             output += cat.hex; output += ";";
             output += cat.data; output += ";";
-            output += cat.save; output += ";;;;<eol/>";
+            // output += cat.save; output += ";;;;<eol/>";
+            output += cat.save; output += ";";
+            output += cat.version; output += ";";
+            output += cat.developer; output += ";";
+            output += cat.info; output += ";<eol/>";
 
             var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
             var idsInOrder = ul.sortable("toArray");
