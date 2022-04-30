@@ -86,52 +86,52 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 5;supercrate;Platformer\supercrate.png;Platformer\supercrate.hex;;;1.0;uXe;A platform-action-shooting game.;4
 5;ninjafuzz;Platformer\ninjafuzz.png;Platformer\ninjafuzz.hex;;;1.0;Hundstrasse;Guide the Fuzzgrawth up the three towers to collect the three ‘things’! It’s a fast paced platformer against the clock with randomly ordered levels.;9
 5;bounce;Platformer\bounce.png;Platformer\bounce.hex;;;1.0;Joshimuz;The Bounce is a bouncy ball physics platformer game. Simple to understand yet incredibly hard to master, what seems easy at first glance is actually pretty rage inducing when you get to the later levels. ;9
-5;BigBlackBox;Platformer\BigBlackBox.png;Platformer\BigBlackBox.hex;;;;STUDIOCRAFTapps;;
-5;njahr;Platformer\njahr.png;Platformer\njahr.hex;;;;;;
-5;tinytower;Puzzle\tinytower.png;Puzzle\tinytower.hex;;;;akkera102;;
+5;BigBlackBox;Platformer\BigBlackBox.png;Platformer\BigBlackBox.hex;;;1.0;Studio Craft Apps;A port of the Gaebuino Big Black Box.;
+5;njahr;Platformer\njahr.png;Platformer\njahr.hex;;;1.0;Hundstrasse;A fast paced platformer.;
+5;tinytower;Puzzle\tinytower.png;Puzzle\tinytower.hex;;;1.0;akkera102;Players must climb up a procedurally generated tower.;
 6;Strategy;category-screens\Strategy.png;;;;;;;
-6;microcity;Arcade\microcity.png;Arcade\microcity.hex;;;;jhhoward;;37
-6;microtd;Puzzle\microtd.png;Puzzle\microtd.hex;;;;drummyfish;;19
-6;Ardulem;Puzzle\Ardulem.png;Puzzle\Ardulem.hex;;;;banban;;20
-6;ARtillery;Arcade\ARtillery.png;Arcade\ARtillery.hex;;;;bergasms;;3
+6;microcity;Arcade\microcity.png;Arcade\microcity.hex;;;1.0;jhhoward;MicroCity is a city simulation game inspired by SimCity.;37
+6;microtd;Puzzle\microtd.png;Puzzle\microtd.hex;;;1.1;drummyfish;Defend your territory from the enemy attackers.;19
+6;Ardulem;Puzzle\Ardulem.png;Puzzle\Ardulem.hex;;;1.0;banban;Lemmings on Arduboy!;20
+6;ARtillery;Arcade\ARtillery.png;Arcade\ARtillery.hex;;;1.0;bergasms;A remake of the classic Tanks game from the Amiga by Gary Roberts.;3
 7;Puzzle;category-screens\Puzzle.png;;;;;;;
-7;CircuitDude;Puzzle\CircuitDude.png;Puzzle\CircuitDude.hex;;;;Crait;;30
-7;Logix;Puzzle\Logix.png;Puzzle\Logix.hex;;;;filmote;;21
-7;Atomicpuzzlepack;Puzzle\Atomicpuzzlepack.png;Puzzle\Atomicpuzzlepack.hex;;;;Atomic;;19
+7;CircuitDude;Puzzle\CircuitDude.png;Puzzle\CircuitDude.hex;;;3.2;Crait;Help Circuit Dude build an awesome invention by leading him through 75 unique levels, completing circuits and plugging in microchips. After all chips are inserted into their sockets, the exit will activate and you can advance to the next puzzle! What kind of secret invention is Circuit Dude building? Complete all of the levels to find out!;30
+7;Logix;Puzzle\Logix.png;Puzzle\Logix.hex;;;1.0;Press Play on Tape;Logix is an educational game that teaches the basic logic gates used in digital electronics. Once you have completed some introductory puzzles that feature a single gate each, you can move on to harder puzzles that test your learning!;21
+7;Atomicpuzzlepack;Puzzle\Atomicpuzzlepack.png;Puzzle\Atomicpuzzlepack.hex;;;1.0;Atomic;Three different puzzle games in one!;19
 7;Darkstar;Misc\Darkstar.png;Misc\Darkstar.hex;;;1.0;MrBlinky;A little puzzle game based on the HP48 / TI83 calculator game Dstar.;14
-7;Sensitive;Puzzle\Sensitive.png;Puzzle\Sensitive.hex;;;;spinal;;13
-7;Blocks;Puzzle\Blocks.png;Puzzle\Blocks.hex;;;;w3woody;;10
-7;tinysokoban;Puzzle\tinysokoban.png;Puzzle\tinysokoban.hex;;;;akkera102;;5
-7;MAZEZAM;Puzzle\MAZEZAM.png;Puzzle\MAZEZAM.hex;;;;ardubeast;;10
-7;chiemagari;Puzzle\chiemagari.png;Puzzle\chiemagari.hex;;;;Obono;;11
-7;Pipes;Puzzle\Pipes.png;Puzzle\Pipes.hex;;;;filmote;;7
+7;Sensitive;Puzzle\Sensitive.png;Puzzle\Sensitive.hex;;;1.0;spinal;A remake of the classic C64 game Sensitive by Oliver Kirwa.;13
+7;Blocks;Puzzle\Blocks.png;Puzzle\Blocks.hex;;;1.0;w3woody;A puzzle game where you move boxes to where they belong.;10
+7;tinysokoban;Puzzle\tinysokoban.png;Puzzle\tinysokoban.hex;;;1.0;akkera102;A clone of Sokoban (1982) using the Yoshio Murase Levels. These levels are very small but difficult and interesting.;5
+7;MAZEZAM;Puzzle\MAZEZAM.png;Puzzle\MAZEZAM.hex;;;1.0;ardubeast;The game is similar to Sokoban since the player is able to push (and not pull) boxes. One difference is that the boxes can only be pushed horizontally, and any push causes all of the boxes in that particular row to be moved. Another difference is that the player is only trying to exit the level as opposed to putting the boxes in the correct locations.;10
+7;chiemagari;Puzzle\chiemagari.png;Puzzle\chiemagari.hex;;;1.0;Obono;A puzzle game. Tere are 10 different pieces. You must place all of them into the frame without overlapping.;11
+7;Pipes;Puzzle\Pipes.png;Puzzle\Pipes.hex;;;1.0;Press Play on Tape;A version of the classic pipes game where you must lay pipe between each pair of nodes without the pipes crossing each other. This version has puzzles ranging from 5 x 5 to 9 x 9.;7
 7;Xmas Tree;Misc\xmastree.png;Misc\xmastree.hex;;;1.1;MrBlinky;A Christmas themed version of the classic Towers of Hanoi game.;10
-7;AMaze;Puzzle\AMaze.png;Puzzle\AMaze.hex;;;;Keyboard_Camper;;6
-7;Arduslide;Puzzle\Arduslide.png;Puzzle\Arduslide.hex;;;;gooberdlx;;6
-7;Crates3d;Puzzle\Crates3d.png;Puzzle\Crates3d.hex;;;;Brian;;6
-7;ringpuzzle;Puzzle\ringpuzzle.png;Puzzle\ringpuzzle.hex;;;;SSNikolaevich;;2
-7;LiteOut;Puzzle\LiteOut.png;Puzzle\LiteOut.hex;;;;kmk1018;;1
-7;2048;Puzzle\2048.png;Puzzle\2048.hex;;;;Yuki;;7
-7;1010;Puzzle\1010.png;Puzzle\1010.hex;;;;;;
-7;termtwirl;Puzzle\termtwirl.png;Puzzle\termtwirl.hex;;;;Corruptio;;
+7;AMaze;Puzzle\AMaze.png;Puzzle\AMaze.hex;;;1.0;Keyboard_Camper;Navigate through randomly generated mazes.;6
+7;Arduslide;Puzzle\Arduslide.png;Puzzle\Arduslide.hex;;;1.0;gooberdlx;A tile slider game.;6
+7;Crates3d;Puzzle\Crates3d.png;Puzzle\Crates3d.hex;;;1.0;Brian;A port of the 3D puzzle game originally written for the TI-83 calculator.;6
+7;ringpuzzle;Puzzle\ringpuzzle.png;Puzzle\ringpuzzle.hex;;;1.0;SSNikolaevich;A simple puzzle game with toroidal topology;2
+7;LiteOut;Puzzle\LiteOut.png;Puzzle\LiteOut.hex;;;1.0;kmk1018;Lite/Out is a game where you have to turn off all of the lights, but every time you change a light, the surrounding lights change. The game consists of a 5-by-5 grid where some of the blocks are lit up. You’ll complete the level when all of the blocks are not lit.;1
+7;2048;Puzzle\2048.png;Puzzle\2048.hex;;;1.0;Yuki;The classic 2048 sliding tile puzzle.;7
+7;1010;Puzzle\1010.png;Puzzle\1010.hex;;;1.0;MWM;1010! is a wildly addicting brain teaser - a simple puzzle game that will challenge you, while also training your brain. Put your puzzle skills to the test with this exciting title - we dare you to try and put it down.;
+7;termtwirl;Puzzle\termtwirl.png;Puzzle\termtwirl.hex;;;1.0;Corruptio;This is clone of classic Text Twist, with 1900 random levels. Add to your score by unjumbling the letters to make words. If you use all six letters to make a word within the allotted time, then you can continue to the next level. There is a large bonus for finding all the words before time runs out.;
 8;Skill;category-screens\Skill.png;;;;;;;
-8;curse;Puzzle\curse.png;Puzzle\curse.hex;;;;Press Play On Tape;;17
-8;Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;;Press Play On Tape;;17
-8;KnightMove;Puzzle\knightmove.png;Puzzle\knightmove.hex;;;;Obono;;21
-8;Samegame;Arcade\Samegame.png;Arcade\Samegame.hex;;;;Obono;;13
-8;stairssweep;Puzzle\stairssweep.png;Puzzle\stairssweep.hex;;;;Obono;;
-8;psicolo;Puzzle\psicolo.png;Puzzle\psicolo.hex;;;;Obono;;10
-8;Minesweeper;Puzzle\Minesweeper.png;Puzzle\Minesweeper.hex;;;;Pharap;;13
-8;begemmed;arg\begemmed.png;arg\begemmed.hex;;;;Team ARG;;10
-8;Blobattack;arg\Blobattack.png;arg\Blobattack.hex;;;;Team ARG;;9
-8;sudoku;Puzzle\sudoku.png;Puzzle\sudoku.hex;;;;neilsunw;;5
-8;Boxstacker;Puzzle\Boxstacker.png;Puzzle\Boxstacker.hex;;;;dragula96;;4
-8;Arduboysays;Puzzle\Arduboysays.png;Puzzle\Arduboysays.hex;;;;Slade;;4
-8;Diamonds;Arcade\diamonds.png;Arcade\diamonds.hex;;;;redbug;;5
-8;KOOKY;Puzzle\KOOKY.png;Puzzle\KOOKY.hex;;;;shdwwzrd;;9
-8;NumberMind;Puzzle\NumberMind.png;Puzzle\NumberMind.hex;;;;Yoshi;;5
-8;Bombzzle;Puzzle\Bombzzle.png;Puzzle\Bombzzle.hex;;;;HokuHakase;;4
-8;Floodfill;Puzzle\Floodfill.png;Puzzle\Floodfill.hex;;;;garyfranz;;3
+8;curse;Puzzle\curse.png;Puzzle\curse.hex;;;1.0;Press Play On Tape;The evil Astarok has cast a nasty curse on the folk of Griford and turned them into pumpkins! The town’s people have asked you to battle the AstaroK and his evil friends in their hideout - an old castle on the edge of town. Can you release the town from the curse of AztaroK?;17
+8;Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;1.0;Press Play On Tape;Each year the people of the village choose a new champion to protect them from Astarok. Compete in the trials to see how far you can get and you could be that champion! Your choice of runes will select different courses … some are easier than others!;17
+8;KnightMove;Puzzle\knightmove.png;Puzzle\knightmove.hex;;;1.0;Obono;An action-puzzle game where you control a knight piece of the chess which can move in an L shape on the 8×4 board.;21
+8;Samegame;Arcade\Samegame.png;Arcade\Samegame.hex;;;1.0;Obono;A famous tile-matching puzzle.;13
+8;stairssweep;Puzzle\stairssweep.png;Puzzle\stairssweep.hex;;;1.0;Obono;A falling block puzzle game.;
+8;psicolo;Puzzle\psicolo.png;Puzzle\psicolo.hex;;;1.0;Obono;A puzzle game with dice.;10
+8;Minesweeper;Puzzle\Minesweeper.png;Puzzle\Minesweeper.hex;;;1.0;Pharap;The classic Minesweeper for the Arduboy.;13
+8;begemmed;arg\begemmed.png;arg\begemmed.hex;;;1.0;Team ARG;Get three or more matching gems in a row by swapping adjacent gems.;10
+8;Blobattack;arg\Blobattack.png;arg\Blobattack.hex;;;1.0;Team ARG;A falling block game.;9
+8;sudoku;Puzzle\sudoku.png;Puzzle\sudoku.hex;;;1.0;neilsunw;Play Sudoku on your Arduboy. Includes 45 puzzles (easy, medium, hard) and allows custom puzzles to be entered manually or via serial input.;5
+8;Boxstacker;Puzzle\Boxstacker.png;Puzzle\Boxstacker.hex;;;1.0;dragula96;Stacker clone like the game at the arcade that gives you a chance to win a prize, however in this one the only thing you win is satisfaction!.;4
+8;Arduboysays;Puzzle\Arduboysays.png;Puzzle\Arduboysays.hex;;;1.0;Slade;Simon for the Arduboy. Remember and repeat the sequences as they show on screen.;4
+8;Diamonds;Arcade\diamonds.png;Arcade\diamonds.hex;;;1.0;redbug;Diamonds is a mix between a breakout game and a puzzle game. Original game was released on HP48 more than 20 years ago.;5
+8;KOOKY;Puzzle\KOOKY.png;Puzzle\KOOKY.hex;;;1.0;shdwwzrd;Santa has delivered the presents and filled the stockings. Help Santa eat the cookies before the kids wake up and discover him in this match 2 puzzle game. Build bigger sets to get extra time and lots of points.;9
+8;NumberMind;Puzzle\NumberMind.png;Puzzle\NumberMind.hex;;;1.0;Yoshi;NumberMind - A Master Mind type game with numbers;5
+8;Bombzzle;Puzzle\Bombzzle.png;Puzzle\Bombzzle.hex;;;1.0;HokuHakase;An explosive puzzle game!;4
+8;Floodfill;Puzzle\Floodfill.png;Puzzle\Floodfill.hex;;;;Gary Franz;This is a simple flood fill game for the Arduboy. Starting from the top-left tile, the goal is to flood the entire board until there is only one pattern. There are 999 levels. Each level has a limit of 20 moves.;3
 8;Tres;Puzzle\Tres.png;Puzzle\Tres.hex;;;;cajogold;;3
 8;Roshambo;Puzzle\Roshambo.png;Puzzle\Roshambo.hex;;;;CDR_Xavier;;2
 8;TicTacCurly;Puzzle\TicTacCurly.png;Puzzle\TicTacCurly.hex;;;;curly;;2
