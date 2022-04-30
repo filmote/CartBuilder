@@ -98,14 +98,14 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Circuit Dude;Puzzle\CircuitDude.png;Puzzle\CircuitDude.hex;;;3.2;Crait;Help Circuit Dude build an awesome invention by leading him through 75 unique levels, completing circuits and plugging in microchips. After all chips are inserted into their sockets, the exit will activate and you can advance to the next puzzle! What kind of secret invention is Circuit Dude building? Complete all of the levels to find out!;30
 7;Logix;Puzzle\Logix.png;Puzzle\Logix.hex;;;1.0;Press Play on Tape;Logix is an educational game that teaches the basic logic gates used in digital electronics. Once you have completed some introductory puzzles that feature a single gate each, you can move on to harder puzzles that test your learning!;21
 7;Atomic Puzzle Pack;Puzzle\Atomicpuzzlepack.png;Puzzle\Atomicpuzzlepack.hex;;;1.0;Atomic;Three different puzzle games in one!;19
-7;Darkstar;Misc\Darkstar.png;Misc\Darkstar.hex;;;1.0;MrBlinky;A little puzzle game based on the HP48 / TI83 calculator game Dstar.;14
+7;Darkstar;Misc\Darkstar.png;Misc\Darkstar.hex;;;1.0;Mr.Blinky;A little puzzle game based on the HP48 / TI83 calculator game Dstar.;14
 7;Sensitive;Puzzle\Sensitive.png;Puzzle\Sensitive.hex;;;1.0;spinal;A remake of the classic C64 game Sensitive by Oliver Kirwa.;13
 7;Blocks;Puzzle\Blocks.png;Puzzle\Blocks.hex;;;1.0;w3woody;A puzzle game where you move boxes to where they belong.;10
 7;Tiny Sokoban;Puzzle\tinysokoban.png;Puzzle\tinysokoban.hex;;;1.0;akkera102;A clone of Sokoban (1982) using the Yoshio Murase Levels. These levels are very small but difficult and interesting.;5
 7;MAZEZAM;Puzzle\MAZEZAM.png;Puzzle\MAZEZAM.hex;;;1.0;ardubeast;The game is similar to Sokoban since the player is able to push (and not pull) boxes. One difference is that the boxes can only be pushed horizontally, and any push causes all of the boxes in that particular row to be moved. Another difference is that the player is only trying to exit the level as opposed to putting the boxes in the correct locations.;10
 7;Chie Magari Ita;Puzzle\chiemagari.png;Puzzle\chiemagari.hex;;;1.0;Obono;A puzzle game. Tere are 10 different pieces. You must place all of them into the frame without overlapping.;11
 7;Pipes;Puzzle\Pipes.png;Puzzle\Pipes.hex;;;1.0;Press Play on Tape;A version of the classic pipes game where you must lay pipe between each pair of nodes without the pipes crossing each other. This version has puzzles ranging from 5 x 5 to 9 x 9.;7
-7;Xmas Tree;Misc\xmastree.png;Misc\xmastree.hex;;;1.1;MrBlinky;A Christmas themed version of the classic Towers of Hanoi game.;10
+7;Xmas Tree;Misc\xmastree.png;Misc\xmastree.hex;;;1.1;Mr.Blinky;A Christmas themed version of the classic Towers of Hanoi game.;10
 7;AMaze;Puzzle\AMaze.png;Puzzle\AMaze.hex;;;1.0;Keyboard_Camper;Navigate through randomly generated mazes.;6
 7;Arduslide;Puzzle\Arduslide.png;Puzzle\Arduslide.hex;;;1.0;gooberdlx;A tile slider game.;6
 7;Crates 3D;Puzzle\Crates3d.png;Puzzle\Crates3d.hex;;;1.0;Brian;A port of the 3D puzzle game originally written for the TI-83 calculator.;6
@@ -232,7 +232,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 15;Arduboy Life;Misc\ArduboyLife.png;Misc\ArduboyLife.hex;;;;MLXXXp;;10
 15;Game of Life;Demos\gameoflife.png;Demos\gameoflife.hex;;;;kmasato;;
 15;Boids;Demos\boids.png;Demos\boids.hex;;;;elpassion;;
-15;Silence;Misc\silence-a-text-adventure.png;Misc\silence-a-text-adventure.hex;;;;rainnw;;
+15;Silence;Misc\silence-a-text-adventure.png;Misc\silence-a-text-adventure.hex;;;1.2;Rainnw (Spaceneedle);A fun little Sci-Fi text adventure using the GTI game engine;
 15;Fidget Spinner;Demos\fidget.png;Demos\fidget.hex;;;;Trigonated;;8
 15;Book Reader - The Pig And The Box;Application\book.png;Application\book.hex;;;;drummyfish;;7
 15;The Guy Who Never Complains;Misc\tgwnc.png;Misc\tgwnc.hex;;;;JuiceLizard;;6
