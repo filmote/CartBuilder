@@ -1,14 +1,14 @@
 List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Info;Likes
 0;Bootloader;arduboy-fx-loader.png;;;;;;;
 1;Action;category-screens\Action.png;;;;;;;
-1;Hopper;Action\hopper.png;Action\hopper.hex;;;1.0;obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;24
-1;Lasers;Arcade\Lasers.png;Arcade\Lasers.hex;;;1.0;obono;Lasers - A simple Ikaruga-like game.;19
-1;chribocchi;Arcade\chribocchi.png;Arcade\chribocchi.hex;;;1.0;obono;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;12
-1;Bangi;Action\Bangi.png;Action\Bangi.hex;;;1.0;igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;14
+1;Hopper;Action\hopper.png;Action\hopper.hex;;;1.0;Obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;24
+1;Lasers;Arcade\Lasers.png;Arcade\Lasers.hex;;;1.0;Obono;Lasers - A simple Ikaruga-like game.;19
+1;chribocchi;Arcade\chribocchi.png;Arcade\chribocchi.hex;;;1.0;Obono;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;12
+1;Bangi;Action\Bangi.png;Action\Bangi.hex;;;1.0;Igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;14
 1;Helii;Action\Helii.png;Action\Helii.hex;;;1.0;BHSPitMonkey;Helii is a port of my homebrew clone of the old Flash “Helicopter Game” and its ilk (i.e. game type that Flappy Bird is a variation of). As you fly through the tunnel the gap becomes more narrow and more challenging - How far can you go?;8
 1;Choplifter;Action\Choplifter.png;Action\Choplifter.hex;;;1.1.1;Press Play On Tape;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;9
 1;Karatega;Action\Karatega.png;Action\Karatega.hex;;;0.9;Press Play On Tape;Rescue Princess Mariko from within the Akum'a castle fortress.;12
-1;FestiveFight;Misc\FestiveFight.png;Misc\FestiveFight.hex;;;1.0;crait;Holiday mascots from throughout the calendar must fight in order to compete for the affection of the children throughout the world for some weird reason.;14
+1;FestiveFight;Misc\FestiveFight.png;Misc\FestiveFight.hex;;;1.0;Crait;Holiday mascots from throughout the calendar must fight in order to compete for the affection of the children throughout the world for some weird reason.;14
 1;Kungfuescape;Arcade\Kungfuescape.png;Arcade\Kungfuescape.hex;;;1.0;Sazazel;Enter the dragon! Battle enemies using an array of flying kicks, normal kicks and punches.;12
 1;pocketfighter;Arcade\pocketfighter.png;Arcade\pocketfighter.hex;;;1.0;WangRenxin;Pocket Fighter is an FTG, you can compete with your Arduboy. The CPU will repeat your actions at previous level.;2
 1;Bounce;Arcade\bounce.png;Arcade\bounce.hex;;;1.0;RetrobitCoder;Air hockey for the Arduboy!  Two players pick their dogsand battle to the end.;7
@@ -40,52 +40,52 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 3;OilPanic;Arcade\OilPanic.png;Arcade\OilPanic.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;
 3;Rooftop;Action\rooftop.png;Action\rooftop.hex;;;1.0;Prototype;Rescue the trapped people as fire consumes the city.;21
 3;BiriBiriBeat;Arcade\biribiribeat.png;Arcade\biribiribeat.hex;;;1.0;shiyouganai;BiriBiriBeat is a rhythm game! Its title is derived from ビリビリ - a Japanese onomatopoeia used to describe an electric shock or vibration.;12
-3;Backtothejungle;Arcade\Backtothejungle.png;Arcade\Backtothejungle.hex;;;;eried;;11
-3;Fatsche;Arcade\Fatsche.png;Arcade\Fatsche.hex;;;;veritazz;;10
-3;BurgardTime;Arcade\BurgardTime.png;Arcade\BurgardTime.hex;;;;pixelplatforms;;9
-3;Arduwhack;Arcade\Arduwhack.png;Arcade\Arduwhack.hex;;;;zeduckmaster;;8
-3;JumpBoy;Arcade\JumpBoy.png;Arcade\JumpBoy.hex;;;;t-iwasaki;;8
-3;pooppanic;Arcade\pooppanic.png;Arcade\pooppanic.hex;;;;inajob;;8
-3;RoboDodge;Arcade\RoboDodge.png;Arcade\RoboDodge.hex;;;;Gaveno;;7
-3;APara;Arcade\Apara.png;Arcade\APara.hex;;;;leovt;;4
-3;Chickenlauncher;Arcade\Chickenlauncher.png;Arcade\Chickenlauncher.hex;;;;crait;;4
-3;Dancerow;Arcade\Dancerow.png;Arcade\Dancerow.hex;;;;madya121;;4
-3;keykat;Arcade\keykat.png;Arcade\keykat.hex;;;;pngwen;;3
-3;DeepDishNine;Misc\DeepDishNine.png;Misc\DeepDishNine.hex;;;;fentonc;;3
-3;2PlayersPack;Arcade\2PlayersPack.png;Arcade\2PlayersPack.hex;;;;;;
-3;Arduman;Arcade\Arduman.png;Arcade\Arduman.hex;;;;Seth;;
-3;Crateconfusion;Arcade\Crateconfusion.png;Arcade\Crateconfusion.hex;;;;Phoboslab;;
-3;Ohyougonnadie;Arcade\oygd.png;Arcade\oygd.hex;;;;;;
-3;Tinydepth;Action\Tinydepth.png;Action\Tinydepth.hex;;;;akkera102;;
-3;PrizeFrenzy;Puzzle\prizefrenzy.png;Puzzle\prizefrenzy.hex;;;;madya121;;
+3;Backtothejungle;Arcade\Backtothejungle.png;Arcade\Backtothejungle.hex;;;1.8;eried;The Zoo had to close, what can the animals do? A small arcade game, inspired slighty on frogger (but sideways).;11
+3;Fatsche;Arcade\Fatsche.png;Arcade\Fatsche.hex;;;1.0;veritazz;Defend the town from the marauders.;10
+3;BurgardTime;Arcade\BurgardTime.png;Arcade\BurgardTime.hex;;;1.0;pixelplatforms;Peter Pepper  must walk over hamburger ingredients located across a maze of platforms while avoiding characters who pursue him.;9
+3;Arduwhack;Arcade\Arduwhack.png;Arcade\Arduwhack.hex;;;1.0;zeduckmaster;Whack-a-Mole for the Arduboy!;8
+3;JumpBoy;Arcade\JumpBoy.png;Arcade\JumpBoy.hex;;;1.0;t-iwasaki;Collect the coins but be carefull as the floorboards will decrease one by one each time you land on them.;8
+3;pooppanic;Arcade\pooppanic.png;Arcade\pooppanic.hex;;;1.0;inajob;Keep the Zoo clean of animal poop.;8
+3;RoboDodge;Arcade\RoboDodge.png;Arcade\RoboDodge.hex;;;1.0;Gaveno;Control your very own small robot as you dodge the barrage of incoming rockets!;7
+3;APara;Arcade\Apara.png;Arcade\APara.hex;;;1.0;leovt;Catch the paratroopers jumping out of a helicopter before they fall in the water.;4
+3;Chickenlauncher;Arcade\Chickenlauncher.png;Arcade\Chickenlauncher.hex;;;1.1;Crait;Shoot a chicken as far as you can. Try to hit springboards to give you a boost but watch out for spikes! ;4
+3;Dancerow;Arcade\Dancerow.png;Arcade\Dancerow.hex;;;1.0;madya121;An Audition Dance Game clone for Arduboy;4
+3;keykat;Arcade\keykat.png;Arcade\keykat.hex;;;1.0;pngwen;You are an I.T. worker named KeyKat. You must run around and turn computers off and back on again when they fail.;3
+3;DeepDishNine;Misc\DeepDishNine.png;Misc\DeepDishNine.hex;;;1.0;fentonc;You have to pilot a spacecraft around the TRAPPIST-1 system (a recently discovered star with 7 earth-sized planets orbiting it) while delivering pizzas. The goal is to try to make it onto the high-score board by minimizing delivery time and fuel usage.;3
+3;2PlayersPack;Arcade\2PlayersPack.png;Arcade\2PlayersPack.hex;;;1.0;Cedric Martin;Multiple two player games including Pong, Trave, ReflX, Mill and Memo;
+3;Arduman;Arcade\Arduman.png;Arcade\Arduman.hex;;;1.0;Seth;Re-live the nostalgic glory of games like Pac-Man and Lock ‘n’ Chase (with a few less pixels…) right on your Arduboy!;
+3;Crateconfusion;Arcade\Crateconfusion.png;Arcade\Crateconfusion.hex;;;1.0;Phoboslab;Manoeuvre the space ship to collect the crates.;
+3;Ohyougonnadie;Arcade\oygd.png;Arcade\oygd.hex;;;1.0;;You have one job, 8 bombs, 16 seconds to get the key and get to the door .. alive!;
+3;Tinydepth;Action\Tinydepth.png;Action\Tinydepth.hex;;;1.0;akkera102;Destroy the attacking submarines;
+3;PrizeFrenzy;Puzzle\prizefrenzy.png;Puzzle\prizefrenzy.hex;;;1.0;madya121;Its holiday time and presents are falling from the sky. Catch as many as you can in the available time.;
 4;Runner;category-screens\Runner.png;;;;;;;
-4;hollowseeker;Arcade\hollowseeker.png;Arcade\hollowseeker.hex;;;;obono;;21
-4;Chromedino;Arcade\Chromedino.png;Arcade\Chromedino.hex;;;;flaki;;16
-4;Squario;Platformer\Squario.png;Platformer\Squario.hex;;;;chris;;17
-4;Flappyball;Arcade\Flappyball.png;Arcade\Flappyball.hex;;;;chris;;6
-4;Flappybird;Arcade\Flappybird.png;Arcade\Flappybird.hex;;;;GameExpress;;
-4;ZooEscape;Action\ZooEscape.png;Action\ZooEscape.hex;;;;FerJerez;;9
-4;ShadowRunner;arg\ShadowRunner.png;arg\ShadowRunner.hex;;;;Team ARG;;7
-4;Roorun;Arcade\Roorun.png;Arcade\Roorun.hex;;;;crait;;5
-4;Leannathelion;Arcade\Leannathelion.png;Arcade\Leannathelion.hex;;;;shdwwzrd;;10
-4;ArduBuggy;Arcade\ArduBuggy.png;Arcade\ArduBuggy.hex;;;;Nono_Nono;;10
-4;Fanboat;Arcade\Fanboat.png;Arcade\Fanboat.hex;;;;fanboat;;9
-4;YouWontSurvive;Arcade\YouWontSurvive.png;Arcade\YouWontSurvive.hex;;;;AstroAndre;;3
-4;SFCave;Arcade\SFCave.png;Arcade\SFCave.hex;;;;Slade1972;;2
+4;hollowseeker;Arcade\hollowseeker.png;Arcade\hollowseeker.hex;;;1.0;Obono;Go forward in right direction. Seek a hollow as refuge not to be crushed.;21
+4;Chromedino;Arcade\Chromedino.png;Arcade\Chromedino.hex;;;1.0;Flaki;A version of Chrome’s (in?)famous dino side-scroller running-man-style dino jumper.;16
+4;Squario;Platformer\Squario.png;Platformer\Squario.hex;;;1.0;Chris;Here is is the jumping square man adventure you’ve all been looking for! Jump over chasms! Jump on top of bad guys! Jump into Question blocks and get points! Points!!;17
+4;Flappyball;Arcade\Flappyball.png;Arcade\Flappyball.hex;;;1.0;Chris;A flappy bird clone.;6
+4;Flappybird;Arcade\Flappybird.png;Arcade\Flappybird.hex;;;1.0;GameExpress;A flappy bird clone.;
+4;ZooEscape;Action\ZooEscape.png;Action\ZooEscape.hex;;;1.0;FerJerez;The animals have escaped! Avoid the animals by jumping over them and landing on the crocodiles mouth to snap it shut.;9
+4;ShadowRunner;arg\ShadowRunner.png;arg\ShadowRunner.hex;;;1.0;Team ARG;A shadow lost his kid by wandering too far away from the light. Now it must find its coloured equal to become one again.;7
+4;Roorun;Arcade\Roorun.png;Arcade\Roorun.hex;;;1.0;Crait;The zoo had to close and now all the animals are trying to escape! Help the kangaroo run away from the animal control who’s trying to catch him.;5
+4;Leannathelion;Arcade\Leannathelion.png;Arcade\Leannathelion.hex;;;1.0;shdwwzrd;Leanna may be a lion, but she knows what she likes: She wants fresh meat from her favorite restaurant.;10
+4;ArduBuggy;Arcade\ArduBuggy.png;Arcade\ArduBuggy.hex;;;1.0;Nono_Nono;A moon patrol remake.;10
+4;Fanboat;Arcade\Fanboat.png;Arcade\Fanboat.hex;;;1.0;fanboat;Dodge gators on your propeller-powered pontoon as it rages faster and faster across the big black bayou. If you can pick up juice for your grandfather’s old shield generator, you can pass right through the congregation as long as it’s powered up;9
+4;YouWontSurvive;Arcade\YouWontSurvive.png;Arcade\YouWontSurvive.hex;;;1.0;AstroAndre;Avoid incoming enemies on two different modes and test your reflexes. ;3
+4;SFCave;Arcade\SFCave.png;Arcade\SFCave.hex;;;Version;Slade1972;A remake of a palm pilot game.;2
 5;Platformer;category-screens\Platformer.png;;;;;;;
-5;CasteBoy;Platformer\CastleBoy.png;Platformer\CastleBoy.hex;;;;jlauener;;33
-5;SanSan;Action\Sansan.png;Action\Sansan.hex;;;;chame;;18
-5;MysticBalloon;arg\MysticBalloon.png;arg\MysticBalloon.hex;;;;Team ARG;;17
-5;MidnightWild;Misc\MidnightWild.png;Misc\MidnightWild.hex;;;;crait;;28
-5;OmegaHorizon;Platformer\OmegaHorizon.png;Platformer\OmegaHorizon.hex;;;;shdwwzrd;;15
-5;SquareNose;Platformer\SquareNose.png;Platformer\SquareNose.hex;;;;JuiceLizard;;16
-5;Jetpac;Action\Jetpac.png;Action\Jetpac.hex;;;;TheArduinoGuy;;5
-5;joustish;Arcade\joustish.png;Arcade\joustish.hex;;;;wuuff;;8
-5;poitto;Action\poitto.png;Action\poitto.hex;;;;inajob;;10
-5;ecomd;arg\ecomd.png;arg\ecomd.hex;;;;Team ARG;;10
-5;supercrate;Platformer\supercrate.png;Platformer\supercrate.hex;;;;uXe;;4
-5;ninjafuzz;Platformer\ninjafuzz.png;Platformer\ninjafuzz.hex;;;;Hundstrasse;;9
-5;bounce;Platformer\bounce.png;Platformer\bounce.hex;;;;Joshimuz;;9
+5;CasteBoy;Platformer\CastleBoy.png;Platformer\CastleBoy.hex;;;1.0;jlauener;A Castlvania demake.;33
+5;SanSan;Action\Sansan.png;Action\Sansan.hex;;;1.0;chame;SanSan is a name of little Santa. A weapon is his bag! This is Son Son, Rygar inspired action game, but add some original ideas.;18
+5;MysticBalloon;arg\MysticBalloon.png;arg\MysticBalloon.hex;;;1.0;Team ARG;Jump around, jump up and get down, jump around, float around, jump float, jump, float. Collect those coins.;17
+5;MidnightWild;Misc\MidnightWild.png;Misc\MidnightWild.hex;;;1.3;Crait;Something’s gone awry out West! Help Dusty Argile adventure out and defeat the baddies who are causing a commotion and stopping him from getting a good night’s rest. Put them to sleep with your handy lasso and rack up as many points as you can, but watch out for falling barrels, cacti, whirling tumbleweeds, snakes, and coyotes! Most of all, watch out for the mad bull and crazy Texan twister!;28
+5;OmegaHorizon;Platformer\OmegaHorizon.png;Platformer\OmegaHorizon.hex;;;1.3;shdwwzrd;The planet of Turnax has extensive mineral deposits of high value to the Interplanetary Allied Confederation (IPAC). Recent unanticipated attacks by primative species have proven damaging to mining operations. Your mission is to eliminate the primitive hierarchy in minimal time.;15
+5;SquareNose;Platformer\SquareNose.png;Platformer\SquareNose.hex;;;1.0;JuiceLizard;In a near future, in 1996, two international companies fight against each other to reign on the pet dry food market.So, what are you waiting for? Let’s go! Eat them all, Square Nose!;16
+5;Jetpac;Action\Jetpac.png;Action\Jetpac.hex;;;1.0;TheArduinoGuy;You are an astronaut on an alien planet with a Jet Pac. Assemble you rocket and gather fuel before taking off.;5
+5;joustish;Arcade\joustish.png;Arcade\joustish.hex;;;1.0;wuuff;A game quite like Joust!;8
+5;poitto;Action\poitto.png;Action\poitto.hex;;;1.0;inajob;An action puzzle game.;10
+5;ecomd;arg\ecomd.png;arg\ecomd.hex;;;1.0;Team ARG;Obviously .. something went wrong. That's for sure! You are hired to fix it. No questions asked. Licensed to shoot all that moves!;10
+5;supercrate;Platformer\supercrate.png;Platformer\supercrate.hex;;;1.0;uXe;A platform-action-shooting game.;4
+5;ninjafuzz;Platformer\ninjafuzz.png;Platformer\ninjafuzz.hex;;;1.0;Hundstrasse;Guide the Fuzzgrawth up the three towers to collect the three ‘things’! It’s a fast paced platformer against the clock with randomly ordered levels.;9
+5;bounce;Platformer\bounce.png;Platformer\bounce.hex;;;1.0;Joshimuz;The Bounce is a bouncy ball physics platformer game. Simple to understand yet incredibly hard to master, what seems easy at first glance is actually pretty rage inducing when you get to the later levels. ;9
 5;BigBlackBox;Platformer\BigBlackBox.png;Platformer\BigBlackBox.hex;;;;STUDIOCRAFTapps;;
 5;njahr;Platformer\njahr.png;Platformer\njahr.hex;;;;;;
 5;tinytower;Puzzle\tinytower.png;Puzzle\tinytower.hex;;;;akkera102;;
@@ -95,7 +95,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 6;Ardulem;Puzzle\Ardulem.png;Puzzle\Ardulem.hex;;;;banban;;20
 6;ARtillery;Arcade\ARtillery.png;Arcade\ARtillery.hex;;;;bergasms;;3
 7;Puzzle;category-screens\Puzzle.png;;;;;;;
-7;CircuitDude;Puzzle\CircuitDude.png;Puzzle\CircuitDude.hex;;;;crait;;30
+7;CircuitDude;Puzzle\CircuitDude.png;Puzzle\CircuitDude.hex;;;;Crait;;30
 7;Logix;Puzzle\Logix.png;Puzzle\Logix.hex;;;;filmote;;21
 7;Atomicpuzzlepack;Puzzle\Atomicpuzzlepack.png;Puzzle\Atomicpuzzlepack.hex;;;;Atomic;;19
 7;Darkstar;Misc\Darkstar.png;Misc\Darkstar.hex;;;1.0;MrBlinky;A little puzzle game based on the HP48 / TI83 calculator game Dstar.;14
@@ -103,7 +103,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Blocks;Puzzle\Blocks.png;Puzzle\Blocks.hex;;;;w3woody;;10
 7;tinysokoban;Puzzle\tinysokoban.png;Puzzle\tinysokoban.hex;;;;akkera102;;5
 7;MAZEZAM;Puzzle\MAZEZAM.png;Puzzle\MAZEZAM.hex;;;;ardubeast;;10
-7;chiemagari;Puzzle\chiemagari.png;Puzzle\chiemagari.hex;;;;obono;;11
+7;chiemagari;Puzzle\chiemagari.png;Puzzle\chiemagari.hex;;;;Obono;;11
 7;Pipes;Puzzle\Pipes.png;Puzzle\Pipes.hex;;;;filmote;;7
 7;Xmas Tree;Misc\xmastree.png;Misc\xmastree.hex;;;1.1;MrBlinky;A Christmas themed version of the classic Towers of Hanoi game.;10
 7;AMaze;Puzzle\AMaze.png;Puzzle\AMaze.hex;;;;Keyboard_Camper;;6
@@ -117,10 +117,10 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Skill;category-screens\Skill.png;;;;;;;
 8;curse;Puzzle\curse.png;Puzzle\curse.hex;;;;Press Play On Tape;;17
 8;Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;;Press Play On Tape;;17
-8;KnightMove;Puzzle\knightmove.png;Puzzle\knightmove.hex;;;;obono;;21
-8;Samegame;Arcade\Samegame.png;Arcade\Samegame.hex;;;;obono;;13
-8;stairssweep;Puzzle\stairssweep.png;Puzzle\stairssweep.hex;;;;obono;;
-8;psicolo;Puzzle\psicolo.png;Puzzle\psicolo.hex;;;;obono;;10
+8;KnightMove;Puzzle\knightmove.png;Puzzle\knightmove.hex;;;;Obono;;21
+8;Samegame;Arcade\Samegame.png;Arcade\Samegame.hex;;;;Obono;;13
+8;stairssweep;Puzzle\stairssweep.png;Puzzle\stairssweep.hex;;;;Obono;;
+8;psicolo;Puzzle\psicolo.png;Puzzle\psicolo.hex;;;;Obono;;10
 8;Minesweeper;Puzzle\Minesweeper.png;Puzzle\Minesweeper.hex;;;;Pharap;;13
 8;begemmed;arg\begemmed.png;arg\begemmed.hex;;;;Team ARG;;10
 8;Blobattack;arg\Blobattack.png;arg\Blobattack.hex;;;;Team ARG;;9
@@ -142,8 +142,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 9;Tabletop;category-screens\Tabletop.png;;;;;;;
 9;Blackjack;Misc\Blackjack.png;Misc\Blackjack.hex;;;;filmote;;11
 9;Diceoffate;arg\Diceoffate.png;arg\Diceoffate.hex;;;;Team ARG;;5
-9;reversi;Puzzle\reversi.png;Puzzle\reversi.hex;;;;obono;;15
-9;quarto;Puzzle\quarto.png;Puzzle\quarto.hex;;;;obono;;10
+9;reversi;Puzzle\reversi.png;Puzzle\reversi.hex;;;;Obono;;15
+9;quarto;Puzzle\quarto.png;Puzzle\quarto.hex;;;;Obono;;10
 9;littlerookchess;Demos\littlerookchess.png;Demos\littlerookchess.hex;;;;olikraus;;13
 9;Farkle;Puzzle\Farkle.png;Puzzle\Farkle.hex;;;;Press Play On Tape;;11
 9;MicroCheckers;Puzzle\MicroCheckers.png;Puzzle\MicroCheckers.hex;;;;Jezzamon;;11
@@ -184,7 +184,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Junofirst;Action\Junofirst.png;Action\Junofirst.hex;;;;Press Play On Tape;;19
 12;Evade;Arcade\Evade.png;Arcade\Evade.hex;;;;ModusCreate;;14
 12;Evade2;Arcade\Evade2.png;Arcade\Evade2.hex;;;;ModusCreate;;13
-12;ardubullets;Shooter\ardubullets.png;Shooter\ardubullets.hex;;;;obono;;19
+12;ardubullets;Shooter\ardubullets.png;Shooter\ardubullets.hex;;;;Obono;;19
 12;StellarImpact;Shooter\StellarImpact.png;Shooter\StellarImpact.hex;;;;gnargle;;14
 12;Trenchrun;Action\Trenchrun.png;Action\Trenchrun.hex;;;;lscardinali;;14
 12;TinyAsteroids;Shooter\TinyAsteroids.png;Shooter\TinyAsteroids.hex;;;;akkera102;;13
@@ -194,7 +194,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;HumanityRevenge;Shooter\HumanityRevenge.png;Shooter\HumanityRevenge.hex;;;;giangregorioc;;9
 12;NightRaid;Shooter\NightRaid.png;Shooter\NightRaid.hex;;;;epbarger;;8
 12;Arcodia;Shooter\Arcodia.png;Shooter\Arcodia.hex;;;;TheArduinoGuy;;5
-12;SuitShoter;Shooter\SuitShooter.png;Shooter\SuitShooter.hex;;;;crait;;5
+12;SuitShoter;Shooter\SuitShooter.png;Shooter\SuitShooter.hex;;;;Crait;;5
 12;Millipe;Arcade\Millipe.png;Arcade\Millipe.hex;;;;Dreamer2345;;3
 12;CosmicPods;Shooter\CosmicPods.png;Shooter\CosmicPods.hex;;;;cubic9com;;4
 12;BattleForZ;Shooter\BattleForZ.png;Shooter\BattleForZ.hex;;;;Mre64;;3
@@ -249,7 +249,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 16;Abshell;Application\Abshell.png;Application\Abshell.hex;;;;boochow;;16
 16;CodersToolbox;Application\Toolbox.png;Application\Toolbox.hex;;;;filmote;;16
 16;ABAsmDP1;Application\ABAsmDP1.png;Application\ABAsmDP1.hex;;;;fuopy;;12
-16;ArduboyAssistant;Application\ArduboyAssistant.png;Application\ArduboyAssistant.hex;;;;crait;;10
+16;ArduboyAssistant;Application\ArduboyAssistant.png;Application\ArduboyAssistant.hex;;;;Crait;;10
 16;ASE;Application\ASE.png;Application\ASE.hex;;;;pmwasson;;9
 16;PocketPDA;Application\PocketPDA.png;Application\PocketPDA.hex;;;;WangRenxin;;9
 16;brainfxck;Application\brainfxck.png;Application\brainfxck.hex;;;;red-hara;;8

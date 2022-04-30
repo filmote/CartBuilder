@@ -512,9 +512,12 @@ $(document).ready(function () {
 
         success: function (response) {
 
-            tabledata = response.replace(/\;/g, ",");
-            urldata = tabledata.replace(/\\/g, "/");
-            csvdata = $.csv.toArrays(urldata);
+            var options = {"separator" : ";"};
+
+            // tabledata = response.replace(/\;/g, ",");
+            // urldata = tabledata.replace(/\\/g, "/");
+            urldata = response.replace(/\\/g, "/");
+            csvdata = $.csv.toArrays(urldata, options);
             generateHtmlTable(csvdata);
 
             if (typeof fullList !== "undefined" && fullList != "") {
@@ -527,9 +530,12 @@ $(document).ready(function () {
 
                     success: function (response) {
 
-                        tabledata = response.replace(/\;/g, ",");
-                        urldata = tabledata.replace(/\\/g, "/");
-                        csvdata = $.csv.toArrays(urldata);
+                        var options = {"separator" : ";"};
+
+                        // tabledata = response.replace(/\;/g, ",");
+                        // urldata = tabledata.replace(/\\/g, "/");
+                        urldata = response.replace(/\\/g, "/");
+                        csvdata = $.csv.toArrays(urldata, options);
                         generateHtmlTable_FullList(csvdata);
 
 
