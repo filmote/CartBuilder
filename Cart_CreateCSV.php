@@ -1,3 +1,5 @@
+<?php
+
 /* -------------------------------------------------------------------------------
 
 BSD 3-Clause License
@@ -33,8 +35,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ------------------------------------------------------------------------------- */
 
 // V1.07
-
-<?php
 
     #CSV indices
     const ID_LIST = 0;

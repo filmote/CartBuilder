@@ -1,3 +1,5 @@
+<?php
+
 /* -------------------------------------------------------------------------------
 
 BSD 3-Clause License
@@ -34,7 +36,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // V1.07
 
-<?php
 
     session_start();
 
