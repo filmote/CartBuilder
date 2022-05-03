@@ -113,6 +113,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 10;CrazyKart;Racing/CrazyKart.png;Racing/CrazyKart.hex;;;;;;
 10;Randocity;Racing/Randocity.png;Racing/Randocity.hex;;;;;;
 11;RPG;category-screens/RPG.png;;;;;;;
+11;ArduRogue;RPG\ardurogue.png;RPG\ardurogue.hex;;;1.0;brow1067;ArduRogue: a traditional roguelike for the Arduboy.;0
 11;ardynia;RPG/ardynia.png;RPG/ardynia.hex;;;;;;
 11;Arduventure;RPG/Arduventure.png;RPG/Arduventure.hex;;;;;;
 11;darkandunder;RPG/darkandunder.png;RPG/darkandunder.hex;;;;;;
