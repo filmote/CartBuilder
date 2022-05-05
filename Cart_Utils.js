@@ -178,8 +178,19 @@ function openInfo(itemIndex) {
     if (suppressOpenInfoDlg == false) {
 
         var item = items[itemIndex - 1];
-
-        if (item.name !="") $('#ui-id-3').text(item.name);
+        var gamenr = 0;
+        var gamecount = 0;
+        for (var i = 0; i < $("#tab").find("tr:first th").length - 2; i++) {
+            var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
+            var idsInOrder = ul.sortable("toArray");
+            for (const value of idsInOrder) {
+                gamecount++;
+                if (itemIndex == value.substring(2)) gamenr = gamecount;
+            }
+        }
+        var gameinfo = ""
+        if (gamenr > 0) gameinfo = " (Game " + gamenr + " of " +gamecount + ")";
+        if (item.name !="" || gameinfo != "") $('#ui-id-3').text(item.name + gameinfo);
         $('#infoImg').attr("src", item.screen);
         $('#infoDeveloper').text(item.developer);
         if (item.version != "") $('#infoVersion').text("Version " + item.version);
