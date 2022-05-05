@@ -87,7 +87,7 @@ function generateHtmlTable(data) {
 
                     // Add category details to global collection..
 
-                    var cat = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row [6], developer: row[7], info: row[8] };
+                    var cat = { name: row[1].trim(), screen: row[2], hex: row[3], data: row[4], save: row[5], version: row [6], developer: row[7], info: row[8] };
                     cats.push(cat);
 
                 }
@@ -219,7 +219,7 @@ function generateHtmlTable_FullList(data) {
 
                     // Add category details to global collection..
 
-                    var cat = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row [6], developer: row[7], info: row[8] };
+                    var cat = { name: row[1].trim(), screen: row[2], hex: row[3], data: row[4], save: row[5], version: row [6], developer: row[7], info: row[8] };
                     cats.push(cat);
 
                 }

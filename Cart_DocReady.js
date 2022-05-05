@@ -62,14 +62,25 @@ $(document).ready(function () {
 
             event.preventDefault();
             var valid = true;
+            var $categoryName = $('#categoryName').val().trim();
+
             allFields.removeClass("ui-state-error");
 
             valid = valid && checkLength(tips, name, "category name", 1, 99);
             valid = valid && checkRegexp(tips, name, /^[a-z](.)*$/i, "Category names must begin with a letter.");
 
+            var pos = cats.map(function (e) {
+                return e.name.toLowerCase();
+            }).indexOf($categoryName.toLowerCase());
+
+            if (pos >= 0) {
+                name.addClass("ui-state-error");
+                updateTips(tips, "Category name already in use.");
+                valid = false;
+            }
+
             if (valid) {
 
-                var $categoryName = $('#categoryName').val();
                 var $guid = $('#guid').val();
 
                 $.post("Cart_CreateCSV.php",
