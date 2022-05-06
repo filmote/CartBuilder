@@ -75,7 +75,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 4;You Wont Survive;Arcade\YouWontSurvive.png;Arcade\YouWontSurvive.hex;;;1.0;AstroAndre;Avoid incoming enemies on two different modes and test your reflexes. ;3
 4;SF Cave;Arcade\SFCave.png;Arcade\SFCave.hex;;;Version;Slade1972;A remake of a palm pilot game.;2
 5;Platformer;category-screens\Platformer.png;;;;;;;
-5;CasteBoy;Platformer\CastleBoy.png;Platformer\CastleBoy.hex;;;1.0;jlauener;A Castlvania demake.;33
+5;Castle Boy;Platformer\CastleBoy.png;Platformer\CastleBoy.hex;;;1.0;jlauener;A Castlvania demake.;33
 5;SanSan;Action\Sansan.png;Action\Sansan.hex;;;1.0;chame;SanSan is a name of little Santa. A weapon is his bag! This is Son Son, Rygar inspired action game, but add some original ideas.;18
 5;Mystic Balloon;arg\MysticBalloon.png;arg\MysticBalloon.hex;;;1.0;Team ARG;Jump around, jump up and get down, jump around, float around, jump float, jump, float. Collect those coins.;17
 5;Midnight Wild;Misc\MidnightWild.png;Misc\MidnightWild.hex;;;1.3;Crait;Something’s gone awry out West! Help Dusty Argile adventure out and defeat the baddies who are causing a commotion and stopping him from getting a good night’s rest. Put them to sleep with your handy lasso and rack up as many points as you can, but watch out for falling barrels, cacti, whirling tumbleweeds, snakes, and coyotes! Most of all, watch out for the mad bull and crazy Texan twister!;28
