@@ -58,7 +58,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 5;bounce;Platformer/bounce.png;Platformer/bounce.hex;;;;;;
 5;njahr;Platformer/njahr.png;Platformer/njahr.hex;;;;;;
 6;Strategy;category-screens/Strategy.png;;;;;;;
-6;microcity;Arcade/microcity.png;Arcade/microcity.hex;;;;;;
+6;MicroCity;Arcade\microcity.png;Arcade\microcity.hex;;;1.3;jhhoward;MicroCity is a city simulation game inspired by SimCity.;37
 6;microtd;Puzzle/microtd.png;Puzzle/microtd.hex;;;;;;
 6;Ardulem;Puzzle/Ardulem.png;Puzzle/Ardulem.hex;;;;;;
 7;Puzzle;category-screens/Puzzle.png;;;;;;;

@@ -92,7 +92,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 5;Not Just A Hat Rack;Platformer\njahr.png;Platformer\njahr.hex;;;1.0;Hundstrasse;A fast paced platformer.;
 5;Tiny Tower;Puzzle\tinytower.png;Puzzle\tinytower.hex;;;1.0;akkera102;Players must climb up a procedurally generated tower.;
 6;Strategy;category-screens\Strategy.png;;;;;;;
-6;MicroCity;Arcade\microcity.png;Arcade\microcity.hex;;;1.0;jhhoward;MicroCity is a city simulation game inspired by SimCity.;37
+6;MicroCity;Arcade\microcity.png;Arcade\microcity.hex;;;1.3;jhhoward;MicroCity is a city simulation game inspired by SimCity.;37
 6;MicroTD;Puzzle\microtd.png;Puzzle\microtd.hex;;;1.1;drummyfish;Defend your territory from the enemy attackers.;19
 6;Ardulem;Puzzle\Ardulem.png;Puzzle\Ardulem.hex;;;1.0;banban;Lemmings on Arduboy!;20
 6;ARtillery;Arcade\ARtillery.png;Arcade\ARtillery.hex;;;1.0;Bergasms;A remake of the classic Tanks game from the Amiga by Gary Roberts.;3
