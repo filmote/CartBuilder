@@ -63,7 +63,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 4;Evasion;8BitCadeXL/Action/Evasion.png;8BitCadeXL/Action/Evasion.hex;;
 4;Fan Boat;8BitCadeXL/Action/Fanboat.png;8BitCadeXL/Action/Fanboat.hex;;;1.0;fanboat;Dodge gators on your propeller-powered pontoon as it rages faster and faster across the big black bayou. If you can pick up juice for your grandfather’s old shield generator, you can pass right through the congregation as long as it’s powered up;9
 4;Trolly Fish;8BitCadeXL/Action/FISH.png;8BitCadeXL/Action/FISH.hex;;;1.0;Team ARG;Little fish. Big fish, swimming in the water. Come back here, man. Give me back my star!;10
-4;Flappy Ball;8BitCadeXL/Action/FlappyBall.png;8BitCadeXL/Action/FlappyBall.hex;;1.0;Chris;A flappy bird clone.;6
+4;Flappy Ball;8BitCadeXL/Action/FlappyBall.png;8BitCadeXL/Action/FlappyBall.hex;;;1.0;Chris;A flappy bird clone.;6
 4;Frog Wizard;8BitCadeXL/Action/Frog Wizard.png;8BitCadeXL/Action/Frog Wizard.hex;;
 4;Frogger;8BitCadeXL/Action/Frogger.png;8BitCadeXL/Action/Frogger.hex;;
 4;Froggy Toad;8BitCadeXL/Action/Froggy Toad.png;8BitCadeXL/Action/Froggy Toad.hex;;
@@ -210,7 +210,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Minesweeper;8BitCadeXL/Puzzle/Minesweeper.png;8BitCadeXL/Puzzle/Minesweeper.hex;;
 12;Modus;8BitCadeXL/Puzzle/Modus.png;8BitCadeXL/Puzzle/Modus.hex;;
 12;NumberMind;8BitCadeXL/Puzzle/NumberMind.png;8BitCadeXL/Puzzle/NumberMind.hex;;
-12;PiCross;8BitCadeXL/Puzzle/PiCross.png;8BitCadeXL/Puzzle/PiCross.hex;;
+12;PiCross;8BitCadeXL/Puzzle/Picross.png;8BitCadeXL/Puzzle/Picross.hex;;
 12;ProjectPuzzle;8BitCadeXL/Puzzle/ProjectPuzzle.png;8BitCadeXL/Puzzle/ProjectPuzzle.hex;;
 12;Puzzle Pack;8BitCadeXL/Puzzle/Puzzle Pack.png;8BitCadeXL/Puzzle/Puzzle Pack.hex;;
 12;Quadrastic;8BitCadeXL/Puzzle/Quadrastic.png;8BitCadeXL/Puzzle/Quadrastic.hex;;
