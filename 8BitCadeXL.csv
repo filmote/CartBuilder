@@ -9,10 +9,10 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 2;'Ard Drivin';8BitCadeXL/Arcade/Ard-Drivin.png;8BitCadeXL/Arcade/Ard-Drivin.hex;;;1.0;Rem;A fast paced racing sim.;23
 2;ArduBOYNG;8BitCadeXL/Arcade/ArduBOYNG.png;8BitCadeXL/Arcade/ArduBOYNG.hex;;;0.81;Troubadixx;Pong. What more do you need to say?;5
 2;ArduBreakout;8BitCadeXL/Arcade/ArduBreakout.png;8BitCadeXL/Arcade/ArduBreakout.hex;;;1.0;SebGoscik;An Arduboy version of the classic game Breakout!;5
-2;ArduBuggy;8BitCadeXL/Arcade/ArduBuggy.png;8BitCadeXL/Arcade/ArduBuggy.hex;;;;1.0;Nono_Nono;A moon patrol remake.;10
+2;ArduBuggy;8BitCadeXL/Arcade/ArduBuggy.png;8BitCadeXL/Arcade/ArduBuggy.hex;;;1.0;Nono_Nono;A moon patrol remake.;10
 2;ArduIndy_2_5;8BitCadeXL/Arcade/ArduIndy_2_5.png;8BitCadeXL/Arcade/ArduIndy_2_5.hex;;;;;
-2;Boris Goes Skiing;8BitCadeXL/Arcade/BorisGoesSkiing.png;8BitCadeXL/Arcade/BorisGoesSkiing.hex;;;;1.0;sones;Boris Goes Skiing is a clone of the ZX Spectrum game Horace goes skiing.;3
-2;Bounce;8BitCadeXL/Arcade/Bounce.png;8BitCadeXL/Arcade/Bounce.hex;;;;1.0;RetrobitCoder;Air hockey for the Arduboy!  Two players pick their dogsand battle to the end.;7
+2;Boris Goes Skiing;8BitCadeXL/Arcade/BorisGoesSkiing.png;8BitCadeXL/Arcade/BorisGoesSkiing.hex;;;1.0;sones;Boris Goes Skiing is a clone of the ZX Spectrum game Horace goes skiing.;3
+2;Bounce;8BitCadeXL/Arcade/Bounce.png;8BitCadeXL/Arcade/Bounce.hex;;;1.0;RetrobitCoder;Air hockey for the Arduboy!  Two players pick their dogsand battle to the end.;7
 2;Breakout;8BitCadeXL/Arcade/Breakout.png;8BitCadeXL/Arcade/Breakout.hex;;;;;
 2;BreakoutV;8BitCadeXL/Arcade/BreakoutV.png;8BitCadeXL/Arcade/BreakoutV.hex;;;;;
 2;Depth Of Nightmare;8BitCadeXL/Arcade/Depth Of Nightmare.png;8BitCadeXL/Arcade/Depth Of Nightmare.hex;;
