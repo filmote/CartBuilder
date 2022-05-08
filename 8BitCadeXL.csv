@@ -2,8 +2,10 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 0;Bootloader;8bitcade_loader.png;;;;;;;
 1;Maintenance;8BitCadeXL/category-screens/Maintenance.png;;;;;;;
 1;Battery Test;8BitCadeXL/Maintenance/Battery Test.png;8BitCadeXL/Maintenance/Battery Test.hex;;;1.0;Jack Daly;;
-1;HardwareTest;8BitCadeXL/Maintenance/HardwareTest.png;8BitCadeXL/Maintenance/HardwareTest.hex;;;1.0;Jack Daly;;
+1;Hardware Test;8BitCadeXL/Maintenance/HardwareTest.png;8BitCadeXL/Maintenance/HardwareTest.hex;;;1.0;Jack Daly;;
+1;EEPROM Editor;8BitCadeXL/Maintenance/EepromEditor.png;8BitCadeXL/Maintenance/EepromEditor.hex;;;1.0;Press Play On Tape;;
 2;Arcade;8BitCadeXL/category-screens/Arcade.png;;;
+2;CyberHack;8BitCadeXL/Arcade/CyberHack.png;8BitCadeXL/Arcade/CyberHack.hex;;;;;;
 2;'Ard Drivin';8BitCadeXL/Arcade/Ard-Drivin.png;8BitCadeXL/Arcade/Ard-Drivin.hex;;;1.0;Rem;A fast paced racing sim.;23
 2;ArduBOYNG;8BitCadeXL/Arcade/ArduBOYNG.png;8BitCadeXL/Arcade/ArduBOYNG.hex;;;0.81;Troubadixx;Pong. What more do you need to say?;5
 2;ArduBreakout;8BitCadeXL/Arcade/ArduBreakout.png;8BitCadeXL/Arcade/ArduBreakout.hex;;;1.0;SebGoscik;An Arduboy version of the classic game Breakout!;5
@@ -46,6 +48,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 3;Pong Extreme;8BitCadeXL/2 Player/Pong Extreme.png;8BitCadeXL/2 Player/Pong Extreme.hex;;
 3;Two Player Tetris;8BitCadeXL/2 Player/TwoP Tetris.png;8BitCadeXL/2 Player/TwoP Tetris.hex;;
 4;Action;8BitCadeXL/category-screens/Action.png;;;
+4;Lode Runner;8BitCadeXL/Action/LodeRunner.png;8BitCadeXL/Action/LodeRunner.hex;8BitCadeXL/Action/LevelData.bin;;;;;
 4;A To Bee;8BitCadeXL/Action/A To Bee.png;8BitCadeXL/Action/A To Bee.hex;;
 4;APara;8BitCadeXL/Action/APara.png;8BitCadeXL/Action/APara.hex;;;1.0;leovt;Catch the paratroopers jumping out of a helicopter before they fall in the water.;4
 4;ArduStar;8BitCadeXL/Action/ArduStar.png;8BitCadeXL/Action/ArduStar.hex;;
@@ -84,7 +87,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 4;Snake;8BitCadeXL/Action/Snake.png;8BitCadeXL/Action/Snake.hex;;
 4;Snake_2;8BitCadeXL/Action/Snake_2.png;8BitCadeXL/Action/Snake_2.hex;;
 4;Snakeling;8BitCadeXL/Action/Snakeling.png;8BitCadeXL/Action/Snakeling.hex;;
-4;TBridge;8BitCadeXL/Action/TBridge.png;8BitCadeXL/Action/TBridge.hex;;
+4;Turtle Bridge;8BitCadeXL/Action/TurtleBridge.png;8BitCadeXL/Action/TurtleBridge.hex;;
 4;Tiny Ships;8BitCadeXL/Action/Tiny Ships.png;8BitCadeXL/Action/Tiny Ships.hex;;
 4;TrainDodge;8BitCadeXL/Action/TrainDodge.png;8BitCadeXL/Action/TrainDodge.hex;;
 4;TurtleBaby;8BitCadeXL/Action/TurtleBaby.png;8BitCadeXL/Action/TurtleBaby.hex;;
@@ -99,12 +102,13 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 6;Arduchess;8BitCadeXL/Board/Arduchess.png;8BitCadeXL/Board/Arduchess.hex;;
 6;ArduSlide;8BitCadeXL/Board/ArduSlide.png;8BitCadeXL/Board/ArduSlide.hex;;
 6;Battleships;8BitCadeXL/Board/Battleships.png;8BitCadeXL/Board/Battleships.hex;;
-6;Black Jack;8BitCadeXL/Board/Black Jack.png;8BitCadeXL/Board/Black Jack.hex;;
+6;Black Jack;8BitCadeXL/Board/Blackjack.png;8BitCadeXL/Board/Blackjack.hex;;
 6;Cribbage;8BitCadeXL/Board/Cribbage.png;8BitCadeXL/Board/Cribbage.hex;;
 6;Darkstar;8BitCadeXL/Board/Darkstar.png;8BitCadeXL/Board/Darkstar.hex;;
 6;DeepDish9;8BitCadeXL/Board/DeepDish9.png;8BitCadeXL/Board/DeepDish9.hex;;
 6;Dominoes;8BitCadeXL/Board/Dominoes.png;8BitCadeXL/Board/Dominoes.hex;;
 6;Farkle;8BitCadeXL/Board/Farkle.png;8BitCadeXL/Board/Farkle.hex;;
+6;German Whist;8BitCadeXL/Board/Germanwhist.png;8BitCadeXL/Board/Germanwhist.hex;;
 6;Hangman;8BitCadeXL/Board/Hangman.png;8BitCadeXL/Board/Hangman.hex;;
 6;Hippodrome;8BitCadeXL/Board/Hippodrome.png;8BitCadeXL/Board/Hippodrome.hex;;
 6;Knightmove;8BitCadeXL/Board/Knightmove.png;8BitCadeXL/Board/Knightmove.hex;;
@@ -127,7 +131,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Arduart;8BitCadeXL/Creative/Arduart.png;8BitCadeXL/Creative/Arduart.hex;;
 7;Draw_A_Sprite;8BitCadeXL/Creative/Draw_A_Sprite.png;8BitCadeXL/Creative/Draw_A_Sprite.hex;;
 7;Etch Sketch;8BitCadeXL/Creative/Etch Sketch.png;8BitCadeXL/Creative/Etch Sketch.hex;;
-7;Sp_Music;8BitCadeXL/Creative/Sp_Music.png;8BitCadeXL/Creative/Sp_Music.hex;;
+7;Coder's Toolbox;8BitCadeXL/Creative/CodersToolbox.png;8BitCadeXL/Creative/CodersToolbox.hex;;
 8;Favourite;8BitCadeXL/category-screens/Favourite.png;;;
 8;ArduBreakout;8BitCadeXL/Favourite/ArduBreakout.png;8BitCadeXL/Favourite/ArduBreakout.hex;;
 8;Arduventure;8BitCadeXL/Favourite/Arduventure.png;8BitCadeXL/Favourite/Arduventure.hex;;
@@ -154,7 +158,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Blade Runner;8BitCadeXL/Platformer/Blade Runner.png;8BitCadeXL/Platformer/Blade Runner.hex;;
 11;BurgardTime;8BitCadeXL/Platformer/BurgardTime.png;8BitCadeXL/Platformer/BurgardTime.hex;;
 11;CastleBoy;8BitCadeXL/Platformer/CastleBoy.png;8BitCadeXL/Platformer/CastleBoy.hex;;
-11;Chop Lifter;8BitCadeXL/Platformer/Chop Lifter.png;8BitCadeXL/Platformer/Chop Lifter.hex;;
+11;ChopLifter;8BitCadeXL/Platformer/Choplifter.png;8BitCadeXL/Platformer/Choplifter.hex;;
 11;Chribocchi;8BitCadeXL/Platformer/Chribocchi.png;8BitCadeXL/Platformer/Chribocchi.hex;;
 11;Crabator;8BitCadeXL/Platformer/Crabator.png;8BitCadeXL/Platformer/Crabator.hex;;
 11;Ecomd;8BitCadeXL/Platformer/Ecomd.png;8BitCadeXL/Platformer/Ecomd.hex;;
@@ -168,8 +172,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Joustish;8BitCadeXL/Platformer/Joustish.png;8BitCadeXL/Platformer/Joustish.hex;;
 11;Kong;8BitCadeXL/Platformer/Kong.png;8BitCadeXL/Platformer/Kong.hex;;
 11;Kong2;8BitCadeXL/Platformer/Kong2.png;8BitCadeXL/Platformer/Kong2.hex;;
-11;LayingPipe;8BitCadeXL/Platformer/LayingPipe.png;8BitCadeXL/Platformer/LayingPipe.hex;;
-11;Lion_Tamer;8BitCadeXL/Platformer/Lion_Tamer.png;8BitCadeXL/Platformer/Lion_Tamer.hex;;
+11;Lion Tamer;8BitCadeXL/Platformer/LionTamer.png;8BitCadeXL/Platformer/LionTamer.hex;;
 11;Midnight Wild;8BitCadeXL/Platformer/Midnight Wild.png;8BitCadeXL/Platformer/Midnight Wild.hex;;
 11;Mystic_Balloon;8BitCadeXL/Platformer/Mystic_Balloon.png;8BitCadeXL/Platformer/Mystic_Balloon.hex;;
 11;Oh Mummy;8BitCadeXL/Platformer/Oh Mummy.png;8BitCadeXL/Platformer/Oh Mummy.hex;;
@@ -184,7 +187,11 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Umeroose;8BitCadeXL/Platformer/Umeroose.png;8BitCadeXL/Platformer/Umeroose.hex;;
 11;Zoo Midnight;8BitCadeXL/Platformer/Zoo Midnight.png;8BitCadeXL/Platformer/Zoo Midnight.hex;;
 12;Puzzle;8BitCadeXL/category-screens/Puzzle.png;;;
+12;LeWord;8BitCadeXL/Puzzle/LeWord.png;8BitCadeXL/Puzzle/LeWord.hex;8BitCadeXL/Puzzle/LeWord.bin;
+12;Buttons Trail;8BitCadeXL/Puzzle/ButtonsTrail.png;8BitCadeXL/Puzzle/ButtonsTrail.hex;;
+12;Buttons Trail;8BitCadeXL/Puzzle/ButtonsTrail.png;8BitCadeXL/Puzzle/ButtonsTrail.hex;;
 12;8BitCADE_Tetris;8BitCadeXL/Puzzle/8BitCADE_Tetris.png;8BitCadeXL/Puzzle/8BitCADE_Tetris.hex;;
+12;Pipes;8BitCadeXL/Puzzle/Pipes.png;8BitCadeXL/Puzzle/Pipes.hex;;
 12;Alignment;8BitCadeXL/Puzzle/Alignment.png;8BitCadeXL/Puzzle/Alignment.hex;;
 12;AMaze;8BitCadeXL/Puzzle/AMaze.png;8BitCadeXL/Puzzle/AMaze.hex;;
 12;ArduBrain;8BitCadeXL/Puzzle/ArduBrain.png;8BitCadeXL/Puzzle/ArduBrain.hex;;
@@ -243,8 +250,9 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 14;Ardynia;8BitCadeXL/RPG/Ardynia.png;8BitCadeXL/RPG/Ardynia.hex;;
 14;COTD;8BitCadeXL/RPG/COTD.png;8BitCadeXL/RPG/COTD.hex;;
 14;Cripple Mr Onion;8BitCadeXL/RPG/Cripple Mr Onion.png;8BitCadeXL/RPG/Cripple Mr Onion.hex;;
-14;Curse of Astarok;8BitCadeXL/RPG/Curse of Astarok.png;8BitCadeXL/RPG/Curse of Astarok.hex;;
-14;DarkAndUnder;8BitCadeXL/RPG/DarkAndUnder.png;8BitCadeXL/RPG/DarkAndUnder.hex;;
+14;Curse of Astarok;8BitCadeXL/RPG/Astarok.png;8BitCadeXL/RPG/Astarok.hex;;
+14;Trials of Astarok;8BitCadeXL/RPG/Curse of Astarok.png;8BitCadeXL/RPG/Curse of Astarok.hex;;
+14;Dark And Under;8BitCadeXL/RPG/DarkAndUnder.png;8BitCadeXL/RPG/DarkAndUnder.hex;;
 14;Escape Game;8BitCadeXL/RPG/Escape Game.png;8BitCadeXL/RPG/Escape Game.hex;;
 14;Garboyles Quest;8BitCadeXL/RPG/Garboyles Quest.png;8BitCadeXL/RPG/Garboyles Quest.hex;;
 14;Hypercube;8BitCadeXL/RPG/Hypercube.png;8BitCadeXL/RPG/Hypercube.hex;;
@@ -279,7 +287,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 15;HFC;8BitCadeXL/Shooter/HFC.png;8BitCadeXL/Shooter/HFC.hex;;
 15;Humanity_Revenge;8BitCadeXL/Shooter/Humanity_Revenge.png;8BitCadeXL/Shooter/Humanity_Revenge.hex;;
 15;i4;8BitCadeXL/Shooter/i4.png;8BitCadeXL/Shooter/i4.hex;;
-15;Invader;8BitCadeXL/Shooter/Invader.png;8BitCadeXL/Shooter/Invader.hex;;
+15;1nvader;8BitCadeXL/Shooter/1nvader.png;8BitCadeXL/Shooter/1nvader.hex;;
 15;Invaders Classic;8BitCadeXL/Shooter/Invaders Classic.png;8BitCadeXL/Shooter/Invaders Classic.hex;;
 15;Invaders;8BitCadeXL/Shooter/Invaders.png;8BitCadeXL/Shooter/Invaders.hex;;
 15;JunoFirst;8BitCadeXL/Shooter/JunoFirst.png;8BitCadeXL/Shooter/JunoFirst.hex;;
@@ -316,3 +324,4 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 16;Skateanddie;8BitCadeXL/Sport/Skateanddie.png;8BitCadeXL/Sport/Skateanddie.hex;;
 16;TinyTrickHockey;8BitCadeXL/Sport/TinyTrickHockey.png;8BitCadeXL/Sport/TinyTrickHockey.hex;;
 16;VolleyBall;8BitCadeXL/Sport/VolleyBall.png;8BitCadeXL/Sport/VolleyBall.hex;;
+16;Golfer's Companion;8BitCadeXL/Sport/GolfCompanion.png;8BitCadeXL/Sport/GolfCompanion.hex;;
