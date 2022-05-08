@@ -84,7 +84,6 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 4;Quick_Block;8BitCadeXL/Action/Quick_Block.png;8BitCadeXL/Action/Quick_Block.hex;;
 4;Rysk;8BitCadeXL/Action/Rysk.png;8BitCadeXL/Action/Rysk.hex;;
 4;Snake;8BitCadeXL/Action/Snake.png;8BitCadeXL/Action/Snake.hex;;
-4;Snake_2;8BitCadeXL/Action/Snake_2.png;8BitCadeXL/Action/Snake_2.hex;;
 4;Snakeling;8BitCadeXL/Action/Snakeling.png;8BitCadeXL/Action/Snakeling.hex;;
 4;Turtle Bridge;8BitCadeXL/Action/TurtleBridge.png;8BitCadeXL/Action/TurtleBridge.hex;;
 4;Tiny Ships;8BitCadeXL/Action/Tiny Ships.png;8BitCadeXL/Action/Tiny Ships.hex;;
@@ -119,7 +118,6 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 6;Samegame;8BitCadeXL/Board/Samegame.png;8BitCadeXL/Board/Samegame.hex;;
 6;Sudoku;8BitCadeXL/Board/Sudoku.png;8BitCadeXL/Board/Sudoku.hex;;
 6;Tic Tac Toe;8BitCadeXL/Board/Tic Tac Toe.png;8BitCadeXL/Board/Tic Tac Toe.hex;;
-6;Tic Tac Toe_2;8BitCadeXL/Board/Tic Tac Toe_2.png;8BitCadeXL/Board/Tic Tac Toe_2.hex;;
 6;TicTac Curly;8BitCadeXL/Board/TicTac Curly.png;8BitCadeXL/Board/TicTac Curly.hex;;
 6;Tower_Def;8BitCadeXL/Board/Tower_Def.png;8BitCadeXL/Board/Tower_Def.hex;;
 6;Xmas_Puz;8BitCadeXL/Board/Xmas_Puz.png;8BitCadeXL/Board/Xmas_Puz.hex;;
@@ -132,10 +130,6 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Etch Sketch;8BitCadeXL/Creative/Etch Sketch.png;8BitCadeXL/Creative/Etch Sketch.hex;;
 7;Coder's Toolbox;8BitCadeXL/Creative/CodersToolbox.png;8BitCadeXL/Creative/CodersToolbox.hex;;
 8;Favourite;8BitCadeXL/category-screens/Favourite.png;;;
-8;ArduBreakout;8BitCadeXL/Favourite/ArduBreakout.png;8BitCadeXL/Favourite/ArduBreakout.hex;;
-8;Arduventure;8BitCadeXL/Favourite/Arduventure.png;8BitCadeXL/Favourite/Arduventure.hex;;
-8;Artillary;8BitCadeXL/Favourite/Artillary.png;8BitCadeXL/Favourite/Artillary.hex;;
-8;Asterocks;8BitCadeXL/Favourite/Asterocks.png;8BitCadeXL/Favourite/Asterocks.hex;;
 8;Orbs;8BitCadeXL/Favourite/Orbs.png;8BitCadeXL/Favourite/Orbs.hex;;
 8;Space_Invaders;8BitCadeXL/Favourite/Space_Invaders.png;8BitCadeXL/Favourite/Space_Invaders.hex;;
 9;Fighting;8BitCadeXL/category-screens/Fighting.png;;;
