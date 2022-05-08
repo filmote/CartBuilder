@@ -69,6 +69,12 @@ function generateHtmlTable(data) {
 
             case 1:
 
+                if (row[7] != "") {
+
+                    extraCats = row[7];
+
+                }
+
                 if (row[8] != "") {
 
                     fullList = row[8];

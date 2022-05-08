@@ -562,6 +562,12 @@ $(document).ready(function () {
 
         success: function (response) {
 
+            var options = {"separator" : ";"};
+
+            urldata = response.replace(/\\/g, "/");
+            csvdata = $.csv.toArrays(urldata, options);
+            generateHtmlTable(csvdata);
+
             if (typeof extraCats !== "undefined" && extraCats != "") {
                     
                 $.ajax({
@@ -584,14 +590,7 @@ $(document).ready(function () {
                 });
 
             }
-
-
-            var options = {"separator" : ";"};
-
-            urldata = response.replace(/\\/g, "/");
-            csvdata = $.csv.toArrays(urldata, options);
-            generateHtmlTable(csvdata);
-
+            
             if (typeof fullList !== "undefined" && fullList != "") {
 
                 $.ajax({
