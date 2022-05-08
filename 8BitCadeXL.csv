@@ -136,7 +136,6 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Arduventure;8BitCadeXL/Favourite/Arduventure.png;8BitCadeXL/Favourite/Arduventure.hex;;
 8;Artillary;8BitCadeXL/Favourite/Artillary.png;8BitCadeXL/Favourite/Artillary.hex;;
 8;Asterocks;8BitCadeXL/Favourite/Asterocks.png;8BitCadeXL/Favourite/Asterocks.hex;;
-8;Myballoon;8BitCadeXL/Favourite/Myballoon.png;8BitCadeXL/Favourite/Myballoon.hex;;
 8;Orbs;8BitCadeXL/Favourite/Orbs.png;8BitCadeXL/Favourite/Orbs.hex;;
 8;Space_Invaders;8BitCadeXL/Favourite/Space_Invaders.png;8BitCadeXL/Favourite/Space_Invaders.hex;;
 9;Fighting;8BitCadeXL/category-screens/Fighting.png;;;
@@ -173,7 +172,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Kong2;8BitCadeXL/Platformer/Kong2.png;8BitCadeXL/Platformer/Kong2.hex;;
 11;Lion Tamer;8BitCadeXL/Platformer/LionTamer.png;8BitCadeXL/Platformer/LionTamer.hex;;
 11;Midnight Wild;8BitCadeXL/Platformer/Midnight Wild.png;8BitCadeXL/Platformer/Midnight Wild.hex;;
-11;Mystic_Balloon;8BitCadeXL/Platformer/Mystic_Balloon.png;8BitCadeXL/Platformer/Mystic_Balloon.hex;;
+11;Mystic Balloon;8BitCadeXL/Platformer/Mystic_Balloon.png;8BitCadeXL/Platformer/Mystic_Balloon.hex;;
 11;Oh Mummy;8BitCadeXL/Platformer/Oh Mummy.png;8BitCadeXL/Platformer/Oh Mummy.hex;;
 11;OmegaHorizon;8BitCadeXL/Platformer/OmegaHorizon.png;8BitCadeXL/Platformer/OmegaHorizon.hex;;
 11;Platformer;8BitCadeXL/Platformer/Platformer.png;8BitCadeXL/Platformer/Platformer.hex;;
@@ -289,7 +288,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 15;1nvader;8BitCadeXL/Shooter/1nvader.png;8BitCadeXL/Shooter/1nvader.hex;;
 15;Invaders Classic;8BitCadeXL/Shooter/Invaders Classic.png;8BitCadeXL/Shooter/Invaders Classic.hex;;
 15;Invaders;8BitCadeXL/Shooter/Invaders.png;8BitCadeXL/Shooter/Invaders.hex;;
-15;JunoFirst;8BitCadeXL/Shooter/JunoFirst.png;8BitCadeXL/Shooter/JunoFirst.hex;;
+15;Juno First;8BitCadeXL/Shooter/JunoFirst.png;8BitCadeXL/Shooter/JunoFirst.hex;;
 15;LoveRush;8BitCadeXL/Shooter/LoveRush.png;8BitCadeXL/Shooter/LoveRush.hex;;
 15;MallARD Hunt;8BitCadeXL/Shooter/MallARD Hunt.png;8BitCadeXL/Shooter/MallARD Hunt.hex;;
 15;MicroTank;8BitCadeXL/Shooter/MicroTank.png;8BitCadeXL/Shooter/MicroTank.hex;;
