@@ -1,42 +1,42 @@
 List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 0;Bootloader;arduboy-fx-loader.png;;;;;;./Curated.csv;
 1;Adventure;category-screens/ppot/Adventure.png;;;;;;;
-1;curse;Puzzle/curse.png;Puzzle/curse.hex;;;;;;
-1;Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;;;;
-1;CyberHack;Arcade/CyberHack.png;Arcade/CyberHack.hex;;;;;;
-1;MiniRogue;RPG/MiniRogue.png;RPG/MiniRogue.hex;;;;;;
+1;Curse of Astarok;Puzzle/curse.png;Puzzle/curse.hex;;;1.0;Press Play On Tape;The evil Astarok has cast a nasty curse on the folk of Griford and turned them into pumpkins! The town’s people have asked you to battle the AstaroK and his evil friends in their hideout - an old castle on the edge of town. Can you release the town from the curse of AztaroK?;17
+1;Trials of Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;1.0;Press Play On Tape;Each year the people of the village choose a new champion to protect them from Astarok. Compete in the trials to see how far you can get and you could be that champion! Your choice of runes will select different courses … some are easier than others!;17
+1;CyberHack;Arcade/CyberHack.png;Arcade/CyberHack.hex;;;1.0;Press Play On Tape;The corrupted Corpo has to be stopped and your hacking skills will be invaluable. Inspired by the game CyberPunk.;
+1;Mini Rogue;RPG/MiniRogue.png;RPG/MiniRogue.hex;;;1.0;Press Play On Tape;Mini Rogue is a 9-card game in which a single player delves into a deep dungeon to get the famous ruby called The Og’s Blood on the bottom floor. The player must choose how to spend their resources in order to be powerful enough to confront ever difficult monsters. Random events and encounters make every play-through a unique experience.;16
 2;Arcade;category-screens/ppot/Arcade.png;;;;;;;
-2;1944;Arcade/1944.png;Arcade/1944.hex;;;;;;
-2;Junofirst;Action/Junofirst.png;Action/Junofirst.hex;;;;;;
-2;SpaceCab;Arcade/SpaceCab.png;Arcade/SpaceCab.hex;;;;;;
-2;1nvader;Shooter/1nvader.png;Shooter/1nvader.hex;;;;;;
-2;Choplifter;Action/Choplifter.png;Action/Choplifter.hex;;;;;;
-2;Karatega;Action/Karatega.png;Action/Karatega.hex;;;;;;
-2;LodeRunner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;;;;
-2;Loverush;Arcade/Loverush.png;Arcade/Loverush.hex;;;;;;
+2;1944 The Battle of Midway;Arcade/1944.png;Arcade/1944.hex;;;1.0;Press Play On Tape;A remake of the classic CapCom game 1944 The Battle of Midway.;20
+2;Juno First;Action/Junofirst.png;Action/Junofirst.hex;;;1.0.1;Press Play On Tape;Kill each wave of attacking aliens before you fuel or health runs out. Rescue the captured astronaut to get extra points! ;19
+2;Space Cab;Arcade/SpaceCab.png;Arcade/SpaceCab.hex;;;;;;
+2;1nvader;Shooter/11.0;Press Play On Tape;1NVADER is a one or two-player game played with one button, one laser, one 1NVADER, and one life. Play co-operatively, or competitively with a friend, or face the 1NVADER alone.;22nvader.png;Shooter/1nvader.hex;;;;;;
+2;Choplifter;Action/Choplifter.png;Action/Choplifter.hex;;;1.1.1;Press Play On Tape;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;9
+2;Karateka;Action/Karatega.png;Action/Karatega.hex;;;0.9;Press Play On Tape;Rescue Princess Mariko from within the Akum'a castle fortress.;12
+2;Lode Runner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
+2;Love Rush;Arcade/Loverush.png;Arcade/Loverush.hex;;;1.0;Vampirics;A cute infinite shooter for Arduboy.;11
 3;Gameandwatch;category-screens/ppot/Gameandwatch.png;;;;;;;
-3;FirePanic;Action/FirePanic.png;Action/FirePanic.hex;;;;;;
-3;Kong;Arcade/Kong.png;Arcade/Kong.hex;;;;;;
-3;Kong2;Arcade/Kong2.png;Arcade/Kong2.hex;;;;;;
-3;LionTamer;Arcade/LionTamer.png;Arcade/LionTamer.hex;;;;;;
-3;OilPanic;Arcade/OilPanic.png;Arcade/OilPanic.hex;;;;;;
-3;Turtlebridge;Arcade/Turtlebridge.png;Arcade/Turtlebridge.hex;;;;;;
+3;Fire Panic;Action/FirePanic.png;Action/FirePanic.hex;;;1.0;Press Play On Tape;A remake of the classic Game and Watch game 'Fire'. Save the residents of the burning tower by catching them in your safety net and bouncing them into the awaiting ambulance before rushing them to hospital.;25
+3;Kong;Arcade/Kong.png;Arcade/Kong.hex;;;1.0.3;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong. Kong has stolen your lunch again. Avoid the barrels and topple the gorilla to retrieve it!;24
+3;Kong II;Arcade/Kong2.png;Arcade/Kong2.hex;;;1.0;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong II. Kong has been locked up but Kong Jnr can save him!;19
+3;Lion Tamer;Arcade/LionTamer.png;Arcade/LionTamer.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Lion Tamer. Someone has left the lion’s cage doors open! Keep them from escaping by blocking their path with your trusty chair. Play alone or with a second lion tamer!;
+3;Oil Panic;Arcade/OilPanic.png;Arcade/OilPanic.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;
+3;Turtle Bridge;Arcade/Turtlebridge.png;Arcade/Turtlebridge.hex;;;1.3;Press Play On Tape;A remake of the classic Game and Watch game Turtle Bridge. Carry the package to the awaiting truck by jumping across the turtle’s backs. Watch out as they may dive for a snack!;19
 4;Puzzles;category-screens/ppot/Puzzles.png;;;;;;;
-4;LeWord;Puzzle/LeWord.png;Puzzle/LeWord.hex;Puzzle/LeWord.bin;;;;;
-4;Logix;Puzzle/Logix.png;Puzzle/Logix.hex;;;;;;
-4;Pipes;Puzzle/Pipes.png;Puzzle/Pipes.hex;;;;;;
-4;PiCross;Puzzle/Picross.png;Puzzle/Picross.hex;;;;;;
+4;LeWord;Puzzle/LeWord.png;Puzzle/LeWord.hex;Puzzle/LeWord.bin;;1.0;Press Play On Tape;The NY Times classic word game in English and French.;
+4;Logix;Puzzle/Logix.png;Puzzle/Logix.hex;;;1.0;Press Play on Tape;Logix is an educational game that teaches the basic logic gates used in digital electronics. Once you have completed some introductory puzzles that feature a single gate each, you can move on to harder puzzles that test your learning!;21
+4;Pipes;Puzzle/Pipes.png;Puzzle/Pipes.hex;;;1.0;Press Play on Tape;A version of the classic pipes game where you must lay pipe between each pair of nodes without the pipes crossing each other. This version has puzzles ranging from 5 x 5 to 9 x 9.;7
+4;PiCross;Puzzle/Picross.png;Puzzle/Picross.hex;;;1.0;Press Play On Tape;Classic PiCross game with over 150 levels!;
 5;Racing;category-screens/ppot/Racing.png;;;;;;;
-5;Road Trip;Racing/RoadTrip.png;Racing/RoadTrip.hex;;;;;;
+5;Road Trip;Racing/RoadTrip.png;Racing/RoadTrip.hex;;;1.1;Press Play on Tape;Inspired by the Atari 2600 game Enduro. Strap on your goggles. Sink into your seat. And leave all your fears in the pit. You’re about to enter the race of your life. You’ll be required to pass lots of cars each day. From sunrise to sunset - as fast as you can. Welcome to the National Enduro!;
 6;Tabletop;category-screens/ppot/Tabletop.png;;;;;;;
-6;Blackjack;Misc/Blackjack.png;Misc/Blackjack.hex;;;;;;
-6;Cribbage;Puzzle/Cribbage.png;Puzzle/Cribbage.hex;;;;;;
-6;Dominoes;Puzzle/Dominoes.png;Puzzle/Dominoes.hex;;;;;;
-6;Farkle;Puzzle/Farkle.png;Puzzle/Farkle.hex;;;;;;
-6;GermanWhist;Puzzle/Whist.png;Puzzle/Whist.hex;;;;;;
+6;Blackjack;Misc/Blackjack.png;Misc/Blackjack.hex;;;1.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
+6;Cribbage;Puzzle/Cribbage.png;Puzzle/Cribbage.hex;;;1.0.1;Press Play On Tape;Classic English game of Cribbage - a luck and tactics card game.;6
+6;Dominoes;Puzzle/Dominoes.png;Puzzle/Dominoes.hex;;;1.0;Press Play On Tape;All Fives is a popular variant of Dominoes where players the goal of the game is not just to go out, but to make the open ends of the layout add up to 5 (or a multiple of five). One or two players.;
+6;Farkle;Puzzle/Farkle.png;Puzzle/Farkle.hex;;;1.0;Press Play On Tape;A dice game of tactics and luck.;11
+6;GermanWhist;Puzzle/Whist.png;Puzzle/Whist.hex;;;1.0;Press Play On Tape;German Whist is an adaptation of classic Whist for two players. There is nothing German about it - as far as anyone can tell it is of British origin.;7
 7;Application;category-screens/ppot/Application.png;;;;;;;
-7;GolfCompanion;Application/GolfCompanion.png;Application/GolfCompanion.hex;;;;;;
-7;EEPROMEditor;Application/EEPROMEditor.png;Application/EEPROMEditor.hex;;;;;;
-7;CodersToolbox;Application/Toolbox.png;Application/Toolbox.hex;;;;;;
+7;GolfCompanion;Application/GolfCompanion.png;Application/GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;11
+7;EEPROMEditor;Application/EEPROMEditor.png;Application/EEPROMEditor.hex;;;1.0;Press Play on Tape;Inspired by Crait’s Arduboy Assistant, this version has been expanded to show 25 bytes at a time (to give context) with the current cell highlighted in the middle.;10
+7;CodersToolbox;Application/Toolbox.png;Application/Toolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;16
 8;Sideprojects;category-screens/ppot/Sideprojects.png;;;;;;;
-8;darkandunder;RPG/darkandunder.png;RPG/darkandunder.hex;;;;;;
+8;darkandunder;RPG/darkandunder.png;RPG/darkandunder.hex;;;1.0;GarageCollective;A dungeon crawler for the Arduboy.;39
