@@ -317,3 +317,49 @@ function generateCatImage(catName, imgName) {
     return '<img class="game" id="' + catName + '" draggable="true" ondragstart="drag(event)" src="' + imgName + '" />';
 
 }
+
+
+function generateExtraCats(data) {
+
+    if (typeof (data[0]) === 'undefined') {
+
+        return null;
+
+    }
+
+    $.each(data, function (index, row) {
+
+        // ignore header
+
+        if (index == 0) { } else {
+
+            if (catCount != row[0] && row[0] != 0) {
+
+                catCount = row[0];
+
+
+                // Does the cateogries collection already contain this category?
+
+                var pos = cats.map(function (e) {
+                    return e.name;
+                }).indexOf(row[1]);
+
+                if (pos < 0) {
+
+                    catCount = row[0];
+                    $("#dvCategories").append(generateCatImage(row[1], row[2]));
+
+                    // Add category details to global collection..
+
+                    var cat = { name: row[1].trim(), screen: row[2], hex: row[3], data: row[4], save: row[5], version: row [6], developer: row[7], info: row[8] };
+                    cats.push(cat);
+
+                }
+
+            }
+
+        }
+
+    });
+
+}

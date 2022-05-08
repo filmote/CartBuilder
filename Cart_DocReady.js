@@ -527,6 +527,7 @@ $(document).ready(function () {
 
     var fileName = "./flashcart-index.csv";
     fullList = "./flashcart-index.csv";
+    extraCats = "";
 
     let searchParams = new URLSearchParams(window.location.search);
 
@@ -536,6 +537,10 @@ $(document).ready(function () {
 
     if (searchParams.has('list')) {
         fullList = "./" + searchParams.get('list');
+    }
+    
+    if (searchParams.has('extraCats')) {
+        extraCats = "./" + searchParams.get('extraCats');
     }
 
     if (fileName == "./flashcart-index.csv") {
@@ -557,10 +562,32 @@ $(document).ready(function () {
 
         success: function (response) {
 
+            if (typeof extraCats !== "undefined" && extraCats != "") {
+                    
+                $.ajax({
+
+                    type: "GET",
+                    url: extraCats,
+                    dataType: "text",
+
+                    success: function (response) {
+
+                        var options = {"separator" : ";"};
+
+                        urldata = response.replace(/\\/g, "/");
+                        csvdata = $.csv.toArrays(urldata, options);
+                        generateExtraCats(csvdata);
+                        resizeColumnHeights();
+
+                    }
+
+                });
+
+            }
+
+
             var options = {"separator" : ";"};
 
-            // tabledata = response.replace(/\;/g, ",");
-            // urldata = tabledata.replace(/\\/g, "/");
             urldata = response.replace(/\\/g, "/");
             csvdata = $.csv.toArrays(urldata, options);
             generateHtmlTable(csvdata);
@@ -577,8 +604,6 @@ $(document).ready(function () {
 
                         var options = {"separator" : ";"};
 
-                        // tabledata = response.replace(/\;/g, ",");
-                        // urldata = tabledata.replace(/\\/g, "/");
                         urldata = response.replace(/\\/g, "/");
                         csvdata = $.csv.toArrays(urldata, options);
                         generateHtmlTable_FullList(csvdata);
