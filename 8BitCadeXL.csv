@@ -13,7 +13,6 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 2;ArduIndy_2_5;8BitCadeXL/Arcade/ArduIndy_2_5.png;8BitCadeXL/Arcade/ArduIndy_2_5.hex;;;;;
 2;Boris Goes Skiing;8BitCadeXL/Arcade/BorisGoesSkiing.png;8BitCadeXL/Arcade/BorisGoesSkiing.hex;;;1.0;sones;Boris Goes Skiing is a clone of the ZX Spectrum game Horace goes skiing.;3
 2;Bounce;8BitCadeXL/Arcade/Bounce.png;8BitCadeXL/Arcade/Bounce.hex;;;1.0;RetrobitCoder;Air hockey for the Arduboy!  Two players pick their dogsand battle to the end.;7
-2;Breakout;8BitCadeXL/Arcade/Breakout.png;8BitCadeXL/Arcade/Breakout.hex;;;;;
 2;BreakoutV;8BitCadeXL/Arcade/BreakoutV.png;8BitCadeXL/Arcade/BreakoutV.hex;;;;;
 2;Depth Of Nightmare;8BitCadeXL/Arcade/Depth Of Nightmare.png;8BitCadeXL/Arcade/Depth Of Nightmare.hex;;
 2;Digger;8BitCadeXL/Arcade/Digger.png;8BitCadeXL/Arcade/Digger.hex;;
@@ -237,6 +236,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 13;Tiny Bike;8BitCadeXL/Racing/Tiny Bike.png;8BitCadeXL/Racing/Tiny Bike.hex;;
 13;Uforace;8BitCadeXL/Racing/Uforace.png;8BitCadeXL/Racing/Uforace.hex;;
 14;RPG;8BitCadeXL/category-screens/RPG.png;;;
+14;ArduRogue;8BitCadeXL/RPG/ArduRogue.png;8BitCadeXL/RPG/ArduRogue.hex;;
 14;Arduventure;8BitCadeXL/RPG/Arduventure.png;8BitCadeXL/RPG/Arduventure.hex;;
 14;Ardynia;8BitCadeXL/RPG/Ardynia.png;8BitCadeXL/RPG/Ardynia.hex;;
 14;COTD;8BitCadeXL/RPG/COTD.png;8BitCadeXL/RPG/COTD.hex;;
