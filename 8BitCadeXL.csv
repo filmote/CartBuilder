@@ -3,28 +3,28 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Maintenance;8BitCadeXL/category-screens/Maintenance.png;;;;;;;
 1;Battery Test;8BitCadeXL/Maintenance/Battery Test.png;8BitCadeXL/Maintenance/Battery Test.hex;;;1.0;Jack Daly;;
 1;Hardware Test;8BitCadeXL/Maintenance/HardwareTest.png;8BitCadeXL/Maintenance/HardwareTest.hex;;;1.0;Jack Daly;;
-1;EEPROM Editor;8BitCadeXL/Maintenance/EepromEditor.png;8BitCadeXL/Maintenance/EepromEditor.hex;;;1.0;Press Play On Tape;;
+1;EEPROM Editor;8BitCadeXL/Maintenance/EepromEditor.png;8BitCadeXL/Maintenance/EepromEditor.hex;;;1.0;Press Play on Tape;Inspired by Crait’s Arduboy Assistant, this version has been expanded to show 25 bytes at a time (to give context) with the current cell highlighted in the middle.;10
 2;Arcade;8BitCadeXL/category-screens/Arcade.png;;;
-2;CyberHack;8BitCadeXL/Arcade/CyberHack.png;8BitCadeXL/Arcade/CyberHack.hex;;;;;;
+2;CyberHack;8BitCadeXL/Arcade/CyberHack.png;8BitCadeXL/Arcade/CyberHack.hex;;;1.0;Press Play On Tape;The corrupted Corpo has to be stopped and your hacking skills will be invaluable. Inspired by the game CyberPunk.;
 2;'Ard Drivin';8BitCadeXL/Arcade/Ard-Drivin.png;8BitCadeXL/Arcade/Ard-Drivin.hex;;;1.0;Rem;A fast paced racing sim.;23
 2;ArduBOYNG;8BitCadeXL/Arcade/ArduBOYNG.png;8BitCadeXL/Arcade/ArduBOYNG.hex;;;0.81;Troubadixx;Pong. What more do you need to say?;5
 2;ArduBreakout;8BitCadeXL/Arcade/ArduBreakout.png;8BitCadeXL/Arcade/ArduBreakout.hex;;;1.0;SebGoscik;An Arduboy version of the classic game Breakout!;5
 2;ArduBuggy;8BitCadeXL/Arcade/ArduBuggy.png;8BitCadeXL/Arcade/ArduBuggy.hex;;;1.0;Nono_Nono;A moon patrol remake.;10
-2;ArduIndy_2_5;8BitCadeXL/Arcade/ArduIndy_2_5.png;8BitCadeXL/Arcade/ArduIndy_2_5.hex;;;;;
+2;ArduIndy_2_5;8BitCadeXL/Arcade/ArduIndy_2_5.png;8BitCadeXL/Arcade/ArduIndy_2_5.hex;;;2.5;Jacoste;ArduIndy - Inspired by ZX Spectrum game “Sabre Wulf”.;8
 2;Boris Goes Skiing;8BitCadeXL/Arcade/BorisGoesSkiing.png;8BitCadeXL/Arcade/BorisGoesSkiing.hex;;;1.0;sones;Boris Goes Skiing is a clone of the ZX Spectrum game Horace goes skiing.;3
 2;Bounce;8BitCadeXL/Arcade/Bounce.png;8BitCadeXL/Arcade/Bounce.hex;;;1.0;RetrobitCoder;Air hockey for the Arduboy!  Two players pick their dogsand battle to the end.;7
-2;BreakoutV;8BitCadeXL/Arcade/BreakoutV.png;8BitCadeXL/Arcade/BreakoutV.hex;;;;;
-2;Depth Of Nightmare;8BitCadeXL/Arcade/Depth Of Nightmare.png;8BitCadeXL/Arcade/Depth Of Nightmare.hex;;;;;
-2;Digger;8BitCadeXL/Arcade/Digger.png;8BitCadeXL/Arcade/Digger.hex;;;;;
-2;Fidget Slots;8BitCadeXL/Arcade/Fidget Slots.png;8BitCadeXL/Arcade/Fidget Slots.hex;;;;;
+2;BreakoutV;8BitCadeXL/Arcade/BreakoutV.png;8BitCadeXL/Arcade/BreakoutV.hex;;;1.0;boochow;An Arduboy version of the classic game Breakout! This one is orientated verically, hence the V.;5
+2;Depth Of Nightmare;8BitCadeXL/Arcade/Depth Of Nightmare.png;8BitCadeXL/Arcade/Depth Of Nightmare.hex;;;1.0;Kiwi;A dungeon crawling game - avoid the rats and other killers and find the treasure.
+2;Digger;8BitCadeXL/Arcade/Digger.png;8BitCadeXL/Arcade/Digger.hex;;;1.0;eried;Goal is to collect as many diamonds as needed to unlock the exit. You can move rocks, if there is nothing behind it. If a rock falls through a changer, then its converted to a diamond.
+2;Fidget Slots;8BitCadeXL/Arcade/Fidget Slots.png;8BitCadeXL/Arcade/Fidget Slots.hex;;;1.0;obigal;Vegas-style slots on the Arduboy!
 2;Fire Panic;8BitCadeXL/Arcade/FirePanic.png;8BitCadeXL/Arcade/FirePanic.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;
-2;Incher;8BitCadeXL/Arcade/Incher.png;8BitCadeXL/Arcade/Incher.hex;;;;;
+2;Incher;8BitCadeXL/Arcade/Incher.png;8BitCadeXL/Arcade/Incher.hex;;;1.0;D Lein Hellios;Incher is a worm-guiding simulator. Through some unknown mishap, a handful of good worms are trapped deep behind enemy lines. It is your duty to guide them home, one inch at a time. The path is laden with traps set by the maniacal faces. Avoid these hazards, reach the portals, and prevent your worms' untimely demise.
 2;JetPac;8BitCadeXL/Arcade/JetPac.png;8BitCadeXL/Arcade/JetPac.hex;;;1.0;TheArduinoGuy;You are an astronaut on an alien planet with a Jet Pac. Assemble you rocket and gather fuel before taking off.;5
 2;Jump Boy;8BitCadeXL/Arcade/JumpBoy.png;8BitCadeXL/Arcade/JumpBoy.hex;;;1.0;t-iwasaki;Collect the coins but be carefull as the floorboards will decrease one by one each time you land on them.;8
 2;Millipe;8BitCadeXL/Arcade/Millipe.png;8BitCadeXL/Arcade/Millipe.hex;;;1.0;Dreamer2345;A small Centipede clone.;3
-2;Octopus;8BitCadeXL/Arcade/Octopus.png;8BitCadeXL/Arcade/Octopus.hex;;;;;
-2;OilPanic;8BitCadeXL/Arcade/OilPanic.png;8BitCadeXL/Arcade/OilPanic.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;
-2;Pactastic;8BitCadeXL/Arcade/Pactastic.png;8BitCadeXL/Arcade/Pactastic.hex;;;;;
+2;Octopus;8BitCadeXL/Arcade/Octopus.png;8BitCadeXL/Arcade/Octopus.hex;;;1.0;Roberto;A remake of the classic Game & Watch game, Octopus!
+2;Oil Panic;8BitCadeXL/Arcade/OilPanic.png;8BitCadeXL/Arcade/OilPanic.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;
+2;Pactastic;8BitCadeXL/Arcade/Pactastic.png;8BitCadeXL/Arcade/Pactastic.hex;;;1.0;Dragula96;A cross between two classic games - PacMan and Snake.
 2;Paqman;8BitCadeXL/Arcade/Paqman.png;8BitCadeXL/Arcade/Paqman.hex;;;;;
 2;Paqman_Classic;8BitCadeXL/Arcade/Paqman_Classic.png;8BitCadeXL/Arcade/Paqman_Classic.hex;;;;;
 2;Pong;8BitCadeXL/Arcade/Pong.png;8BitCadeXL/Arcade/Pong.hex;;;;;
@@ -36,9 +36,9 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 2;Startrek;8BitCadeXL/Arcade/Startrek.png;8BitCadeXL/Arcade/Startrek.hex;;;;;
 2;Stellar Impact;8BitCadeXL/Arcade/StellarImpact.png;8BitCadeXL/Arcade/StellarImpact.hex;;;1.0;gnargle;A space shoot 'em up with procedurally generated starfields. Watch for the bomb that freezes time!;14
 2;Tempest;8BitCadeXL/Arcade/Tempest.png;8BitCadeXL/Arcade/Tempest.hex;;;;;
-2;Tiny Bert;8BitCadeXL/Arcade/Tiny Bert.png;8BitCadeXL/Arcade/Tiny Bert.hex;;;;;
-2;Tiny DDug;8BitCadeXL/Arcade/Tiny DDug.png;8BitCadeXL/Arcade/Tiny DDug.hex;;;;;
-2;To;8BitCadeXL/Arcade/To.png;8BitCadeXL/Arcade/To.hex;;;;;
+2;Tiny Bert;8BitCadeXL/Arcade/Tiny Bert.png;8BitCadeXL/Arcade/Tiny Bert.hex;;1.0;Daniel C (www.tinyjoypad.com);A remake of the 80s classic, QBert.;
+2;Tiny DDug;8BitCadeXL/Arcade/Tiny DDug.png;8BitCadeXL/Arcade/Tiny DDug.hex;;1.0;Daniel C (www.tinyjoypad.com);Classic Atari game Dig Dug on the small screen.;
+2;To;8BitCadeXL/Arcade/To.png;8BitCadeXL/Arcade/To.hex;;;1.0;waday;You are the developer of the door with the teleport function. But just before completion, someone is trying to destroy the door. There seems to be no choice but to distort the space with the power of the door and to prevent destruction.;4
 2;Zoo Escape;8BitCadeXL/Arcade/ZooEscape.png;8BitCadeXL/Arcade/ZooEscape.hex;;;1.0;FerJerez;The animals have escaped! Avoid the animals by jumping over them and landing on the crocodiles mouth to snap it shut.;9
 3;2 Player;8BitCadeXL/category-screens/2 Player.png;;;;;;
 3;Ant Crusher;8BitCadeXL/2 Player/Ant Crusher.png;8BitCadeXL/2 Player/Ant Crusher.hex;;;;;
