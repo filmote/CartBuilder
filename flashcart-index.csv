@@ -73,7 +73,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 4;ArduBuggy;Arcade\ArduBuggy.png;Arcade\ArduBuggy.hex;;;1.0;Nono_Nono;A moon patrol remake.;10
 4;Fan Boat;Arcade\Fanboat.png;Arcade\Fanboat.hex;;;1.0;fanboat;Dodge gators on your propeller-powered pontoon as it rages faster and faster across the big black bayou. If you can pick up juice for your grandfather’s old shield generator, you can pass right through the congregation as long as it’s powered up;9
 4;You Wont Survive;Arcade\YouWontSurvive.png;Arcade\YouWontSurvive.hex;;;1.0;AstroAndre;Avoid incoming enemies on two different modes and test your reflexes. ;3
-4;SF Cave;Arcade\SFCave.png;Arcade\SFCave.hex;;;Version;Slade1972;A remake of a palm pilot game.;2
+4;SF Cave;Arcade\SFCave.png;Arcade\SFCave.hex;;;1.0;Slade1972;A remake of a palm pilot game.;2
 5;Platformer;category-screens\Platformer.png;;;;;;;
 5;Castle Boy;Platformer\CastleBoy.png;Platformer\CastleBoy.hex;;;1.0;jlauener;A Castlvania demake.;33
 5;SanSan;Action\Sansan.png;Action\Sansan.hex;;;1.0;chame;SanSan is a name of little Santa. A weapon is his bag! This is Son Son, Rygar inspired action game, but add some original ideas.;18
@@ -156,7 +156,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 9;Yatzy;Puzzle\Yatzy.png;Puzzle\Yatzy.hex;;;1.3;shdwwzrd;A dice game where you need to role combinations before running out of attempts.;
 9;Cripple Mr Onion;Puzzle\Cripplemronion.png;Puzzle\Cripplemronion.hex;;;1.0;fentonc;A hilariously complicated combination of poker and blackjack, using an 8-suited deck.You can customize your character, accumulate money through betting, etc. As you gain money, your ‘rank’ increases, with the ultimate goal of being rich enough to become the Patrician of Ankh-Morpork!;3
 10;Racing;category-screens\Racing.png;;;;;;;
-10;ArdDriving;Racing\Arddriving.png;Racing\Arddriving.hex;;;1.0;Rem;A fast paced racing sim.;23
+10;'Ard Drivin';Racing\Arddriving.png;Racing\Arddriving.hex;;;1.0;Rem;A fast paced racing sim.;23
 10;ArduRacer;Racing\ArduRacer.png;Racing\ArduRacer.hex;;;1.0;tonym128;A top down racing time trail racing game for the ArduBoy similar to Trackmania;9
 10;Road Trip;Racing/RoadTrip.png;Racing/RoadTrip.hex;;;1.1;Press Play on Tape;Inspired by the Atari 2600 game Enduro. Strap on your goggles. Sink into your seat. And leave all your fears in the pit. You’re about to enter the race of your life. You’ll be required to pass lots of cars each day. From sunrise to sunset - as fast as you can. Welcome to the National Enduro!;
 10;Bone Shakers;Racing\BoneShakers.png;Racing\BoneShakers.hex;;;1.0;jhhoward;Bone Shakers is a racing game where skeletons ride unicycles around a dungeon race track. In part inspired by Super Mario Kart for the SNES.;15
@@ -194,7 +194,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;i4arduboy;Shooter\l4arduboy.png;Shooter\l4arduboy.hex;;;1.0;Yomogimaru;i4arduboy is a horizontal shmup. Control a submarine and snipe far enemies on off-screen with torpedos!;12
 12;LoveRush;Arcade\Loverush.png;Arcade\Loverush.hex;;;1.0;Vampirics;A cute infinite shooter for Arduboy.;11
 12;Trolly Fish;arg\trollyfish.png;arg\trollyfish.hex;;;1.0;Team ARG;Little fish. Big fish, swimming in the water. Com back here, man. Give me back my star!;10
-12;Humanity Revenge;Shooter\HumanityRevenge.png;Shooter\HumanityRevenge.hex;;;;giangregorioc;;9
+12;Humanity Revenge;Shooter\HumanityRevenge.png;Shooter\HumanityRevenge.hex;;;1.0;giangregorioc;9
 12;Night Raid;Shooter\NightRaid.png;Shooter\NightRaid.hex;;;1.0;epbarger;It’s extremely similar to Missile Command.;8
 12;Arcodia;Shooter\Arcodia.png;Shooter\Arcodia.hex;;;1.0;TheArduinoGuy;A port of the classic ZX Spectrum game ‘Arcadia’.;5
 12;Suit Shooter;Shooter\SuitShooter.png;Shooter\SuitShooter.hex;;;2.0;Crait;Launch suits of cards at falling cards in order to create matches and score points. Watch out, though! Missing cards will hurt you! The cards start out falling slowly, but get faster as you score more points and regain health.;5
@@ -203,7 +203,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Battle For Zuthsrah;Shooter\BattleForZ.png;Shooter\BattleForZ.hex;;;1.0;Mre64;A space shoot 'em up!;3
 12;Space Fighter;Shooter\SpaceFighter.png;Shooter\SpaceFighter.hex;;;1.0;PolygonAndPixel;A space shooter similar to Stellar Impact.;3
 12;Space Knife;Shooter\SpaceKnife.png;Shooter\SpaceKnife.hex;;;1.0;streetalchemist;A Gradius type of side-scroller shmup.;3
-12;Space Quarth;Puzzle\spacequarth.png;Puzzle\spacequarth.hex;;;1.0;Schuemi;A spcae hoot 'em up.;5
+12;Space Quarth;Puzzle\spacequarth.png;Puzzle\spacequarth.hex;;;1.0;Schuemi;A space shoot 'em up.;5
 12;CowBro;Shooter\CowBro.png;Shooter\CowBro.hex;;;1.0;GERD;You are a cowboy and have to shoot randomly generated targets and grab time bonuses that drop from the top of the stage to continue.;2
 12;Tiny Digital Invader;Shooter\TinyDigitalInvader.png;Shooter\TinyDigitalInvader.hex;;;1.0;akkera102;Tiny Digital Invader is Casio MG-880 Calculator(1980) game clone. This game use only 8 * 7-segment display.;1
 12;101 Starships;Shooter\101Starships.png;Shooter\101Starships.hex;;;1.0;Zoglu;A horizontal space shoot 'em up.;
