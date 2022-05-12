@@ -166,7 +166,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;RPG;category-screens\RPG.png;;;;;;;
 11;ArduRogue;RPG\ardurogue.png;RPG\ardurogue.hex;;;1.0;brow1067;ArduRogue: a traditional roguelike for the Arduboy.;0
 11;Ardynia;RPG\ardynia.png;RPG\ardynia.hex;;;1.0;city41;Ardynia - a Zelda style adventure.;49
-11;Dark and Under;RPG\darkandunder.png;RPG\darkandunder.hex;;;1.0;GarageCollective;A dungeon crawler for the Arduboy.;39
+11;Dark and Under;RPG\darkandunder.png;RPG\darkandunder.hex;;;1.0;Garage Collective;A dungeon crawler for the Arduboy.;39
 11;Arduventure;RPG\Arduventure.png;RPG\Arduventure.hex;;;1.0;Team ARG;Arduventure is a classic top-down 8-Bit RPG with original monochrome graphics and musical score. Collect items, weapons, armor, amulets and magic to fight enemies in turn-based battle system. Explore a massive world map larger than the one in Zelda: Links Awakening!;34
 11;Star Honor;RPG\starhonor.png;RPG\starhonor.hex;;;1.0;Wenceslao;Star Honor is a Roguelike space adventure where you are field promoted into the Captain’s chair of the USS Arduino. Your home world has become the victim of the a biological weapon deployed by enemies. You posses the only hope for your world, a cure for the phage. With a skeleton crew, a limping vessel and time running out, you must travel world to world, seeking supplies, upgrades and doing battle to make it home and save your planet.;20
 11;Tackle Box;Arcade\tacklebox.png;Arcade\tacklebox.hex;;;1.0;city41;Similar to the classic Legend of the River King, Tackle Box is a fishing-themed role playing video game.;19
