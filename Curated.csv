@@ -18,7 +18,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 2;Raynetherogue;Action/Raynetherogue.png;Action/Raynetherogue.hex;;;;;;
 2;Rayne2;Action\RAYNE2.png;Action\RAYNE2.hex;;;8;shdwwzrd
 2;ZooatMidnight;Action/zooatmidnight.png;Action/zooatmidnight.hex;;;;;;
-2;CyberHack;Arcade/CyberHack.png;Puzzle/CyberHack.hex;;;;;;
+2;CyberHack;Arcade/CyberHack.png;Arcade/CyberHack.hex;;;;;;
 3;Arcade;category-screens/Arcade.png;;;;;;;
 3;Beam 'em Up;Arcade\BeamEmUp.png;Arcade\BeamEmUp.hex;;;1.0;BenUnwired;You play a space squid that just wants to mess with some local cows. Move around the multi-screen landscape and use the A button to tractor beam the creatures and move them around the screen. Stopping the beam will let them go, but they’re pretty resilient.;0
 3;Ravine Despoiler;Arcade\RavineDespoiler.png;Arcade\RavineDespoiler.hex;;;1.0;BenUnwired;Based on the Atari arcade game Canyon Bomber. You can speed up or slow down your plane and drop bombs in the canyon to knock out boulders for points. Missing rocks will result in losing points, while hitting multiple boulders at once gives extra points. The game is over when the canyon is emptied. I'm not sure what the theoretical high score is, but my best games have been around 240 with several misses.;0

@@ -215,7 +215,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 13;Ardletics;Sports\Ardletics.png;Sports\Ardletics.hex;;;1.0;igvina;Ardletics - Athletics for Arduboy;9
 13;Boris Goes Skiing;Arcade\Borisgoesskiing.png;Arcade\Borisgoesskiing.hex;;;1.0;sones;Boris Goes Skiing is a clone of the ZX Spectrum game Horace goes skiing.;3
 13;ArduBall;Arcade\ArduBall.png;Arcade\ArduBall.hex;;;1.0;2BarrelShotgun;Basketball for the Arduboy.;2
-13;Tiny Trick;Sports\tinytrick.png;Sports\tinytrick.hex;;;1.0;ElectroLIB;Icehockey for the Arduboy.;
+13;Tiny Trick Hockey;Sports\tinytrick.png;Sports\tinytrick.hex;;;1.0;ElectroLIB;Icehockey for the Arduboy.;
 14;Music;category-screens\Music.png;;;;;;;
 14;abSynth-FM;Misc\abSynthFM.png;Misc\abSynthFM.hex;;;1.0;boochow;FM Synthesizer with 16-step sequencer for Arduboy.;18
 14;Musicgen Pocket;Application\musicgenpocket.png;Application\musicgenpocket.hex;;;1.0;inajob;MusicGenN Pocket is 8bit mugic generator for Arduboy. All you have to do is turn on your Arduboy and you can listen 8bit music everywhere!;11
@@ -231,7 +231,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 15;Graph 2;Application\graph2.png;Application\graph2.hex;;;1.0;V360;A fully-functional graphing calculator! It’s ten times better than Graph 1, because you can enter your own expression from scratch!;7
 15;ArduSaver;Application\ArduSaver.png;Application\ArduSaver.hex;;;1.0;Prototype;Do you feel your OLED is suffering from critical levels of burn-in? Is nostalgia spoiling your working day? ArduSaver to the rescue!;11
 15;Screen Saver;Demos\screensaver.png;Demos\screensaver.hex;;;1.0;blockbird;A screen saver of fascinating shapes.;7
-15;Golf Companion;Application\GolfCompanion.png;Application\GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;11
+15;Golfer's Companion;Application\GolfCompanion.png;Application\GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;11
 15;Arduboy Life;Misc\ArduboyLife.png;Misc\ArduboyLife.hex;;;1.0;MLXXXp;Arduboy gets a Life (Conway’s Game of Life);10
 15;Game of Life;Demos\gameoflife.png;Demos\gameoflife.hex;;;1.0;kmasato;Game of Life (Celluar Automaton) for Arduboy.;
 15;Boids;Demos\boids.png;Demos\boids.hex;;;1.0;elpassion;;
