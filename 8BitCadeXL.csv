@@ -1,8 +1,8 @@
 List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Info;Likes
 0;Bootloader;8bitcade_loader.png;;;;;;;
 1;Maintenance;8BitCadeXL/category-screens/Maintenance.png;;;;;;;
-1;Battery Test;8BitCadeXL/Maintenance/Battery Test.png;8BitCadeXL/Maintenance/Battery Test.hex;;;1.0;Jack Daly;;
-1;Hardware Test;8BitCadeXL/Maintenance/HardwareTest.png;8BitCadeXL/Maintenance/HardwareTest.hex;;;1.0;Jack Daly;;
+1;Battery Test;8BitCadeXL/Maintenance/Battery Test.png;8BitCadeXL/Maintenance/Battery Test.hex;;;1.0;Jack Daly;Test the battery on your 8BitCadeXL;
+1;Hardware Test;8BitCadeXL/Maintenance/HardwareTest.png;8BitCadeXL/Maintenance/HardwareTest.hex;;;1.0;Jack Daly;Test the buttons on your 8BitCadeXL;
 1;EEPROM Editor;8BitCadeXL/Maintenance/EepromEditor.png;8BitCadeXL/Maintenance/EepromEditor.hex;;;1.0;Press Play on Tape;Inspired by Crait’s Arduboy Assistant, this version has been expanded to show 25 bytes at a time (to give context) with the current cell highlighted in the middle.;10
 2;Arcade;8BitCadeXL/category-screens/Arcade.png;;;
 2;CyberHack;8BitCadeXL/Arcade/CyberHack.png;8BitCadeXL/Arcade/CyberHack.hex;;;1.0;Press Play On Tape;The corrupted Corpo has to be stopped and your hacking skills will be invaluable. Inspired by the game CyberPunk.;
@@ -25,71 +25,71 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 2;Octopus;8BitCadeXL/Arcade/Octopus.png;8BitCadeXL/Arcade/Octopus.hex;;;1.0;Roberto;A remake of the classic Game & Watch game, Octopus!
 2;Oil Panic;8BitCadeXL/Arcade/OilPanic.png;8BitCadeXL/Arcade/OilPanic.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;
 2;Pactastic;8BitCadeXL/Arcade/Pactastic.png;8BitCadeXL/Arcade/Pactastic.hex;;;1.0;Dragula96;A cross between two classic games - PacMan and Snake.
-2;Paqman;8BitCadeXL/Arcade/Paqman.png;8BitCadeXL/Arcade/Paqman.hex;;;;;
-2;Paqman_Classic;8BitCadeXL/Arcade/Paqman_Classic.png;8BitCadeXL/Arcade/Paqman_Classic.hex;;;;;
-2;Pong;8BitCadeXL/Arcade/Pong.png;8BitCadeXL/Arcade/Pong.hex;;;;;
+2;Paqman;8BitCadeXL/Arcade/Paqman.png;8BitCadeXL/Arcade/Paqman.hex;;;1.0;Seth;Re-live the nostalgic glory of games like Pac-Man and Lock ‘n’ Chase (with a few less pixels…) right on your Arduboy!;
+2;Paqman_Classic;8BitCadeXL/Arcade/Paqman_Classic.png;8BitCadeXL/Arcade/Paqman_Classic.hex;;;1.0;Yoda Video Arcade;Another Pacman clone.
+2;Pong;8BitCadeXL/Arcade/Pong.png;8BitCadeXL/Arcade/Pong.hex;;;1.0;;Two player pong.
 2;RoboDodge;8BitCadeXL/Arcade/RoboDodge.png;8BitCadeXL/Arcade/RoboDodge.hex;;;1.0;Gaveno;Control your very own small robot as you dodge the barrage of incoming rockets!;7
 2;Rooftop Rescue;8BitCadeXL/Arcade/RooftopRescue.png;8BitCadeXL/Arcade/RooftopRescue.hex;;;1.0;Prototype;Rescue the trapped people as fire consumes the city.;21
-2;Sea Battle;8BitCadeXL/Arcade/Sea Battle.png;8BitCadeXL/Arcade/Sea Battle.hex;;;;;
+2;Sea Battle;8BitCadeXL/Arcade/Sea Battle.png;8BitCadeXL/Arcade/Sea Battle.hex;;;1.0;DarkestSpire;Based on the game BattleShips. This game has a simple AI and music, but is smart enough to be challenging.
 2;Shadow Runner;8BitCadeXL/Arcade/ShadowRunner.png;8BitCadeXL/Arcade/ShadowRunner.hex;;;1.0;Team ARG;A shadow lost his kid by wandering too far away from the light. Now it must find its coloured equal to become one again.;7
 2;Space Cab;8BitCadeXL/Arcade/SpaceCab.png;8BitCadeXL/Arcade/SpaceCab.hex;;;1.0.1;Press Play On Tape;A tribute to the classic Commodore 64 game Space Taxi! Collect and deliver customers to their destination as quickly as possible to make the most money! But be careful and make sure you do not run out of fuel land without deploying your landing gear or squash a customer.;12
-2;Startrek;8BitCadeXL/Arcade/Startrek.png;8BitCadeXL/Arcade/Startrek.hex;;;;;
+2;Startrek;8BitCadeXL/Arcade/Startrek.png;8BitCadeXL/Arcade/Startrek.hex;;;1.0;BlueMax;Simulator based on the Star Trek game.
 2;Stellar Impact;8BitCadeXL/Arcade/StellarImpact.png;8BitCadeXL/Arcade/StellarImpact.hex;;;1.0;gnargle;A space shoot 'em up with procedurally generated starfields. Watch for the bomb that freezes time!;14
-2;Tempest;8BitCadeXL/Arcade/Tempest.png;8BitCadeXL/Arcade/Tempest.hex;;;;;
+2;Tempest;8BitCadeXL/Arcade/Tempest.png;8BitCadeXL/Arcade/Tempest.hex;;;1.0;Colin TA;Inspired by Tempest, this is a straightforward shooter, except you rotate around the center and shoot towards the middle. Enemies emerge from the “portal” in the middle.
 2;Tiny Bert;8BitCadeXL/Arcade/Tiny Bert.png;8BitCadeXL/Arcade/Tiny Bert.hex;;1.0;Daniel C (www.tinyjoypad.com);A remake of the 80s classic, QBert.;
 2;Tiny DDug;8BitCadeXL/Arcade/Tiny DDug.png;8BitCadeXL/Arcade/Tiny DDug.hex;;1.0;Daniel C (www.tinyjoypad.com);Classic Atari game Dig Dug on the small screen.;
 2;To;8BitCadeXL/Arcade/To.png;8BitCadeXL/Arcade/To.hex;;;1.0;waday;You are the developer of the door with the teleport function. But just before completion, someone is trying to destroy the door. There seems to be no choice but to distort the space with the power of the door and to prevent destruction.;4
 2;Zoo Escape;8BitCadeXL/Arcade/ZooEscape.png;8BitCadeXL/Arcade/ZooEscape.hex;;;1.0;FerJerez;The animals have escaped! Avoid the animals by jumping over them and landing on the crocodiles mouth to snap it shut.;9
 3;2 Player;8BitCadeXL/category-screens/2 Player.png;;;;;;
-3;Ant Crusher;8BitCadeXL/2 Player/Ant Crusher.png;8BitCadeXL/2 Player/Ant Crusher.hex;;;;;
+3;Ant Crusher;8BitCadeXL/2 Player/Ant Crusher.png;8BitCadeXL/2 Player/Ant Crusher.hex;;1.0;Devloped By Tom;As its name suggests, you must crush the ants underfoot!
 3;Bip BipBipBip;8BitCadeXL/2 Player/Bip Bip.png;8BitCadeXL/2 Player/Bip Bip.hex;;;1.0;JuiceLizard;A “Pong” demake named “Bip Bipbip” for two players. How to win? It is simple. If the ball touchs your opponent when he doesn’t press his button or if his rectangle reaches the middle of the screen before yours then he loses.;5
-3;Pong Extreme;8BitCadeXL/2 Player/Pong Extreme.png;8BitCadeXL/2 Player/Pong Extreme.hex;;;;;
-3;Two Player Tetris;8BitCadeXL/2 Player/TwoP Tetris.png;8BitCadeXL/2 Player/TwoP Tetris.hex;;;;;
+3;Pong Extreme;8BitCadeXL/2 Player/Pong Extreme.png;8BitCadeXL/2 Player/Pong Extreme.hex;;1.0;Unknown;One and two player versin of pong.
+3;Two Tris;8BitCadeXL/2 Player/TwoP Tetris.png;8BitCadeXL/2 Player/TwoP Tetris.hex;;;1.0;skaterced;Two player tetris.
 4;Action;8BitCadeXL/category-screens/Action.png;;;;;;
 4;Lode Runner;8BitCadeXL/Action/LodeRunner.png;8BitCadeXL/Action/LodeRunner.hex;8BitCadeXL/Action/LevelData.bin;;1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
-4;A To Bee;8BitCadeXL/Action/A To Bee.png;8BitCadeXL/Action/A To Bee.hex;;;;;
+4;A To Bee;8BitCadeXL/Action/A To Bee.png;8BitCadeXL/Action/A To Bee.hex;;;1.0;Unknown;Collect pollen from nearby flowers and return it to the hive without being hit by other bees.
 4;APara;8BitCadeXL/Action/APara.png;8BitCadeXL/Action/APara.hex;;;1.0;leovt;Catch the paratroopers jumping out of a helicopter before they fall in the water.;4
-4;ArduStar;8BitCadeXL/Action/ArduStar.png;8BitCadeXL/Action/ArduStar.hex;;;;;
-4;ArduSub;8BitCadeXL/Action/ArduSub.png;8BitCadeXL/Action/ArduSub.hex;;;;;
+4;ArduStar;8BitCadeXL/Action/ArduStar.png;8BitCadeXL/Action/ArduStar.hex;;;1.0;Keith M;A shoot 'em up in space.
+4;ArduSub;8BitCadeXL/Action/ArduSub.png;8BitCadeXL/Action/ArduSub.hex;;;1.0;King-Swood;A simple button-mashing/beat-the-clock game where the player must avoid the mines and survive for as long as possible.
 4;Back To The Jungle;8BitCadeXL/Action/Back2Jungle.png;8BitCadeXL/Action/Back2Jungle.hex;;;1.8;eried;The Zoo had to close, what can the animals do? A small arcade game, inspired slighty on frogger (but sideways).;11
 4;Bangi;8BitCadeXL/Action/Bangi.png;8BitCadeXL/Action/Bangi.hex;;;1.0;Igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;14
-4;Block Stacker;8BitCadeXL/Action/BlockStacker.png;8BitCadeXL/Action/BlockStacker.hex;;;;;
+4;Block Stacker;8BitCadeXL/Action/BlockStacker.png;8BitCadeXL/Action/BlockStacker.hex;;;1.0;Dragula96;Stacker clone like the game at the arcade that gives you a chance to win a prize, however in this one the only thing you win is satisfaction!.
 4;Chicken Launcher;8BitCadeXL/Action/Chicken Launcher.png;8BitCadeXL/Action/Chicken Launcher.hex;;;1.1;Crait;Shoot a chicken as far as you can. Try to hit springboards to give you a boost but watch out for spikes! ;4
-4;Chicken Crossing;8BitCadeXL/Action/ChickenX.png;8BitCadeXL/Action/ChickenX.hex;;;;;
+4;Chicken Cross;8BitCadeXL/Action/ChickenX.png;8BitCadeXL/Action/ChickenX.hex;;;1.0;Dragula96;This game started out its life as a Frogger clone, ended up being a Freeway clone.
 4;Chome Dino;8BitCadeXL/Action/Chome Dino.png;8BitCadeXL/Action/Chome Dino.hex;;;1.0;Flaki;A version of Chrome’s (in?)famous dino side-scroller running-man-style dino jumper.;16
 4;Crate Confusion;8BitCadeXL/Action/Crate-Confusion.png;8BitCadeXL/Action/Crate-Confusion.hex;;;1.0;Phoboslab;Manoeuvre the space ship to collect the crates.;
-4;Crazy Bird;8BitCadeXL/Action/Crazy Bird.png;8BitCadeXL/Action/Crazy Bird.hex;;;;;
+4;Crazy Bird;8BitCadeXL/Action/Crazy Bird.png;8BitCadeXL/Action/Crazy Bird.hex;;;1.0;JuiceLizard;An alternative version of "Flappy Ball" on Arduboy that provides more challenge.
 4;Dancerow;8BitCadeXL/Action/Dancerow.png;8BitCadeXL/Action/Dancerow.hex;;;1.0;madya121;An Audition Dance Game clone for Arduboy;4
-4;DDR Boy;8BitCadeXL/Action/DDR Boy.png;8BitCadeXL/Action/DDR Boy.hex;;;;;
-4;Evasion;8BitCadeXL/Action/Evasion.png;8BitCadeXL/Action/Evasion.hex;;;;;
-4;Fan Boat;8BitCadeXL/Action/Fanboat.png;8BitCadeXL/Action/Fanboat.hex;;;1.0;fanboat;Dodge gators on your propeller-powered pontoon as it rages faster and faster across the big black bayou. If you can pick up juice for your grandfather’s old shield generator, you can pass right through the congregation as long as it’s powered up;9
+4;DDRBoy (Dance Dance Revolution);8BitCadeXL/Action/DDR Boy.png;8BitCadeXL/Action/DDR Boy.hex;;;1.0;tytydraco;Test your reflexes and your ability to keep up with the buttons. It is super intense and never gets boring because its so addictive!
+4;Evasion;8BitCadeXL/Action/Evasion.png;8BitCadeXL/Action/Evasion.hex;;;1.0;obono;Control the runing guy and evade pillars.
+4;Fanboat;8BitCadeXL/Action/Fanboat.png;8BitCadeXL/Action/Fanboat.hex;;;1.0;fanboat;Dodge gators on your propeller-powered pontoon as it rages faster and faster across the big black bayou. If you can pick up juice for your grandfather’s old shield generator, you can pass right through the congregation as long as it’s powered up;9
 4;Trolly Fish;8BitCadeXL/Action/FISH.png;8BitCadeXL/Action/FISH.hex;;;1.0;Team ARG;Little fish. Big fish, swimming in the water. Come back here, man. Give me back my star!;10
 4;Flappy Ball;8BitCadeXL/Action/FlappyBall.png;8BitCadeXL/Action/FlappyBall.hex;;;1.0;Chris;A flappy bird clone.;6
-4;Frog Wizard;8BitCadeXL/Action/Frog Wizard.png;8BitCadeXL/Action/Frog Wizard.hex;;;;;
-4;Frogger;8BitCadeXL/Action/Frogger.png;8BitCadeXL/Action/Frogger.hex;;;;;
-4;Froggy Toad;8BitCadeXL/Action/Froggy Toad.png;8BitCadeXL/Action/Froggy Toad.hex;;;;;
-4;Gravitron;8BitCadeXL/Action/Gravitron.png;8BitCadeXL/Action/Gravitron.hex;;;;;
-4;Hallo;8BitCadeXL/Action/Hallo.png;8BitCadeXL/Action/Hallo.hex;;;;;
+4;Frog Egg;8BitCadeXL/Action/Frog Wizard.png;8BitCadeXL/Action/Frog Wizard.hex;;;1.0;eggboycolor;Collect all the eggs in this Mario like game.
+4;Frogger;8BitCadeXL/Action/Frogger.png;8BitCadeXL/Action/Frogger.hex;;;1.0;csmick;Recreation of the classic game Frogger.
+4;Froggy Toad;8BitCadeXL/Action/Froggy Toad.png;8BitCadeXL/Action/Froggy Toad.hex;;;1.0;Unknown;Another frogger clone.
+4;Gravitron;8BitCadeXL/Action/Gravitron.png;8BitCadeXL/Action/Gravitron.hex;;;1.0;zogurt;In Astroship Gravitron you are a controlling a space ship trying to pass the infamous 5 doge it challenges. In order to pass each level you must not let a single asteroid touch your ship.
+4;Spooky Halloween;8BitCadeXL/Action/Hallo.png;8BitCadeXL/Action/Hallo.hex;;;1.0;flaki;A halloween inspired version of Chrome's Dino game.
 4;Helii;8BitCadeXL/Action/Helii.png;8BitCadeXL/Action/Helii.hex;;;1.0;BHSPitMonkey;Helii is a port of my homebrew clone of the old Flash “Helicopter Game” and its ilk (i.e. game type that Flappy Bird is a variation of). As you fly through the tunnel the gap becomes more narrow and more challenging - How far can you go?;8
-4;Inferno;8BitCadeXL/Action/Inferno.png;8BitCadeXL/Action/Inferno.hex;;;;;
+4;Inferno;8BitCadeXL/Action/Inferno.png;8BitCadeXL/Action/Inferno.hex;;;1.0;Unknown;Space shoot 'em up.
 4;Kemono Patrol;8BitCadeXL/Action/Kemono_Patrol.png;8BitCadeXL/Action/Kemono_Patrol.hex;;;1.0;metalidol;A moon buggy-style game.;
-4;Keykat;8BitCadeXL/Action/Keykat.png;8BitCadeXL/Action/Keykat.hex;;;;;
-4;Lander;8BitCadeXL/Action/Lander.png;8BitCadeXL/Action/Lander.hex;;;;;
+4;Keykat;8BitCadeXL/Action/Keykat.png;8BitCadeXL/Action/Keykat.hex;;;1.0;pngwen;You are an I.T. worker named KeyKat. You must run around and turn computers off and back on again when they fail.;3
+4;Lander;8BitCadeXL/Action/Lander.png;8BitCadeXL/Action/Lander.hex;;;1.0;Yoda;A lunar lander clone.
 4;Lasers;8BitCadeXL/Action/Lasers.png;8BitCadeXL/Action/Lasers.hex;;;1.0;Obono;Lasers - A simple Ikaruga-like game.;19
 4;Leanna The Lion;8BitCadeXL/Action/LeLion.png;8BitCadeXL/Action/LeLion.hex;;;1.0;shdwwzrd;Leanna may be a lion, but she knows what she likes: She wants fresh meat from her favorite restaurant.;10
-4;Lunar;8BitCadeXL/Action/Lunar.png;8BitCadeXL/Action/Lunar.hex;;;;;
-4;Obstacle Flight;8BitCadeXL/Action/Obstacle Flight.png;8BitCadeXL/Action/Obstacle Flight.hex;;;;;
-4;Ozzy The Cat;8BitCadeXL/Action/Ozzy The Cat.png;8BitCadeXL/Action/Ozzy The Cat.hex;;;;;
-4;Quick Block;8BitCadeXL/Action/Quick_Block.png;8BitCadeXL/Action/Quick_Block.hex;;;;;
-4;Rysk;8BitCadeXL/Action/Rysk.png;8BitCadeXL/Action/Rysk.hex;;;;;
-4;Snake;8BitCadeXL/Action/Snake.png;8BitCadeXL/Action/Snake.hex;;;;;
-4;Snakeling;8BitCadeXL/Action/Snakeling.png;8BitCadeXL/Action/Snakeling.hex;;;;;
+4;Lunar;8BitCadeXL/Action/Lunar.png;8BitCadeXL/Action/Lunar.hex;;;1.0;Nave_99 Evan Morschhauser;A lunar lander clone.
+4;Obstacle Flight;8BitCadeXL/Action/Obstacle Flight.png;8BitCadeXL/Action/Obstacle Flight.hex;;;1.0;Unknown;Avoid the obstacles as you fly along the trench.
+4;Ozzy The Cat;8BitCadeXL/Action/Ozzy The Cat.png;8BitCadeXL/Action/Ozzy The Cat.hex;;;1.0;Aaron Parecki;Ozzy the Cat, the official unofficial mascot of #OAuth, is making his debut on the Arduboy!
+4;Quick Block;8BitCadeXL/Action/Quick_Block.png;8BitCadeXL/Action/Quick_Block.hex;;;1.0;Ashteroide;Quick Block is simple game, tag all blocks in the chosen time limit. Challenge your friends to the fastest time with 100th of milliseconds accuracy.
+4;Rysk;8BitCadeXL/Action/Rysk.png;8BitCadeXL/Action/Rysk.hex;;;0.10;Rysk;Catch as many balls as you can in the allotted time.
+4;Snake;8BitCadeXL/Action/Snake.png;8BitCadeXL/Action/Snake.hex;;;1.0;XCode;The classic Nokia snake game.
+4;Snakeling;8BitCadeXL/Action/Snakeling.png;8BitCadeXL/Action/Snakeling.hex;;;1.0;Unknown;The classic Nokia snake game.
 4;Turtle Bridge;8BitCadeXL/Action/TurtleBridge.png;8BitCadeXL/Action/TurtleBridge.hex;;;1.3;Press Play On Tape;A remake of the classic Game and Watch game Turtle Bridge. Carry the package to the awaiting truck by jumping across the turtle’s backs. Watch out as they may dive for a snack!;19
-4;Tiny Ships;8BitCadeXL/Action/Tiny Ships.png;8BitCadeXL/Action/Tiny Ships.hex;;;;;
-4;Train Dodge;8BitCadeXL/Action/TrainDodge.png;8BitCadeXL/Action/TrainDodge.hex;;;;;
-4;Turtle Baby;8BitCadeXL/Action/TurtleBaby.png;8BitCadeXL/Action/TurtleBaby.hex;;;;;
-4;Unicorn Dash;8BitCadeXL/Action/Unicorn_dash.png;8BitCadeXL/Action/Unicorn_dash.hex;;;;;
-4;You Wont Survive;8BitCadeXL/Action/YouWontSurvive.png;8BitCadeXL/Action/YouWontSurvive.hex;;;;;
+4;TinyShips;8BitCadeXL/Action/Tiny Ships.png;8BitCadeXL/Action/Tiny Ships.hex;;;1.0;icodealot;A space shoot 'em up!
+4;Train Dodge;8BitCadeXL/Action/TrainDodge.png;8BitCadeXL/Action/TrainDodge.hex;;;1.1;Crait;Who’s brave enough to play chicken with a train? Stand on the track as multiple trains come at you full-speed… The closer they get to you before jumping off the tracks, the more points you’ll rack up. 
+4;Turtle Baby;8BitCadeXL/Action/TurtleBaby.png;8BitCadeXL/Action/TurtleBaby.hex;;;1.0;Unknown;Collect all the coins as you swim around.
+4;Unicorn Dash;8BitCadeXL/Action/Unicorn_dash.png;8BitCadeXL/Action/Unicorn_dash.hex;;;1.0;YossaVonK;A simple unicorn themed endless runner.
+4;You Wont Survive;8BitCadeXL/Action/YouWontSurvive.png;8BitCadeXL/Action/YouWontSurvive.hex;;;1.0;Andre3000;Avoid incoming enemies on two different modes and test your reflexes. Move your character by pressing UP and DOWN. Sounds easy right? But remember … surviving is hard in this one. Get at least 30 points!
 5;Apps;8BitCadeXL/category-screens/Apps.png;;;;;;
 5;ArduMetronome;8BitCadeXL/Apps/ArduMetronome.png;8BitCadeXL/Apps/ArduMetronome.hex;;;1.0;raspberrybrain;Use it when practicing a musical instrument (except for maybe a drum set, it probably isn’t loud enough for that), or turn it on and hide it somewhere to annoy your family, friends and loved ones with incessant beeps.;6
 5;Ardutosh;8BitCadeXL/Apps/Ardutosh.png;8BitCadeXL/Apps/Ardutosh.hex;;;1.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;31
