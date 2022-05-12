@@ -12,7 +12,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 2;ArduBuggy;8BitCadeXL/Arcade/ArduBuggy.png;8BitCadeXL/Arcade/ArduBuggy.hex;;;1.0;Nono_Nono;A moon patrol remake.;10
 2;ArduIndy_2_5;8BitCadeXL/Arcade/ArduIndy_2_5.png;8BitCadeXL/Arcade/ArduIndy_2_5.hex;;;2.5;Jacoste;ArduIndy - Inspired by ZX Spectrum game “Sabre Wulf”.;8
 2;Boris Goes Skiing;8BitCadeXL/Arcade/BorisGoesSkiing.png;8BitCadeXL/Arcade/BorisGoesSkiing.hex;;;1.0;sones;Boris Goes Skiing is a clone of the ZX Spectrum game Horace goes skiing.;3
-2;Bounce;8BitCadeXL/Arcade/Bounce.png;8BitCadeXL/Arcade/Bounce.hex;;;1.0;RetrobitCoder;Air hockey for the Arduboy!  Two players pick their dogsand battle to the end.;7
+2;Bounce;8BitCadeXL/Arcade/Bounce.png;8BitCadeXL/Arcade/Bounce.hex;;;1.0;RetrobitCoder;Air hockey for the Arduboy! Two players pick their dogsand battle to the end.;7
 2;BreakoutV;8BitCadeXL/Arcade/BreakoutV.png;8BitCadeXL/Arcade/BreakoutV.hex;;;1.0;boochow;An Arduboy version of the classic game Breakout! This one is orientated verically, hence the V.;5
 2;Depth Of Nightmare;8BitCadeXL/Arcade/Depth Of Nightmare.png;8BitCadeXL/Arcade/Depth Of Nightmare.hex;;;1.0;Kiwi;A dungeon crawling game - avoid the rats and other killers and find the treasure.
 2;Digger;8BitCadeXL/Arcade/Digger.png;8BitCadeXL/Arcade/Digger.hex;;;1.0;eried;Goal is to collect as many diamonds as needed to unlock the exit. You can move rocks, if there is nothing behind it. If a rock falls through a changer, then its converted to a diamond.
@@ -36,8 +36,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 2;Startrek;8BitCadeXL/Arcade/Startrek.png;8BitCadeXL/Arcade/Startrek.hex;;;1.0;BlueMax;Simulator based on the Star Trek game.
 2;Stellar Impact;8BitCadeXL/Arcade/StellarImpact.png;8BitCadeXL/Arcade/StellarImpact.hex;;;1.0;gnargle;A space shoot 'em up with procedurally generated starfields. Watch for the bomb that freezes time!;14
 2;Tempest;8BitCadeXL/Arcade/Tempest.png;8BitCadeXL/Arcade/Tempest.hex;;;1.0;Colin TA;Inspired by Tempest, this is a straightforward shooter, except you rotate around the center and shoot towards the middle. Enemies emerge from the “portal” in the middle.
-2;Tiny Bert;8BitCadeXL/Arcade/Tiny Bert.png;8BitCadeXL/Arcade/Tiny Bert.hex;;1.0;Daniel C (www.tinyjoypad.com);A remake of the 80s classic, QBert.;
-2;Tiny DDug;8BitCadeXL/Arcade/Tiny DDug.png;8BitCadeXL/Arcade/Tiny DDug.hex;;1.0;Daniel C (www.tinyjoypad.com);Classic Atari game Dig Dug on the small screen.;
+2;Tiny Bert;8BitCadeXL/Arcade/Tiny Bert.png;8BitCadeXL/Arcade/Tiny Bert.hex;;1.0;Daniel C (Electro L.I.B);A remake of the 80s classic, QBert.;
+2;Tiny DDug;8BitCadeXL/Arcade/Tiny DDug.png;8BitCadeXL/Arcade/Tiny DDug.hex;;1.0;Daniel C (Electro L.I.B);Classic Atari game Dig Dug on the small screen.;
 2;To;8BitCadeXL/Arcade/To.png;8BitCadeXL/Arcade/To.hex;;;1.0;waday;You are the developer of the door with the teleport function. But just before completion, someone is trying to destroy the door. There seems to be no choice but to distort the space with the power of the door and to prevent destruction.;4
 2;Zoo Escape;8BitCadeXL/Arcade/ZooEscape.png;8BitCadeXL/Arcade/ZooEscape.hex;;;1.0;FerJerez;The animals have escaped! Avoid the animals by jumping over them and landing on the crocodiles mouth to snap it shut.;9
 3;2 Player;8BitCadeXL/category-screens/2 Player.png;;;;;;
@@ -94,11 +94,11 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 5;ArduMetronome;8BitCadeXL/Apps/ArduMetronome.png;8BitCadeXL/Apps/ArduMetronome.hex;;;1.0;raspberrybrain;Use it when practicing a musical instrument (except for maybe a drum set, it probably isn’t loud enough for that), or turn it on and hide it somewhere to annoy your family, friends and loved ones with incessant beeps.;6
 5;Ardutosh;8BitCadeXL/Apps/Ardutosh.png;8BitCadeXL/Apps/Ardutosh.hex;;;1.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;31
 5;Light Meter;8BitCadeXL/Apps/LightMeter.png;8BitCadeXL/Apps/LightMeter.hex;;;1.0;MLXXXp;I’m not sure if this falls under useful or useless. I’ll let others be the judge. It’s definitely useless in the emulator. You’ll have to load it into a real Arduboy.;7
-5;Pi24k;8BitCadeXL/Apps/Pi24k.png;8BitCadeXL/Apps/Pi24k.hex;;;;;
+5;Pi24k;8BitCadeXL/Apps/Pi24k.png;8BitCadeXL/Apps/Pi24k.hex;;;1.0;obono;Calculates Pi to 24 thousand places.
 6;Board;8BitCadeXL/category-screens/Board.png;;;;;;
-6;Arduchess;8BitCadeXL/Board/Arduchess.png;8BitCadeXL/Board/Arduchess.hex;;;;;
+6;Arduchess;8BitCadeXL/Board/Arduchess.png;8BitCadeXL/Board/Arduchess.hex;;;1.0;Brow1067;Play chess on the Arduboy!
 6;ArduSlide;8BitCadeXL/Board/ArduSlide.png;8BitCadeXL/Board/ArduSlide.hex;;;1.0;gooberdlx;A tile slider game.;6
-6;Battleships;8BitCadeXL/Board/Battleships.png;8BitCadeXL/Board/Battleships.hex;;;;;
+6;Battleships;8BitCadeXL/Board/Battleships.png;8BitCadeXL/Board/Battleships.hex;;;1.0;Botisaurus;The classic battleships board game on the Arduboy!
 6;Black Jack;8BitCadeXL/Board/Blackjack.png;8BitCadeXL/Board/Blackjack.hex;;;1.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
 6;Cribbage;8BitCadeXL/Board/Cribbage.png;8BitCadeXL/Board/Cribbage.hex;;;1.0.1;Press Play On Tape;Classic English game of Cribbage - a luck and tactics card game.;6
 6;Darkstar;8BitCadeXL/Board/Darkstar.png;8BitCadeXL/Board/Darkstar.hex;;;1.0;Mr.Blinky;A little puzzle game based on the HP48 / TI83 calculator game Dstar.;14
@@ -106,8 +106,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 6;Dominoes;8BitCadeXL/Board/Dominoes.png;8BitCadeXL/Board/Dominoes.hex;;;1.0;Press Play On Tape;All Fives is a popular variant of Dominoes where players the goal of the game is not just to go out, but to make the open ends of the layout add up to 5 (or a multiple of five). One or two players.;
 6;Farkle;8BitCadeXL/Board/Farkle.png;8BitCadeXL/Board/Farkle.hex;;;;;
 6;German Whist;8BitCadeXL/Board/Germanwhist.png;8BitCadeXL/Board/Germanwhist.hex;;;1.0;Press Play On Tape;German Whist is an adaptation of classic Whist for two players. There is nothing German about it - as far as anyone can tell it is of British origin.;7
-6;Hangman;8BitCadeXL/Board/Hangman.png;8BitCadeXL/Board/Hangman.hex;;;;;
-6;Hippodrome;8BitCadeXL/Board/Hippodrome.png;8BitCadeXL/Board/Hippodrome.hex;;;;;
+6;Hangman;8BitCadeXL/Board/Hangman.png;8BitCadeXL/Board/Hangman.hex;;;1.2;Serisman;Classic hangman with approximately 800 words in its vocabularly.
+6;Hippodrome;8BitCadeXL/Board/Hippodrome.png;8BitCadeXL/Board/Hippodrome.hex;;;1.0;Miguel Riaza Valverde;Hippodrome is a variant of single-player chess where the knights start in the first row and the rest of the pieces, except one, is randomly distributed in the remaining squares. The game consists in taking the knights to the last row, the capture of pieces is not allowed.
 6;Knight Move;8BitCadeXL/Board/Knightmove.png;8BitCadeXL/Board/Knightmove.hex;;;1.0;Obono;An action-puzzle game where you control a knight piece of the chess which can move in an L shape on the 8×4 board.;21
 6;Kooky;8BitCadeXL/Board/KOOKY.png;8BitCadeXL/Board/KOOKY.hex;;;1.0;shdwwzrd;Santa has delivered the presents and filled the stockings. Help Santa eat the cookies before the kids wake up and discover him in this match 2 puzzle game. Build bigger sets to get extra time and lots of points.;9
 6;Micro Checkers;8BitCadeXL/Board/Micro Checkers.png;8BitCadeXL/Board/Micro Checkers.hex;;;1.0;Jezzamon;The classic Chinese game of checkers.;11
@@ -116,64 +116,64 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 6;Reversi;8BitCadeXL/Board/Reversi.png;8BitCadeXL/Board/Reversi.hex;;;1.0;Obono;Reversi is a strategy board game for two players, played on an 8×8 uncheckered board.;15
 6;SameGame;8BitCadeXL/Board/Samegame.png;8BitCadeXL/Board/Samegame.hex;;;1.0;Obono;A famous tile-matching puzzle.;13
 6;Sudoku;8BitCadeXL/Board/Sudoku.png;8BitCadeXL/Board/Sudoku.hex;;;1.0;neilsunw;Play Sudoku on your Arduboy. Includes 45 puzzles (easy, medium, hard) and allows custom puzzles to be entered manually or via serial input.;5
-6;Tic Tac Toe;8BitCadeXL/Board/Tic Tac Toe.png;8BitCadeXL/Board/Tic Tac Toe.hex;;;;;
+6;Tic Tac Toe;8BitCadeXL/Board/Tic Tac Toe.png;8BitCadeXL/Board/Tic Tac Toe.hex;;;1.0;Unknown;Yes, its tic tac toe (noughts and crosses).
 6;Tic Tac Curly;8BitCadeXL/Board/TicTac Curly.png;8BitCadeXL/Board/TicTac Curly.hex;;;;1.0;Curly;Tic Tac Toe by Curly.;2
-6;Tower Defence;8BitCadeXL/Board/Tower_Def.png;8BitCadeXL/Board/Tower_Def.hex;;;;;
-6;Xmas_Puz;8BitCadeXL/Board/Xmas_Puz.png;8BitCadeXL/Board/Xmas_Puz.hex;;;;;
+6;MicroTD (Tower Defence);8BitCadeXL/Board/Tower_Def.png;8BitCadeXL/Board/Tower_Def.hex;;;1.0;drummyfish;Build towers in order to keep creeps that spawn at start location(s) and run to the finish location(s). By killing creeps and finishing rounds you earn dollars to buy more towers and upgrades.
+6;Santa's Happy Little Packer;8BitCadeXL/Board/Xmas_Puz.png;8BitCadeXL/Board/Xmas_Puz.hex;;;1.0;eried;Santa needs help, he has a lot of gifts in weird layout and you need to fit them in his sleigh filling all the spaces.
 6;Yatzy;8BitCadeXL/Board/Yatzy.png;8BitCadeXL/Board/Yatzy.hex;;;1.3;shdwwzrd;A dice game where you need to role combinations before running out of attempts.;
 7;Creative;8BitCadeXL/category-screens/Creative.png;;;;;;
 7;8BitCADE_Assistant;8BitCadeXL/Creative/8BitCADE_Assistant.png;8BitCadeXL/Creative/8BitCADE_Assistant.hex;;;1.0;Crait;Arduboy Assistant is a program that allows you to manage an Arduboy’s EEPROM as well as test several hardware and software components.;10
-7;Apprentice Wizard;8BitCadeXL/Creative/Apprentice Wizard.png;8BitCadeXL/Creative/Apprentice Wizard.hex;;;;;
-7;Arduart;8BitCadeXL/Creative/Arduart.png;8BitCadeXL/Creative/Arduart.hex;;;;;
-7;Draw_A_Sprite;8BitCadeXL/Creative/Draw_A_Sprite.png;8BitCadeXL/Creative/Draw_A_Sprite.hex;;;;;
-7;Etch Sketch;8BitCadeXL/Creative/Etch Sketch.png;8BitCadeXL/Creative/Etch Sketch.hex;;;;;
+7;Apprentice Wizard;8BitCadeXL/Creative/Apprentice Wizard.png;8BitCadeXL/Creative/Apprentice Wizard.hex;;;1.0;inajob;This game teaches you the way to draw “MagicalCircle”.
+7;Arduart;8BitCadeXL/Creative/Arduart.png;8BitCadeXL/Creative/Arduart.hex;;;1.0;Unknown;A simple drawing program.
+7;Arduboy Sprite Editor;8BitCadeXL/Creative/Draw_A_Sprite.png;8BitCadeXL/Creative/Draw_A_Sprite.hex;;;1.0;Paul Wasson;A sprite editor with save functionality.
+7;Etch A Sketch;8BitCadeXL/Creative/Etch Sketch.png;8BitCadeXL/Creative/Etch Sketch.hex;;;1.0;Jack Daly;An etch-a-sketch on the Arduboy!
 7;Coder's Toolbox;8BitCadeXL/Creative/CodersToolbox.png;8BitCadeXL/Creative/CodersToolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;16
 8;Favourite;8BitCadeXL/category-screens/Favourite.png;;;;;;
-8;Orbs;8BitCadeXL/Favourite/Orbs.png;8BitCadeXL/Favourite/Orbs.hex;;;;;
+8;Orbs;8BitCadeXL/Favourite/Orbs.png;8BitCadeXL/Favourite/Orbs.hex;;;1.0;jmosk;Orbs is losely based on the concept of the PC game Osmos. The user owns an orb that is to capture the other orbs in its universe. The user’s orb is distinguished by sparkles blinking inside of the orb. To win, all other Orbs are to be captured. 
 9;Fighting;8BitCadeXL/category-screens/Fighting.png;;;;;;
-9;Battle Net Boy;8BitCadeXL/Fighting/Battle Net Boy.png;8BitCadeXL/Fighting/Battle Net Boy.hex;;;;;
+9;BattleNetBoy;8BitCadeXL/Fighting/Battle Net Boy.png;8BitCadeXL/Fighting/Battle Net Boy.hex;;;1.0;Suma;This game is inspired by “Mega Man Battle Network” and is an action card game. 
 9;Festive Fight;8BitCadeXL/Fighting/Festive Fight.png;8BitCadeXL/Fighting/Festive Fight.hex;;;1.0;Crait;Holiday mascots from throughout the calendar must fight in order to compete for the affection of the children throughout the world for some weird reason.;14
 9;Karateka;8BitCadeXL/Fighting/Karateka.png;8BitCadeXL/Fighting/Karateka.hex;;;0.9;Press Play On Tape;Rescue Princess Mariko from within the Akum'a castle fortress.;12
 9;Kung Fu Escape;8BitCadeXL/Fighting/KFu_Esc.png;8BitCadeXL/Fighting/KFu_Esc.hex;;;1.0;Sazazel;Enter the dragon! Battle enemies using an array of flying kicks, normal kicks and punches.;12
 9;Pocket Fighter;8BitCadeXL/Fighting/Pocket_fighter.png;8BitCadeXL/Fighting/Pocket_fighter.hex;;;1.0;WangRenxin;Pocket Fighter is an FTG, you can compete with your Arduboy. The CPU will repeat your actions at previous level.;2
 10;Multi;8BitCadeXL/category-screens/Multi.png;;;;;;
-10;3in1A;8BitCadeXL/Multi/3in1A.png;8BitCadeXL/Multi/3in1A.hex;;;;;
-10;3in1B;8BitCadeXL/Multi/3in1B.png;8BitCadeXL/Multi/3in1B.hex;;;;;
-10;3in1C;8BitCadeXL/Multi/3in1C.png;8BitCadeXL/Multi/3in1C.hex;;;;;
-10;3in1D;8BitCadeXL/Multi/3in1D.png;8BitCadeXL/Multi/3in1D.hex;;;;;
-10;3in1E;8BitCadeXL/Multi/3in1E.png;8BitCadeXL/Multi/3in1E.hex;;;;;
-10;3in1F;8BitCadeXL/Multi/3in1F.png;8BitCadeXL/Multi/3in1F.hex;;;;;
+10;3in1A;8BitCadeXL/Multi/3in1A.png;8BitCadeXL/Multi/3in1A.hex;;;1.0;Unknown;Three games in one - Space Invaders, Pinball and Pacman.
+10;3in1B;8BitCadeXL/Multi/3in1B.png;8BitCadeXL/Multi/3in1B.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny Bomber, Tiny Arkanoid, Tiny Gilbert.
+10;3in1C;8BitCadeXL/Multi/3in1C.png;8BitCadeXL/Multi/3in1C.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny Bert, Tiny Bike, Tiny Trick.
+10;3in1D;8BitCadeXL/Multi/3in1D.png;8BitCadeXL/Multi/3in1D.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny DDug, Tiny Plaque, Tiny Tris.
+10;3in1E;8BitCadeXL/Multi/3in1E.png;8BitCadeXL/Multi/3in1E.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny Missile, Tiny Morpion, Tiny Pipe
+10;3in1F;8BitCadeXL/Multi/3in1F.png;8BitCadeXL/Multi/3in1F.hex;;;1.0;Unknown;Three games in one - Blocks Arcade, Blocks Puzzle, Bridge Builder.
 11;Platformer;8BitCadeXL/category-screens/Platformer.png;;;;;;
-11;ArduMine;8BitCadeXL/Platformer/ArduMine.png;8BitCadeXL/Platformer/ArduMine.hex;;;;;
-11;Blade Runner;8BitCadeXL/Platformer/Blade Runner.png;8BitCadeXL/Platformer/Blade Runner.hex;;;;;
+11;Arduminer;8BitCadeXL/Platformer/ArduMine.png;8BitCadeXL/Platformer/ArduMine.hex;;;1.0;Bergasms;Mining, crafting and combat on your arduboy. Explore 64 procedurally generated levels, conquer dungeons and upgrade your kit to survive progressively stronger enemies.;13
+11;Blade Runner;8BitCadeXL/Platformer/Blade Runner.png;8BitCadeXL/Platformer/Blade Runner.hex;;;1.0;noobgeek;Your task is to move from one platform to another through the constructed blade-bridge. If you get to the exact center of the bridge, you earn one coin. Perfect hit 5 times in a row gives +5 coins. At the hard level, these indicators double. Well, also you will find a small bonus in the store!
 11;Burgard Time;8BitCadeXL/Platformer/BurgardTime.png;8BitCadeXL/Platformer/BurgardTime.hex;;;1.0;pixelplatforms;Peter Pepper  must walk over hamburger ingredients located across a maze of platforms while avoiding characters who pursue him.;9
 11;Castle Boy;8BitCadeXL/Platformer/CastleBoy.png;8BitCadeXL/Platformer/CastleBoy.hex;;;1.0;jlauener;A Castlvania demake.;33
 11;ChopLifter;8BitCadeXL/Platformer/Choplifter.png;8BitCadeXL/Platformer/Choplifter.hex;;;1.1.1;Press Play On Tape;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;9
 11;Chri-Bocchi Cat;8BitCadeXL/Platformer/Chribocchi.png;8BitCadeXL/Platformer/Chribocchi.hex;;;1.0;Obono;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;12
-11;Crabator;8BitCadeXL/Platformer/Crabator.png;8BitCadeXL/Platformer/Crabator.hex;;;;;
+11;Crabator;8BitCadeXL/Platformer/Crabator.png;8BitCadeXL/Platformer/Crabator.hex;;;1.0;rodot;Crabator is an intense action game where you kill crabs to make money to buy weapons to kill crabs to make money, etc. but watch out, the more crabs you kill the more they are. Each small crab killed gives you $1, each boss gives you $5. Once you have at least $5 you can buy a crate which will give you half a heart and upgrade your weapon. If you run out of ammunition, your weapon is downgraded.
 11;Epic Cratres of Mass Desctruction;8BitCadeXL/Platformer/Ecomd.png;8BitCadeXL/Platformer/Ecomd.hex;;;1.0;Team ARG;Obviously .. something went wrong. That's for sure! You are hired to fix it. No questions asked. Licensed to shoot all that moves!;10
-11;Escaper Droid;8BitCadeXL/Platformer/Escaper Droid.png;8BitCadeXL/Platformer/Escaper Droid.hex;;;;;
+11;Escaper Droid;8BitCadeXL/Platformer/Escaper Droid.png;8BitCadeXL/Platformer/Escaper Droid.hex;;;1.0;Team ARG;Demo unfinished game.
 11;Ninja Fuzzgrawth;8BitCadeXL/Platformer/Fuzzgrawth.png;8BitCadeXL/Platformer/Fuzzgrawth.hex;;;1.0;Hundstrasse;Guide the Fuzzgrawth up the three towers to collect the three ‘things’! It’s a fast paced platformer against the clock with randomly ordered levels.;9
 11;Glove;8BitCadeXL/Platformer/Glove.png;8BitCadeXL/Platformer/Glove.hex;;;1.0;fuopy;Glove is an action-adventure game created in the style of the classic Gauntlet series. Navigate from room to room, blasting bad guys and collecting treasure along the way;18
 11;Not Just A Hat Rack;8BitCadeXL/Platformer/Hatrack.png;8BitCadeXL/Platformer/Hatrack.hex;;;1.0;Hundstrasse;A fast paced platformer.;
 11;Hollow Seeker;8BitCadeXL/Platformer/Hollow.png;8BitCadeXL/Platformer/Hollow.hex;;;1.0;Obono;Go forward in right direction. Seek a hollow as refuge not to be crushed.;21
 11;Hopper;8BitCadeXL/Platformer/Hopper.png;8BitCadeXL/Platformer/Hopper.hex;;;1.0;Obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;24
-11;Journey To The Moon;8BitCadeXL/Platformer/Journey ToThe Moon.png;8BitCadeXL/Platformer/Journey ToThe Moon.hex;;;;;
+11;Journey To The Moon;8BitCadeXL/Platformer/Journey ToThe Moon.png;8BitCadeXL/Platformer/Journey ToThe Moon.hex;;;1.0;as;Despite not having anything to do with a journey to the moon, the game is a 2D sidescrolling platformer with RPG elements including the ability to use a weapon to attack, a health and experience bar, and an attack stat. The general backstory involves aliens invading your planet, and the player hunting them down because it’s sort of fun.
 11;Joustish;8BitCadeXL/Platformer/Joustish.png;8BitCadeXL/Platformer/Joustish.hex;;;1.0;wuuff;A game quite like Joust!;8
 11;Kong;8BitCadeXL/Platformer/Kong.png;8BitCadeXL/Platformer/Kong.hex;;;1.0.3;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong. Kong has stolen your lunch again. Avoid the barrels and topple the gorilla to retrieve it!;24
 11;Kong 2;8BitCadeXL/Platformer/Kong2.png;8BitCadeXL/Platformer/Kong2.hex;;;1.0;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong II. Kong has been locked up but Kong Jnr can save him!;19
 11;Lion Tamer;8BitCadeXL/Platformer/LionTamer.png;8BitCadeXL/Platformer/LionTamer.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Lion Tamer. Someone has left the lion’s cage doors open! Keep them from escaping by blocking their path with your trusty chair. Play alone or with a second lion tamer!;
 11;Midnight Wild;8BitCadeXL/Platformer/Midnight Wild.png;8BitCadeXL/Platformer/Midnight Wild.hex;;;1.3;Crait;Something’s gone awry out West! Help Dusty Argile adventure out and defeat the baddies who are causing a commotion and stopping him from getting a good night’s rest. Put them to sleep with your handy lasso and rack up as many points as you can, but watch out for falling barrels, cacti, whirling tumbleweeds, snakes, and coyotes! Most of all, watch out for the mad bull and crazy Texan twister!;28
 11;Mystic Balloon;8BitCadeXL/Platformer/Mystic_Balloon.png;8BitCadeXL/Platformer/Mystic_Balloon.hex;;;1.0;Team ARG;Jump around, jump up and get down, jump around, float around, jump float, jump, float. Collect those coins.;17
-11;Oh Mummy;8BitCadeXL/Platformer/Oh Mummy.png;8BitCadeXL/Platformer/Oh Mummy.hex;;;;;
+11;OhMummy;8BitCadeXL/Platformer/Oh Mummy.png;8BitCadeXL/Platformer/Oh Mummy.hex;;;1.0;MattVic;Heavily influenced by an Amsoft classic, attack advancing mummies and loot the pyramids.
 11;Omega Horizon;8BitCadeXL/Platformer/OmegaHorizon.png;8BitCadeXL/Platformer/OmegaHorizon.hex;;;1.3;shdwwzrd;The planet of Turnax has extensive mineral deposits of high value to the Interplanetary Allied Confederation (IPAC). Recent unanticipated attacks by primative species have proven damaging to mining operations. Your mission is to eliminate the primitive hierarchy in minimal time.;15
-11;Platformer;8BitCadeXL/Platformer/Platformer.png;8BitCadeXL/Platformer/Platformer.hex;;;;;
+11;Platformer;8BitCadeXL/Platformer/Platformer.png;8BitCadeXL/Platformer/Platformer.hex;;;1.0;Unknown;Jump from ledge to ledge but watch out as its easy to fall!
 11;Poitto;8BitCadeXL/Platformer/Poitto.png;8BitCadeXL/Platformer/Poitto.hex;;;1.0;inajob;An action puzzle game.;10
 11;Square Nose;8BitCadeXL/Platformer/SquareNose.png;8BitCadeXL/Platformer/SquareNose.hex;;;1.0;JuiceLizard;In a near future, in 1996, two international companies fight against each other to reign on the pet dry food market.So, what are you waiting for? Let’s go! Eat them all, Square Nose!;16
 11;Squario;8BitCadeXL/Platformer/Squario.png;8BitCadeXL/Platformer/Squario.hex;;;1.0;Chris;Here is is the jumping square man adventure you’ve all been looking for! Jump over chasms! Jump on top of bad guys! Jump into Question blocks and get points! Points!!;17
-11;The Pit;8BitCadeXL/Platformer/The Pit.png;8BitCadeXL/Platformer/The Pit.hex;;;;;
-11;Tiny Pipe;8BitCadeXL/Platformer/Tiny Pipe.png;8BitCadeXL/Platformer/Tiny Pipe.hex;;;;;
-11;Tiny Bert;8BitCadeXL/Platformer/Tiny_Bert.png;8BitCadeXL/Platformer/Tiny_Bert.hex;;;;;
+11;The Pit;8BitCadeXL/Platformer/The Pit.png;8BitCadeXL/Platformer/The Pit.hex;;;1.0;Unknown;Avoid the falling objects.
+11;Tiny Pipe;8BitCadeXL/Platformer/Tiny Pipe.png;8BitCadeXL/Platformer/Tiny Pipe.hex;;;1.0;Daniel C (Electro L.I.B);
+11;Tiny Bert;8BitCadeXL/Platformer/Tiny_Bert.png;8BitCadeXL/Platformer/Tiny_Bert.hex;;;1.0;Daniel C (Electro L.I.B);
 11;Umeroose;8BitCadeXL/Platformer/Umeroose.png;8BitCadeXL/Platformer/Umeroose.hex;;;;;
 11;Zoo at Midnight;8BitCadeXL/Platformer/Zoo Midnight.png;8BitCadeXL/Platformer/Zoo Midnight.hex;;;1.0;Hundstrasse;Scrawf must sneak around the zoo to collect the food ans feed the animals before and escaping - all without being caught in the flashlight beam of the zoo wardens!;5
 12;Puzzle;8BitCadeXL/category-screens/Puzzle.png;;;;;;
@@ -215,8 +215,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Stairs Sweep;8BitCadeXL/Puzzle/StairsSweep.png;8BitCadeXL/Puzzle/StairsSweep.hex;;;1.0;Obono;A falling block puzzle game.;
 12;Tet;8BitCadeXL/Puzzle/Tet.png;8BitCadeXL/Puzzle/Tet.hex;;;;;
 12;Tetris;8BitCadeXL/Puzzle/Tetris.png;8BitCadeXL/Puzzle/Tetris.hex;;;;;
-12;Tiny Tris;8BitCadeXL/Puzzle/Tiny Tris.png;8BitCadeXL/Puzzle/Tiny Tris.hex;;;;;
-12;Tiny Morpion;8BitCadeXL/Puzzle/TinyMorpion.png;8BitCadeXL/Puzzle/TinyMorpion.hex;;;;;
+12;Tiny Tris;8BitCadeXL/Puzzle/Tiny Tris.png;8BitCadeXL/Puzzle/Tiny Tris.hex;;;1.0;Daniel C (Electro L.I.B);
+12;Tiny Morpion;8BitCadeXL/Puzzle/TinyMorpion.png;8BitCadeXL/Puzzle/TinyMorpion.hex;;;1.0;Daniel C (Electro L.I.B);
 12;Tres;8BitCadeXL/Puzzle/Tres.png;8BitCadeXL/Puzzle/Tres.hex;;;1.0;cajogold;A Threes! clone.;3
 12;World's Hardest Game;8BitCadeXL/Puzzle/WHG.png;8BitCadeXL/Puzzle/WHG.hex;;;;;
 12;Xmas;8BitCadeXL/Puzzle/Xmas.png;8BitCadeXL/Puzzle/Xmas.hex;;;;;
@@ -301,8 +301,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 15;Tank Force One;8BitCadeXL/Shooter/Tank Force One.png;8BitCadeXL/Shooter/Tank Force One.hex;;;;;
 15;Teeny Tank;8BitCadeXL/Shooter/TeenyTank.png;8BitCadeXL/Shooter/TeenyTank.hex;;;;;
 15;The Horde;8BitCadeXL/Shooter/TheHorde.png;8BitCadeXL/Shooter/TheHorde.hex;;;;;
-15;Tiny Missile;8BitCadeXL/Shooter/Tiny Missile.png;8BitCadeXL/Shooter/Tiny Missile.hex;;;;;
-15;Tiny Plaque;8BitCadeXL/Shooter/Tiny Plaque.png;8BitCadeXL/Shooter/Tiny Plaque.hex;;;1.0;ElectroLIB;Protect your host's teeth from plaque in this littl shmup.;
+15;Tiny Missile;8BitCadeXL/Shooter/Tiny Missile.png;8BitCadeXL/Shooter/Tiny Missile.hex;;;1.0;Daniel C (Electro L.I.B);
+15;Tiny Plaque;8BitCadeXL/Shooter/Tiny Plaque.png;8BitCadeXL/Shooter/Tiny Plaque.hex;;;1.0;Daniel C (Electro L.I.B);Protect your host's teeth from plaque in this littl shmup.;
 15;Trench Run;8BitCadeXL/Shooter/TrenchRun.png;8BitCadeXL/Shooter/TrenchRun.hex;;;1.0;Lucas Salton Cardinali;Inspired by the Star Wars Battle Pod Arcade Game. It depicts the rebels assault on the Doom Sphere, the Empire enormous space station and you, as a Rebel pilot, have to destroy the Imperial Fighters until you get a chance to shoot into the Exhaustion Port and destroy it.;14
 15;Witch Game;8BitCadeXL/Shooter/Witch Game.png;8BitCadeXL/Shooter/Witch Game.hex;;;;;
 15;Battle For Zuthsrah;8BitCadeXL/Shooter/Zuthsrah.png;8BitCadeXL/Shooter/Zuthsrah.hex;;;1.0;Mre64;A space shoot 'em up!;3
@@ -311,6 +311,6 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 16;ArduTurf;8BitCadeXL/Sport/ArduTurf.png;8BitCadeXL/Sport/ArduTurf.hex;;;;;
 16;Custom Pong;8BitCadeXL/Sport/Custom Pong.png;8BitCadeXL/Sport/Custom Pong.hex;;;;;
 16;Skate Ard Die;8BitCadeXL/Sport/Skateanddie.png;8BitCadeXL/Sport/Skateanddie.hex;;;1.0;pixelplatforms;Skateboarding on the Arduboy.;11
-16;Tiny Trick Hockey;8BitCadeXL/Sport/TinyTrickHockey.png;8BitCadeXL/Sport/TinyTrickHockey.hex;;;1.0;ElectroLIB;Icehockey for the Arduboy.;
+16;Tiny Trick Hockey;8BitCadeXL/Sport/TinyTrickHockey.png;8BitCadeXL/Sport/TinyTrickHockey.hex;;;1.0;Daniel C (Electro L.I.B);Icehockey for the Arduboy.;
 16;Volley Ball;8BitCadeXL/Sport/VolleyBall.png;8BitCadeXL/Sport/VolleyBall.hex;;;;;
 16;Golfer's Companion;8BitCadeXL/Sport/GolfCompanion.png;8BitCadeXL/Sport/GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;11
