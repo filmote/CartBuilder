@@ -10,7 +10,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 1;To;Action/To.png;Action/To.hex;;;;;;
 1;LodeRunner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;;;;
 2;Adventure;category-screens/Adventure.png;;;;;;;
-2;Catacombsofthedamned;Action/Cotd.png;Action/Cotd.hex;;;;;;
+2;Catacombs Of The Damned;Action/Cotd.png;Action/Cotd.hex;;;;;;
 2;virus;arg/virus.png;arg/virus.hex;;;;;;
 2;Glove;Action/Glove.png;Action/Glove.hex;;;;;;
 2;Mazogs;Action/Mazogs.png;Action/Mazogs.hex;;;;;;
@@ -24,18 +24,18 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 3;Ravine Despoiler;Arcade\RavineDespoiler.png;Arcade\RavineDespoiler.hex;;;1.0;BenUnwired;Based on the Atari arcade game Canyon Bomber. You can speed up or slow down your plane and drop bombs in the canyon to knock out boulders for points. Missing rocks will result in losing points, while hitting multiple boulders at once gives extra points. The game is over when the canyon is emptied. I'm not sure what the theoretical high score is, but my best games have been around 240 with several misses.;0
 3;FirePanic;Action/FirePanic.png;Action/FirePanic.hex;;;;;;
 3;Kong;Arcade/Kong.png;Arcade/Kong.hex;;;;;;
-3;Kong2;Arcade/Kong2.png;Arcade/Kong2.hex;;;;;;
-3;Turtlebridge;Arcade/Turtlebridge.png;Arcade/Turtlebridge.hex;;;;;;
-3;SpaceCab;Arcade/SpaceCab.png;Arcade/SpaceCab.hex;;;;;;
-3;LionTamer;Arcade/LionTamer.png;Arcade/LionTamer.hex;;;;;;
-3;OilPanic;Arcade/OilPanic.png;Arcade/OilPanic.hex;;;;;;
+3;Kong 2;Arcade/Kong2.png;Arcade/Kong2.hex;;;;;;
+3;Turtle Bridge;Arcade/Turtlebridge.png;Arcade/Turtlebridge.hex;;;;;;
+3;Space Cab;Arcade/SpaceCab.png;Arcade/SpaceCab.hex;;;;;;
+3;Lion Tamer;Arcade/LionTamer.png;Arcade/LionTamer.hex;;;;;;
+3;Oil Panic;Arcade/OilPanic.png;Arcade/OilPanic.hex;;;;;;
 3;Rooftop;Action/rooftop.png;Action/rooftop.hex;;;;;;
 3;BiriBiriBeat;Arcade/biribiribeat.png;Arcade/biribiribeat.hex;;;;;;
-3;Backtothejungle;Arcade/Backtothejungle.png;Arcade/Backtothejungle.hex;;;;;;
+3;Back To Thejungle;Arcade/Backtothejungle.png;Arcade/Backtothejungle.hex;;;;;;
 3;Fatsche;Arcade/Fatsche.png;Arcade/Fatsche.hex;;;;;;
 3;BurgardTime;Arcade/BurgardTime.png;Arcade/BurgardTime.hex;;;;;;
 3;APara;Arcade/Apara.png;Arcade/APara.hex;;;;;;
-3;Chickenlauncher;Arcade/Chickenlauncher.png;Arcade/Chickenlauncher.hex;;;;;;
+3;Chicken Launcher;Arcade/Chickenlauncher.png;Arcade/Chickenlauncher.hex;;;;;;
 4;Runner;category-screens/Runner.png;;;;;;;
 4;hollowseeker;Arcade/hollowseeker.png;Arcade/hollowseeker.hex;;;;;;
 4;Flappyball;Arcade/Flappyball.png;Arcade/Flappyball.hex;;;;;;
