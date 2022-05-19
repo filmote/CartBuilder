@@ -141,3 +141,7 @@ iframe {
 .searchBox:focus {
   background-color: white;
 }
+
+.comboBox {
+  width: 138px;background-color: #45c4fa; border-style: solid; border-color: #156f96; outline: none;
+}
