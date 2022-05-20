@@ -182,6 +182,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Shooter;category-screens\Shooter.png;;;;;;;
 12;MicroTank;Arcade\microtank.png;Arcade\microtank.hex;;;1.0;hartmann1301;You start with a small tank and your goal is to get as deep as possilbe into enemy territory. Some enemys drop coins for upgrading the weapon of your choice.;22
 12;1nvader;Shooter\1nvader.png;Shooter\1nvader.hex;;;1.0;Press Play On Tape;1NVADER is a one or two-player game played with one button, one laser, one 1NVADER, and one life. Play co-operatively, or competitively with a friend, or face the 1NVADER alone.;22
+12;OBS (One Button Shooter);category-screens/ppot/OBS.png;Shooter\OBS.hex;;;1.0;Press Play On Tape;Youe ship has been damaged by some space debris. The steering is broken and you cannot navigate. You discover that by firing the laser you can steer ..sort of! Avoid the asteroids and enemy ships and fly home.;0
 12;1944 The Battle of Midway;Arcade\1944.png;Arcade\1944.hex;;;1.0;Press Play On Tape;A remake of the classic CapCom game 1944 The Battle of Midway.;20
 12;Sirene;arg\Sirene.png;arg\Sirene.hex;;;1.0;Team ARG;There's trouble under the sea, but Nina will fight her way to the heart of it. An aquatic shoot-em-up adventure!;
 12;Juno First;Action\Junofirst.png;Action\Junofirst.hex;;;1.0.1;Press Play On Tape;Kill each wave of attacking aliens before you fuel or health runs out. Rescue the captured astronaut to get extra points! ;19

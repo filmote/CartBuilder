@@ -133,6 +133,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 12;1944;Arcade/1944.png;Arcade/1944.hex;;;;;;
 12;Junofirst;Action/Junofirst.png;Action/Junofirst.hex;;;;;;
 12;1nvader;Shooter/1nvader.png;Shooter/1nvader.hex;;;;;;
+12;OBS (One Button Shooter);category-screens/ppot/OBS.png;Shooter\OBS.hex;;;1.0;Press Play On Tape;Youe ship has been damaged by some space debris. The steering is broken and you cannot navigate. You discover that by firing the laser you can steer ..sort of! Avoid the asteroids and enemy ships and fly home.;0
 12;Evade;Arcade/Evade.png;Arcade/Evade.hex;;;;;;
 12;Evade2;Arcade/Evade2.png;Arcade/Evade2.hex;;;;;;
 12;ardubullets;Shooter/ardubullets.png;Shooter/ardubullets.hex;;;;;;
