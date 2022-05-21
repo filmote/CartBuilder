@@ -68,7 +68,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 4;Flappy Bird;Arcade\Flappybird.png;Arcade\Flappybird.hex;;;1.0;GameExpress;A flappy bird clone.;
 4;Zoo Escape;Action\ZooEscape.png;Action\ZooEscape.hex;;;1.0;FerJerez;The animals have escaped! Avoid the animals by jumping over them and landing on the crocodiles mouth to snap it shut.;9
 4;Shadow Runner;arg\ShadowRunner.png;arg\ShadowRunner.hex;;;1.0;Team ARG;A shadow lost his kid by wandering too far away from the light. Now it must find its coloured equal to become one again.;7
-4;Roo Rrun;Arcade\Roorun.png;Arcade\Roorun.hex;;;1.0;Crait;The zoo had to close and now all the animals are trying to escape! Help the kangaroo run away from the animal control who’s trying to catch him.;5
+4;Roo Run;Arcade\Roorun.png;Arcade\Roorun.hex;;;1.0;Crait;The zoo had to close and now all the animals are trying to escape! Help the kangaroo run away from the animal control who’s trying to catch him.;5
 4;Leanna The Lion;Arcade\Leannathelion.png;Arcade\Leannathelion.hex;;;1.0;shdwwzrd;Leanna may be a lion, but she knows what she likes: She wants fresh meat from her favorite restaurant.;10
 4;ArduBuggy;Arcade\ArduBuggy.png;Arcade\ArduBuggy.hex;;;1.0;Nono_Nono;A moon patrol remake.;10
 4;Fanboat;Arcade\Fanboat.png;Arcade\Fanboat.hex;;;1.0;fanboat;Dodge gators on your propeller-powered pontoon as it rages faster and faster across the big black bayou. If you can pick up juice for your grandfather’s old shield generator, you can pass right through the congregation as long as it’s powered up;9
@@ -84,7 +84,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 5;Jetpac;Action\Jetpac.png;Action\Jetpac.hex;;;1.0;TheArduinoGuy;You are an astronaut on an alien planet with a Jet Pac. Assemble you rocket and gather fuel before taking off.;5
 5;Joustish;Arcade\joustish.png;Arcade\joustish.hex;;;1.0;wuuff;A game quite like Joust!;8
 5;Poitto;Action\poitto.png;Action\poitto.hex;;;1.0;inajob;An action puzzle game.;10
-5;Epic Cratres of Mass Desctruction;arg\ecomd.png;arg\ecomd.hex;;;1.0;Team ARG;Obviously .. something went wrong. That's for sure! You are hired to fix it. No questions asked. Licensed to shoot all that moves!;10
+5;Epic Cratres of Mass Destruction;arg\ecomd.png;arg\ecomd.hex;;;1.0;Team ARG;Obviously .. something went wrong. That's for sure! You are hired to fix it. No questions asked. Licensed to shoot all that moves!;10
 5;Super Crate;Platformer\supercrate.png;Platformer\supercrate.hex;;;1.0;uXe;A platform-action-shooting game.;4
 5;Ninja Fuzzgrawth;Platformer\ninjafuzz.png;Platformer\ninjafuzz.hex;;;1.0;Hundstrasse;Guide the Fuzzgrawth up the three towers to collect the three ‘things’! It’s a fast paced platformer against the clock with randomly ordered levels.;9
 5;Bounce;Platformer\bounce.png;Platformer\bounce.hex;;;1.0;Joshimuz;The Bounce is a bouncy ball physics platformer game. Simple to understand yet incredibly hard to master, what seems easy at first glance is actually pretty rage inducing when you get to the later levels. ;9
@@ -140,10 +140,10 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Zoo;Puzzle\Zoo.png;Puzzle\Zoo.hex;;;1.0;Yuki;A beautiful begemmed style of game.;
 8;Santas Factory;Puzzle\santasfactory.png;Puzzle\santasfactory.hex;;;1.0;madya121;In Santa’s Factory, there’s no room for one mistake. Your job is to deliver each present to the correct place.;
 8;TnTank;Puzzle\tntank.png;Puzzle\tntank.hex;;;1.0;madya121;Avoid the TNT in this Minesweeper style game.;
-8;New Blocks onthe Kid;Puzzle\NBOTK.png;Puzzle\NBOTK.hex;;;1.0;bateske;There is a new falling block game in town.;
+8;New Blocks on the Kid;Puzzle\NBOTK.png;Puzzle\NBOTK.hex;;;1.0;bateske;There is a new falling block game in town.;
 9;Tabletop;category-screens\Tabletop.png;;;;;;;
 9;Blackjack;Misc\Blackjack.png;Misc\Blackjack.hex;;;1.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
-9;Dice Of Fate;arg\Diceoffate.png;arg\Diceoffate.hex;;;;Team ARG;A dice utility. Choose between a coin or a 4, 6, 8, 10, 12, 20 or 100 sided dice.;5
+9;Dice Of Fate;arg\Diceoffate.png;arg\Diceoffate.hex;;;1.0;Team ARG;A dice utility. Choose between a coin or a 4, 6, 8, 10, 12, 20 or 100 sided dice.;5
 9;Reversi;Puzzle\reversi.png;Puzzle\reversi.hex;;;1.0;Obono;Reversi is a strategy board game for two players, played on an 8×8 uncheckered board.;15
 9;Quarto;Puzzle\quarto.png;Puzzle\quarto.hex;;;1.0;Obono;An abstract strategy board game played on a 4x4 board with 16 unique pieces.;10
 9;Little Rook Chess;Demos\littlerookchess.png;Demos\littlerookchess.hex;;;1.0;olikraus;Chess, obviously.;13
@@ -192,10 +192,10 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Stellar Impact;Shooter\StellarImpact.png;Shooter\StellarImpact.hex;;;1.0;gnargle;A space shoot 'em up with procedurally generated starfields. Watch for the bomb that freezes time!;14
 12;Trench Run;Action\Trenchrun.png;Action\Trenchrun.hex;;;1.0;Lucas Salton Cardinali;Inspired by the Star Wars Battle Pod Arcade Game. It depicts the rebels assault on the Doom Sphere, the Empire enormous space station and you, as a Rebel pilot, have to destroy the Imperial Fighters until you get a chance to shoot into the Exhaustion Port and destroy it.;14
 12;Tiny Asteroids;Shooter\TinyAsteroids.png;Shooter\TinyAsteroids.hex;;;1.0;akkera102;An Asteroids (1979) clone.;13
-12;i4arduboy;Shooter\l4arduboy.png;Shooter\l4arduboy.hex;;;1.0;Yomogimaru;i4arduboy is a horizontal shmup. Control a submarine and snipe far enemies on off-screen with torpedos!;12
+12;i4Arduboy;Shooter\l4arduboy.png;Shooter\l4arduboy.hex;;;1.0;Yomogimaru;i4arduboy is a horizontal shmup. Control a submarine and snipe far enemies on off-screen with torpedos!;12
 12;LoveRush;Arcade\Loverush.png;Arcade\Loverush.hex;;;1.0;Vampirics;A cute infinite shooter for Arduboy.;11
 12;Trolly Fish;arg\trollyfish.png;arg\trollyfish.hex;;;1.0;Team ARG;Little fish. Big fish, swimming in the water. Com back here, man. Give me back my star!;10
-12;Humanity Revenge;Shooter\HumanityRevenge.png;Shooter\HumanityRevenge.hex;;;1.0;giangregorioc;9
+12;Humanity Revenge;Shooter\HumanityRevenge.png;Shooter\HumanityRevenge.hex;;;1.0;giangregorioc;;9
 12;Night Raid;Shooter\NightRaid.png;Shooter\NightRaid.hex;;;1.0;epbarger;It’s extremely similar to Missile Command.;8
 12;Arcodia;Shooter\Arcodia.png;Shooter\Arcodia.hex;;;1.0;TheArduinoGuy;A port of the classic ZX Spectrum game ‘Arcadia’.;5
 12;Suit Shooter;Shooter\SuitShooter.png;Shooter\SuitShooter.hex;;;2.0;Crait;Launch suits of cards at falling cards in order to create matches and score points. Watch out, though! Missing cards will hurt you! The cards start out falling slowly, but get faster as you score more points and regain health.;5
@@ -251,7 +251,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 16;Tools;category-screens\Tools.png;;;;;;;
 16;Ardutosh;Application\Ardutosh.png;Application\Ardutosh.hex;;;1.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;31
 16;Abshell;Application\Abshell.png;Application\Abshell.hex;;;1.0;boochow;Abshell is a command shell for Arduboy. You can send commands from PC to Arduboy via USB-serial port. No programming skills needed to draw graphics on Arduboy screen! Any VT100 compatible serial port terminal softwares (PuTTY, etc.) can be used.;16
-16;Coders Toolbox;Application\Toolbox.png;Application\Toolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;16
+16;Coder's Toolbox;Application\Toolbox.png;Application\Toolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;16
 16;ABAsm DP1;Application\ABAsmDP1.png;Application\ABAsmDP1.hex;;;1.0;Fuopy;ABasm is an Arduboy game that lets you program your own Arduboy games, on your Arduboy! It uses an assembly language-style of programming with its own bytecode format.;12
 16;Arduboy Assistant;Application\ArduboyAssistant.png;Application\ArduboyAssistant.hex;;;1.0;Crait;Arduboy Assistant is a program that allows you to manage an Arduboy’s EEPROM as well as test several hardware and software components.;10
 16;Arduboy Sprite Editor;Application\ASE.png;Application\ASE.hex;;;1.0;PMWasson;ASE - a sprite editor for Arduboy games that runs on the Arduboy.;9
