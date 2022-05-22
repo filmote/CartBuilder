@@ -198,6 +198,7 @@ function openInfo(itemIndex) {
         var data = item.data;
         if  (data != "") data = "&data=../" + data;
         $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
+        $('#downloadLink').attr("href", item.hex);
         infoPanel.dialog("open");
         infoPreview.focus();
     }
