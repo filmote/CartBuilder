@@ -20,6 +20,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Quadrastic;Action\Quadrastic.png;Action\Quadrastic.hex;;;1.01;dragula96;Quadrastic a simple addictive game based off a favorite psp homebrew game called Squarez.;0
 1;Snake;Arcade\snake3.png;Arcade\snake3.hex;;;1.0;WojciechKo;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
 1;Lode Runner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
+1;The Social Distance Gamer;Action/thesocialdistancegame.png;Action/thesocialdistancegame.hex;;;1.1.0;msanatan;Get more points by keeping your distance from pedestrians and make your community proud. Ultimately, you should really be at home so at some point you’ll lose lol.;
 2;Adventure;category-screens\Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action\Cotd.png;Action\Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
 2;Virus LQP-79;arg\virus.png;arg\virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
@@ -75,6 +76,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 4;You Wont Survive;Arcade\YouWontSurvive.png;Arcade\YouWontSurvive.hex;;;1.0;AstroAndre;Avoid incoming enemies on two different modes and test your reflexes. ;3
 4;SF Cave;Arcade\SFCave.png;Arcade\SFCave.hex;;;1.0;Slade1972;A remake of a palm pilot game.;2
 5;Platformer;category-screens\Platformer.png;;;;;;;
+5;The Crawl;Platformer\TheCrawl.png;Platformer\TheCrawl.hex;;;1.0;andylatham82;The Crawl is a dungeon crawling platformer in which you have to find a path that allows you to discover enough keys to make it to the exit.;1
 5;Castle Boy;Platformer\CastleBoy.png;Platformer\CastleBoy.hex;;;1.0;jlauener;A Castlvania demake.;33
 5;SanSan;Action\Sansan.png;Action\Sansan.hex;;;1.0;chame;SanSan is a name of little Santa. A weapon is his bag! This is Son Son, Rygar inspired action game, but add some original ideas.;18
 5;Mystic Balloon;arg\MysticBalloon.png;arg\MysticBalloon.hex;;;1.0;Team ARG;Jump around, jump up and get down, jump around, float around, jump float, jump, float. Collect those coins.;17
@@ -116,6 +118,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;2048;Puzzle\2048.png;Puzzle\2048.hex;;;1.0;Yuki;The classic 2048 sliding tile puzzle.;7
 7;1010;Puzzle\1010.png;Puzzle\1010.hex;;;1.0;MWM;1010! is a wildly addicting brain teaser - a simple puzzle game that will challenge you, while also training your brain. Put your puzzle skills to the test with this exciting title - we dare you to try and put it down.;
 7;Term Twirl;Puzzle\termtwirl.png;Puzzle\termtwirl.hex;;;1.0;Corruptio;This is clone of classic Text Twist, with 1900 random levels. Add to your score by unjumbling the letters to make words. If you use all six letters to make a word within the allotted time, then you can continue to the next level. There is a large bonus for finding all the words before time runs out.;
+7;Long Cat;Puzzle\LongCat.png;Puzzle\LongCat.hex;;;1.0;jaguile6;A puzzle game inspired in the longcat minigame from the Fancade Android game.;
+7;ArduGods;Puzzle\ArduGods.png;Puzzle\ArduGods.hex;;;1.0;resetreboot;Your goal in this game is to gather faith and a cult following to become stronger and be able to battle the rest of the Gods, to reclaim your place among them as the most powerful ever, and it all starts by raising prayers with your Arduboy buttons.;
 8;Skill;category-screens\Skill.png;;;;;;;
 8;Curse of Astarok;Puzzle\curse.png;Puzzle\curse.hex;;;1.0;Press Play On Tape;The evil Astarok has cast a nasty curse on the folk of Griford and turned them into pumpkins! The town’s people have asked you to battle the AstaroK and his evil friends in their hideout - an old castle on the edge of town. Can you release the town from the curse of AztaroK?;17
 8;Trials of Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;1.0;Press Play On Tape;Each year the people of the village choose a new champion to protect them from Astarok. Compete in the trials to see how far you can get and you could be that champion! Your choice of runes will select different courses … some are easier than others!;17
@@ -141,6 +145,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Santas Factory;Puzzle\santasfactory.png;Puzzle\santasfactory.hex;;;1.0;madya121;In Santa’s Factory, there’s no room for one mistake. Your job is to deliver each present to the correct place.;
 8;TnTank;Puzzle\tntank.png;Puzzle\tntank.hex;;;1.0;madya121;Avoid the TNT in this Minesweeper style game.;
 8;New Blocks on the Kid;Puzzle\NBOTK.png;Puzzle\NBOTK.hex;;;1.0;bateske;There is a new falling block game in town.;
+8;Rick and Morty Game;Misc\RickAndMortyGame.png;Misc\RickAndMortyGame.hex;;;1.0;Celinebins;Here is THE MOST EPIC (unofficial) ARDUBOY RICK AND MORTY game.;
 9;Tabletop;category-screens\Tabletop.png;;;;;;;
 9;Blackjack;Misc\Blackjack.png;Misc\Blackjack.hex;;;1.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
 9;Dice Of Fate;arg\Diceoffate.png;arg\Diceoffate.hex;;;1.0;Team ARG;A dice utility. Choose between a coin or a 4, 6, 8, 10, 12, 20 or 100 sided dice.;5
@@ -179,7 +184,10 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Fantasy Rampage;arg\Fantasy.png;arg\Fantasy.hex;;;1.0;Team ARG;A two-player card battle game.;10
 11;Tamaguino AB;Misc\tamaguino.png;Misc\tamaguino.hex;;;1.0;Keyboard_Camper;Tamagotchi for the Arduboy.;7
 11;The Quest For Truth;RPG\tqft.png;RPG\tqft.hex;;;1.0;Timmy O' Toole;A platformer game with elements of RPG and puzzle-solving challenges.;
+11;Monpals;RPG\Monpals.png;RPG\Monpals.hex;;;1.0;Revlis;Monpals is a rpg that is much like Pokemon and Monster Rancher. There are 15 total monsters in the game that have one of three types: Nature, Mystic, Synth.;
 12;Shooter;category-screens\Shooter.png;;;;;;;
+12;Starduino;Shooter\Starduino.png;Shooter\Starduino.hex;;;1.0;Stephane Hockenhull;Starduino - Star Fox inspired 3D rail shooter for Arduboy.;22
+12;Starduino Turbo;Shooter\starduino-turbo.png;Shooter\starduino-turbo.hex;;;1.0;Stephane Hockenhull;Starduino - Star Fox inspired 3D rail shooter for Arduboy.;22
 12;MicroTank;Arcade\microtank.png;Arcade\microtank.hex;;;1.0;hartmann1301;You start with a small tank and your goal is to get as deep as possilbe into enemy territory. Some enemys drop coins for upgrading the weapon of your choice.;22
 12;1nvader;Shooter\1nvader.png;Shooter\1nvader.hex;;;1.0;Press Play On Tape;1NVADER is a one or two-player game played with one button, one laser, one 1NVADER, and one life. Play co-operatively, or competitively with a friend, or face the 1NVADER alone.;22
 12;OBS (One Button Shooter);category-screens/ppot/OBS.png;Shooter\OBS.hex;;;1.0;Press Play On Tape;Youe ship has been damaged by some space debris. The steering is broken and you cannot navigate. You discover that by firing the laser you can steer ..sort of! Avoid the asteroids and enemy ships and fly home.;0
@@ -211,6 +219,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Kemono Patrol;Shooter\KemonoPatrol.png;Shooter\KemonoPatrol.hex;;;1.0;metalidol;A moon buggy-style game.;
 12;Tiny Plaque;Shooter\TinyPlaque.png;Shooter\TinyPlaque.hex;;;1.0;ElectroLIB;Protect your host's teeth from plaque in this littl shmup.;
 12;Siege;Action\Siege.png;Action\Siege.hex;;;1.0;shdwwzrd;The king needs your help to keep the Dark Lord’s army from destroying the kingdom. The Wizards will arrive after the 5th day and the rest of our army will be back in 20 days. The king is counting on you to hold the wall. Hold strong, noble archer, HOLD STRONG!;2
+12;Cooties Attack;Shooter\cooties.png;Shooter\cooties.hex;;;1.0;graziel;An entry into the itch.io Game Jam, Cooties Attack is a shoot 'em up where you have to kill everyone's childhood fear (cooties!).;1
 13;Sports;category-screens\Sports.png;;;;;;;
 13;Skate Ard Die;Sports\SkateArdDie.png;Sports\SkateArdDie.hex;;;1.0;pixelplatforms;Skateboarding on the Arduboy.;11
 13;Ardletics;Sports\Ardletics.png;Sports\Ardletics.hex;;;1.0;igvina;Ardletics - Athletics for Arduboy;9
