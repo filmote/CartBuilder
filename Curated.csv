@@ -48,7 +48,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 5;Castle Boy;Platformer/CastleBoy.png;Platformer/CastleBoy.hex;;;1.0;jlauener;A Castlvania demake.;33
 5;SanSan;Action/Sansan.png;Action/Sansan.hex;;;1.0;chame;SanSan is a name of little Santa. A weapon is his bag! This is Son Son, Rygar inspired action game, but add some original ideas.;18
 5;Mystic Balloon;arg/MysticBalloon.png;arg/MysticBalloon.hex;;;1.0;Team ARG;Jump around, jump up and get down, jump around, float around, jump float, jump, float. Collect those coins.;17
-5;MidnightWild;Misc/MidnightWild.png;Misc/MidnightWild.hex;;;;;;
+5;Midnight Wild;Misc/MidnightWild.png;Misc/MidnightWild.hex;;;1.3;Crait;Something’s gone awry out West! Help Dusty Argile adventure out and defeat the baddies who are causing a commotion and stopping him from getting a good night’s rest. Put them to sleep with your handy lasso and rack up as many points as you can, but watch out for falling barrels, cacti, whirling tumbleweeds, snakes, and coyotes! Most of all, watch out for the mad bull and crazy Texan twister!;28
 5;Omega Horizon;Platformer/OmegaHorizon.png;Platformer/OmegaHorizon.hex;;;1.3;shdwwzrd;The planet of Turnax has extensive mineral deposits of high value to the Interplanetary Allied Confederation (IPAC). Recent unanticipated attacks by primative species have proven damaging to mining operations. Your mission is to eliminate the primitive hierarchy in minimal time.;15
 5;Jetpac;Action/Jetpac.png;Action/Jetpac.hex;;;1.0;TheArduinoGuy;You are an astronaut on an alien planet with a Jet Pac. Assemble you rocket and gather fuel before taking off.;5
 5;Joustish;Arcade/joustish.png;Arcade/joustish.hex;;;1.0;wuuff;A game quite like Joust!;8
