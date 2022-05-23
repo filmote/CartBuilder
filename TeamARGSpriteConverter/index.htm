@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduboy Sprite Converter</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=750" />
+	<meta name="buildDate" content="Friday 3 March 2017" />
+	<meta property="og:url" content="https://teamarg.github.io/arduboy-sprite-converter/" />
+	<meta property="og:type" content="website" /> 
+	<link rel="stylesheet" type="text/css" href="css/textstyles.css" />
+	<link rel="stylesheet" type="text/css" href="css/pagestyle.css?3.568126e+9" />
+	<script type="text/javascript" src="js/imageCode.js"></script>
+	<script type="text/javascript" src="js/LZWEncoder.js"></script>
+	<script type="text/javascript" src="js/NeuQuant.js"></script>
+	<script type="text/javascript" src="js/GIFEncoder.js"></script>
+	<script type="text/javascript" src="js/b64.js"></script>
+	<style type="text/css">
+	div.container {min-height: 1070px;}.shape_18 {background: url('images/shape_18.png') no-repeat;}@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {.shape_18 {background: url('images/shape_18@2x.png') no-repeat;background-size: 702px 162px;}}
+	canvas,
+	img {
+		image-rendering: crisp-edges;
+		image-rendering: -moz-crisp-edges;
+		image-rendering: -webkit-optimize-contrast;
+		image-rendering: optimize-contrast;
+		image-rendering: pixelated;
+		-ms-interpolation-mode: nearest-neighbor;
+	}
+	textarea{
+		resize:none;
+		width: 698px;
+		padding:0px;
+		background-color: #FEFEFC;
+		border: 1px solid #463C3C;
+		white-space: pre;
+	}
+	.txtHead{
+		text-align: left;
+		margin: 16px 0 0 0;
+	}
+	</style>
+	<script language="JavaScript">
+	function setup(body){
+		body.ondragover = function() {
+			return false;
+		};
+		body.ondragend = function() {
+			return false;
+		};
+		body.ondrop = function(e) {
+		        // Prevent the browser from showing the dropped file
+		        e.preventDefault();
+
+		        // Get the image data
+		        var imageData = getImageData(e);
+
+		        // If there is some data, add it to the page
+		        if(imageData !== null) {
+		        	addDroppedElement(imageData);
+		        }
+		    }
+		}
+		function getImageData(event) {
+			var file = event.dataTransfer.files[0];
+			if(file.type.indexOf('image') === 0){
+				return file;
+			}
+		}
+		function addDroppedElement(imageData) {
+			var reader = new FileReader();
+			reader.onload = function(event) {
+				event.preventDefault;
+
+		        // Create image element
+		        var droppedImage = new Image();
+		        droppedImage.src = event.target.result;
+		        // add delay so the image can be loaded properly before accessing it
+		        setTimeout(function(){
+		        	var fileName = imageData.name.split('.')[0];
+		        	var origWidth = parseInt(fileName.split('_')[1].split('x')[0]);
+		        	var origHeight = parseInt(fileName.split('_')[1].split('x')[1]);
+		        	var imgNW = droppedImage.naturalWidth;
+		        	var imgNH = droppedImage.naturalHeight;
+		        	var zoom = 1;
+		        	switch(origHeight){
+		        		case 8: zoom = 4;
+		        		break;
+		        		case 16: zoom = 2;
+		        		break;
+		        		case 24: zoom = 4/3;
+		        		break;
+		        		case 32: zoom = 1;
+		        		break;
+		        	}
+
+		    		// Create canvas for tiles
+		    		var droppedImageCanvas = document.createElement("canvas");
+		    		droppedImageCanvas.width = origWidth*zoom;
+		    		droppedImageCanvas.height = origHeight*zoom;
+		    		droppedImageCanvas.style.display = "none";
+
+		    		// Create invisible canvas for original image
+		    		var invisImageCanvas = document.createElement("canvas");
+		    		invisImageCanvas.width = imgNW;
+		    		invisImageCanvas.height = imgNH;
+		    		invisImageCanvas.style.display = "none";
+
+		    		// Create code container
+		    		var txtS = document.createElement("p");
+		    		txtS.innerHTML = "Sprite";
+		    		txtS.className = "txtHead";
+		    		var droppedImageCode = document.createElement("textarea");
+		    		droppedImageCode.className = "code";
+		    		droppedImageCode.rows = "7";
+		    		var txtM = document.createElement("p");
+		    		txtM.innerHTML = "Mask";
+		    		txtM.className = "txtHead";
+		    		var droppedMaskCode = document.createElement("textarea");
+		    		droppedMaskCode.className = "code";
+		    		droppedMaskCode.rows = "7";
+		    		var txtSM = document.createElement("p");
+		    		txtSM.innerHTML = "Sprite + Mask";
+		    		txtSM.className = "txtHead";
+		    		var droppedComboCode = document.createElement("textarea");
+		    		droppedComboCode.className = "code";
+		    		droppedComboCode.rows = "7";
+
+		    		// Create div container
+		    		var droppedImageDiv = document.createElement("div");
+		    		droppedImageDiv.className = "image-view";
+		    		droppedImageDiv.appendChild(droppedImageCanvas);
+		    		droppedImageDiv.appendChild(invisImageCanvas);
+		    		
+		    		var imageContainer = document.getElementById("image-container");
+		    		imageContainer.innerHTML = "";
+		    		imageContainer.appendChild(droppedImageDiv);
+		    		imageContainer.appendChild(txtS);
+		    		imageContainer.appendChild(droppedImageCode);
+		    		imageContainer.appendChild(document.createElement("br"));
+		    		imageContainer.appendChild(txtM);
+		    		imageContainer.appendChild(droppedMaskCode);
+		    		imageContainer.appendChild(document.createElement("br"));
+		    		imageContainer.appendChild(txtSM);
+		    		imageContainer.appendChild(droppedComboCode);
+
+		    		// Create context for drawing
+		    		var droppedImageContext = droppedImageCanvas.getContext("2d");
+		    		droppedImageContext.imageSmoothingEnabled = false;
+		    		var invisImageContext = invisImageCanvas.getContext("2d");
+
+		    		// Draw the image on an invisible canvas to generate the code
+		    		invisImageContext.drawImage(droppedImage, 0, 0);
+
+		    		// Initiate GIFEncoder
+		    		var encoder = new GIFEncoder();
+		    		encoder.setRepeat(0);
+		    		encoder.setDelay(500);
+		    		encoder.start();
+		    		droppedImageContext.fillStyle = "#00FF00";
+
+		    		// Clip the image, draw on invisble canvas with green background and create a frame from the canvas 
+		    		for(var i = 0; i < imgNH/origHeight; i++){
+		    			droppedImageContext.fillRect(0,0,droppedImageCanvas.width, droppedImageCanvas.height);
+		    			droppedImageContext.drawImage(droppedImage, 0, i*origHeight, origWidth, origHeight, 0, 0, origWidth*zoom, origHeight*zoom);
+		    			encoder.addFrame(droppedImageContext);
+		    		}
+		    		// Finish the GIF creation and show it with the total number of frames
+		    		encoder.finish();
+		    		var binaryGIF = encoder.stream().getData();
+		    		var dataURL = 'data:image/gif;base64,'+encode64(binaryGIF);
+		    		var gifDiv = document.createElement('div');
+		    		var gif = document.createElement('img');
+		    		gif.style.verticalAlign = 'middle';
+		    		gif.src = dataURL;
+		    		gifDiv.appendChild(gif);
+		    		var totalFrames = document.createElement('p');
+		    		totalFrames.style.display = 'inline-block';
+		    		totalFrames.style.margin = '0px 20px';
+		    		totalFrames.innerHTML = "Total number of frames: "+imgNH/origHeight;
+		    		gifDiv.appendChild(totalFrames);
+		    		imageContainer.insertBefore(gifDiv, imageContainer.firstChild);
+
+		    		// Generate the sprite string
+		    		var spriteString = "const unsigned char PROGMEM "+fileName.split('_')[0]+"[] =\n"+
+		    		"{\n// width, height,\n"+origWidth+", "+origHeight+",\n"+
+		    		"// FRAME 00\n";
+		    		var maskString = "const unsigned char PROGMEM "+fileName.split('_')[0]+"_mask[] =\n"+
+		    		"{\n// width, height,\n"+origWidth+", "+origHeight+",\n"+
+		    		"// FRAME 00\n";
+		    		var comboString = "const unsigned char PROGMEM "+fileName.split('_')[0]+"_plus_mask[] =\n"+
+		    		"{\n// width, height,\n"+origWidth+", "+origHeight+",\n"+
+		    		"// FRAME 00\n";
+		    		var pageCount = Math.ceil(imgNH / 8);
+		    		var columnCount = imgNW;
+		    		var currentByte = 0;
+		    		var frameCounter = 0;
+		    		var bytesPerFrame = origWidth*origHeight/8;
+		    		
+		    		// Read the sprite page-by-page
+		    		for(var page = 0; page < pageCount; page++) {
+		    		    // Read the page column-by-column
+		    		    for(var column = 0; column < columnCount; column++) {
+
+		    		        // Read the column into a byte
+		    		        var spriteByte = 0;
+		    		        var maskByte = 0;
+		    		        for(var yPixel = 0; yPixel < 8; yPixel++) {
+
+		    		            // If the color of the pixel is not black, count it as white
+		    		            var pixelColor = invisImageContext.getImageData(column, page*8 + yPixel, 1, 1).data;
+		    		            if(pixelColor[0] > 0 || pixelColor[1] > 0 || pixelColor[2] > 0) {
+		    		            	spriteByte |= (1 << yPixel);
+		    		            }
+		    		            if(pixelColor[3] > 0) {
+		    		            	maskByte |= (1 << yPixel);
+		    		            }
+		    		        }
+		    		        
+		    		        // Print the column in hex notation, add a comma for formatting
+		    		        var digitSpriteStr = spriteByte.toString(16);
+		    		        var digitMaskStr = maskByte.toString(16);
+		    		        if(digitSpriteStr.length == 1) {
+		    		        	digitSpriteStr = "0" + digitSpriteStr;
+		    		        }
+		    		        if(digitMaskStr.length == 1) {
+		    		        	digitMaskStr = "0" + digitMaskStr;
+		    		        }
+		    		        spriteString += "0x" + digitSpriteStr + ", ";
+		    		        maskString += "0x" + digitMaskStr + ", ";
+		    		        comboString += "0x" + digitSpriteStr + ", ";
+		    		        if(imgNW%2===0){
+		    		        	comboString += "0x" + digitMaskStr + ", ";
+		    		        	if(currentByte%imgNW == imgNW - 1){
+		    		        		spriteString += "\n";
+		    		        		maskString += "\n";
+		    		        		comboString += "\n";
+		    		        	}
+		    		        }
+		    		        if(currentByte%imgNW == Math.ceil(imgNW/2)-1){
+		    		        	comboString += "\n";
+		    		        }
+		    		        if(imgNW%2===1){
+		    		        	comboString += "0x" + digitMaskStr + ", ";
+		    		        	if(currentByte%imgNW == imgNW - 1){
+		    		        		spriteString += "\n";
+		    		        		maskString += "\n";
+		    		        		comboString += "\n";
+		    		        	}
+		    		        }
+		    		        if(currentByte%bytesPerFrame === bytesPerFrame - 1 && frameCounter < imgNH/origHeight -1){
+		    		        	if(currentByte%imgNW !== imgNW - 1){
+		    		        		spriteString += "\n";
+		    		        		maskString += "\n";
+		    		        	}
+		    		        	if(currentByte%imgNW !== Math.ceil(imgNW/2)-1){
+		    		        		comboString += "\n";
+		    		        	}
+		    		        	frameCounter++;
+		    		        	var frameNumber = frameCounter.toString().length === 1 ? "0"+frameCounter.toString() : frameCounter.toString();
+		    		        	spriteString += "// FRAME "+frameNumber+"\n";
+		    		        	maskString += "// FRAME "+frameNumber+"\n";
+		    		        	comboString += "// FRAME "+frameNumber+"\n";
+		    		        	currentByte = 0;
+		    		        }
+		    		        else{
+		    		        	currentByte++;
+		    		        }
+		    		    }
+		    		}
+		    		spriteString = spriteString.replace(/\s*$/, "\n};");
+		    		maskString = maskString.replace(/\s*$/, "\n};");
+		    		comboString = comboString.replace(/\s*$/, "\n};");
+
+		    		// Put the code in the text field
+		    		droppedImageCode.innerHTML = spriteString;
+		    		droppedMaskCode.innerHTML = maskString;
+		    		droppedComboCode.innerHTML = comboString;
+		    	}, 50);
+};
+reader.readAsDataURL(imageData);
+}
+</script>
+</head>
+
+<body onload="setup(this);" style="font-family: Courier New; text-align: center;">
+	<div class="shadow">
+		<div class="container" style="height:1250px">
+
+
+
+			<div class="content" data-minheight="1400">
+				<div style="position:relative">
+					<div class="shape_14" style="left:25px;top:20px;width:700px;height:64px;z-index:14;position:absolute;">
+						<img src="images/SpriteSheetConverter.png" height="64" width="700" />
+					</div>
+					<div class="shape_14" style="left:25px;top:90px;width:700px;height:64px;z-index:14;position:absolute;">
+					<p class="Style2">
+					The Spritesheet Converter converts a file to arrays containing one or more sprites. A sprite array, mask array and a combined sprite+mask array are produced. The sprite+mask array contains sprite/mask byte pairs suitable for use with the Sprites <b>drawPlusMask()</b> function.
+<br/>
+<br/>
+<b>Note</b>: The mask array produced includes width and height bytes at the beginning. If this array is to be used with the <b>drawExternalMask()</b> function, these bytes must be commented out or deleted.
+<br/>
+<br/>
+The filename can be any name but must have the dimensions of a single sprite or tile, in the form _WIDTHxHEIGHT, appended to it before the extension.
+E.g. to create an array named mySprites with each sprite having a width of 8 and a height of 16 pixels, from a PNG image, the file should be named mySprites_8x16.png. The underscore and dimensions will be removed from the resulting array names.
+<br/>
+<br/>
+The image file for multiple sprites or tiles must have them arranged vertically in a single column.
+<br/>
+<br/>
+Below is an image that will produce arrays for 3 16x16 sprites. The image contains transparent pixels that will be used for the masks. Its original filename was sprites_16x16.png
+<br/>
+<br/>
+<img src="images/Example1.png" width="16px" height="48px">
+<br/>
+<br/>
+In addition to using the produced arrays with the Sprites classes, they can also be used (except sprite+mask) with the Arduboy2Base class <b>drawBitmap()</b> function. For this, the length and width bytes at the start of the array need to be commented out or deleted. To draw a given sprite or tile from an array containing more than one, the proper index into the array would have to be calculated (SpriteNumber * SpriteWidth * SpriteHeight / 8) as a pointer and passed as the bitmap parameter. Masking can be done by first drawing the mask using colour BLACK and then the sprite, at the same position, using colour WHITE (or reverse the two colours to draw the sprite inverted).
+</p>
+					</div>
+				</div>
+				<div style="position:relative">
+					<div class="shape_18" style="left:24px;top:600px;width:702px;height:162px;z-index:18;position:absolute;">
+						<div style="margin: 4.32px 2.16px 4.32px 2.16px; ">
+							<p style="line-height:18px;text-align:center;margin-top:0px;margin-bottom:0px;" class="Style2">
+								<br />
+							</p>
+							<p style="line-height:50.4px;text-align:center;margin-bottom:0px;margin-top:0px;" class="Style65">
+								Drop your sprite sheet here
+							</p>
+						</div>
+					</div>
+				</div>
+				<div style="position:relative">
+					<div class="shape_19" style="left:25px;top:784px;width:700px;height:160px;z-index:17;position:absolute;">
+						<div style="margin: 4.32px 2.16px 4.32px 2.16px; " id='image-container'>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+				<a  class="Style2" href="LICENSE">Original Licence</a>
+	</div>
+</body>
+</html>

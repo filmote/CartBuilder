@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduboy Image Converter</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=750" />
+	<meta name="buildDate" content="Friday 3 March 2017" />
+	<meta property="og:url" content="https://teamarg.github.io/arduboy-image-converter/" />
+	<meta property="og:type" content="website" /> 
+	<link rel="stylesheet" type="text/css" href="css/textstyles.css" />
+	<script type="text/javascript" src="js/imageCode.js">
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/pagestyle.css?3.568126e+9" />
+	<style type="text/css">
+	div.container {min-height: 1070px;}.shape_18 {background: url('images/shape_18.png') no-repeat;}@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {.shape_18 {background: url('images/shape_18@2x.png') no-repeat;background-size: 702px 162px;}}
+	canvas,
+	img {
+		image-rendering: crisp-edges;
+		image-rendering: -moz-crisp-edges;
+		image-rendering: -webkit-optimize-contrast;
+		image-rendering: optimize-contrast;
+		image-rendering: pixelated;
+		-ms-interpolation-mode: nearest-neighbor;
+	}
+	textarea{
+		resize:none;
+		padding:0px;
+		background-color: #FFFFFF;
+		border: 1px solid #463C3C;
+		white-space: pre;
+	}
+	</style>
+	<script language="JavaScript">
+	function setup(body){
+		body.ondragover = function() {
+			return false;
+		};
+		body.ondragend = function() {
+			return false;
+		};
+		body.ondrop = function(e) {
+		        // Prevent the browser from showing the dropped file
+		        e.preventDefault();
+		        // Get the image data
+		        var imageData = getImageData(e);
+		        
+		        // If there is some data, add it to the page
+		        if(imageData !== null) {
+		        	addDroppedElement(imageData);
+		        }
+		    }
+		}
+		function getImageData(event) {
+			var file = event.dataTransfer.files[0];
+			if(file.type.indexOf('image') === 0){
+				return file;
+			}
+		}
+		function addDroppedElement(imageData) {
+			var reader = new FileReader();
+			reader.onload = function(event) {
+				event.preventDefault;
+
+		        // Create image element
+		        var droppedImage = new Image();
+		        droppedImage.src = event.target.result;
+		        // add delay so the image can be loaded properly before accessing it
+		        setTimeout(function(){
+		        	// Create canvas for image
+		        	var droppedImageCanvas = document.createElement("canvas");
+		        	droppedImageCanvas.width = droppedImage.naturalWidth;
+		        	droppedImageCanvas.height = droppedImage.naturalHeight;
+		        	
+		        	// Create code container
+		        	var droppedImageCode = document.createElement("textarea");
+		        	droppedImageCode.className = "code";
+
+		        	droppedImageCode.style.width = "698px";
+		        	droppedImageCode.rows = "20";
+		        	
+		        	// Create div container
+		        	var droppedImageDiv = document.createElement("div");
+		        	droppedImageDiv.className = "image-view";
+		        	droppedImageDiv.appendChild(droppedImageCanvas);
+		        	
+		        	var imageContainer = document.getElementById("image-container");
+		        	imageContainer.innerHTML = "";
+		        	imageContainer.appendChild(droppedImageDiv);
+		        	imageContainer.appendChild(document.createElement("br"));
+		        	imageContainer.appendChild(droppedImageCode);
+		        	
+		        	// Create context for drawing
+		        	var droppedImageContext = droppedImageCanvas.getContext("2d");
+		        	
+		        	// Draw the image
+		        	droppedImageContext.drawImage(droppedImage, 0, 0);
+
+		        	// Generate the sprite string
+		        	var spriteString = "const uint8_t PROGMEM "+imageData.name.split(/_|\./)[0]+"[] = {\n"+
+		        	+droppedImage.naturalWidth+", "+droppedImage.naturalHeight+",\n";
+		        	
+		        	var pageCount = Math.ceil(droppedImage.naturalHeight / 8);
+		        	var columnCount = droppedImage.naturalWidth;
+		        	var currentByte = 0;
+		        	
+		        	// Read the sprite page-by-page
+		        	for(var page = 0; page < pageCount; page++) {
+
+		        	    // Read the page column-by-column
+		        	    for(var column = 0; column < columnCount; column++) {
+
+		        	        // Read the column into a byte
+		        	        var spriteByte = 0;
+		        	        for(var yPixel = 0; yPixel < 8; yPixel++) {
+
+		        	            // If the color of the pixel is not black, count it as white
+		        	            var pixelColor = droppedImageContext.getImageData(column, page*8 + yPixel, 1, 1).data;
+		        	            if(pixelColor[0] > 16 || pixelColor[1] > 16 || pixelColor[2] > 16) {
+		        	            	spriteByte |= (1 << yPixel);
+		        	            }
+		        	        }
+		        	        
+		        	        // Print the column in hex notation, add a comma for formatting
+		        	        var digitStr = spriteByte.toString(16);
+		        	        if(digitStr.length == 1) {
+		        	        	digitStr = "0" + digitStr;
+		        	        }
+		        	        spriteString += "0x" + digitStr + ", ";
+		        	        if(currentByte%droppedImage.naturalWidth == droppedImage.naturalWidth - 1) {
+		        	        	spriteString += "\n";
+		        	        }
+		        	        currentByte++;
+		        	    }
+		        	}
+		        	// Terminate the array
+		        	spriteString += "};";
+		        	// Create an invisible element containing the string
+		        	droppedImageCode.innerHTML = spriteString;
+		        	
+		        	// Resize canvas to show 2x scaled image
+		        	droppedImageCanvas.width = droppedImage.naturalWidth * 2;
+		        	droppedImageCanvas.height = droppedImage.naturalHeight * 2;
+		        	droppedImageContext = droppedImageCanvas.getContext("2d");
+		        	droppedImageContext.imageSmoothingEnabled = false;
+		        	droppedImageContext.drawImage(droppedImage, 0, 0, droppedImage.naturalWidth * 2, droppedImage.naturalHeight * 2);
+		        }, 50);
+};
+reader.readAsDataURL(imageData);
+}
+</script>
+</head>
+
+<body onload="setup(this);" style="font-family: Courier New; text-align: center;">
+	<div class="shadow">
+		<div class="container" style="height:1070px">
+
+			<div class="content" data-minheight="900">
+				
+				<div style="position:relative">
+					<div class="shape_14" style="left:25px;top:20px;width:700px;height:48;z-index:14;position:absolute;border:1;">
+						<img src="images/imageConverter.png" height="48" width="700" />
+					</div>
+					<div class="shape_14" style="left:25px;top:90px;width:700px;height:48;z-index:14;position:absolute;border:1;">
+					<span class="Style2">
+The Image Converter converts a file to a single sprite without a mask. Any filename can be used but anything after an underscore (including the underscore) will be removed from the resulting array name.
+For best results, images should contain only pixels that are fully black, fully white or fully transparent.
+</span>
+					</div>
+				</div>
+
+
+				<div style="position:relative">
+					<div class="shape_18" style="left:24px;top:179px;width:702px;height:162px;z-index:18;position:absolute;">
+						<div style="margin: 4.32px 2.16px 4.32px 2.16px; ">
+							<p style="line-height:18px;text-align:center;margin-top:0px;margin-bottom:0px;" class="Style2">
+								<br />
+							</p>
+							<p style="line-height:50.4px;text-align:center;margin-bottom:0px;margin-top:0px;" class="Style65">
+								Drop your image file here
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div style="position:relative">
+					<div class="shape_19" style="left:25px;top:364px;width:700px;height:160px;z-index:17;position:absolute;">
+						<div style="margin: 4.32px 2.16px 4.32px 2.16px; " id='image-container'>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+				<a  class="Style2" href="LICENSE">Original Licence</a>
+	</div>
+</body>
+</html>
