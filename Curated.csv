@@ -96,6 +96,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 8;Zoo;Puzzle/Zoo.png;Puzzle/Zoo.hex;;;1.0;Yuki;A beautiful begemmed style of game.;
 8;New Blocks on the Kid;Puzzle/NBOTK.png;Puzzle/NBOTK.hex;;;1.0;bateske;There is a new falling block game in town.;
 9;Tabletop;category-screens/Tabletop.png;;;;;;;
+9;Arduchess;Misc/Arduchess.png;Misc/arduchess.hex;;;1.0;Brow1067;Play chess on the Arduboy!
 9;Blackjack;Misc/Blackjack.png;Misc/Blackjack.hex;;;.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
 9;Dice of Fate;arg/Diceoffate.png;arg/Diceoffate.hex;;;1.0;Team ARG;A dice utility. Choose between a coin or a 4, 6, 8, 10, 12, 20 or 100 sided dice.;5
 9;Reversi;Puzzle/reversi.png;Puzzle/reversi.hex;;;1.0;Obono;Reversi is a strategy board game for two players, played on an 8×8 uncheckered board.;15
@@ -146,9 +147,11 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 12;Millipe;Arcade/Millipe.png;Arcade/Millipe.hex;;;1.0;Dreamer2345;A small Centipede clone.;3
 12;Kemono Patrol;Shooter/KemonoPatrol.png;Shooter/KemonoPatrol.hex;;;1.0;metalidol;A moon buggy-style game.;
 12;Siege;Action/Siege.png;Action/Siege.hex;;;1.0;shdwwzrd;The king needs your help to keep the Dark Lord’s army from destroying the kingdom. The Wizards will arrive after the 5th day and the rest of our army will be back in 20 days. The king is counting on you to hold the wall. Hold strong, noble archer, HOLD STRONG!;2
-13;Application;category-screens/Application.png;;;;;;;
-13;Ardutosh;Application/Ardutosh.png;Application/Ardutosh.hex;;;.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;31
-13;Golfer's Companion;Application/GolfCompanion.png;Application/GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;11
-13;Coder's Toolbox;Application/Toolbox.png;Application/Toolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;16
-13;Ardu Remote;Application/ArduRemote.png;Application/ArduRemote.hex;;;1.0;eried;Use your Arduboy as a remote keyboard / mouse.;5
-13;Calendar;Application/Calendar.png;Application/Calendar.hex;;;1.0;hartmann1301;A calendar for the Arduboy. Make notes on important days.;2
+13;Sports;category-screens\Sports.png;;;;;;;
+13;18-Hole Mini Golf;Sports\ardugolf.png;Sports\ardugolf.hex;;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
+14;Application;category-screens/Application.png;;;;;;;
+14;Ardutosh;Application/Ardutosh.png;Application/Ardutosh.hex;;;.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;31
+14;Golfer's Companion;Application/GolfCompanion.png;Application/GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;11
+14;Coder's Toolbox;Application/Toolbox.png;Application/Toolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;16
+14;Ardu Remote;Application/ArduRemote.png;Application/ArduRemote.hex;;;1.0;eried;Use your Arduboy as a remote keyboard / mouse.;5
+14;Calendar;Application/Calendar.png;Application/Calendar.hex;;;1.0;hartmann1301;A calendar for the Arduboy. Make notes on important days.;2

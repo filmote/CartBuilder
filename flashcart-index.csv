@@ -147,6 +147,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;New Blocks on the Kid;Puzzle\NBOTK.png;Puzzle\NBOTK.hex;;;1.0;bateske;There is a new falling block game in town.;
 8;Rick and Morty Game;Misc\RickAndMortyGame.png;Misc\RickAndMortyGame.hex;;;1.0;Celinebins;Here is THE MOST EPIC (unofficial) ARDUBOY RICK AND MORTY game.;
 9;Tabletop;category-screens\Tabletop.png;;;;;;;
+9;Arduchess;Misc/Arduchess.png;Misc/arduchess.hex;;;1.0;Brow1067;Play chess on the Arduboy!
 9;Blackjack;Misc\Blackjack.png;Misc\Blackjack.hex;;;1.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
 9;Dice Of Fate;arg\Diceoffate.png;arg\Diceoffate.hex;;;1.0;Team ARG;A dice utility. Choose between a coin or a 4, 6, 8, 10, 12, 20 or 100 sided dice.;5
 9;Reversi;Puzzle\reversi.png;Puzzle\reversi.hex;;;1.0;Obono;Reversi is a strategy board game for two players, played on an 8×8 uncheckered board.;15
@@ -221,6 +222,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Siege;Action\Siege.png;Action\Siege.hex;;;1.0;shdwwzrd;The king needs your help to keep the Dark Lord’s army from destroying the kingdom. The Wizards will arrive after the 5th day and the rest of our army will be back in 20 days. The king is counting on you to hold the wall. Hold strong, noble archer, HOLD STRONG!;2
 12;Cooties Attack;Shooter\cooties.png;Shooter\cooties.hex;;;1.0;graziel;An entry into the itch.io Game Jam, Cooties Attack is a shoot 'em up where you have to kill everyone's childhood fear (cooties!).;1
 13;Sports;category-screens\Sports.png;;;;;;;
+13;18-Hole Mini Golf;Sports\ardugolf.png;Sports\ardugolf.hex;;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
 13;Skate Ard Die;Sports\SkateArdDie.png;Sports\SkateArdDie.hex;;;1.0;pixelplatforms;Skateboarding on the Arduboy.;11
 13;Ardletics;Sports\Ardletics.png;Sports\Ardletics.hex;;;1.0;igvina;Ardletics - Athletics for Arduboy;9
 13;Boris Goes Skiing;Arcade\Borisgoesskiing.png;Arcade\Borisgoesskiing.hex;;;1.0;sones;Boris Goes Skiing is a clone of the ZX Spectrum game Horace goes skiing.;3
