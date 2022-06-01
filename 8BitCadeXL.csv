@@ -307,6 +307,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 15;Witch Game;8BitCadeXL/Shooter/Witch Game.png;8BitCadeXL/Shooter/Witch Game.hex;;;;;
 15;Battle For Zuthsrah;8BitCadeXL/Shooter/Zuthsrah.png;8BitCadeXL/Shooter/Zuthsrah.hex;;;1.0;Mre64;A space shoot 'em up!;3
 16;Sport;8BitCadeXL/category-screens/Sport.png;;;;;;
+16;18-Hole Mini Golf;8BitCadeXL/Sports/ardugolf.png;8BitCadeXL/Sports/ardugolf.hex;;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
 16;ArduSki;8BitCadeXL/Sport/ArduSki.png;8BitCadeXL/Sport/ArduSki.hex;;;;;
 16;ArduTurf;8BitCadeXL/Sport/ArduTurf.png;8BitCadeXL/Sport/ArduTurf.hex;;;;;
 16;Custom Pong;8BitCadeXL/Sport/Custom Pong.png;8BitCadeXL/Sport/Custom Pong.hex;;;;;
