@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.08
+// V1.11
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;

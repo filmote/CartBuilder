@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.08
+// V1.11
 
 var suppressOpenInfoDlg = false;
 
@@ -408,13 +408,25 @@ function resizeColumnHeights() {
 function doSearch() {
 
   if ($('#search').val() == "") {
+
     $('#dvHidden').children().appendTo("#dvUnused");
+
+    // Clear highlighting ..
+
+    for (var idx = 0; idx < items.length; idx++) {
+
+        $('#li' + (idx + 1)).css("-webkit-filter", "drop-shadow(4px 4px 4px rgba(0, 0, 0, .15))");
+
+    }
+
 
   }
   else {
     
     $('#dvUnused').children().appendTo("#dvHidden");
 
+
+    // Items not in use ..
 
     var ul = $("#dvHidden");
     var idsInOrder = ul.sortable("toArray");
@@ -424,7 +436,7 @@ function doSearch() {
 
         var index = value.substring(2);
 
-        if (items[index - 1].name.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1 || items[index - 1].developer.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1) {
+        if (items[index - 1].name.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1 || items[index - 1].developer.toLowerCase().startsWith($('#search').val().toLowerCase())) {
 
           matches.set(value, value);
 
@@ -435,8 +447,36 @@ function doSearch() {
 
     for (const match of matches) {
 
-      var item = $('#' + match);
-      $('#dvUnused').append(item);
+        var item = $('#' + match);
+        $('#dvUnused').append(item);
+        
+    }
+
+
+    // Items in use ..
+
+    for (var idx = 0; idx < items.length; idx++) {
+
+        var item = items[idx];
+
+        if (item.name.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1 || item.developer.toLowerCase().startsWith($('#search').val().toLowerCase())) {
+
+            if (!matches.has("li" + (idx+1))) {
+                $('#li' + (idx + 1)).css("-webkit-filter", "drop-shadow(4px 4px 4px #E2C425)");
+            }
+            else {
+
+                $('#li' + (idx + 1)).css("-webkit-filter", "drop-shadow(4px 4px 4px rgba(0, 0, 0, .15))");
+
+            }
+
+        }
+        else {
+
+            $('#li' + (idx + 1)).css("-webkit-filter", "drop-shadow(4px 4px 4px rgba(0, 0, 0, .15))");
+
+        }
+
     }
 
   }
