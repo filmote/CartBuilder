@@ -322,5 +322,5 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 17;Pocket PDA;Application\PocketPDA.png;Application\PocketPDA.hex;;;1.0;WangRenxin;Pocket PDA - an OS turns your Arduboy into a PDA.;9
 17;BrainF#ck;Application\brainfxck.png;Application\brainfxck.hex;;;1.0;Red-Hara;An interactive Brainf#ck interpreter;8
 17;Set System EEPROM;Application\SetSystemEEPROM.png;Application\SetSystemEEPROM.hex;;;1.0;MLXXXp;A utiloity that allows you to set the 'Unit Name' of your Arduboy.  This is displayed at the end of the logo sequence and can be used in programs to uniquely identify the unit.;10
-17;EEPROM Editor;Application\EEPROMEditor.png;Application\EEPROMEditor.hex;;;1.0;Press Play on Tape;Inspired by Crait’s Arduboy Assistant, this version has been expanded to show 25 bytes at a time (to give context) with the current cell highlighted in the middle.;10
+17;EEPROM Editor;Application\EEPROMEditor.png;Application\EepromEditor.hex;;;1.0;Press Play on Tape;Inspired by Crait’s Arduboy Assistant, this version has been expanded to show 25 bytes at a time (to give context) with the current cell highlighted in the middle.;10
 17;Welcome;Application\welcome.png;Application\welcome.hex;;;1.0;Bateske;Instructions on how to drive your new FX. This is the default application the FX comes pre-installed with.;10
