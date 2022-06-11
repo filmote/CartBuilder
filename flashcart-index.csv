@@ -30,6 +30,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Crate Confusion;Action/Crate Confusion.png;Action/Crate Confusion.hex;;;1.0;Phoboslab;Manoeuvre the space ship to collect the crates.;1
 1;Digger;Arcade/Digger.png;Arcade/Digger.hex;;;1.0;eried;Goal is to collect as many diamonds as needed to unlock the exit. You can move rocks, if there is nothing behind it. If a rock falls through a changer, then its converted to a diamond.;1
 1;Crabator;Action/Crabator.png;Arcade/Crabator.hex;;;1.0;R0d0t;Crabator is an intense action game where you kill crabs to make money to buy weapons to kill crabs to make money, etc. but watch out, the more crabs you kill the more they are.;1
+1;Harambes Revenge;Action/Harambes Revenge.png;Arcade/Harambes Revenge.hex;;;1.0;MorganLapis and SerendipityDoDa;In Harambe’s Revenge, you play as a phantasmal Harambe that has returned from the afterlife to convert oblivious tourists into mutant zombie gorilla minions which will then protect him. The zoo had to close down in quarantine, trapping many tourists inside.;1
 2;Adventure;category-screens\Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action\Cotd.png;Action\Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
 2;Virus LQP-79;arg\virus.png;arg\virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
@@ -72,6 +73,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 3;Oh You're Gonna Die;Arcade\oygd.png;Arcade\oygd.hex;;;1.0;;You have one job, 8 bombs, 16 seconds to get the key and get to the door .. alive!;
 3;Tiny Depth;Action\Tinydepth.png;Action\Tinydepth.hex;;;1.0;akkera102;Destroy the attacking submarines;
 3;Prize Frenzy;Puzzle\prizefrenzy.png;Puzzle\prizefrenzy.hex;;;1.0;madya121;Its holiday time and presents are falling from the sky. Catch as many as you can in the available time.;
+3;Jezz Ball;Arcade\Jezzball.png;Arcade\Jezzball.hex;;;1.0;RackhamLeNoir;The goal is to isolate bouncing balls by splitting the game area.;1
 4;Runner;category-screens\Runner.png;;;;;;;
 4;Hollow Seeker;Arcade\hollowseeker.png;Arcade\hollowseeker.hex;;;1.0;Obono;Go forward in right direction. Seek a hollow as refuge not to be crushed.;21
 4;Chromedino;Arcade\Chromedino.png;Arcade\Chromedino.hex;;;1.0;Flaki;A version of Chrome’s (in?)famous dino side-scroller running-man-style dino jumper.;16
@@ -96,6 +98,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 5;Square Nose;Platformer\SquareNose.png;Platformer\SquareNose.hex;;;1.0;JuiceLizard;In a near future, in 1996, two international companies fight against each other to reign on the pet dry food market.So, what are you waiting for? Let’s go! Eat them all, Square Nose!;16
 5;Jetpac;Action\Jetpac.png;Action\Jetpac.hex;;;1.0;TheArduinoGuy;You are an astronaut on an alien planet with a Jet Pac. Assemble you rocket and gather fuel before taking off.;5
 5;Joustish;Arcade\joustish.png;Arcade\joustish.hex;;;1.0;wuuff;A game quite like Joust!;8
+5;Rick Arduous;Platformer\RickArduous.png;Platformer\RickArduous.hex;;;1.0;Iswbanban;Inspired by the retro-game Rick Dangerous, the player takes the role of an adventurer exploring caves in the hope of finding the Grail. The game propose a series of puzzles fitting in one screen. The player will have to reach the exit point of each screen to move to the next puzzle. The game propose 12 puzzle-screens with an increasing difficulty.;8
 5;Poitto;Action\poitto.png;Action\poitto.hex;;;1.0;inajob;An action puzzle game.;10
 5;Epic Cratres of Mass Destruction;arg\ecomd.png;arg\ecomd.hex;;;1.0;Team ARG;Obviously .. something went wrong. That's for sure! You are hired to fix it. No questions asked. Licensed to shoot all that moves!;10
 5;Super Crate;Platformer\supercrate.png;Platformer\supercrate.hex;;;1.0;uXe;A platform-action-shooting game.;4
@@ -138,6 +141,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Tiny Tris;Puzzle\TinyTris.png;Puzzle\TinyTris.hex;;;1.0;Daniel C;A falling-block game sort of like Tetris.;
 7;Tris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Daniel C;Another falling-block game sort of like Tetris.;
 7;ArduGods;Puzzle\ArduGods.png;Puzzle\ArduGods.hex;;;1.0;resetreboot;Your goal in this game is to gather faith and a cult following to become stronger and be able to battle the rest of the Gods, to reclaim your place among them as the most powerful ever, and it all starts by raising prayers with your Arduboy buttons.;
+7;Hangman;Misc\Hangman.png;Misc\Hangman.hex;;;1.2.0;Serisman;Classic hangman game with nearly 800 words.;
 8;Skill;category-screens\Skill.png;;;;;;;
 8;Curse of Astarok;Puzzle\curse.png;Puzzle\curse.hex;;;1.0;Press Play On Tape;The evil Astarok has cast a nasty curse on the folk of Griford and turned them into pumpkins! The town’s people have asked you to battle the AstaroK and his evil friends in their hideout - an old castle on the edge of town. Can you release the town from the curse of AztaroK?;17
 8;Trials of Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;1.0;Press Play On Tape;Each year the people of the village choose a new champion to protect them from Astarok. Compete in the trials to see how far you can get and you could be that champion! Your choice of runes will select different courses … some are easier than others!;17
@@ -152,6 +156,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Box Stacker;Puzzle\Boxstacker.png;Puzzle\Boxstacker.hex;;;1.0;dragula96;Stacker clone like the game at the arcade that gives you a chance to win a prize, however in this one the only thing you win is satisfaction!.;4
 8;Arduboy Says;Puzzle\Arduboysays.png;Puzzle\Arduboysays.hex;;;1.0;Slade;Simon for the Arduboy. Remember and repeat the sequences as they show on screen.;4
 8;Nomis;Puzzle\Nomis.png;Puzzle\Nomis.hex;;;1.0;ccaroon;A simple memory game similar to Simon.;4
+8;I Do U Do;Puzzle\I Do U DO.png;Puzzle\I Do U DO.hex;;;1.0;ccaroon;A simple memory game similar to Simon.;4
+8;Cutie E;Puzzle\Cutie_E.png;Puzzle\Cutie_E.hex;;;1.0;JuiceLizard;Dance Dance Revolution anyone?;4
 8;Diamonds;Arcade\diamonds.png;Arcade\diamonds.hex;;;1.0;redbug;Diamonds is a mix between a breakout game and a puzzle game. Original game was released on HP48 more than 20 years ago.;5
 8;Kooky;Puzzle\KOOKY.png;Puzzle\KOOKY.hex;;;1.0;shdwwzrd;Santa has delivered the presents and filled the stockings. Help Santa eat the cookies before the kids wake up and discover him in this match 2 puzzle game. Build bigger sets to get extra time and lots of points.;9
 8;NumberMind;Puzzle\NumberMind.png;Puzzle\NumberMind.hex;;;1.0;Yoshi;NumberMind - A Master Mind type game with numbers;5
@@ -213,6 +219,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Monpals;RPG\Monpals.png;RPG\Monpals.hex;;;1.0;Revlis;Monpals is a rpg that is much like Pokemon and Monster Rancher. There are 15 total monsters in the game that have one of three types: Nature, Mystic, Synth.;
 11;MayQ;RPG\MayQ.png;RPG\MayQ.hex;;;1.0;cobinee;Explore the dungeon and battle the monsters and bats.;
 12;Shooter;category-screens\Shooter.png;;;;;;;
+12;Do You Remember Love?;Shooter\Do You Remember Love.png;Shooter\Do You Remember Love.hex;;;1.0;cobinee;A space shoot 'em up where the attackers come rom all angles.;22
 12;Petit of the Dead;Shooter\Petit of the dead.png;Shooter\Petit of the dead.hex;;;1.0;cobinee;Shoot the zombies before they catch you.;22
 12;Galaxian;Shooter\galaxian.png;Shooter\galaxian.hex;;;1.0;tak02;The classic NAMCO game!;22
 12;Starduino;Shooter\Starduino.png;Shooter\Starduino.hex;;;1.0;Stephane Hockenhull;Starduino - Star Fox inspired 3D rail shooter for Arduboy.;22
@@ -256,6 +263,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Pyoro;Shooter\Pyoro_1.1.png;Shooter\Pyoro_1.1.hex;;;1.1;Thesola10;In Pyoro (known as Bird and Beans in the US) you must destroy the incoming enemies before they destroy your platform.;1
 12;Orbs;Shooter/orbs.png;Shooter/orbs.hex;;;1.0;jmosk;Orbs is losely based on the concept of the PC game Osmos. The user owns an orb that is to capture the other orbs in its universe. The user’s orb is distinguished by sparkles blinking inside of the orb. To win, all other Orbs are to be captured.;1
 12;Armageddon;Shooter/Armageddon.png;Shooter/Armageddon.hex;;;1.0;wuuff;You have been tasked with the defense of six cities from the incoming nuclear apocalypse. You have only two launchers to shoot down incoming missiles.  Survive as long as you can to delay the inevitable end of the world.;1 
+12;Invaders;Shooter/invadersyoda.png;Shooter/invadersyoda.hex;;;1.0;yoda;Classic Space Invaders clone.;1 
 13;Sports;category-screens\Sports.png;;;;;;;
 13;18-Hole Mini Golf;Sports\ardugolf.png;Sports\ardugolf.hex;;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
 13;Skate Ard Die;Sports\SkateArdDie.png;Sports\SkateArdDie.hex;;;1.0;pixelplatforms;Skateboarding on the Arduboy.;11
@@ -278,6 +286,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 15;3in1C;Multi/3in1C.png;Multi/3in1C.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny Bert, Tiny Bike, Tiny Trick.
 15;3in1D;Multi/3in1D.png;Multi/3in1D.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny DDug, Tiny Plaque, Tiny Tris.
 15;3in1E;Multi/3in1E.png;Multi/3in1E.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny Missile, Tiny Morpion, Tiny Pipe
+15;Epic Mini Games;Multi/Epic Mini Games.png;Multi/Epic Mini Games.hex;;;1.0;Unknown;Four games in one - Meterorites, Race, Runner, Whack a Mole
+15;LATE (Little Arduboy Timekiller Endeavour);Multi/LATE.png;Multi/LATE.hex;;;1.0;core1024;Three games in one - Tetris, Blocks Puzzle (1010 clone), Bridge Builder (Stick Hero);1
 16;Application;category-screens\Application.png;;;;;;;
 16;Egg Master Pro 2020;Application\eggmaster.png;Application\eggmaster.hex;;;1.0;Prototype;Here is the Egg Master Pro 2020. To be taken with a grain of salt. Hope you like it!;13
 16;Arduboy Gamepad;Application\ArduboyGamepad.png;Application\ArduboyGamepad.hex;;;1.0;fuopy;Arduboy Gamepad allows you to map your Arduboy’s buttons to keyboard keys.;12
