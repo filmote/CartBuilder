@@ -111,6 +111,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 6;MicroTD;Puzzle\microtd.png;Puzzle\microtd.hex;;;1.1;drummyfish;Defend your territory from the enemy attackers.;19
 6;Ardulem;Puzzle\Ardulem.png;Puzzle\Ardulem.hex;;;1.0;banban;Lemmings on Arduboy!;20
 6;ARtillery;Arcade\ARtillery.png;Arcade\ARtillery.hex;;;1.0;Bergasms;A remake of the classic Tanks game from the Amiga by Gary Roberts.;3
+6;Cascade Path;Misc\Cascade Path.png;Misc\Cascade Path.hex;;;1.0;Chris;Have you ever wanted to discover what life was like on the trail? Going hunting and fording rivers? Have you ever wanted to know more about dysentery than you could possibly imagine?;3
 7;Puzzle;category-screens\Puzzle.png;;;;;;;
 7;Circuit Dude;Puzzle\CircuitDude.png;Puzzle\CircuitDude.hex;;;3.2;Crait;Help Circuit Dude build an awesome invention by leading him through 75 unique levels, completing circuits and plugging in microchips. After all chips are inserted into their sockets, the exit will activate and you can advance to the next puzzle! What kind of secret invention is Circuit Dude building? Complete all of the levels to find out!;30
 7;Logix;Puzzle\Logix.png;Puzzle\Logix.hex;;;1.0;Press Play on Tape;Logix is an educational game that teaches the basic logic gates used in digital electronics. Once you have completed some introductory puzzles that feature a single gate each, you can move on to harder puzzles that test your learning!;21
@@ -252,7 +253,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Space Invaders;Shooter\SpaceInvaders.png;Shooter\SpaceInvaders.hex;;;1.0;Rednuht;A remake of the classic Space Invaders.;1
 12;SFZ;Shooter\SFZ.png;Shooter\SFZ.hex;;;1.0;cobinee;Avoid the enemies as they fly, bounce or roll towards you. Beautifully made!;1
 12;Pyoro;Shooter\Pyoro_1.1.png;Shooter\Pyoro_1.1.hex;;;1.1;Thesola10;In Pyoro (known as Bird and Beans in the US) you must destroy the incoming enemies before they destroy your platform.;1
-12;Orbs;Shooter/orbs.png;Shooter/orbs.hex;;;1.0;jmosk;Orbs is losely based on the concept of the PC game Osmos. The user owns an orb that is to capture the other orbs in its universe. The user’s orb is distinguished by sparkles blinking inside of the orb. To win, all other Orbs are to be captured. 
+12;Orbs;Shooter/orbs.png;Shooter/orbs.hex;;;1.0;jmosk;Orbs is losely based on the concept of the PC game Osmos. The user owns an orb that is to capture the other orbs in its universe. The user’s orb is distinguished by sparkles blinking inside of the orb. To win, all other Orbs are to be captured.;1
+12;Armageddon;Shooter/Armageddon.png;Shooter/Armageddon.hex;;;1.0;wuuff;You have been tasked with the defense of six cities from the incoming nuclear apocalypse. You have only two launchers to shoot down incoming missiles.  Survive as long as you can to delay the inevitable end of the world.;1 
 13;Sports;category-screens\Sports.png;;;;;;;
 13;18-Hole Mini Golf;Sports\ardugolf.png;Sports\ardugolf.hex;;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
 13;Skate Ard Die;Sports\SkateArdDie.png;Sports\SkateArdDie.hex;;;1.0;pixelplatforms;Skateboarding on the Arduboy.;11
@@ -260,6 +262,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 13;Boris Goes Skiing;Arcade\Borisgoesskiing.png;Arcade\Borisgoesskiing.hex;;;1.0;sones;Boris Goes Skiing is a clone of the ZX Spectrum game Horace goes skiing.;3
 13;ArduBall;Arcade\ArduBall.png;Arcade\ArduBall.hex;;;1.0;2BarrelShotgun;Basketball for the Arduboy.;2
 13;Tiny Trick Hockey;Sports\tinytrick.png;Sports\tinytrick.hex;;;1.0;ElectroLIB;Icehockey for the Arduboy.;
+14;Ardu Turf Masters;Sports\arduturfmasters.png;Sports\arduturfmasters.hex;;;1.0;FerJerez;Golf on the Arduboy!;
 14;Music;category-screens\Music.png;;;;;;;
 14;abSynth-FM;Misc\abSynthFM.png;Misc\abSynthFM.hex;;;1.0;boochow;FM Synthesizer with 16-step sequencer for Arduboy.;18
 14;Musicgen Pocket;Application\musicgenpocket.png;Application\musicgenpocket.hex;;;1.0;inajob;MusicGenN Pocket is 8bit mugic generator for Arduboy. All you have to do is turn on your Arduboy and you can listen 8bit music everywhere!;11
@@ -267,39 +270,45 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 14;Nanoseq;Misc\nanoseq.png;Misc\nanoseq.hex;;;1.0;inajob;A nano sized sequencer for Arduboy.;7
 14;Petitseq;Misc\petitseq.png;Misc\petitseq.hex;;;1.0;inajob;Petitseq - petit size sequencer for Arduboy.;6
 14;Arduloop;Misc\arduloop.png;Misc\arduloop.hex;;;1.0;possan;Produce interesting chiptune-ish loops on the internal beeper.;
-15;Application;category-screens\Application.png;;;;;;;
-15;Egg Master Pro 2020;Application\eggmaster.png;Application\eggmaster.hex;;;1.0;Prototype;Here is the Egg Master Pro 2020. To be taken with a grain of salt. Hope you like it!;13
-15;Arduboy Gamepad;Application\ArduboyGamepad.png;Application\ArduboyGamepad.hex;;;1.0;fuopy;Arduboy Gamepad allows you to map your Arduboy’s buttons to keyboard keys.;12
-15;Virtual Gamepad;Application\VirtualGamepad.png;Application\VirtualGamepad.hex;;;1.0;eried;Virtual Gamepad allows you to map your Arduboy’s buttons to keyboard keys.;7
-15;Graph;Application\Graph.png;Application\Graph.hex;;;1.0;V360;A small graphing calculator for Arduboy! Very simple, though. More of a novelty than an actual calculator.;12
-15;Graph 2;Application\graph2.png;Application\graph2.hex;;;1.0;V360;A fully-functional graphing calculator! It’s ten times better than Graph 1, because you can enter your own expression from scratch!;7
-15;ArduSaver;Application\ArduSaver.png;Application\ArduSaver.hex;;;1.0;Prototype;Do you feel your OLED is suffering from critical levels of burn-in? Is nostalgia spoiling your working day? ArduSaver to the rescue!;11
-15;Screen Saver;Demos\screensaver.png;Demos\screensaver.hex;;;1.0;blockbird;A screen saver of fascinating shapes.;7
-15;Golfer's Companion;Application\GolfCompanion.png;Application\GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;11
-15;Arduboy Life;Misc\ArduboyLife.png;Misc\ArduboyLife.hex;;;1.0;MLXXXp;Arduboy gets a Life (Conway’s Game of Life);10
-15;Game of Life;Demos\gameoflife.png;Demos\gameoflife.hex;;;1.0;kmasato;Game of Life (Celluar Automaton) for Arduboy.;
-15;Boids;Demos\boids.png;Demos\boids.hex;;;1.0;elpassion;;
-15;Silence;Misc\silence-a-text-adventure.png;Misc\silence-a-text-adventure.hex;;;1.2;Rainnw (Spaceneedle);A fun little Sci-Fi text adventure using the GTI game engine;
-15;Fidget Spinner;Demos\fidget.png;Demos\fidget.hex;;;1.0;Trigonated;Stop fidgeting! A fidget spinner for the Arduboy!;8
-15;Book Reader - The Pig And The Box;Application\book.png;Application\book.hex;;;1.0;drummyfish;A portable book reader that creates executable books. It compresses the text but still because of the limited flash size only small books will fit.;7
-15;The Guy Who Never Complains;Misc\tgwnc.png;Misc\tgwnc.hex;;;1.0;JuiceLizard;This is an ebook reader for the Arduboy. About 15 minutes of reading with 32 small and funny chapters.;6
-15;Arduboy Light Meter;Application\ArduboyLightMeter.png;Application\ArduboyLightMeter.hex;;;1.0;MLXXXp;I’m not sure if this falls under useful or useless. I’ll let others be the judge. It’s definitely useless in the emulator. You’ll have to load it into a real Arduboy.;7
-15;Ardu-EZ Button;Application\arduEZ.png;Application\arduEZ.hex;;;1.0;shiyouganai;The Ardu-EZ button is the perfect way to relish your daily successes! Just one press and you’ll be greeted with a satisfying reminder of the ease with which you dispatch even the most pesky problems. But a veteran problem-solver like you won’t need only one press, so the Ardu-EZ button is built to withstand rapid dispensing of self-validation. And no matter how many quandaries you navigate, the Ardu-EZ button will keep a satisfying tally of each victory.;6
-15;Okta Ardu Token;Application\OktaArduToken.png;Application\OktaArduToken.hex;;;1.0;afitnerd;An Okta one-time password token.;6
-15;Ardu Remote;Application\ArduRemote.png;Application\ArduRemote.hex;;;1.0;eried;Use your Arduboy as a remote keyboard / mouse.;5
-15;Sketch;Application\sketch.png;Application\sketch.hex;;;1.0;ccaroon;An etch-a-sketch for the Arduboy.;5
-15;ArduBrain;Application\ardubrain.png;Application\ardubrain.hex;;;1.0;renato-grottesi;ArduBrain is an application that helps you keeping your brain sharp training your reflexes, memory, focus and much more!;4
-15;Credit Card;Application\CreditCard.png;Application\CreditCard.hex;;;1.0;madya121;Save your Credit Card information inside your Credit Card sized gaming system.;3
-15;Calendar;Application\Calendar.png;Application\Calendar.hex;;;1.0;hartmann1301;A calendar for the Arduboy. Make notes on important days.;2
-16;Tools;category-screens\Tools.png;;;;;;;
-16;Ardutosh;Application\Ardutosh.png;Application\Ardutosh.hex;;;1.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;31
-16;Abshell;Application\Abshell.png;Application\Abshell.hex;;;1.0;boochow;Abshell is a command shell for Arduboy. You can send commands from PC to Arduboy via USB-serial port. No programming skills needed to draw graphics on Arduboy screen! Any VT100 compatible serial port terminal softwares (PuTTY, etc.) can be used.;16
-16;Coder's Toolbox;Application\Toolbox.png;Application\Toolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;16
-16;ABAsm DP1;Application\ABAsmDP1.png;Application\ABAsmDP1.hex;;;1.0;Fuopy;ABasm is an Arduboy game that lets you program your own Arduboy games, on your Arduboy! It uses an assembly language-style of programming with its own bytecode format.;12
-16;Arduboy Assistant;Application\ArduboyAssistant.png;Application\ArduboyAssistant.hex;;;1.0;Crait;Arduboy Assistant is a program that allows you to manage an Arduboy’s EEPROM as well as test several hardware and software components.;10
-16;Arduboy Sprite Editor;Application\ASE.png;Application\ASE.hex;;;1.0;PMWasson;ASE - a sprite editor for Arduboy games that runs on the Arduboy.;9
-16;Pocket PDA;Application\PocketPDA.png;Application\PocketPDA.hex;;;1.0;WangRenxin;Pocket PDA - an OS turns your Arduboy into a PDA.;9
-16;BrainF#ck;Application\brainfxck.png;Application\brainfxck.hex;;;1.0;Red-Hara;An interactive Brainf#ck interpreter;8
-16;Set System EEPROM;Application\SetSystemEEPROM.png;Application\SetSystemEEPROM.hex;;;1.0;MLXXXp;A utiloity that allows you to set the 'Unit Name' of your Arduboy.  This is displayed at the end of the logo sequence and can be used in programs to uniquely identify the unit.;10
-16;EEPROM Editor;Application\EEPROMEditor.png;Application\EEPROMEditor.hex;;;1.0;Press Play on Tape;Inspired by Crait’s Arduboy Assistant, this version has been expanded to show 25 bytes at a time (to give context) with the current cell highlighted in the middle.;10
-16;Welcome;Application\welcome.png;Application\welcome.hex;;;1.0;Bateske;Instructions on how to drive your new FX. This is the default application the FX comes pre-installed with.;10
+15;Multi;category-screens/Multi.png;;;;;;
+15;3in1A;Multi/3in1A.png;Multi/3in1A.hex;;;1.0;Unknown;Three games in one - Space Invaders, Pinball and Pacman.
+15;3in1B;Multi/3in1B.png;Multi/3in1B.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny Bomber, Tiny Arkanoid, Tiny Gilbert.
+15;3in1C;Multi/3in1C.png;Multi/3in1C.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny Bert, Tiny Bike, Tiny Trick.
+15;3in1D;Multi/3in1D.png;Multi/3in1D.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny DDug, Tiny Plaque, Tiny Tris.
+15;3in1E;Multi/3in1E.png;Multi/3in1E.hex;;;1.0;Daniel C (Electro L.I.B);Three games in one - Tiny Missile, Tiny Morpion, Tiny Pipe
+16;Application;category-screens\Application.png;;;;;;;
+16;Egg Master Pro 2020;Application\eggmaster.png;Application\eggmaster.hex;;;1.0;Prototype;Here is the Egg Master Pro 2020. To be taken with a grain of salt. Hope you like it!;13
+16;Arduboy Gamepad;Application\ArduboyGamepad.png;Application\ArduboyGamepad.hex;;;1.0;fuopy;Arduboy Gamepad allows you to map your Arduboy’s buttons to keyboard keys.;12
+16;Virtual Gamepad;Application\VirtualGamepad.png;Application\VirtualGamepad.hex;;;1.0;eried;Virtual Gamepad allows you to map your Arduboy’s buttons to keyboard keys.;7
+16;Graph;Application\Graph.png;Application\Graph.hex;;;1.0;V360;A small graphing calculator for Arduboy! Very simple, though. More of a novelty than an actual calculator.;12
+16;Graph 2;Application\graph2.png;Application\graph2.hex;;;1.0;V360;A fully-functional graphing calculator! It’s ten times better than Graph 1, because you can enter your own expression from scratch!;7
+16;ArduSaver;Application\ArduSaver.png;Application\ArduSaver.hex;;;1.0;Prototype;Do you feel your OLED is suffering from critical levels of burn-in? Is nostalgia spoiling your working day? ArduSaver to the rescue!;11
+16;Screen Saver;Demos\screensaver.png;Demos\screensaver.hex;;;1.0;blockbird;A screen saver of fascinating shapes.;7
+16;Golfer's Companion;Application\GolfCompanion.png;Application\GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;11
+16;Arduboy Life;Misc\ArduboyLife.png;Misc\ArduboyLife.hex;;;1.0;MLXXXp;Arduboy gets a Life (Conway’s Game of Life);10
+16;Game of Life;Demos\gameoflife.png;Demos\gameoflife.hex;;;1.0;kmasato;Game of Life (Celluar Automaton) for Arduboy.;
+16;Boids;Demos\boids.png;Demos\boids.hex;;;1.0;elpassion;;
+16;Silence;Misc\silence-a-text-adventure.png;Misc\silence-a-text-adventure.hex;;;1.2;Rainnw (Spaceneedle);A fun little Sci-Fi text adventure using the GTI game engine;
+16;Fidget Spinner;Demos\fidget.png;Demos\fidget.hex;;;1.0;Trigonated;Stop fidgeting! A fidget spinner for the Arduboy!;8
+16;Book Reader - The Pig And The Box;Application\book.png;Application\book.hex;;;1.0;drummyfish;A portable book reader that creates executable books. It compresses the text but still because of the limited flash size only small books will fit.;7
+16;The Guy Who Never Complains;Misc\tgwnc.png;Misc\tgwnc.hex;;;1.0;JuiceLizard;This is an ebook reader for the Arduboy. About 15 minutes of reading with 32 small and funny chapters.;6
+16;Arduboy Light Meter;Application\ArduboyLightMeter.png;Application\ArduboyLightMeter.hex;;;1.0;MLXXXp;I’m not sure if this falls under useful or useless. I’ll let others be the judge. It’s definitely useless in the emulator. You’ll have to load it into a real Arduboy.;7
+16;Ardu-EZ Button;Application\arduEZ.png;Application\arduEZ.hex;;;1.0;shiyouganai;The Ardu-EZ button is the perfect way to relish your daily successes! Just one press and you’ll be greeted with a satisfying reminder of the ease with which you dispatch even the most pesky problems. But a veteran problem-solver like you won’t need only one press, so the Ardu-EZ button is built to withstand rapid dispensing of self-validation. And no matter how many quandaries you navigate, the Ardu-EZ button will keep a satisfying tally of each victory.;6
+16;Okta Ardu Token;Application\OktaArduToken.png;Application\OktaArduToken.hex;;;1.0;afitnerd;An Okta one-time password token.;6
+16;Ardu Remote;Application\ArduRemote.png;Application\ArduRemote.hex;;;1.0;eried;Use your Arduboy as a remote keyboard / mouse.;5
+16;Sketch;Application\sketch.png;Application\sketch.hex;;;1.0;ccaroon;An etch-a-sketch for the Arduboy.;5
+16;ArduBrain;Application\ardubrain.png;Application\ardubrain.hex;;;1.0;renato-grottesi;ArduBrain is an application that helps you keeping your brain sharp training your reflexes, memory, focus and much more!;4
+16;Credit Card;Application\CreditCard.png;Application\CreditCard.hex;;;1.0;madya121;Save your Credit Card information inside your Credit Card sized gaming system.;3
+16;Calendar;Application\Calendar.png;Application\Calendar.hex;;;1.0;hartmann1301;A calendar for the Arduboy. Make notes on important days.;2
+17;Tools;category-screens\Tools.png;;;;;;;
+17;Ardutosh;Application\Ardutosh.png;Application\Ardutosh.hex;;;1.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;31
+17;Abshell;Application\Abshell.png;Application\Abshell.hex;;;1.0;boochow;Abshell is a command shell for Arduboy. You can send commands from PC to Arduboy via USB-serial port. No programming skills needed to draw graphics on Arduboy screen! Any VT100 compatible serial port terminal softwares (PuTTY, etc.) can be used.;16
+17;Coder's Toolbox;Application\Toolbox.png;Application\Toolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;16
+17;ABAsm DP1;Application\ABAsmDP1.png;Application\ABAsmDP1.hex;;;1.0;Fuopy;ABasm is an Arduboy game that lets you program your own Arduboy games, on your Arduboy! It uses an assembly language-style of programming with its own bytecode format.;12
+17;Arduboy Assistant;Application\ArduboyAssistant.png;Application\ArduboyAssistant.hex;;;1.0;Crait;Arduboy Assistant is a program that allows you to manage an Arduboy’s EEPROM as well as test several hardware and software components.;10
+17;Arduboy Sprite Editor;Application\ASE.png;Application\ASE.hex;;;1.0;PMWasson;ASE - a sprite editor for Arduboy games that runs on the Arduboy.;9
+17;Pocket PDA;Application\PocketPDA.png;Application\PocketPDA.hex;;;1.0;WangRenxin;Pocket PDA - an OS turns your Arduboy into a PDA.;9
+17;BrainF#ck;Application\brainfxck.png;Application\brainfxck.hex;;;1.0;Red-Hara;An interactive Brainf#ck interpreter;8
+17;Set System EEPROM;Application\SetSystemEEPROM.png;Application\SetSystemEEPROM.hex;;;1.0;MLXXXp;A utiloity that allows you to set the 'Unit Name' of your Arduboy.  This is displayed at the end of the logo sequence and can be used in programs to uniquely identify the unit.;10
+17;EEPROM Editor;Application\EEPROMEditor.png;Application\EEPROMEditor.hex;;;1.0;Press Play on Tape;Inspired by Crait’s Arduboy Assistant, this version has been expanded to show 25 bytes at a time (to give context) with the current cell highlighted in the middle.;10
+17;Welcome;Application\welcome.png;Application\welcome.hex;;;1.0;Bateske;Instructions on how to drive your new FX. This is the default application the FX comes pre-installed with.;10
