@@ -15,10 +15,14 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;ArduBoyng;Arcade\ArduBoyng.png;Arcade\ArduBoyng.hex;;;1.0;Troubadixx;Pong. What more do you need to say?;5
 1;To;Action\To.png;Action\To.hex;;;1.0;waday;You are the developer of the door with the teleport function. But just before completion, someone is trying to destroy the door. There seems to be no choice but to distort the space with the power of the door and to prevent destruction.;4
 1;Bip Bipbip;Arcade\BipBipBip.png;Arcade\BipBipBip.hex;;;1.0;JuiceLizard;A 'Pong' demake named 'Bip Bipbip' for two players. How to win? It is simple. If the ball touchs your opponent when he doesn’t press his button or if his rectangle reaches the middle of the screen before yours then he loses.;5
+1;Pong;Arcade\Pong.png;Arcade\Pong.hex;;;1.0;Unknown;One or two player version of the classic Pong.;5
 1;ArduBreakout;Arcade\ArduBreakout.png;Arcade\ArduBreakout.hex;;;1.0;SebGoscik;An Arduboy version of the classic game Breakout!;5
 1;Techno Monkey;Arcade\Technomonkey.png;Arcade\Technomonkey.hex;;;1.0;RetrobitCoder;A meteor crashes in a zoo during the night. An alien virus spreads to the residents in the zoo and causes them to mutate into robot hybrids called Technoids. Do to the outbreak the zoo has been under quarantine. It is a fight for survival inside. Can you beat the opposing Technoids and survive?;5
 1;Quadrastic;Action\Quadrastic.png;Action\Quadrastic.hex;;;1.01;dragula96;Quadrastic a simple addictive game based off a favorite psp homebrew game called Squarez.;0
+1;Snake;Arcade\SNAKE.png;Arcade\SNAKE.hex;;;1.0;Unknown;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
+1;Snake;Arcade\snake2.png;Arcade\snake2.hex;;;1.0;Stu;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
 1;Snake;Arcade\snake3.png;Arcade\snake3.hex;;;1.0;WojciechKo;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
+1;Miss Snake;Arcade\MissSnake.png;Arcade\MissSnake.hex;;;1.0;mad4j;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
 1;Lode Runner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
 1;The Social Distance Gamer;Action/thesocialdistancegame.png;Action/thesocialdistancegame.hex;;;1.1.0;msanatan;Get more points by keeping your distance from pedestrians and make your community proud. Ultimately, you should really be at home so at some point you’ll lose lol.;
 1;Unicorn Dash;Action/unicorn_dash.png;Action/unicorn_dash.hex;;;1.0;YossaVonK;An endless runner with .. well .. a unicorn!;
@@ -57,6 +61,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 3;DanceRow;Arcade\Dancerow.png;Arcade\Dancerow.hex;;;1.0;madya121;An Audition Dance Game clone for Arduboy;4
 3;KeyKat;Arcade\keykat.png;Arcade\keykat.hex;;;1.0;pngwen;You are an I.T. worker named KeyKat. You must run around and turn computers off and back on again when they fail.;3
 3;Deep Dish Nine;Misc\DeepDishNine.png;Misc\DeepDishNine.hex;;;1.0;fentonc;You have to pilot a spacecraft around the TRAPPIST-1 system (a recently discovered star with 7 earth-sized planets orbiting it) while delivering pizzas. The goal is to try to make it onto the high-score board by minimizing delivery time and fuel usage.;3
+3;Paqman;Arcade\paqman.png;Arcade\paqman.hex;;;1.0;Yoda;Gamebuino port of the classic Pacman.;3
+3;Pactastic;Arcade/pactastic.png;Arcade/pactastic.hex;;;1.0;Dragula96;A cross between two classic games - PacMan and Snake.
 3;2 Players Pack;Arcade\2PlayersPack.png;Arcade\2PlayersPack.hex;;;1.0;Cedric Martin;Multiple two player games including Pong, Trave, ReflX, Mill and Memo;
 3;Arduman;Arcade\Arduman.png;Arcade\Arduman.hex;;;1.0;Seth;Re-live the nostalgic glory of games like Pac-Man and Lock ‘n’ Chase (with a few less pixels…) right on your Arduboy!;
 3;Crate Confusion;Arcade\Crateconfusion.png;Arcade\Crateconfusion.hex;;;1.0;Phoboslab;Manoeuvre the space ship to collect the crates.;
@@ -97,6 +103,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 5;Tiny Tower;Puzzle\tinytower.png;Puzzle\tinytower.hex;;;1.0;akkera102;Players must climb up a procedurally generated tower.;
 5;Umeroose;Platformer\Umeroose.png;Platformer\Umeroose.hex;;;1.0;Unknown;A game like Infinite Petit Petit. Addictive.;
 5;Tiny Bert;Platformer/Tiny_Bert.png;Platformer/Tiny_Bert.hex;;;1.0;Daniel C (Electro L.I.B);Move Bert between the squares by jumping about avoiding the bad guys.;
+5;OhMummy;Platformer/OhMummy.png;Platformer/OhMummy.hex;;;1.0;MattVic;Heavily influenced by an Amsoft classic, attack advancing mummies and loot the pyramids.
 6;Strategy;category-screens\Strategy.png;;;;;;;
 6;MicroCity;Arcade\microcity.png;Arcade\microcity.hex;;;1.3;jhhoward;MicroCity is a city simulation game inspired by SimCity.;37
 6;MicroTD;Puzzle\microtd.png;Puzzle\microtd.hex;;;1.1;drummyfish;Defend your territory from the enemy attackers.;19
@@ -139,6 +146,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Sudoku;Puzzle\sudoku.png;Puzzle\sudoku.hex;;;1.0;neilsunw;Play Sudoku on your Arduboy. Includes 45 puzzles (easy, medium, hard) and allows custom puzzles to be entered manually or via serial input.;5
 8;Box Stacker;Puzzle\Boxstacker.png;Puzzle\Boxstacker.hex;;;1.0;dragula96;Stacker clone like the game at the arcade that gives you a chance to win a prize, however in this one the only thing you win is satisfaction!.;4
 8;Arduboy Says;Puzzle\Arduboysays.png;Puzzle\Arduboysays.hex;;;1.0;Slade;Simon for the Arduboy. Remember and repeat the sequences as they show on screen.;4
+8;Nomis;Puzzle\Nomis.png;Puzzle\Nomis.hex;;;1.0;ccaroon;A simple memory game similar to Simon.;4
 8;Diamonds;Arcade\diamonds.png;Arcade\diamonds.hex;;;1.0;redbug;Diamonds is a mix between a breakout game and a puzzle game. Original game was released on HP48 more than 20 years ago.;5
 8;Kooky;Puzzle\KOOKY.png;Puzzle\KOOKY.hex;;;1.0;shdwwzrd;Santa has delivered the presents and filled the stockings. Help Santa eat the cookies before the kids wake up and discover him in this match 2 puzzle game. Build bigger sets to get extra time and lots of points.;9
 8;NumberMind;Puzzle\NumberMind.png;Puzzle\NumberMind.hex;;;1.0;Yoshi;NumberMind - A Master Mind type game with numbers;5
@@ -154,6 +162,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Rick and Morty Game;Misc\RickAndMortyGame.png;Misc\RickAndMortyGame.hex;;;1.0;Celinebins;Here is THE MOST EPIC (unofficial) ARDUBOY RICK AND MORTY game.;
 8;Tiny DDUG;Puzzle\TinyDDUG.png;Puzzle\TinyDDUG.hex;;;1.0;Daniel C;Control Dig Dug to defeat all enemies per stage, by either inflating them to bursting or crushing them underneath rocks.;
 8;Tiny Morpion;Puzzle\Tiny_Morpion.png;Puzzle\Tiny_Morpion.hex;;;1.0;Daniel C (Electro L.I.B);The best Tic Tac Toe version available for the Arduboy!;
+8;PiCross;Puzzle/Picross.png;Puzzle/Picross.hex;;;1.0;Press Play On Tape;Classic PiCross game with over 150 levels!;
 9;Tabletop;category-screens\Tabletop.png;;;;;;;
 9;Arduchess;Misc/Arduchess.png;Misc/arduchess.hex;;;1.0;Brow1067;Play chess on the Arduboy!
 9;Blackjack;Misc\Blackjack.png;Misc\Blackjack.hex;;;1.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
@@ -197,6 +206,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;The Quest For Truth;RPG\tqft.png;RPG\tqft.hex;;;1.0;Timmy O' Toole;A platformer game with elements of RPG and puzzle-solving challenges.;
 11;Monpals;RPG\Monpals.png;RPG\Monpals.hex;;;1.0;Revlis;Monpals is a rpg that is much like Pokemon and Monster Rancher. There are 15 total monsters in the game that have one of three types: Nature, Mystic, Synth.;
 12;Shooter;category-screens\Shooter.png;;;;;;;
+12;Petit of the Dead;Shooter\Petit of the dead.png;Shooter\Petit of the dead.hex;;;1.0;cobinee;Shoot the zombies before they catch you.;22
 12;Galaxian;Shooter\galaxian.png;Shooter\galaxian.hex;;;1.0;tak02;The classic NAMCO game!;22
 12;Starduino;Shooter\Starduino.png;Shooter\Starduino.hex;;;1.0;Stephane Hockenhull;Starduino - Star Fox inspired 3D rail shooter for Arduboy.;22
 12;Starduino Turbo;Shooter\starduino-turbo.png;Shooter\starduino-turbo.hex;;;1.0;Stephane Hockenhull;Starduino - Star Fox inspired 3D rail shooter for Arduboy.;22
@@ -235,6 +245,9 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Asteroids;Shooter\asteroids.png;Shooter\asteroids.hex;;;1.0;CDR_Xavier;A remake of the classic, multi-directional shooter.;1
 12;Tiny Missile;Shooter\Tiny-Missile.png;Shooter\Tiny-Missile.hex;;;1.0;Daniel C (Electro L.I.B);Shoot the incoming missiles before they kill you.;1
 12;Space Invaders;Shooter\SpaceInvaders.png;Shooter\SpaceInvaders.hex;;;1.0;Rednuht;A remake of the classic Space Invaders.;1
+12;SFZ;Shooter\SFZ.png;Shooter\SFZ.hex;;;1.0;cobinee;Avoid the enemies as they fly, bounce or roll towards you. Beautifully made!;1
+12;Pyoro;Shooter\Pyoro_1.1.png;Shooter\Pyoro_1.1.hex;;;1.1;Thesola10;In Pyoro (known as Bird and Beans in the US) you must destroy the incoming enemies before they destroy your platform.;1
+12;Orbs;Shooter/orbs.png;Shooter/orbs.hex;;;1.0;jmosk;Orbs is losely based on the concept of the PC game Osmos. The user owns an orb that is to capture the other orbs in its universe. The user’s orb is distinguished by sparkles blinking inside of the orb. To win, all other Orbs are to be captured. 
 13;Sports;category-screens\Sports.png;;;;;;;
 13;18-Hole Mini Golf;Sports\ardugolf.png;Sports\ardugolf.hex;;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
 13;Skate Ard Die;Sports\SkateArdDie.png;Sports\SkateArdDie.hex;;;1.0;pixelplatforms;Skateboarding on the Arduboy.;11
