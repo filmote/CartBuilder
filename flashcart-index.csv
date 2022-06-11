@@ -25,10 +25,11 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Miss Snake;Arcade\MissSnake.png;Arcade\MissSnake.hex;;;1.0;mad4j;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
 1;Lode Runner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
 1;The Social Distance Gamer;Action/thesocialdistancegame.png;Action/thesocialdistancegame.hex;;;1.1.0;msanatan;Get more points by keeping your distance from pedestrians and make your community proud. Ultimately, you should really be at home so at some point you’ll lose lol.;
-1;Unicorn Dash;Action/unicorn_dash.png;Action/unicorn_dash.hex;;;1.0;YossaVonK;An endless runner with .. well .. a unicorn!;
+1;Unicorn Dash;Action/unicorn_dash.png;Action/unicorn_dash.hex;;;1.0;YossaVonK;An endless runner with .. well .. a unicorn!;1
 1;Train Dodge;Action/Train Dodge.png;Action/Train Dodge.hex;;;1.1;Crait;Who’s brave enough to play chicken with a train? Stand on the track as multiple trains come at you full-speed.. The closer they get to you before jumping off the tracks, the more points you’ll rack up.;
-1;Crate Confusion;Action/Crate Confusion.png;Action/Crate Confusion.hex;;;1.0;Phoboslab;Manoeuvre the space ship to collect the crates.;
-1;Digger;Arcade/Digger.png;Arcade/Digger.hex;;;1.0;eried;Goal is to collect as many diamonds as needed to unlock the exit. You can move rocks, if there is nothing behind it. If a rock falls through a changer, then its converted to a diamond.
+1;Crate Confusion;Action/Crate Confusion.png;Action/Crate Confusion.hex;;;1.0;Phoboslab;Manoeuvre the space ship to collect the crates.;1
+1;Digger;Arcade/Digger.png;Arcade/Digger.hex;;;1.0;eried;Goal is to collect as many diamonds as needed to unlock the exit. You can move rocks, if there is nothing behind it. If a rock falls through a changer, then its converted to a diamond.;1
+1;Crabator;Action/Crabator.png;Arcade/Crabator.hex;;;1.0;R0d0t;Crabator is an intense action game where you kill crabs to make money to buy weapons to kill crabs to make money, etc. but watch out, the more crabs you kill the more they are.;1
 2;Adventure;category-screens\Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action\Cotd.png;Action\Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
 2;Virus LQP-79;arg\virus.png;arg\virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
@@ -262,7 +263,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 13;Boris Goes Skiing;Arcade\Borisgoesskiing.png;Arcade\Borisgoesskiing.hex;;;1.0;sones;Boris Goes Skiing is a clone of the ZX Spectrum game Horace goes skiing.;3
 13;ArduBall;Arcade\ArduBall.png;Arcade\ArduBall.hex;;;1.0;2BarrelShotgun;Basketball for the Arduboy.;2
 13;Tiny Trick Hockey;Sports\tinytrick.png;Sports\tinytrick.hex;;;1.0;ElectroLIB;Icehockey for the Arduboy.;
-14;Ardu Turf Masters;Sports\arduturfmasters.png;Sports\arduturfmasters.hex;;;1.0;FerJerez;Golf on the Arduboy!;
+13;Ardu Turf Masters;Sports\arduturfmasters.png;Sports\arduturfmasters.hex;;;1.0;FerJerez;Golf on the Arduboy!;
+13;Electronic Quaterback;Sports\Electronic Quaterback.png;Sports\Electronic Quaterback.hex;;;1.0;DWidel;The short instructions are you select pass or run. On a run play just try to run forward using your 2 blockers to help you. On a pass you are moving your lower dot downfield try to line him up with your QB and press A to pass. When the play’s over you press B to see the down & distance, and press it a second time to see the score and time. We’re short a button so if you hold B and press A it switches the play call from run to pass. This is indicated in the upper right of the screen.;
 14;Music;category-screens\Music.png;;;;;;;
 14;abSynth-FM;Misc\abSynthFM.png;Misc\abSynthFM.hex;;;1.0;boochow;FM Synthesizer with 16-step sequencer for Arduboy.;18
 14;Musicgen Pocket;Application\musicgenpocket.png;Application\musicgenpocket.hex;;;1.0;inajob;MusicGenN Pocket is 8bit mugic generator for Arduboy. All you have to do is turn on your Arduboy and you can listen 8bit music everywhere!;11
