@@ -1,5 +1,5 @@
 List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Info;Likes
-0;Bootloader;arduboy-fx-loader.png;;;;;;;
+0;Bootloader;arduboy-fx-loader.png;;;;;;; 
 1;Action;category-screens\Action.png;;;;;;;
 1;Hopper;Action\hopper.png;Action\hopper.hex;;;1.0;Obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;24
 1;Lasers;Arcade\Lasers.png;Arcade\Lasers.hex;;;1.0;Obono;Lasers - A simple Ikaruga-like game.;19
@@ -21,6 +21,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Snake;Arcade\snake3.png;Arcade\snake3.hex;;;1.0;WojciechKo;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
 1;Lode Runner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
 1;The Social Distance Gamer;Action/thesocialdistancegame.png;Action/thesocialdistancegame.hex;;;1.1.0;msanatan;Get more points by keeping your distance from pedestrians and make your community proud. Ultimately, you should really be at home so at some point you’ll lose lol.;
+1;Unicorn Dash;Action/unicorn_dash.png;Action/unicorn_dash.hex;;;1.0;YossaVonK;An endless runner with .. well .. a unicorn!;
+1;Train Dodge;Action/Train Dodge.png;Action/Train Dodge.hex;;;1.1;Crait;Who’s brave enough to play chicken with a train? Stand on the track as multiple trains come at you full-speed.. The closer they get to you before jumping off the tracks, the more points you’ll rack up.;
 2;Adventure;category-screens\Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action\Cotd.png;Action\Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
 2;Virus LQP-79;arg\virus.png;arg\virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
@@ -93,6 +95,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 5;Big Black Box;Platformer\BigBlackBox.png;Platformer\BigBlackBox.hex;;;1.0;Studio Craft Apps;A port of the Gaebuino Big Black Box.;
 5;Not Just A Hat Rack;Platformer\njahr.png;Platformer\njahr.hex;;;1.0;Hundstrasse;A fast paced platformer.;
 5;Tiny Tower;Puzzle\tinytower.png;Puzzle\tinytower.hex;;;1.0;akkera102;Players must climb up a procedurally generated tower.;
+5;Umeroose;Platformer\Umeroose.png;Platformer\Umeroose.hex;;;1.0;Unknown;A game like Infinite Petit Petit. Addictive.;
+5;Tiny Bert;Platformer/Tiny_Bert.png;Platformer/Tiny_Bert.hex;;;1.0;Daniel C (Electro L.I.B);Move Bert between the squares by jumping about avoiding the bad guys.;
 6;Strategy;category-screens\Strategy.png;;;;;;;
 6;MicroCity;Arcade\microcity.png;Arcade\microcity.hex;;;1.3;jhhoward;MicroCity is a city simulation game inspired by SimCity.;37
 6;MicroTD;Puzzle\microtd.png;Puzzle\microtd.hex;;;1.1;drummyfish;Defend your territory from the enemy attackers.;19
@@ -120,6 +124,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Term Twirl;Puzzle\termtwirl.png;Puzzle\termtwirl.hex;;;1.0;Corruptio;This is clone of classic Text Twist, with 1900 random levels. Add to your score by unjumbling the letters to make words. If you use all six letters to make a word within the allotted time, then you can continue to the next level. There is a large bonus for finding all the words before time runs out.;
 7;Long Cat;Puzzle\LongCat.png;Puzzle\LongCat.hex;;;1.0;jaguile6;A puzzle game inspired in the longcat minigame from the Fancade Android game.;
 7;Tiny Tris;Puzzle\TinyTris.png;Puzzle\TinyTris.hex;;;1.0;Daniel C;A falling-block game sort of like Tetris.;
+7;Tris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Daniel C;Another falling-block game sort of like Tetris.;
 7;ArduGods;Puzzle\ArduGods.png;Puzzle\ArduGods.hex;;;1.0;resetreboot;Your goal in this game is to gather faith and a cult following to become stronger and be able to battle the rest of the Gods, to reclaim your place among them as the most powerful ever, and it all starts by raising prayers with your Arduboy buttons.;
 8;Skill;category-screens\Skill.png;;;;;;;
 8;Curse of Astarok;Puzzle\curse.png;Puzzle\curse.hex;;;1.0;Press Play On Tape;The evil Astarok has cast a nasty curse on the folk of Griford and turned them into pumpkins! The town’s people have asked you to battle the AstaroK and his evil friends in their hideout - an old castle on the edge of town. Can you release the town from the curse of AztaroK?;17
@@ -148,6 +153,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;New Blocks on the Kid;Puzzle\NBOTK.png;Puzzle\NBOTK.hex;;;1.0;bateske;There is a new falling block game in town.;
 8;Rick and Morty Game;Misc\RickAndMortyGame.png;Misc\RickAndMortyGame.hex;;;1.0;Celinebins;Here is THE MOST EPIC (unofficial) ARDUBOY RICK AND MORTY game.;
 8;Tiny DDUG;Puzzle\TinyDDUG.png;Puzzle\TinyDDUG.hex;;;1.0;Daniel C;Control Dig Dug to defeat all enemies per stage, by either inflating them to bursting or crushing them underneath rocks.;
+8;Tiny Morpion;Puzzle\Tiny_Morpion.png;Puzzle\Tiny_Morpion.hex;;;1.0;Daniel C (Electro L.I.B);The best Tic Tac Toe version available for the Arduboy!;
 9;Tabletop;category-screens\Tabletop.png;;;;;;;
 9;Arduchess;Misc/Arduchess.png;Misc/arduchess.hex;;;1.0;Brow1067;Play chess on the Arduboy!
 9;Blackjack;Misc\Blackjack.png;Misc\Blackjack.hex;;;1.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
@@ -163,6 +169,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 9;Dominoes;Puzzle\Dominoes.png;Puzzle\Dominoes.hex;;;1.0;Press Play On Tape;All Fives is a popular variant of Dominoes where players the goal of the game is not just to go out, but to make the open ends of the layout add up to 5 (or a multiple of five). One or two players.;
 9;Yatzy;Puzzle\Yatzy.png;Puzzle\Yatzy.hex;;;1.3;shdwwzrd;A dice game where you need to role combinations before running out of attempts.;
 9;Cripple Mr Onion;Puzzle\Cripplemronion.png;Puzzle\Cripplemronion.hex;;;1.0;fentonc;A hilariously complicated combination of poker and blackjack, using an 8-suited deck.You can customize your character, accumulate money through betting, etc. As you gain money, your ‘rank’ increases, with the ultimate goal of being rich enough to become the Patrician of Ankh-Morpork!;3
+9;Solitaire;Misc\Solitaire.png;Misc\Solitaire.hex;;;1.0;aoneil;This is a Klondike solitaire game for the Arduboy. It includes two difficulties (turning one or three cards at a time) and the ability to undo moves.;3
 10;Racing;category-screens\Racing.png;;;;;;;
 10;'Ard Drivin';Racing\Arddriving.png;Racing\Arddriving.hex;;;1.0;Rem;A fast paced racing sim.;23
 10;ArduRacer;Racing\ArduRacer.png;Racing\ArduRacer.hex;;;1.0;tonym128;A top down racing time trail racing game for the ArduBoy similar to Trackmania;9
@@ -171,6 +178,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 10;Crazy Kart;Racing\CrazyKart.png;Racing\CrazyKart.hex;;;1.0;Alberto;Mario Kart for the Arduboy.;11
 10;Randocity;Racing\Randocity.png;Racing\Randocity.hex;;;1.0;Paul Wasson;Arduboy large open-world procedurally generated city motorcycle game with 3 play modes.;15
 10;Tiny Bike;Racing\tinybike.png;Racing\tinybike.hex;;;1.0;ElectroLIB;Compete in races on your BMX.;
+10;UFO-Race;Racing\Ufo-Race.png;Racing\Ufo-Race.hex;;;1.0;Aurélien Rodot;One single race. One single goal. Finish the lap as fast as possible, you're running against the clock!;
 11;RPG;category-screens\RPG.png;;;;;;;
 11;ArduRogue;RPG\ardurogue.png;RPG\ardurogue.hex;;;1.0;brow1067;ArduRogue: a traditional roguelike for the Arduboy.;0
 11;Ardynia;RPG\ardynia.png;RPG\ardynia.hex;;;1.0;city41;Ardynia - a Zelda style adventure.;49
@@ -225,6 +233,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Siege;Action\Siege.png;Action\Siege.hex;;;1.0;shdwwzrd;The king needs your help to keep the Dark Lord’s army from destroying the kingdom. The Wizards will arrive after the 5th day and the rest of our army will be back in 20 days. The king is counting on you to hold the wall. Hold strong, noble archer, HOLD STRONG!;2
 12;Cooties Attack;Shooter\cooties.png;Shooter\cooties.hex;;;1.0;graziel;An entry into the itch.io Game Jam, Cooties Attack is a shoot 'em up where you have to kill everyone's childhood fear (cooties!).;1
 12;Asteroids;Shooter\asteroids.png;Shooter\asteroids.hex;;;1.0;CDR_Xavier;A remake of the classic, multi-directional shooter.;1
+12;Tiny Missile;Shooter\Tiny-Missile.png;Shooter\Tiny-Missile.hex;;;1.0;Daniel C (Electro L.I.B);Shoot the incoming missiles before they kill you.;1
+12;Space Invaders;Shooter\SpaceInvaders.png;Shooter\SpaceInvaders.hex;;;1.0;Rednuht;A remake of the classic Space Invaders.;1
 13;Sports;category-screens\Sports.png;;;;;;;
 13;18-Hole Mini Golf;Sports\ardugolf.png;Sports\ardugolf.hex;;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
 13;Skate Ard Die;Sports\SkateArdDie.png;Sports\SkateArdDie.hex;;;1.0;pixelplatforms;Skateboarding on the Arduboy.;11
