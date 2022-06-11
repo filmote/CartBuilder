@@ -20,13 +20,15 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Techno Monkey;Arcade\Technomonkey.png;Arcade\Technomonkey.hex;;;1.0;RetrobitCoder;A meteor crashes in a zoo during the night. An alien virus spreads to the residents in the zoo and causes them to mutate into robot hybrids called Technoids. Do to the outbreak the zoo has been under quarantine. It is a fight for survival inside. Can you beat the opposing Technoids and survive?;5
 1;Quadrastic;Action\Quadrastic.png;Action\Quadrastic.hex;;;1.01;dragula96;Quadrastic a simple addictive game based off a favorite psp homebrew game called Squarez.;0
 1;Snake;Arcade\SNAKE.png;Arcade\SNAKE.hex;;;1.0;Unknown;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
-1;Snake;Arcade\snake2.png;Arcade\snake2.hex;;;1.0;Stu;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
+1;Snake;Arcade\Snake2.png;Arcade\Snake2.hex;;;1.0;Stu;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
 1;Snake;Arcade\snake3.png;Arcade\snake3.hex;;;1.0;WojciechKo;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
 1;Miss Snake;Arcade\MissSnake.png;Arcade\MissSnake.hex;;;1.0;mad4j;Snake - just like on the Nokia 5110 but on an Arduboy instead.;2
 1;Lode Runner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
 1;The Social Distance Gamer;Action/thesocialdistancegame.png;Action/thesocialdistancegame.hex;;;1.1.0;msanatan;Get more points by keeping your distance from pedestrians and make your community proud. Ultimately, you should really be at home so at some point you’ll lose lol.;
 1;Unicorn Dash;Action/unicorn_dash.png;Action/unicorn_dash.hex;;;1.0;YossaVonK;An endless runner with .. well .. a unicorn!;
 1;Train Dodge;Action/Train Dodge.png;Action/Train Dodge.hex;;;1.1;Crait;Who’s brave enough to play chicken with a train? Stand on the track as multiple trains come at you full-speed.. The closer they get to you before jumping off the tracks, the more points you’ll rack up.;
+1;Crate Confusion;Action/Crate Confusion.png;Action/Crate Confusion.hex;;;1.0;Phoboslab;Manoeuvre the space ship to collect the crates.;
+1;Digger;Arcade/Digger.png;Arcade/Digger.hex;;;1.0;eried;Goal is to collect as many diamonds as needed to unlock the exit. You can move rocks, if there is nothing behind it. If a rock falls through a changer, then its converted to a diamond.
 2;Adventure;category-screens\Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action\Cotd.png;Action\Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
 2;Virus LQP-79;arg\virus.png;arg\virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
@@ -126,6 +128,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Crates 3D;Puzzle\Crates3d.png;Puzzle\Crates3d.hex;;;1.0;Brian;A port of the 3D puzzle game originally written for the TI-83 calculator.;6
 7;Ring Puzzle;Puzzle\ringpuzzle.png;Puzzle\ringpuzzle.hex;;;1.0;SSNikolaevich;A simple puzzle game with toroidal topology;2
 7;Lite Out;Puzzle\LiteOut.png;Puzzle\LiteOut.hex;;;1.0;kmk1018;Lite/Out is a game where you have to turn off all of the lights, but every time you change a light, the surrounding lights change. The game consists of a 5-by-5 grid where some of the blocks are lit up. You’ll complete the level when all of the blocks are not lit.;1
+7;ArduLO;Puzzle\ArduLO.png;Puzzle\ArduLO.hex;;;1.0;Jon Thysell;ArduLO is a Lights Out clone where you have to turn off all of the lights, but every time you change a light, the surrounding lights change. The game consists of a 5-by-5 grid where some of the blocks are lit up. You’ll complete the level when all of the blocks are not lit.;1
 7;2048;Puzzle\2048.png;Puzzle\2048.hex;;;1.0;Yuki;The classic 2048 sliding tile puzzle.;7
 7;1010;Puzzle\1010.png;Puzzle\1010.hex;;;1.0;MWM;1010! is a wildly addicting brain teaser - a simple puzzle game that will challenge you, while also training your brain. Put your puzzle skills to the test with this exciting title - we dare you to try and put it down.;
 7;Term Twirl;Puzzle\termtwirl.png;Puzzle\termtwirl.hex;;;1.0;Corruptio;This is clone of classic Text Twist, with 1900 random levels. Add to your score by unjumbling the letters to make words. If you use all six letters to make a word within the allotted time, then you can continue to the next level. There is a large bonus for finding all the words before time runs out.;
@@ -163,6 +166,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Tiny DDUG;Puzzle\TinyDDUG.png;Puzzle\TinyDDUG.hex;;;1.0;Daniel C;Control Dig Dug to defeat all enemies per stage, by either inflating them to bursting or crushing them underneath rocks.;
 8;Tiny Morpion;Puzzle\Tiny_Morpion.png;Puzzle\Tiny_Morpion.hex;;;1.0;Daniel C (Electro L.I.B);The best Tic Tac Toe version available for the Arduboy!;
 8;PiCross;Puzzle/Picross.png;Puzzle/Picross.hex;;;1.0;Press Play On Tape;Classic PiCross game with over 150 levels!;
+8;ArduCross;Puzzle/Arducross.png;Puzzle/Arducross.hex;;;1.0;OldMouse;Classic PiCross game with over 16 levels ranging in size from 3x3 to 15x15.;
 9;Tabletop;category-screens\Tabletop.png;;;;;;;
 9;Arduchess;Misc/Arduchess.png;Misc/arduchess.hex;;;1.0;Brow1067;Play chess on the Arduboy!
 9;Blackjack;Misc\Blackjack.png;Misc\Blackjack.hex;;;1.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
@@ -205,6 +209,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Tamaguino AB;Misc\tamaguino.png;Misc\tamaguino.hex;;;1.0;Keyboard_Camper;Tamagotchi for the Arduboy.;7
 11;The Quest For Truth;RPG\tqft.png;RPG\tqft.hex;;;1.0;Timmy O' Toole;A platformer game with elements of RPG and puzzle-solving challenges.;
 11;Monpals;RPG\Monpals.png;RPG\Monpals.hex;;;1.0;Revlis;Monpals is a rpg that is much like Pokemon and Monster Rancher. There are 15 total monsters in the game that have one of three types: Nature, Mystic, Synth.;
+11;MayQ;RPG\MayQ.png;RPG\MayQ.hex;;;1.0;cobinee;Explore the dungeon and battle the monsters and bats.;
 12;Shooter;category-screens\Shooter.png;;;;;;;
 12;Petit of the Dead;Shooter\Petit of the dead.png;Shooter\Petit of the dead.hex;;;1.0;cobinee;Shoot the zombies before they catch you.;22
 12;Galaxian;Shooter\galaxian.png;Shooter\galaxian.hex;;;1.0;tak02;The classic NAMCO game!;22
