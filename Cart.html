@@ -13,6 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+  <script src="zip.min.js"></script>
 </head>
 
 <body>
@@ -89,6 +90,8 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
   </div>
 
   <div id="dlgUploadHEX" title="Upload an Existing Game">
+    <button id="arduboyFileButton">Load .arduboy file...</button>
+    <input type="file" id="arduboyFileInput" value="" accept=".arduboy" hidden>
     <p class="validateTips">Please select a HEX and Graphic file:</p>
     <form name="frmUploadHEXForm" id="frmUploadHEXForm" enctype="multipart/form-data">
       <fieldset>
@@ -234,5 +237,6 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
 <script src="Cart_DocReady.js?V=V1.19"></script>
 <script src="Cart_GenerateHTML.js?V=V1.19"></script>
 <script src="Cart_Utils.js?V=V1.19"></script>
+<script src="Cart_ArduboyFile.js?V=V1.19"></script>
 
 
