@@ -158,14 +158,20 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
             </td>
           </tr>
           <tr>
-            <td colspan="2"><label for="addToRepo">Add to the Cart?</label>&nbsp;&nbsp;&nbsp;
-              </td><td><input type="checkbox" name="addToRepo" id="addToRepo" value=""
-                class="text ui-widget-content ui-corner-all" /></td>
+            <td colspan="2"><label for="addToRepo">Share with the community?</label>&nbsp;&nbsp;
+              </td><td><input type="checkbox" name="addToRepo" id="addToRepo" class="text ui-widget-content ui-corner-all" /></td>
           </tr>
           <tr>
             <td colspan="2"><label for="replaceExistingGame">Replace existing game?</label>&nbsp;&nbsp;&nbsp;
-            </td><td><input type="checkbox" name="replaceExistingGame" id="replaceExistingGame" value=""
-                class="text ui-widget-content ui-corner-all" /></td>
+            </td><td><input type="checkbox" name="replaceExistingGame" id="replaceExistingGame" class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><label for="replaceExistingGame">Game compiled for ..</label>&nbsp;&nbsp;&nbsp;
+            </td><td>
+              <select name="platform" id="platform" class="text ui-widget-content ui-corner-all" >
+                <option value="ArduboyFX">Arduboy FX</option>
+                <option value="8BitCadeXL">8BitCade XL</option>
+              </select></td>
           </tr>
         </table>
 
@@ -225,8 +231,8 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
   var fullList;
   var extraCats;
 </script>
-<script src="Cart_DocReady.js?V=V1.12"></script>
-<script src="Cart_GenerateHTML.js?V=V1.12"></script>
-<script src="Cart_Utils.js?V=V1.12"></script>
+<script src="Cart_DocReady.js?V=V1.19"></script>
+<script src="Cart_GenerateHTML.js?V=V1.19"></script>
+<script src="Cart_Utils.js?V=V1.19"></script>
 
 

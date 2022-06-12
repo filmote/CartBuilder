@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.12
+// V1.19
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -265,7 +265,6 @@ $(document).ready(function () {
             dataName = $("#dataName"),
             saveName = $("#saveName"),
             description = $("#description"),
-            description = $("#description"),
             addToRepo = $("#addToRepo"),
             allFields = $([]).add(name).add(fileName).add(graphicName).add(version).add(developer).add(description),
             tips = $(".validateTips");
@@ -281,6 +280,7 @@ $(document).ready(function () {
             var $gameTitle = $('#gameTitle').val();
             var $versionNumber = $('#versionNumber').val();
             var $developerName = $('#developerName').val();
+            var $descriptionVal = $('#description').val();
 
             // Hex file is mandatory and must be between < 85K, have no mime type and an extension of .hex ..
 
@@ -369,7 +369,7 @@ $(document).ready(function () {
 
             }
 
-            if (description.val().match(/[^a-zA-Z0-9 \.!]/g)) {
+            if ($descriptionVal.match(/[^a-zA-Z0-9 \.!-']/g)) {
                 description.addClass("ui-state-error");
                 updateTips(tips, "Please use only alphanumeric letters.");
                 valid = false;
@@ -410,7 +410,7 @@ $(document).ready(function () {
 
                         var newIndex = items.length + 1;
                         var baseFileName = data.substring(9, 99999);
-                        html = '<li id="li' + newIndex + '"><img class="game" onclick="openInfo(' + newIndex + ');" src="temp/' + baseFileName + '.png" /></li>';
+                        html = '<li id="li' + newIndex + '"><img class="game" onclick="openInfo(' + newIndex + ');" src="' + (addToRepo.val() == "on" ? 'upload/' : 'temp/') + baseFileName + '.png" /></li>';
                         $('#dvUnused').append(html);
 
                         // Add game details to global collection..
@@ -436,12 +436,12 @@ $(document).ready(function () {
                         }
 
 
-                        if (addToRepo.checked) {
-                            var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: "" };
+                        if (addToRepo.val() == "on") {
+                            var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal };
                             items.push(item);
                         }
                         else {
-                            var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: "" };
+                            var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal };
                             items.push(item);
                         }
 

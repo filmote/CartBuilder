@@ -34,7 +34,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.12
+// V1.19
 
 
     session_start();
@@ -111,11 +111,28 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
     // Where should we save it?
-    echo "isset" ;
-    exit(0);
+    // echo "ERR: " . $pathToSave . " isset " .isset($_POST['addToRepo']) ." ". $_POST['addToRepo']  ;
+    // exit(0);
+
     $pathToSave = "temp/";
-    if (isset($_POST['addToRepo']) && $_POST['addToRepo'] == 'Yes') {
+    if (isset($_POST['addToRepo']) && $_POST['addToRepo'] == "on") {
         $pathToSave = "upload/";
+
+        $myfile = fopen("upload/".session_id()."_".$_SESSION['fileCount'].".txt", "w") or die("ERR: Unable to open file!");
+        fwrite($myfile, "Title: ");
+        fwrite($myfile, $_POST['gameTitle']);
+        fwrite($myfile, "\nVersion: ");
+        fwrite($myfile, $_POST['versionNumber']);
+        fwrite($myfile, "\nDeveloper: ");
+        fwrite($myfile, $_POST['developerName']);
+        fwrite($myfile, "\nDescription: ");
+        fwrite($myfile, $_POST['description']);
+        fwrite($myfile, "\nReplace Existing: ");
+        fwrite($myfile, $_POST['replaceExistingGame']);
+        fwrite($myfile, "\nPlatform: ");
+        fwrite($myfile, $_POST['platform']);
+        fclose($myfile);
+
     }
 
 
