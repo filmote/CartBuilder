@@ -46,11 +46,9 @@ async function createFiles(entry, path) {
 
 async function loadFiles() {
     const entries = await (new zip.ZipReader(new zip.BlobReader(arduboyFile))).getEntries("utf-8");
-    console.log(entries);
     const entryInfo = entries.find(x => x.filename == "info.json");
     if(entryInfo === undefined) throw "info.json not found";
     const info = JSON.parse(await getEntryData(entryInfo));
-    console.log(info);
     if('title'       in info) gameTitle    .value = info.title;
     if('version'     in info) versionNumber.value = info.version;
     if('author'      in info) developerName.value = info.author;
