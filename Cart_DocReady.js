@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.11
+// V1.12
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -264,7 +264,10 @@ $(document).ready(function () {
             graphicName = $("#graphicName"),
             dataName = $("#dataName"),
             saveName = $("#saveName"),
-            allFields = $([]).add(name).add(fileName).add(graphicName).add(version).add(developer),
+            description = $("#description"),
+            description = $("#description"),
+            addToRepo = $("#addToRepo"),
+            allFields = $([]).add(name).add(fileName).add(graphicName).add(version).add(developer).add(description),
             tips = $(".validateTips");
 
         function uploadFile() {
@@ -366,6 +369,11 @@ $(document).ready(function () {
 
             }
 
+            if (description.val().match(/[^a-zA-Z0-9 \.!]/g)) {
+                description.addClass("ui-state-error");
+                updateTips(tips, "Please use only alphanumeric letters.");
+                valid = false;
+            }
 
             // If the files are valid then upload them ..
 
@@ -427,8 +435,15 @@ $(document).ready(function () {
                             $gameTitle = baseFileName;
                         }
 
-                        var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: "" };
-                        items.push(item);
+
+                        if (addToRepo.checked) {
+                            var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: "" };
+                            items.push(item);
+                        }
+                        else {
+                            var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: "" };
+                            items.push(item);
+                        }
 
                     }
 
