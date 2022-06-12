@@ -34,7 +34,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.11
+// V1.19
 
 
     session_start();
@@ -94,7 +94,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     }
 
 
-
     // Generate a new ID and store it in the session ..
 
     if (isset($_SESSION['fileCount'])) {
@@ -110,21 +109,48 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     $newSaveName = session_id()."_".$_SESSION['fileCount']."_2.bin";
 
 
-    // Move the files to the 'temp' directory ..
 
-    if (!move_uploaded_file($hexFileTmpLoc, "temp/".$newHexName)) { 
+    // Where should we save it?
+    // echo "ERR: " . $pathToSave . " isset " .isset($_POST['addToRepo']) ." ". $_POST['addToRepo']  ;
+    // exit(0);
+
+    $pathToSave = "temp/";
+    if (isset($_POST['addToRepo']) && $_POST['addToRepo'] == "on") {
+        $pathToSave = "upload/";
+
+        $myfile = fopen("upload/".session_id()."_".$_SESSION['fileCount'].".txt", "w") or die("ERR: Unable to open file!");
+        fwrite($myfile, "Title: ");
+        fwrite($myfile, $_POST['gameTitle']);
+        fwrite($myfile, "\nVersion: ");
+        fwrite($myfile, $_POST['versionNumber']);
+        fwrite($myfile, "\nDeveloper: ");
+        fwrite($myfile, $_POST['developerName']);
+        fwrite($myfile, "\nDescription: ");
+        fwrite($myfile, $_POST['description']);
+        fwrite($myfile, "\nReplace Existing: ");
+        fwrite($myfile, $_POST['replaceExistingGame']);
+        fwrite($myfile, "\nPlatform: ");
+        fwrite($myfile, $_POST['platform']);
+        fclose($myfile);
+
+    }
+
+
+    // Move the files to the 'temp' or 'upload' directory ..
+
+    if (!move_uploaded_file($hexFileTmpLoc, $pathToSave.$newHexName)) { 
         echo "ERR: Upload of HEX file failed.";
         exit(0);
     }
 
-    if (!move_uploaded_file($graphicFileTmpLoc, "temp/".$newGraphicName)) {
+    if (!move_uploaded_file($graphicFileTmpLoc, $pathToSave.$newGraphicName)) {
         echo "ERR: Upload of PNG icon failed.";
         exit(0);
     }
 
     if ($dataFileName !== '') {
 
-        if (!move_uploaded_file($dataFileTmpLoc, "temp/".$newDataName)) {
+        if (!move_uploaded_file($dataFileTmpLoc, $pathToSave.$newDataName)) {
             echo "ERR: Upload of data file failed.";
             exit(0);
         }
@@ -133,7 +159,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     if ($saveFileName !== '') {
 
-        if (!move_uploaded_file($saveFileTmpLoc, "temp/".$newSaveName)) {
+        if (!move_uploaded_file($saveFileTmpLoc, $pathToSave.$newSaveName)) {
             echo "ERR: Upload of save file failed.";
             exit(0);
         }

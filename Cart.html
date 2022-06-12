@@ -101,18 +101,22 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
           </tr>
           <tr>
             <td><label for="gameTitle">Title</label></td>
-            <td><input type="text" name="gameTitle" id="gameTitle" value="" class="text ui-widget-content ui-corner-all" />
+            <td><input type="text" name="gameTitle" id="gameTitle" value="" class="text ui-widget-content ui-corner-all" maxlength="25" />
             </td>
           </tr>
-          <tr>
           <tr>
             <td><label for="versionNumber">Version</label></td>
-            <td><input type="text" name="versionNumber" id="versionNumber" value="" class="text ui-widget-content ui-corner-all" />
+            <td><input type="text" name="versionNumber" id="versionNumber" value="" class="text ui-widget-content ui-corner-all" maxlength="10" />
             </td>
           </tr>
           <tr>
-            <td><label for="developerName">Developer</label></td>
-            <td><input type="text" name="developerName" id="developerName" value="" class="text ui-widget-content ui-corner-all" />
+            <td><label for="developerName">Developer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+            <td><input type="text" name="developerName" id="developerName" value="" class="text ui-widget-content ui-corner-all" maxlength="30" />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><label for="description">Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+            <td><textarea type="text" name="description" id="description" value="" class="text ui-widget-content ui-corner-all" cols="30" rows ="5" ></textarea>
             </td>
           </tr>
           <tr>
@@ -146,11 +150,34 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
                 class="text ui-widget-content ui-corner-all" /></td>
           </tr>
         </table>
+        <table>
+  
+          <tr>
+            <td colspan="2">
+              <div><br /><b>Add to Cart:</b></div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><label for="addToRepo">Share with the community?</label>&nbsp;&nbsp;
+              </td><td><input type="checkbox" name="addToRepo" id="addToRepo" class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><label for="replaceExistingGame">Replace existing game?</label>&nbsp;&nbsp;&nbsp;
+            </td><td><input type="checkbox" name="replaceExistingGame" id="replaceExistingGame" class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><label for="replaceExistingGame">Game compiled for ..</label>&nbsp;&nbsp;&nbsp;
+            </td><td>
+              <select name="platform" id="platform" class="text ui-widget-content ui-corner-all" >
+                <option value="ArduboyFX">Arduboy FX</option>
+                <option value="8BitCadeXL">8BitCade XL</option>
+              </select></td>
+          </tr>
+        </table>
 
         <input type="hidden" name="guid" id="guid" value="" />
         <!-- Allow form submission with keyboard without duplicating the dialog button -->
         <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-        <br />
       </fieldset>
     </form>
   </div>
@@ -204,8 +231,8 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
   var fullList;
   var extraCats;
 </script>
-<script src="Cart_DocReady.js?V=V1.11"></script>
-<script src="Cart_GenerateHTML.js?V=V1.11"></script>
-<script src="Cart_Utils.js?V=V1.11"></script>
+<script src="Cart_DocReady.js?V=V1.19"></script>
+<script src="Cart_GenerateHTML.js?V=V1.19"></script>
+<script src="Cart_Utils.js?V=V1.19"></script>
 
 
