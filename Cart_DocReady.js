@@ -382,6 +382,9 @@ $(document).ready(function () {
                 var $guid = $('#guid').val();
                 var formData = new FormData($("#frmUploadHEXForm")[0]);
                 var addToRepoChecked = document.getElementById('addToRepo').checked;
+                
+                var dataNameContent = $('#dataName')[0].files[0]
+                var saveNameContent = $('#saveName')[0].files[0]
 
                 $.ajax({
                     url: "./Cart_UploadHEX.php",
@@ -411,7 +414,7 @@ $(document).ready(function () {
 
                         var newIndex = items.length + 1;
                         var baseFileName = data.substring(9, 99999);
-                        html = '<li id="li' + newIndex + '"><img class="game" onclick="openInfo(' + newIndex + ');" src="' + (addToRepo.val() == "on" ? 'upload/' : 'temp/') + baseFileName + '.png" /></li>';
+                        html = '<li id="li' + newIndex + '"><img class="game" onclick="openInfo(' + newIndex + ');" src="' + (addToRepoChecked ? 'upload/' : 'temp/') + baseFileName + '.png" /></li>';
                         $('#dvUnused').append(html);
 
                         // Add game details to global collection..
@@ -419,13 +422,13 @@ $(document).ready(function () {
                         var dataFile = "";
                         var saveFile = "";
 
-                        if (typeof $('#dataName')[0].files[0] !== 'undefined') {
+                        if (typeof dataNameContent !== 'undefined') {
 
                             dataFile = baseFileName + "_1.bin";
 
                         }
 
-                        if (typeof $('#saveName')[0].files[0] !== 'undefined') {
+                        if (typeof saveNameContent !== 'undefined') {
 
                             saveFile = baseFileName + "_2.bin";
 
@@ -437,11 +440,11 @@ $(document).ready(function () {
                         }
 
                         if (addToRepoChecked) {
-                            var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal };
+                            var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: "upload/" + dataFile, save: "upload/" + saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal };
                             items.push(item);
                         }
                         else {
-                            var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal };
+                            var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: "temp/" + dataFile, save: "temp/" + saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal };
                             items.push(item);
                         }
 
