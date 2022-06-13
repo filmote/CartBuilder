@@ -29,7 +29,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Train Dodge;Action/Train Dodge.png;Action/Train Dodge.hex;;;1.1;Crait;Who’s brave enough to play chicken with a train? Stand on the track as multiple trains come at you full-speed.. The closer they get to you before jumping off the tracks, the more points you’ll rack up.;
 1;Digger;Arcade/Digger.png;Arcade/Digger.hex;;;1.0;eried;Goal is to collect as many diamonds as needed to unlock the exit. You can move rocks, if there is nothing behind it. If a rock falls through a changer, then its converted to a diamond.;1
 1;Crabator;Action/Crabator.png;Action/Crabator.hex;;;1.0;R0d0t;Crabator is an intense action game where you kill crabs to make money to buy weapons to kill crabs to make money, etc. but watch out, the more crabs you kill the more they are.;1
-1;Harambe's Revenge;Arcade/Haramberevenge.png;Arcade/Haramberevenge.hex;;;1.0;MorganLapis and SerendipityDoDa;In Harambe’s Revenge, you play as a phantasmal Harambe that has returned from the afterlife to convert oblivious tourists into mutant zombie gorilla minions which will then protect him. The zoo had to close down in quarantine, trapping many tourists inside.;1
+1;Harambe's Revenge;Action/Harambes Revenge.png;Action/Harambes Revenge.hex;;;1.0;MorganLapis and SerendipityDoDa;In Harambe’s Revenge, you play as a phantasmal Harambe that has returned from the afterlife to convert oblivious tourists into mutant zombie gorilla minions which will then protect him. The zoo had to close down in quarantine, trapping many tourists inside.;1
+1;MallARD Hunt;Action/MallARDHunt.png;Action/MallARDHunt.hex;;;1.0;pixelplatforms;Duck shooting on the Arduboy.;1
 2;Adventure;category-screens\Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action\Cotd.png;Action\Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
 2;Virus LQP-79;arg\virus.png;arg\virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
@@ -109,12 +110,14 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 5;Umeroose;Platformer\Umeroose.png;Platformer\Umeroose.hex;;;1.0;Unknown;A game like Infinite Petit Petit. Addictive.;
 5;Tiny Bert;Platformer/Tiny_Bert.png;Platformer/Tiny_Bert.hex;;;1.0;Daniel C (Electro L.I.B);Move Bert between the squares by jumping about avoiding the bad guys.;
 5;OhMummy;Platformer/OhMummy.png;Platformer/OhMummy.hex;;;1.0;MattVic;Heavily influenced by an Amsoft classic, attack advancing mummies and loot the pyramids.
+5;Arulem;Misc\Ardulem.png;Misc\Ardulem.hex;;;1.0;lswbanban;Lemmings are cute, lovable animals, drifting through space, searching for their home world. Only you can save them!;3
 6;Strategy;category-screens\Strategy.png;;;;;;;
 6;MicroCity;Arcade\microcity.png;Arcade\microcity.hex;;;1.3;jhhoward;MicroCity is a city simulation game inspired by SimCity.;37
 6;MicroTD;Puzzle\microtd.png;Puzzle\microtd.hex;;;1.1;drummyfish;Defend your territory from the enemy attackers.;19
 6;Ardulem;Puzzle\Ardulem.png;Puzzle\Ardulem.hex;;;1.0;banban;Lemmings on Arduboy!;20
 6;ARtillery;Arcade\ARtillery.png;Arcade\ARtillery.hex;;;1.0;Bergasms;A remake of the classic Tanks game from the Amiga by Gary Roberts.;3
 6;Cascade Path;Misc\Cascade Path.png;Misc\Cascade Path.hex;;;1.0;Chris;Have you ever wanted to discover what life was like on the trail? Going hunting and fording rivers? Have you ever wanted to know more about dysentery than you could possibly imagine?;3
+6;Lagunita;Misc\lagunita.png;Misc\lagunita.hex;;;1.0;Renato Grotessi;A 1D wild west town builder game for Arduboy.;3
 7;Puzzle;category-screens\Puzzle.png;;;;;;;
 7;Waternet;Puzzle\waternet.png;Puzzle\waternet.hex;;;1.0;joyrider3774;The aim of the game - in any game mode - is always to connect all pipes so that water can flow through them from the water point source. How you can accomplish this depends on the game mode. The game has a help section in the main menu where you can always check up on the rules of each game mode.;30
 7;Circuit Dude;Puzzle\CircuitDude.png;Puzzle\CircuitDude.hex;;;3.2;Crait;Help Circuit Dude build an awesome invention by leading him through 75 unique levels, completing circuits and plugging in microchips. After all chips are inserted into their sockets, the exit will activate and you can advance to the next puzzle! What kind of secret invention is Circuit Dude building? Complete all of the levels to find out!;30
@@ -139,7 +142,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Term Twirl;Puzzle\termtwirl.png;Puzzle\termtwirl.hex;;;1.0;Corruptio;This is clone of classic Text Twist, with 1900 random levels. Add to your score by unjumbling the letters to make words. If you use all six letters to make a word within the allotted time, then you can continue to the next level. There is a large bonus for finding all the words before time runs out.;
 7;Long Cat;Puzzle\LongCat.png;Puzzle\LongCat.hex;;;1.0;jaguile6;A puzzle game inspired in the longcat minigame from the Fancade Android game.;
 7;Tiny Tris;Puzzle\TinyTris.png;Puzzle\TinyTris.hex;;;1.0;Daniel C;A falling-block game sort of like Tetris.;
-7;Tris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Daniel C;Another falling-block game sort of like Tetris.;
+7;Tris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Yuki;Another falling-block game sort of like Tetris, but not copyrighted.;
+7;TwoTris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Cédric Martin;Another falling-block game sort of like Tetris but for two players.;
 7;ArduGods;Puzzle\ArduGods.png;Puzzle\ArduGods.hex;;;1.0;resetreboot;Your goal in this game is to gather faith and a cult following to become stronger and be able to battle the rest of the Gods, to reclaim your place among them as the most powerful ever, and it all starts by raising prayers with your Arduboy buttons.;
 7;Hangman;Misc\Hangman.png;Misc\Hangman.hex;;;1.2.0;Serisman;Classic hangman game with nearly 800 words.;
 8;Skill;category-screens\Skill.png;;;;;;;
@@ -150,6 +154,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Stairs Sweep;Puzzle\stairssweep.png;Puzzle\stairssweep.hex;;;1.0;Obono;A falling block puzzle game.;
 8;Psi Colo;Puzzle\psicolo.png;Puzzle\psicolo.hex;;;1.0;Obono;A puzzle game with dice.;10
 8;Minesweeper;Puzzle\Minesweeper.png;Puzzle\Minesweeper.hex;;;1.0;Pharap;The classic Minesweeper for the Arduboy.;13
+8;Ardusweeper;Puzzle\Ardusweeper.png;Puzzle\Ardusweeper.hex;;;1.0;Frrout;The classic Minesweeper for the Arduboy with three levels of difficulty: easy (15 mines), medium (25) and hard (35).;13
 8;Begemmed;arg\begemmed.png;arg\begemmed.hex;;;1.0;Team ARG;Get three or more matching gems in a row by swapping adjacent gems.;10
 8;Blob Attack;arg\Blobattack.png;arg\Blobattack.hex;;;1.0;Team ARG;A falling block game.;9
 8;Sudoku;Puzzle\sudoku.png;Puzzle\sudoku.hex;;;1.0;neilsunw;Play Sudoku on your Arduboy. Includes 45 puzzles (easy, medium, hard) and allows custom puzzles to be entered manually or via serial input.;5
@@ -209,6 +214,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Tackle Box;Arcade\tacklebox.png;Arcade\tacklebox.hex;;;1.0;city41;Similar to the classic Legend of the River King, Tackle Box is a fishing-themed role playing video game.;19
 11;Mini Rogue;RPG\MiniRogue.png;RPG\MiniRogue.hex;;;1.0;Press Play On Tape;Mini Rogue is a 9-card game in which a single player delves into a deep dungeon to get the famous ruby called The Og’s Blood on the bottom floor. The player must choose how to spend their resources in order to be powerful enough to confront ever difficult monsters. Random events and encounters make every play-through a unique experience.;16
 11;Under The Tower;RPG\underthetower.png;RPG\underthetower.hex;;;1.0;wuuff;n a dying city, cut off from the world due to plague, The Tower stands above its center. While the rich and powerful gather in the tower, safe from the devastation below, those below are not so lucky. Among the trash on mud flats by the river, scavengers seek to find anything valuable. They are known as Mudlarks. This is the tale of one of the many unfortunate souls that lives…;14
+11;Tower Of Pain;RPG\TowerOfPain.png;RPG\TowerOfPain.hex;;;1.0;North;Tower Of Pain is a small roguelike game with simplified mechanics and small assets (very small assets).. made for fun only!!;13
 11;Arduminer;RPG\Arduminer.png;RPG\Arduminer.hex;;;1.0;Bergasms;Mining, crafting and combat on your arduboy. Explore 64 procedurally generated levels, conquer dungeons and upgrade your kit to survive progressively stronger enemies.;13
 11;Hello Commander;RPG\HelloCommander.png;RPG\HelloCommander.hex;;;1.0;Fmanga;'Hello, Commander' is a Turn-Based Strategy game for the Arduboy.;13
 11;Rogue;RPG\Rogue.png;RPG\Rogue.hex;;;1.0;BlueMax;Rogue-like ascii based adventure for the Arduboy;13
@@ -264,6 +270,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Orbs;Shooter/orbs.png;Shooter/orbs.hex;;;1.0;jmosk;Orbs is losely based on the concept of the PC game Osmos. The user owns an orb that is to capture the other orbs in its universe. The user’s orb is distinguished by sparkles blinking inside of the orb. To win, all other Orbs are to be captured.;1
 12;Armageddon;Shooter/Armageddon.png;Shooter/Armageddon.hex;;;1.0;wuuff;You have been tasked with the defense of six cities from the incoming nuclear apocalypse. You have only two launchers to shoot down incoming missiles.  Survive as long as you can to delay the inevitable end of the world.;1 
 12;Invaders;Shooter/invadersyoda.png;Shooter/invadersyoda.hex;;;1.0;yoda;Classic Space Invaders clone.;1 
+12;Picovaders;Shooter/picovaders.png;Shooter/picovaders.hex;;;1.0;boochow;Picovaders is a space invaders-like shooting game for Arduboy.;1 
 13;Sports;category-screens\Sports.png;;;;;;;
 13;18-Hole Mini Golf;Sports\ardugolf.png;Sports\ardugolf_fx.hex;Sports\ardugolf_fx.bin;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
 13;Skate Ard Die;Sports\SkateArdDie.png;Sports\SkateArdDie.hex;;;1.0;pixelplatforms;Skateboarding on the Arduboy.;11
