@@ -153,6 +153,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 8;Stairs Sweep;Puzzle\stairssweep.png;Puzzle\stairssweep.hex;;;1.0;Obono;A falling block puzzle game.;
 8;Psi Colo;Puzzle\psicolo.png;Puzzle\psicolo.hex;;;1.0;Obono;A puzzle game with dice.;10
 8;Minesweeper;Puzzle\Minesweeper.png;Puzzle\Minesweeper.hex;;;1.0;Pharap;The classic Minesweeper for the Arduboy.;13
+8;Ardusweeper;Puzzle\Ardusweeper.png;Puzzle\Ardusweeper.hex;;;1.0;Frrout;The classic Minesweeper for the Arduboy with three levels of difficulty: easy (15 mines), medium (25) and hard (35).;13
 8;Begemmed;arg\begemmed.png;arg\begemmed.hex;;;1.0;Team ARG;Get three or more matching gems in a row by swapping adjacent gems.;10
 8;Blob Attack;arg\Blobattack.png;arg\Blobattack.hex;;;1.0;Team ARG;A falling block game.;9
 8;Sudoku;Puzzle\sudoku.png;Puzzle\sudoku.hex;;;1.0;neilsunw;Play Sudoku on your Arduboy. Includes 45 puzzles (easy, medium, hard) and allows custom puzzles to be entered manually or via serial input.;5
@@ -268,6 +269,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 12;Orbs;Shooter/orbs.png;Shooter/orbs.hex;;;1.0;jmosk;Orbs is losely based on the concept of the PC game Osmos. The user owns an orb that is to capture the other orbs in its universe. The user’s orb is distinguished by sparkles blinking inside of the orb. To win, all other Orbs are to be captured.;1
 12;Armageddon;Shooter/Armageddon.png;Shooter/Armageddon.hex;;;1.0;wuuff;You have been tasked with the defense of six cities from the incoming nuclear apocalypse. You have only two launchers to shoot down incoming missiles.  Survive as long as you can to delay the inevitable end of the world.;1 
 12;Invaders;Shooter/invadersyoda.png;Shooter/invadersyoda.hex;;;1.0;yoda;Classic Space Invaders clone.;1 
+12;Picovaders;Shooter/picovaders.png;Shooter/picovaders.hex;;;1.0;boochow;Picovaders is a space invaders-like shooting game for Arduboy.;1 
 13;Sports;category-screens\Sports.png;;;;;;;
 13;18-Hole Mini Golf;Sports\ardugolf.png;Sports\ardugolf_fx.hex;Sports\ardugolf_fx.bin;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
 13;Skate Ard Die;Sports\SkateArdDie.png;Sports\SkateArdDie.hex;;;1.0;pixelplatforms;Skateboarding on the Arduboy.;11
