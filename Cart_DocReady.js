@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.19
+// V1.25
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -266,7 +266,7 @@ $(document).ready(function () {
             saveName = $("#saveName"),
             description = $("#description"),
             addToRepo = $("#addToRepo"),
-            allFields = $([]).add(name).add(fileName).add(graphicName).add(version).add(developer).add(description),
+            allFields = $([]).add(name).add(fileName).add(graphicName).add(version).add(developer).add(description).add(addToRepo),
             tips = $(".validateTips");
 
         function uploadFile() {
@@ -319,7 +319,7 @@ $(document).ready(function () {
                 var mime = $('#graphicName')[0].files[0].type;
                 var extension = $('#graphicName').val().replace(/^.*\./, '');
 
-                if (size > 10000 || mime != "image/png" || extension != "png") {
+                if (size > 10000 || (mime != "image/png" && mime != "") || extension != "png") {
                     graphicName.addClass("ui-state-error");
                     updateTips(tips, "Invalid PNG file selected.");
                     valid = false;
@@ -381,6 +381,7 @@ $(document).ready(function () {
 
                 var $guid = $('#guid').val();
                 var formData = new FormData($("#frmUploadHEXForm")[0]);
+                var addToRepoChecked = document.getElementById('addToRepo').checked;
 
                 $.ajax({
                     url: "./Cart_UploadHEX.php",
@@ -435,8 +436,7 @@ $(document).ready(function () {
                             $gameTitle = baseFileName;
                         }
 
-
-                        if (addToRepo.val() == "on") {
+                        if (addToRepoChecked) {
                             var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal };
                             items.push(item);
                         }
@@ -458,6 +458,12 @@ $(document).ready(function () {
             }
             return valid;
         }
+        
+        function triggerArduboySelect() {
+
+            arduboyFileInput.dispatchEvent(new MouseEvent("click"));
+
+        }
 
         uploadHEXDialog = $("#dlgUploadHEX").dialog({
             autoOpen: false,
@@ -468,8 +474,10 @@ $(document).ready(function () {
                 var t = $('#guid');
                 $('#guid').val(generateGUID());
                 $('#dlgUploadHEX').css('overflow', 'hidden'); //this line does the actual hiding
+                $('.ui-dialog-buttonpane').find('button:contains(".arduboy")').addClass('shiftLeft');
             },
             buttons: {
+                "Load .arduboy": triggerArduboySelect,
                 "Upload": uploadFile,
                 Cancel: function () {
                     uploadHEXDialog.dialog("close");

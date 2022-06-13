@@ -145,3 +145,7 @@ iframe {
 .comboBox {
   width: 138px;background-color: #45c4fa; border-style: solid; border-color: #156f96; outline: none;
 }
+
+.shiftLeft{
+  transform: translate(-102px,0px);
+}

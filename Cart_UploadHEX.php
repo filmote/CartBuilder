@@ -34,7 +34,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.19
+// V1.25
 
 
     session_start();
@@ -67,7 +67,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         exit(0);
     }
 
-    if ($graphicFileType != "image/png" || $graphicFileSize > 10000 || strtolower(substr($graphicFileName, -4)) != ".png") {
+    if (($graphicFileType != "" && $graphicFileType != "image/png" && $graphicFileType != "application/octet-stream") || $graphicFileSize > 10000 || strtolower(substr($graphicFileName, -4)) != ".png") {
         echo "ERR: Invalid PNG file.";
         exit(0);
     }
