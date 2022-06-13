@@ -142,7 +142,8 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Term Twirl;Puzzle\termtwirl.png;Puzzle\termtwirl.hex;;;1.0;Corruptio;This is clone of classic Text Twist, with 1900 random levels. Add to your score by unjumbling the letters to make words. If you use all six letters to make a word within the allotted time, then you can continue to the next level. There is a large bonus for finding all the words before time runs out.;
 7;Long Cat;Puzzle\LongCat.png;Puzzle\LongCat.hex;;;1.0;jaguile6;A puzzle game inspired in the longcat minigame from the Fancade Android game.;
 7;Tiny Tris;Puzzle\TinyTris.png;Puzzle\TinyTris.hex;;;1.0;Daniel C;A falling-block game sort of like Tetris.;
-7;Tris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Daniel C;Another falling-block game sort of like Tetris.;
+7;Tris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Yuki;Another falling-block game sort of like Tetris, but not copyrighted.;
+7;TwoTris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Cédric Martin;Another falling-block game sort of like Tetris but for two players.;
 7;ArduGods;Puzzle\ArduGods.png;Puzzle\ArduGods.hex;;;1.0;resetreboot;Your goal in this game is to gather faith and a cult following to become stronger and be able to battle the rest of the Gods, to reclaim your place among them as the most powerful ever, and it all starts by raising prayers with your Arduboy buttons.;
 7;Hangman;Misc\Hangman.png;Misc\Hangman.hex;;;1.2.0;Serisman;Classic hangman game with nearly 800 words.;
 8;Skill;category-screens\Skill.png;;;;;;;
