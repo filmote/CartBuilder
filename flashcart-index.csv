@@ -31,7 +31,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Crabator;Action/Crabator.png;Action/Crabator.hex;;;1.0;R0d0t;Crabator is an intense action game where you kill crabs to make money to buy weapons to kill crabs to make money, etc. but watch out, the more crabs you kill the more they are.;1
 1;Harambe's Revenge;Action/Harambes Revenge.png;Action/Harambes Revenge.hex;;;1.0;MorganLapis and SerendipityDoDa;In Harambe’s Revenge, you play as a phantasmal Harambe that has returned from the afterlife to convert oblivious tourists into mutant zombie gorilla minions which will then protect him. The zoo had to close down in quarantine, trapping many tourists inside.;1
 1;MallARD Hunt;Action/MallARDHunt.png;Action/MallARDHunt.hex;;;1.0;pixelplatforms;Duck shooting on the Arduboy.;1
-1;Super Soldiers;Action/MalSuperSoldierslARDHunt.png;Action/SuperSoldiers.hex;;;1.0;David Inwood;A dragon is attempting to conquer Canada by sending monsters after all of its cities. The military responds by sending its elite super soldiers powered by ancient gems to fight them.;1
+1;Super Soldiers;Action/SuperSoldiers.png;Action/SuperSoldiers.hex;;;1.0;David Inwood;A dragon is attempting to conquer Canada by sending monsters after all of its cities. The military responds by sending its elite super soldiers powered by ancient gems to fight them.;1
 2;Adventure;category-screens\Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action\Cotd.png;Action\Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
 2;Virus LQP-79;arg\virus.png;arg\virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
@@ -145,6 +145,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 7;Tiny Tris;Puzzle\TinyTris.png;Puzzle\TinyTris.hex;;;1.0;Daniel C;A falling-block game sort of like Tetris.;
 7;Tris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Yuki;Another falling-block game sort of like Tetris, but not copyrighted.;
 7;TwoTris;Puzzle\Tris.png;Puzzle\Tris.hex;;;1.0;Cédric Martin;Another falling-block game sort of like Tetris but for two players.;
+7;Santa's Happy Little Packer;Puzzle\SantasHappyLittlePacker.png;Puzzle\SantasHappyLittlePacker.hex;;;1.0;eried;Santa needs help, he has a lot of gifts and you need to fit them in his sleigh filling all the spaces.;
 7;ArduGods;Puzzle\ArduGods.png;Puzzle\ArduGods.hex;;;1.0;resetreboot;Your goal in this game is to gather faith and a cult following to become stronger and be able to battle the rest of the Gods, to reclaim your place among them as the most powerful ever, and it all starts by raising prayers with your Arduboy buttons.;
 7;Hangman;Misc\Hangman.png;Misc\Hangman.hex;;;1.2.0;Serisman;Classic hangman game with nearly 800 words.;
 8;Skill;category-screens\Skill.png;;;;;;;
