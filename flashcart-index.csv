@@ -33,6 +33,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 1;Harambe's Revenge;Action/Harambes Revenge.png;Action/Harambes Revenge.hex;;;1.0;MorganLapis and SerendipityDoDa;In Harambe’s Revenge, you play as a phantasmal Harambe that has returned from the afterlife to convert oblivious tourists into mutant zombie gorilla minions which will then protect him. The zoo had to close down in quarantine, trapping many tourists inside.;1
 1;MallARD Hunt;Action/MallARDHunt.png;Action/MallARDHunt.hex;;;1.0;pixelplatforms;Duck shooting on the Arduboy.;1
 1;Super Soldiers;Action/SuperSoldiers.png;Action/SuperSoldiers.hex;;;1.0;David Inwood;A dragon is attempting to conquer Canada by sending monsters after all of its cities. The military responds by sending its elite super soldiers powered by ancient gems to fight them.;1
+1;Worlds Hardest Game;Action/WorldsHardestGame.png;Action/WorldsHardestGame.hex;;;1.0;Sorunome;It lives up to its name .. man this is hard!;1
 2;Adventure;category-screens\Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action\Cotd.png;Action\Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
 2;Virus LQP-79;arg\virus.png;arg\virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
