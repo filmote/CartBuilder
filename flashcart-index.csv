@@ -34,6 +34,9 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 1;MallARD Hunt;Action/MallARDHunt.png;Action/MallARDHunt.hex;;;1.0;pixelplatforms;Duck shooting on the Arduboy.;
 1;Super Soldiers;Action/SuperSoldiers.png;Action/SuperSoldiers.hex;;;1.0;David Inwood;A dragon is attempting to conquer Canada by sending monsters after all of its cities. The military responds by sending its elite super soldiers powered by ancient gems to fight them.;
 1;Worlds Hardest Game;Action/WorldsHardestGame.png;Action/WorldsHardestGame.hex;;;1.0;Sorunome;It lives up to its name .. man this is hard!;
+1;Garboyle's Quest;Arcade/GarboylesQuest.png;Arcade/GarboylesQuest.hex;;;1.0;Cedric Martin;A remake of the CAPCOMM game of the same name.;
+1;Rooftop;Action/Rooftop.png;Action/Rooftop.hex;;;1.0;SzymonPL188;Rooftops is a game where you run on .. rooftops. It has 3D wireframe graphics. And the game is hard. You have 3 lives and NO way to restore them.;
+1;Bomberboy;Action/Bomberboy.png;Action/Bomberboy.hex;;;1.0;evgenykzz2;A remake of Bomberman.;
 2;Adventure;category-screens/Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action/Cotd.png;Action/Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;
 2;Virus LQP-79;arg/virus.png;arg/virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;
@@ -55,6 +58,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 3;Burgard Time;Arcade/BurgardTime.png;Arcade/BurgardTime.hex;;;1.0;pixelplatforms;Peter Pepper  must walk over hamburger ingredients located across a maze of platforms while avoiding characters who pursue him.;
 3;Arduwhack;Arcade/Arduwhack.png;Arcade/Arduwhack.hex;;;1.0;zeduckmaster;Whack-a-Mole for the Arduboy!;
 3;Jump Boy;Arcade/JumpBoy.png;Arcade/JumpBoy.hex;;;1.0;t-iwasaki;Collect the coins but be carefull as the floorboards will decrease one by one each time you land on them.;
+3;Jump Boy 2;Arcade/JumpBoy2.png;Arcade/JumpBoy2.hex;;;1.0;t-iwasaki;If you take 5 coins, the enemy will appear. The key will appear when you take 10 coins. Please take the key.;
 3;Poop Panic;Arcade/pooppanic.png;Arcade/pooppanic.hex;;;1.0;inajob;Keep the Zoo clean of animal poop.;
 3;RoboDodge;Arcade/RoboDodge.png;Arcade/RoboDodge.hex;;;1.0;Gaveno;Control your very own small robot as you dodge the barrage of incoming rockets!;
 3;Chicken Launcher;Arcade/Chickenlauncher.png;Arcade/Chickenlauncher.hex;;;1.1;Crait;Shoot a chicken as far as you can. Try to hit springboards to give you a boost but watch out for spikes! ;
@@ -154,10 +158,14 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 8;Long Cat;Puzzle/LongCat.png;Puzzle/LongCat.hex;;;1.0;jaguile6;A puzzle game inspired in the longcat minigame from the Fancade Android game.;
 8;Tiny Tris;Puzzle/TinyTris.png;Puzzle/TinyTris.hex;;;1.0;Daniel C;A falling-block game sort of like Tetris.;
 8;Tris;Puzzle/Tris.png;Puzzle/Tris.hex;;;1.0;Yuki;Another falling-block game sort of like Tetris, but not copyrighted.;
-8;TwoTris;Puzzle/Tris.png;Puzzle/Tris.hex;;;1.0;Cédric Martin;Another falling-block game sort of like Tetris but for two players.;
+8;TwoTris;Puzzle/TwoTris.png;Puzzle/TwoTris.hex;;;1.0;Cédric Martin;Another falling-block game sort of like Tetris but for two players.;
 8;Santa's Happy Little Packer;Puzzle/SantasHappyLittlePacker.png;Puzzle/SantasHappyLittlePacker.hex;;;1.0;eried;Santa needs help, he has a lot of gifts and you need to fit them in his sleigh filling all the spaces.;
 8;ArduGods;Puzzle/ArduGods.png;Puzzle/ArduGods.hex;;;1.0;resetreboot;Your goal in this game is to gather faith and a cult following to become stronger and be able to battle the rest of the Gods, to reclaim your place among them as the most powerful ever, and it all starts by raising prayers with your Arduboy buttons.;
 8;Hangman;Misc/Hangman.png;Misc/Hangman.hex;;;1.2.0;Serisman;Classic hangman game with nearly 800 words.;
+8;Buttons Trail;Puzzle/ButtonsTrail.png;Puzzle/ButtonsTrail.hex;;;1.0;Press Play on Tape;This great little puzzle game was written by Wan Sou.;
+8;Pawn Path;Puzzle/PawnPath.png;Puzzle/PawnPath.hex;;;1.0;North Fran J. Alvarez;This great little puzzle game was written by Wan Sou.;
+8;Floor Fall;Puzzle/FloorFall.png;Puzzle/FloorFall.hex;;;1.0;Pharap;This great little puzzle game was written by Wan Sou.;
+8;LeWord;category-screens/ppot/LeWord.png;Puzzle/LeWord.hex;Puzzle/LeWord.bin;;1.0;Press Play On Tape;The NY Times classic word game in English and French.;
 9;Skill;category-screens/Skill.png;;;;;;;
 9;Curse of Astarok;Puzzle/curse.png;Puzzle/curse.hex;;;1.0;Press Play On Tape;The evil Astarok has cast a nasty curse on the folk of Griford and turned them into pumpkins! The town’s people have asked you to battle the AstaroK and his evil friends in their hideout - an old castle on the edge of town. Can you release the town from the curse of AztaroK?;
 9;Trials of Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;1.0;Press Play On Tape;Each year the people of the village choose a new champion to protect them from Astarok. Compete in the trials to see how far you can get and you could be that champion! Your choice of runes will select different courses … some are easier than others!;
@@ -337,6 +345,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 17;Love Tester;Application/LoveTester.png;Application/LoveTester.hex;;;1.0;Pharap;A homage to the strange mind of Gunpei Yokoi. Testing requires two people - one person must hold the left directional button while the other person must hold the right directional button. The buttons must be held for 5 seconds, during which time the needle will fluctuate. After 5 seconds the needle will stop, indicating its final reading.;
 17;Magic 8 ArduBall;Application/Magic8Ball.png;Application/Magic8Ball.hex;;;1.0;GnobarEl;The magi 8 arduball is a very simple program based on the original Magic 8 Ball. Just ask something and the arduino will predict the better answer for your question.;
 17;Chirp;Application/Chirp.png;Application/Chirp.hex;;;1.0;eried;Make someone go crazy with your Arduboy. Just hide it, he will briefly chirp every 1 to 15 minutes.;
+17;Sand Box;Application/sandbox.png;Application/sandbox.hex;;;1.0;rburmorrison;It’s a sandbox simulator inspired by those old browser falling sand games.;
 18;Tools;category-screens/Tools.png;;;;;;;
 18;Ardutosh;Application/Ardutosh.png;Application/Ardutosh.hex;;;1.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;
 18;Abshell;Application/Abshell.png;Application/Abshell.hex;;;1.0;boochow;Abshell is a command shell for Arduboy. You can send commands from PC to Arduboy via USB-serial port. No programming skills needed to draw graphics on Arduboy screen! Any VT100 compatible serial port terminal softwares (PuTTY, etc.) can be used.;

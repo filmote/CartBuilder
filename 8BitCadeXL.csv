@@ -178,7 +178,7 @@ List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Zoo at Midnight;8BitCadeXL/Platformer/Zoo Midnight.png;8BitCadeXL/Platformer/Zoo Midnight.hex;;;1.0;Hundstrasse;Scrawf must sneak around the zoo to collect the food ans feed the animals before and escaping - all without being caught in the flashlight beam of the zoo wardens!;5
 12;Puzzle;8BitCadeXL/category-screens/Puzzle.png;;;;;;
 12;Le Word;8BitCadeXL/Puzzle/LeWord.png;8BitCadeXL/Puzzle/LeWord.hex;8BitCadeXL/Puzzle/LeWord.bin;;;;
-12;Buttons Trail;8BitCadeXL/Puzzle/ButtonsTrail.png;8BitCadeXL/Puzzle/ButtonsTrail.hex;;;;;
+12;Buttons Trail;8BitCadeXL/Puzzle/ButtonsTrail.png;8BitCadeXL/Puzzle/ButtonsTrail.hex;;;1.0;Press Play on Tape;This great little puzzle game was written by Wan Sou.;
 12;8BitCADE_Tetris;8BitCadeXL/Puzzle/8BitCADE_Tetris.png;8BitCadeXL/Puzzle/8BitCADE_Tetris.hex;;;;;
 12;Pipes;8BitCadeXL/Puzzle/Pipes.png;8BitCadeXL/Puzzle/Pipes.hex;;;1.0;Press Play on Tape;A version of the classic pipes game where you must lay pipe between each pair of nodes without the pipes crossing each other. This version has puzzles ranging from 5 x 5 to 9 x 9.;7
 12;Alignment;8BitCadeXL/Puzzle/Alignment.png;8BitCadeXL/Puzzle/Alignment.hex;;;;;

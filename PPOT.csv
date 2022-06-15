@@ -27,6 +27,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 4;Logix;category-screens/ppot/Logix.png;Puzzle/Logix.hex;;;1.0;Press Play on Tape;Logix is an educational game that teaches the basic logic gates used in digital electronics. Once you have completed some introductory puzzles that feature a single gate each, you can move on to harder puzzles that test your learning!;21
 4;Pipes;category-screens/ppot/Pipes.png;Puzzle/Pipes.hex;;;1.0;Press Play on Tape;A version of the classic pipes game where you must lay pipe between each pair of nodes without the pipes crossing each other. This version has puzzles ranging from 5 x 5 to 9 x 9.;7
 4;PiCross;category-screens/ppot/Picross.png;Puzzle/Picross.hex;;;1.0;Press Play On Tape;Classic PiCross game with over 150 levels!;
+4;Buttons Trail;category-screens/ppot/Buttonstrail.png;Puzzle/ButtonsTrail.hex;;;1.0;Press Play on Tape;This great little puzzle game was written by Wan Sou.;
 5;Racing;category-screens/ppot/Racing.png;;;;;;;
 5;Road Trip;category-screens/ppot/RoadTrip.png;Racing/RoadTrip.hex;;;1.1;Press Play on Tape;Inspired by the Atari 2600 game Enduro. Strap on your goggles. Sink into your seat. And leave all your fears in the pit. You’re about to enter the race of your life. You’ll be required to pass lots of cars each day. From sunrise to sunset - as fast as you can. Welcome to the National Enduro!;
 6;Tabletop;category-screens/ppot/Tabletop.png;;;;;;;
