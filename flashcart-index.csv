@@ -35,8 +35,9 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 1;Super Soldiers;Action/SuperSoldiers.png;Action/SuperSoldiers.hex;;;1.0;David Inwood;A dragon is attempting to conquer Canada by sending monsters after all of its cities. The military responds by sending its elite super soldiers powered by ancient gems to fight them.;
 1;Worlds Hardest Game;Action/WorldsHardestGame.png;Action/WorldsHardestGame.hex;;;1.0;Sorunome;It lives up to its name .. man this is hard!;
 1;Garboyle's Quest;Arcade/GarboylesQuest.png;Arcade/GarboylesQuest.hex;;;1.0;Cedric Martin;A remake of the CAPCOMM game of the same name.;
-1;Rooftop;Action/Rooftop.png;Action/Rooftop.hex;;;1.0;SzymonPL188;Rooftops is a game where you run on .. rooftops. It has 3D wireframe graphics. And the game is hard. You have 3 lives and NO way to restore them.;
+1;Rooftop;Action/rooftop.png;Action/rooftop.hex;;;1.0;SzymonPL188;Rooftops is a game where you run on .. rooftops. It has 3D wireframe graphics. And the game is hard. You have 3 lives and NO way to restore them.;
 1;Bomberboy;Action/Bomberboy.png;Action/Bomberboy.hex;;;1.0;evgenykzz2;A remake of Bomberman.;
+1;Blade Runner;Action/BladeRunner.png;Action/BladeRunner.hex;;;1.0;NoobGeek;Your task is to move from one platform to another through the constructed blade-bridge. If you get to the exact center of the bridge, you earn one coin. Perfect hit 5 times in a row gives +5 coins. At the hard level, these indicators double. Well, also you will find a small bonus in the store :);
 2;Adventure;category-screens/Adventure.png;;;;;;;
 2;Catacombs Of The Damned;Action/Cotd.png;Action/Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;
 2;Virus LQP-79;arg/virus.png;arg/virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;
@@ -126,6 +127,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 6;Tiny Bert;Platformer/Tiny_Bert.png;Platformer/Tiny_Bert.hex;;;1.0;Daniel C (Electro L.I.B);Move Bert between the squares by jumping about avoiding the bad guys.;
 6;OhMummy;Platformer/OhMummy.png;Platformer/OhMummy.hex;;;1.0;MattVic;Heavily influenced by an Amsoft classic, attack advancing mummies and loot the pyramids.;
 6;Arulem;Misc/Ardulem.png;Misc/Ardulem.hex;;;1.0;lswbanban;Lemmings are cute, lovable animals, drifting through space, searching for their home world. Only you can save them!;
+6;Platformer;Platformer/platformer.png;Platformer/platformer.hex;;;1.0;B.F;[WIP] It’s not much more than a few levels with a couple of different themes;
 7;Strategy;category-screens/Strategy.png;;;;;;;
 7;MicroCity;Arcade/microcity.png;Arcade/microcity.hex;;;1.3;jhhoward;MicroCity is a city simulation game inspired by SimCity.;
 7;MicroTD;Puzzle/microtd.png;Puzzle/microtd.hex;;;1.1;drummyfish;Defend your territory from the enemy attackers.;
@@ -166,6 +168,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 8;Pawn Path;Puzzle/PawnPath.png;Puzzle/PawnPath.hex;;;1.0;North Fran J. Alvarez;This great little puzzle game was written by Wan Sou.;
 8;Floor Fall;Puzzle/FloorFall.png;Puzzle/FloorFall.hex;;;1.0;Pharap;This great little puzzle game was written by Wan Sou.;
 8;LeWord;category-screens/ppot/LeWord.png;Puzzle/LeWord.hex;Puzzle/LeWord.bin;;1.0;Press Play On Tape;The NY Times classic word game in English and French.;
+8;Single Ennead;Puzzle/single_ennead.png;Puzzle/single_ennead.hex;;;1.0;Corruptio;This is a demake of the Triple Triad trading card game from the Final Fantasy franchise. In this clone, there are 100 cards to collect, each with different art and flavor text.;
 9;Skill;category-screens/Skill.png;;;;;;;
 9;Curse of Astarok;Puzzle/curse.png;Puzzle/curse.hex;;;1.0;Press Play On Tape;The evil Astarok has cast a nasty curse on the folk of Griford and turned them into pumpkins! The town’s people have asked you to battle the AstaroK and his evil friends in their hideout - an old castle on the edge of town. Can you release the town from the curse of AztaroK?;
 9;Trials of Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;1.0;Press Play On Tape;Each year the people of the village choose a new champion to protect them from Astarok. Compete in the trials to see how far you can get and you could be that champion! Your choice of runes will select different courses … some are easier than others!;
@@ -175,6 +178,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 9;Psi Colo;Puzzle/psicolo.png;Puzzle/psicolo.hex;;;1.0;Obono;A puzzle game with dice.;
 9;Minesweeper;Puzzle/Minesweeper.png;Puzzle/Minesweeper.hex;;;1.0;Pharap;The classic Minesweeper for the Arduboy.;
 9;Ardusweeper;Puzzle/Ardusweeper.png;Puzzle/Ardusweeper.hex;;;1.0;Frrout;The classic Minesweeper for the Arduboy with three levels of difficulty: easy (15 mines), medium (25) and hard (35).;
+9;Cat Mines;Puzzle/CatMines_v1.png;Puzzle/CatMines_v1.hex;;;1.0;Visual-mov;Cat Mines is a Minesweeper clone. The objective is to successfully mark all the mines (or cats) on the grid in the shortest amount of time possible. If you accidentally reveal a mine, the game ends. The game has three different difficulty levels, each with a different number of mines on the grid. Once you have won or lost, your time will be shown.;
 9;Begemmed;arg/begemmed.png;arg/begemmed.hex;;;1.0;Team ARG;Get three or more matching gems in a row by swapping adjacent gems.;
 9;Blob Attack;arg/Blobattack.png;arg/Blobattack.hex;;;1.0;Team ARG;A falling block game.;
 9;Sudoku;Puzzle/sudoku.png;Puzzle/sudoku.hex;;;1.0;neilsunw;Play Sudoku on your Arduboy. Includes 45 puzzles (easy, medium, hard) and allows custom puzzles to be entered manually or via serial input.;
@@ -346,6 +350,8 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 17;Magic 8 ArduBall;Application/Magic8Ball.png;Application/Magic8Ball.hex;;;1.0;GnobarEl;The magi 8 arduball is a very simple program based on the original Magic 8 Ball. Just ask something and the arduino will predict the better answer for your question.;
 17;Chirp;Application/Chirp.png;Application/Chirp.hex;;;1.0;eried;Make someone go crazy with your Arduboy. Just hide it, he will briefly chirp every 1 to 15 minutes.;
 17;Sand Box;Application/sandbox.png;Application/sandbox.hex;;;1.0;rburmorrison;It’s a sandbox simulator inspired by those old browser falling sand games.;
+17;Pip Boy 32K;Application/pipboy32u4.png;Application/pipboy32u4.hex;;;1.0;poevoid;This game is not a game at all, but in fact a program that turns your Arduboy into a functional Pip-boy! Performs inventory management, bad USB attacks and has a mpa of Houston and some music to keep you busy.;
+17;IVBOY - Programable Scientific RPN Calculator;Application/ivboy.png;Application/ivboy.hex;;;1.0;deetee;IVBOY - A powerful FORTH-like programable scientific RPN calculator for the Arduboy;
 18;Tools;category-screens/Tools.png;;;;;;;
 18;Ardutosh;Application/Ardutosh.png;Application/Ardutosh.hex;;;1.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;
 18;Abshell;Application/Abshell.png;Application/Abshell.hex;;;1.0;boochow;Abshell is a command shell for Arduboy. You can send commands from PC to Arduboy via USB-serial port. No programming skills needed to draw graphics on Arduboy screen! Any VT100 compatible serial port terminal softwares (PuTTY, etc.) can be used.;
