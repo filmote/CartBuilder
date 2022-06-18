@@ -2,10 +2,10 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
 0;Bootloader;arduboy-fx-loader.png;;;;;;;
 1;Action;category-screens/Action.png;;;;;;;
 1;Hopper;Action/hopper.png;Action/hopper.hex;;;1.0;Obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;1;https://community.arduboy.com/t/hopper-a-simple-action-game/4293;https://github.com/obono/ArduboyWorks
-1;Lasers;Arcade/Lasers.png;Arcade/Lasers.hex;;;1.0;Obono;Lasers - A simple Ikaruga-like game.;
-1;Chri-Bocchi Cat;Arcade/chribocchi.png;Arcade/chribocchi.hex;;;1.0;Obono;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;
-1;Bangi;Action/Bangi.png;Action/Bangi.hex;;;1.0;Igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;
-1;Helii;Action/Helii.png;Action/Helii.hex;;;1.0;BHSPitMonkey;Helii is a port of my homebrew clone of the old Flash 'Helicopter Game' and its ilk (i.e. game type that Flappy Bird is a variation of). As you fly through the tunnel the gap becomes more narrow and more challenging - How far can you go?;
+1;Lasers;Arcade/Lasers.png;Arcade/Lasers.hex;;;1.0;Obono;Lasers - A simple Ikaruga-like game.;;https://community.arduboy.com/t/lasers-a-simple-ikaruga-like-game/7310s;https://github.com/obono/ArduboyWorks
+1;Chri-Bocchi Cat;Arcade/chribocchi.png;Arcade/chribocchi.hex;;;1.0;Obono;Chri-Bocchi Cat - A simple action game where move the cat and bounce gift boxes for 2 minutes.;1;https://community.arduboy.com/t/chri-bocchi-cat-a-simple-action-game/4571;https://github.com/obono/ArduboyWorks
+1;Bangi;Action/Bangi.png;Action/Bangi.hex;;;1.0;Igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;;https://community.arduboy.com/t/bangi-destroy-all-the-balloons/2016;http://moblynx.com/arduboy/Bangi_1.0_arduboy.zip
+1;Helii;Action/Helii.png;Action/Helii.hex;;;1.0;BHSPitMonkey;Helii is a port of my homebrew clone of the old Flash 'Helicopter Game' and its ilk (i.e. game type that Flappy Bird is a variation of). As you fly through the tunnel the gap becomes more narrow and more challenging - How far can you go?;;https://community.arduboy.com/t/helii-a-side-scrolling-tunnel-game/2451;https://github.com/BHSPitMonkey/Helii-Arduboy
 1;Choplifter;Action/Choplifter.png;Action/Choplifter.hex;;;1.1.1;Press Play On Tape;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;
 1;Karateka;Action/Karatega.png;Action/Karatega.hex;;;0.9;Press Play On Tape;Rescue Princess Mariko from within the Akum'a castle fortress.;
 1;Festive Fight;Misc/FestiveFight.png;Misc/FestiveFight.hex;;;1.0;Crait;Holiday mascots from throughout the calendar must fight in order to compete for the affection of the children throughout the world for some weird reason.;
