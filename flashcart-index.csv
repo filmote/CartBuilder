@@ -140,14 +140,14 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes;Website;Source
 8;Circuit Dude;Puzzle/CircuitDude.png;Puzzle/CircuitDude.hex;;;3.2;Crait;Help Circuit Dude build an awesome invention by leading him through 75 unique levels, completing circuits and plugging in microchips. After all chips are inserted into their sockets, the exit will activate and you can advance to the next puzzle! What kind of secret invention is Circuit Dude building? Complete all of the levels to find out!;
 8;Logix;Puzzle/Logix.png;Puzzle/Logix.hex;;;1.0;Press Play on Tape;Logix is an educational game that teaches the basic logic gates used in digital electronics. Once you have completed some introductory puzzles that feature a single gate each, you can move on to harder puzzles that test your learning!;
 8;Atomic Puzzle Pack;Puzzle/Atomicpuzzlepack.png;Puzzle/Atomicpuzzlepack.hex;;;1.0;Atomic;Three different puzzle games in one!;
-8;Darkstar;Misc/Darkstar.png;Misc/Darkstar.hex;;;1.0;Mr.Blinky;A little puzzle game based on the HP48 / TI83 calculator game Dstar.;
+8;Darkstar;Misc/Darkstar.png;Misc/Darkstar.hex;;;1.0;Mr.Blinky;A little puzzle game based on the HP48 / TI83 calculator game Dstar.;;https://community.arduboy.com/t/dark-star-puzzle-game/8570;https://github.com/MrBlinky/DarkStar
 8;Sensitive;Puzzle/Sensitive.png;Puzzle/Sensitive.hex;;;1.0;spinal;A remake of the classic C64 game Sensitive by Oliver Kirwa.;
 8;Blocks;Puzzle/Blocks.png;Puzzle/Blocks.hex;;;1.0;w3woody;A puzzle game where you move boxes to where they belong.;
 8;Tiny Sokoban;Puzzle/tinysokoban.png;Puzzle/tinysokoban.hex;;;1.0;akkera102;A clone of Sokoban (1982) using the Yoshio Murase Levels. These levels are very small but difficult and interesting.;
 8;MAZEZAM;Puzzle/MAZEZAM.png;Puzzle/MAZEZAM.hex;;;1.0;ardubeast;The game is similar to Sokoban since the player is able to push (and not pull) boxes. One difference is that the boxes can only be pushed horizontally, and any push causes all of the boxes in that particular row to be moved. Another difference is that the player is only trying to exit the level as opposed to putting the boxes in the correct locations.;
 8;Chie Magari Ita;Puzzle/chiemagari.png;Puzzle/chiemagari.hex;;;1.0;Obono;A puzzle game. Tere are 10 different pieces. You must place all of them into the frame without overlapping.;
 8;Pipes;Puzzle/Pipes.png;Puzzle/Pipes.hex;;;1.0;Press Play on Tape;A version of the classic pipes game where you must lay pipe between each pair of nodes without the pipes crossing each other. This version has puzzles ranging from 5 x 5 to 9 x 9.;
-8;Xmas Tree;Misc/xmastree.png;Misc/xmastree.hex;;;1.1;Mr.Blinky;A Christmas themed version of the classic Towers of Hanoi game.;
+8;Xmas Tree;Misc/xmastree.png;Misc/xmastree.hex;;;1.1;Mr.Blinky;A Christmas themed version of the classic Towers of Hanoi game.;;https://community.arduboy.com/t/xmas-tree-minigame/4619;https://github.com/MrBlinky/Arduboy/tree/master/xmastree-minigame
 8;AMaze;Puzzle/AMaze.png;Puzzle/AMaze.hex;;;1.0;Keyboard_Camper;Navigate through randomly generated mazes.;
 8;Arduslide;Puzzle/Arduslide.png;Puzzle/Arduslide.hex;;;1.0;gooberdlx;A tile slider game.;
 8;Crates 3D;Puzzle/Crates3d.png;Puzzle/Crates3d.hex;;;1.0;Brian;A port of the 3D puzzle game originally written for the TI-83 calculator.;
@@ -335,7 +335,7 @@ List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes;Website;Source
 17;Arduboy Life;Misc/ArduboyLife.png;Misc/ArduboyLife.hex;;;1.0;MLXXXp;Arduboy gets a Life (Conway’s Game of Life);
 17;Game of Life;Demos/gameoflife.png;Demos/gameoflife.hex;;;1.0;kmasato;Game of Life (Celluar Automaton) for Arduboy.;
 17;Boids;Demos/boids.png;Demos/boids.hex;;;1.0;elpassion;;
-17;Silence;Misc/silence-a-text-adventure.png;Misc/silence-a-text-adventure.hex;;;1.2;Rainnw (Spaceneedle);A fun little Sci-Fi text adventure using the GTI game engine;
+17;Silence;Misc/silence-a-text-adventure.png;Misc/silence-a-text-adventure.hex;;;1.2;Rainnw (Spaceneedle);A fun little Sci-Fi text adventure using the GTI game engine;;https://community.arduboy.com/t/silence-a-text-adventure-using-the-gti-game-engine/463;https://github.com/MrBlinky/GameTextInterpreter/blob/master/Players/ArduBoyGTI/ArduBoyGTI.ino
 17;Fidget Spinner;Demos/fidget.png;Demos/fidget.hex;;;1.0;Trigonated;Stop fidgeting! A fidget spinner for the Arduboy!;
 17;Book Reader - The Pig And The Box;Application/book.png;Application/book.hex;;;1.0;drummyfish;A portable book reader that creates executable books. It compresses the text but still because of the limited flash size only small books will fit.;
 17;The Guy Who Never Complains;Misc/tgwnc.png;Misc/tgwnc.hex;;;1.0;JuiceLizard;This is an ebook reader for the Arduboy. About 15 minutes of reading with 32 small and funny chapters.;
