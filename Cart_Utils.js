@@ -45,6 +45,7 @@ function deleteColumn(cell, columnID) {
     var img = cell.firstChild.firstChild;
 
     $('#search').val("");
+    $('#searchLabel').val("Search Games:");
     $('#col' + columnID).children().appendTo("#dvUnused");
     if (img.currentSrc.indexOf('catQuestion.png') == -1) {
         dvCategories.append(img);
@@ -201,6 +202,23 @@ function openInfo(itemIndex) {
         if  (data != "") data = "&data=../" + data;
         $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
         $('#downloadLink').attr("href", item.hex);
+
+        if (!(item.url === undefined) && item.url != "") {
+            $('#url').show();
+            $('#url').attr("href", item.url);
+        }
+        else {
+            $('#url').hide();
+        }
+
+        if (!(item.source === undefined) && item.source != "") {
+            $('#source').show();
+            $('#source').attr("href", item.source);
+        }
+        else {
+            $('#source').hide();
+        }
+        
         infoPanel.dialog("open");
         infoPreview.focus();
     }
@@ -310,8 +328,8 @@ function createCSV(colCount) {
 
     var output = '';
 
-    output = 'List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes<eol/>';
-    output += '0;Bootloader;' + $("#loader").val() + ';;;;;' + ((typeof extraCats === "undefined" || extraCats == "")? '' : extraCats) + ';' + ((typeof fullList === "undefined" || fullList == "")? '' : fullList) + ';<eol/>'
+    output = 'List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source<eol/>';
+    output += '0;Bootloader;' + $("#loader").val() + ';;;;;' + ((typeof extraCats === "undefined" || extraCats == "")? '' : extraCats) + ';' + ((typeof fullList === "undefined" || fullList == "")? '' : fullList) + ';;;<eol/>'
 
     for (var i = 0; i < colCount - 2; i++) {
 
@@ -334,7 +352,7 @@ function createCSV(colCount) {
             output += cat.save; output += ";";
             output += cat.version; output += ";";
             output += cat.developer; output += ";";
-            output += cat.info; output += ";<eol/>";
+            output += cat.info; output += ";;;;<eol/>";
 
             var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
             var idsInOrder = ul.sortable("toArray");
@@ -352,8 +370,22 @@ function createCSV(colCount) {
                 output += items[index - 1].data; output += ";";
                 output += items[index - 1].save; output += ";";
                 output += items[index - 1].version; output += ";";
-                output += items[index - 1].developer; output += ";";
-                output += items[index - 1].info; output += ";<eol/>";
+                output += items[index - 1].developer; output += ";";  
+                output += items[index - 1].info; output += ";;";  // <<likes
+
+                if (items[index - 1].url == undefined) {
+                    output += ";";
+                }
+                else {
+                    output += items[index - 1].source; output += ";";
+                }
+
+                if (items[index - 1].url == undefined) {
+                    output += ";<eol/>";
+                }
+                else {
+                    output += items[index - 1].source; output += ";<eol/>";
+                }
 
             }
 
@@ -410,6 +442,7 @@ function resizeColumnHeights() {
 function clearSearch() {
 
     $('#dvHidden').children().appendTo("#dvUnused");
+    $('#searchLabel').html("Search Games:&nbsp&nbsp;&nbsp;&nbsp;&nbsp;");
 
     // Clear highlighting ..
 
@@ -423,6 +456,8 @@ function clearSearch() {
 }
 
 function doSearch() {
+
+  var matchCount = 0;
 
   if ($('#search').val() == "") {
 
@@ -446,7 +481,8 @@ function doSearch() {
 
         if (items[index - 1].name.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1 || items[index - 1].developer.toLowerCase().startsWith($('#search').val().toLowerCase())) {
 
-          matches.set(value, value);
+            matches.set(value, value);
+            matchCount++;
 
         }
 
@@ -472,6 +508,7 @@ function doSearch() {
             if (!matches.has("li" + (idx+1))) {
 //                $('#li' + (idx + 1)).css("-webkit-filter", "drop-shadow(4px 4px 4px #E2C425)");
                 $('#li' + (idx + 1)).show();
+                matchCount++;
             }
             else {
 
@@ -489,6 +526,9 @@ function doSearch() {
         }
 
     }
+
+    var found = "Search: " + "(" + matchCount + " of " + items.length + ")";
+    $('#searchLabel').text(found);
 
   }
 

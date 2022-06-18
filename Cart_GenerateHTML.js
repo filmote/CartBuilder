@@ -46,18 +46,16 @@ function generateHtmlTable(data) {
 
     }
 
-    var html = '<table id=tab class="AltTable"><thead><tr><th valign="top" style="background-color: #25AAE2; column-width:600px;">';//<div style="height:6px;"></div>';
+    var html = '<table id=tab class="AltTable"><thead><tr><th valign="top" align="center" style="text-align:center; background-color: #25AAE2; column-width:600px;">';
     html += '<button type="button" id="btnGetData" class="buttonHeader">Download CSV</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button><div style="height:4px;"></div>';
-    //html += '<button type="button" id="btnCreateCategory2" class="buttonHeader">Create Category</button>';
     html += '<span class="search">Bootload Image:&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</span><div style="height:4px;"></div>';
-    html += '<span class="search">Search Unused:&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</span>';
-    html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;">';//<div style="height:6px;"></div>';
+    html += '<span class="search" id="searchLabel" name="searchLabel">Search Games:&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</span>';
+    html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;">';
     html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button><div style="height:2px;"></div>';
     html += '<select name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option></select><div style="height:2px;"></div>';
     html += '<input name="search" id="search" onInput="doSearch()" class="searchBox" onkeydown="return event.key != \'Enter\';"/>';
-    // html += '<button type="button" id="btnUploadHEXFile2" class="buttonHeader">Upload Game</button>'
     html += '</th>';
 
     catCount = 255;
@@ -153,7 +151,10 @@ function generateHtmlTable(data) {
 
                     // Add game details to global collection..
 
-                    var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8] };
+                    var url = row[10];
+                    var source = row[11];
+
+                    var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source };
                     items.push(item);
 
                 }
@@ -283,7 +284,10 @@ function generateHtmlTable_FullList(data) {
 
                         // Add game details to global collection..
 
-                        var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8] };
+                        var url = row[10];
+                        var source = row[11];
+
+                        var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source };
                         items.push(item);
 
                     };

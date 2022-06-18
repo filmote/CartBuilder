@@ -131,6 +131,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         fwrite($myfile, $_POST['replaceExistingGame']);
         fwrite($myfile, "\nPlatform: ");
         fwrite($myfile, $_POST['platform']);
+        fwrite($myfile, "\Website URL: ");
+        fwrite($myfile, $_POST['websiteURL']);
+        fwrite($myfile, "\Source URL: ");
+        fwrite($myfile, $_POST['sourceURL']);
         fclose($myfile);
 
     }

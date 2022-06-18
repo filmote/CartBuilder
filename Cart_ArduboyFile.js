@@ -42,6 +42,8 @@ const gameTitle         = document.getElementById("gameTitle");
 const versionNumber     = document.getElementById("versionNumber");
 const developerName     = document.getElementById("developerName");
 const description       = document.getElementById("description");
+const sourceURL         = document.getElementById("sourceURL");
+const websiteURL        = document.getElementById("websiteURL");
 
 const hexName           = document.getElementById("hexName");
 const graphicName       = document.getElementById("graphicName");
@@ -88,6 +90,8 @@ async function loadFiles() {
     if('version'     in info) versionNumber.value = info.version;
     if('author'      in info) developerName.value = info.author;
     if('description' in info) description  .value = info.description;
+    if('sourceUrl'   in info) sourceURL    .value = info.sourceUrl;
+    if('url'         in info) websiteURL   .value = info.url;
     if('binaries' in info && info.binaries.length > 0) {
         if('filename' in info.binaries[0]) {
             const entryHex = entries.find(x => x.filename == info.binaries[0].filename);

@@ -92,7 +92,7 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
   <div id="dlgUploadHEX" title="Upload an Existing Game">
     <input type="file" name="arduboyFileInput" id="arduboyFileInput" value="" accept=".arduboy" hidden>
     <p class="validateTips">Please select a HEX and Graphic file:</p>
-    <form name="frmUploadHEXForm" id="frmUploadHEXForm" enctype="multipart/form-data">
+    <form name="frmUploadHEXForm" id="frmUploadHEXForm" enctype="multipart/form-data" autocomplete="off">
       <fieldset>
         <br />
         <table>
@@ -118,7 +118,7 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
           </tr>
           <tr>
             <td valign="top"><label for="description">Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
-            <td><textarea type="text" name="description" id="description" value="" class="text ui-widget-content ui-corner-all" cols="30" rows ="5" ></textarea>
+            <td><textarea type="text" name="description" id="description" value="" class="text ui-widget-content ui-corner-all" cols="30" rows ="5" style="width: 272px;"></textarea>
             </td>
           </tr>
           <tr>
@@ -153,22 +153,27 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
           </tr>
         </table>
         <table>
-  
           <tr>
-            <td colspan="2">
+            <td width="210px">
               <div><br /><b>Add to Cart:</b></div>
             </td>
           </tr>
           <tr>
-            <td colspan="2"><label for="addToRepo">Share with the community?</label>&nbsp;&nbsp;
-              </td><td><input type="checkbox" name="addToRepo" id="addToRepo" class="text ui-widget-content ui-corner-all" /></td>
+            <td><label for="addToRepo">Share with the community?</label>&nbsp;&nbsp;
+              </td><td><input type="checkbox" name="addToRepo" id="addToRepo" class="text ui-widget-content ui-corner-all" onclick="document.getElementById('repoInfo').style.display=this.checked?'block':'none';" /></td>
           </tr>
-          <tr>
-            <td colspan="2"><label for="replaceExistingGame">Replace existing game?</label>&nbsp;&nbsp;&nbsp;
+        </table>
+        <div style="height:6px;"></div>
+
+        <div id="repoInfo" name="repoInfo" style="display: none;">
+        <table>
+        <tr>
+            <td width="210px"><label for="replaceExistingGame">Replace existing game?</label>&nbsp;&nbsp;&nbsp;
             </td><td><input type="checkbox" name="replaceExistingGame" id="replaceExistingGame" class="text ui-widget-content ui-corner-all" /></td>
           </tr>
+          <tr><td colspan="2"></td></tr>
           <tr>
-            <td colspan="2"><label for="replaceExistingGame">Game compiled for ..</label>&nbsp;&nbsp;&nbsp;
+            <td><label for="replaceExistingGame">Game compiled for ..</label>&nbsp;&nbsp;&nbsp;
             </td><td>
               <select name="platform" id="platform" class="text ui-widget-content ui-corner-all" >
                 <option value="ArduboyFX">Arduboy FX</option>
@@ -176,6 +181,21 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
               </select></td>
           </tr>
         </table>
+        <div style="height:2px;"></div>
+        <table>
+          <tr>
+            <td width="120px"><label for="websiteURL">Website URL</label>&nbsp;&nbsp;&nbsp;
+            </td><td><input type="text" name="websiteURL" id="websiteURL" value="" class="text ui-widget-content ui-corner-all" style="width: 255px;" maxlength="255" />
+              </td>
+          </tr>
+          <tr><td colspan="2"></td></tr>
+          <tr>
+            <td><label for="sourceURL">Source URL</label>&nbsp;&nbsp;&nbsp;
+            </td><td><input type="text" name="sourceURL" id="sourceURL" value="" class="text ui-widget-content ui-corner-all" style="width: 255px;" maxlength="255" />
+              </td>
+          </tr>
+        </table>
+      </div>
 
         <input type="hidden" name="guid" id="guid" value="" />
         <!-- Allow form submission with keyboard without duplicating the dialog button -->
@@ -207,7 +227,10 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
     <br />
     <table><tr>
       <td width="99%"><span style="font-size:9px; color:#afafaf; font-weight: bold;">Use 'Z' (A button), X (B Button) and the arrows keys.</sub></td>
-      <td><a href="#" id="downloadLink" name="downloadLink" download><img src="download.png" width="32px"/></a></td></tr></table>
+        <td><a href="#" id="url" name="url" target="_new" title="Website"><img src="icons/url.png" width="32px" style="opacity: .25;"/></a></td>
+        <td><a href="#" id="source" name="source" target="_new" title="Source Code"><img src="icons/source.png" width="32px" style="opacity: .25;"/></a></td>
+        <td><a href="#" id="downloadLink" name="downloadLink" download title="Download Hex File"><img src="icons/download.png" width="32px" style="opacity: .25;"/></a></td>
+      </tr></table>
     
   </div>
 

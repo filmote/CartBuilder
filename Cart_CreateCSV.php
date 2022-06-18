@@ -47,7 +47,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     const ID_DEVELOPER = 7;
     const ID_INFO = 8;
     const ID_LIKES = 9;
-    const ID_MAX = 10;
+    const ID_URL = 10;
+    const ID_SOURCE = 11;
+    const ID_MAX = 12;
 
     $blankimage = str_repeat(chr(0xFF), 1024);
     $blankprogram = str_repeat(chr(0xFF), 29 * 1024);
