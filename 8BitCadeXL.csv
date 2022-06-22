@@ -1,4 +1,4 @@
-List;Discription;Title screen;Hex file;Data file;Save file;Version;Developer;Info;Likes
+List;Description;Title screen;Hex file;Data file;Save file;Version;Developer;Info;Likes
 0;Bootloader;8bitcade_loader.png;;;;;;;
 1;Maintenance;8BitCadeXL/category-screens/Maintenance.png;;;;;;;
 1;Battery Test;8BitCadeXL/Maintenance/Battery Test.png;8BitCadeXL/Maintenance/Battery Test.hex;;;1.0;Jack Daly;Test the battery on your 8BitCadeXL;
