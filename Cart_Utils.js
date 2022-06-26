@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.25
+// V1.26
 
 var suppressOpenInfoDlg = false;
 
@@ -202,6 +202,19 @@ function openInfo(itemIndex) {
         if  (data != "") data = "&data=../" + data;
         $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
         $('#downloadLink').attr("href", item.hex);
+
+
+        // Hide delete button?
+
+        $('#itemId').val(itemIndex);
+        if ($('#li' + itemIndex).parent().attr("id") == "dvUnused") {
+            $('#deleteBin').hide();
+        }
+        else {
+            $('#deleteBin').show();
+        }
+
+
 
         if (!(item.url === undefined) && item.url != "") {
             $('#url').show();
@@ -506,21 +519,13 @@ function doSearch() {
         if (item.name.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1 || item.developer.toLowerCase().startsWith($('#search').val().toLowerCase())) {
 
             if (!matches.has("li" + (idx+1))) {
-//                $('#li' + (idx + 1)).css("-webkit-filter", "drop-shadow(4px 4px 4px #E2C425)");
                 $('#li' + (idx + 1)).show();
                 matchCount++;
-            }
-            else {
-
-//                $('#li' + (idx + 1)).css("-webkit-filter", "drop-shadow(4px 4px 4px rgba(0, 0, 0, .15))");
-   //             $('#li' + (idx + 1)).hide();
-
             }
 
         }
         else {
 
-//            $('#li' + (idx + 1)).css("-webkit-filter", "drop-shadow(4px 4px 4px rgba(0, 0, 0, .15))");
             $('#li' + (idx + 1)).hide();
 
         }
@@ -535,3 +540,20 @@ function doSearch() {
   resizeColumnHeights();
 
 }
+
+
+$("#deleteBin").click(function() {
+
+    var itemId = "li" + $("#itemId").val();
+    var sourceElement = document.getElementById(itemId);
+
+    if (sourceElement.parentElement.id != "dvUnused") {
+
+        var targetElement = document.getElementById("dvUnused");//$("#dvUnused");
+        var sourceParentElement = sourceElement.parentNode;
+        targetElement.appendChild(sourceElement);
+        $('#deleteBin').hide();
+        $("#dlgInfoPanel").dialog("close");
+    }
+
+});

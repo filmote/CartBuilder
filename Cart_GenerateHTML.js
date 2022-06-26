@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.25
+// V1.26
 
 // First pass:  Render the categories and items used in the selected cart. 
 

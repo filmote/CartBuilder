@@ -32,13 +32,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.25
+// V1.26
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
 var errorDialog;
 var whatNext;
 var infoPanel;
+var infoLIID;
 
 
 // -------------------------------------------------------------------------------------------
@@ -46,6 +47,7 @@ var infoPanel;
 // -------------------------------------------------------------------------------------------
 
 $(document).ready(function () {
+
 
 
     // -------------------------------------------------------------------------------------------
@@ -737,4 +739,3 @@ $(document).ready(function () {
     });
 
 });
-
