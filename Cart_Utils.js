@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.26
+// V1.27
 
 var suppressOpenInfoDlg = false;
 
@@ -201,7 +201,20 @@ function openInfo(itemIndex) {
         var data = item.data;
         if  (data != "") data = "&data=../" + data;
         $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
-        $('#downloadLink').attr("href", item.hex);
+
+
+        // Download zip or Hex?
+
+        if (item.data != "" || item.save != "") {
+
+            $('#downloadLink').attr("href", item.hex.substring(0, item.hex.length - 3) + "fx.zip");
+
+        }
+        else {
+
+            $('#downloadLink').attr("href", item.hex);
+
+        }
 
 
         // Hide delete button?
@@ -213,8 +226,6 @@ function openInfo(itemIndex) {
         else {
             $('#deleteBin').show();
         }
-
-
 
         if (!(item.url === undefined) && item.url != "") {
             $('#url').show();
