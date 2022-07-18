@@ -352,7 +352,7 @@ function createCSV(colCount) {
 
     var output = '';
 
-    output = 'List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source<eol/>';
+    output = 'List;Description;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source<eol/>';
     output += '0;Bootloader;' + $("#loader").val() + ';;;;;' + ((typeof extraCats === "undefined" || extraCats == "")? '' : extraCats) + ';' + ((typeof fullList === "undefined" || fullList == "")? '' : fullList) + ';;;<eol/>'
 
     for (var i = 0; i < colCount - 2; i++) {
