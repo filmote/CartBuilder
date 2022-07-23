@@ -177,7 +177,7 @@ List;Description;Title screen;Hex file;Data file;Save file;Version;Developer;Inf
 11;Umeroose;8BitCadeXL/Platformer/Umeroose.png;8BitCadeXL/Platformer/Umeroose.hex;;;;;
 11;Zoo at Midnight;8BitCadeXL/Platformer/Zoo Midnight.png;8BitCadeXL/Platformer/Zoo Midnight.hex;;;1.0;Hundstrasse;Scrawf must sneak around the zoo to collect the food ans feed the animals before and escaping - all without being caught in the flashlight beam of the zoo wardens!;5
 12;Puzzle;8BitCadeXL/category-screens/Puzzle.png;;;;;;
-12;Hashi;8BitCadeXL/Puzzle/hashi.png;8BitCadeXL/Puzzle/hashi.V1.1.XL.hex;;;1.0;snboot9000;Hashiwokakero 2 is a Japanese number puzzle. Given a set of islands on a 2D grid, each island having a number between 1 and 8, the goal is to build bridges connecting all islands.;;https://community.arduboy.com/t/hashi-japanese-bridge-building-number-puzzle-hashiwokakero-with-144-puzzles/10559;https://gitlab.com/nowozin/hashiarduboy/-/tree/main
+12;Hashi;8BitCadeXL/Puzzle/hashi.png;8BitCadeXL/Puzzle/hashi.v1.2.XL.hex;;;1.2;snboot9000;Hashiwokakero 2 is a Japanese number puzzle. Given a set of islands on a 2D grid, each island having a number between 1 and 8, the goal is to build bridges connecting all islands.;;https://community.arduboy.com/t/hashi-japanese-bridge-building-number-puzzle-hashiwokakero-with-144-puzzles/10559;https://gitlab.com/nowozin/hashiarduboy/-/tree/main
 12;Le Word;8BitCadeXL/Puzzle/LeWord.png;8BitCadeXL/Puzzle/LeWord.hex;8BitCadeXL/Puzzle/LeWord.bin;;;;
 12;Buttons Trail;8BitCadeXL/Puzzle/ButtonsTrail.png;8BitCadeXL/Puzzle/ButtonsTrail.hex;;;1.0;Press Play on Tape;This great little puzzle game was written by Wan Sou.;
 12;8BitCADE_Tetris;8BitCadeXL/Puzzle/8BitCADE_Tetris.png;8BitCadeXL/Puzzle/8BitCADE_Tetris.hex;;;;;
