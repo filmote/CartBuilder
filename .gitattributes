@@ -1,0 +1,14 @@
+## Sanitise line endings for contributors using different OS ##
+
+# Set the default behaviour, in case people don't have core.autocrlf set.
+* text=auto
+
+# Declare files that will always have *nix line endings on checkout.
+*.csv text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+# (binary is a macro for -text -diff)
+*.hex binary
+*.png binary
+*.ttf binary
+*.zip binary
