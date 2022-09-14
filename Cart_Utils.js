@@ -206,11 +206,11 @@ function openInfo(itemIndex) {
 
         if (item.start != "na") {
             eepromInfo = "EEPROM Usage: start " + item.start + ", end " + item.end;
-            if (item.hash == 0) {
-                eepromInfo = eepromInfo + ", unprotected.";
+            if (item.hash == 1) {
+                eepromInfo = eepromInfo + ", hash protected.";
             }
             else {
-                eepromInfo = eepromInfo + ", hash protected.";
+                eepromInfo = eepromInfo + ", unprotected.";
             }
         }
 
