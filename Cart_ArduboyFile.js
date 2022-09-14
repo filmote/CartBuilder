@@ -50,6 +50,10 @@ const graphicName       = document.getElementById("graphicName");
 const dataName          = document.getElementById("dataName");
 const saveName          = document.getElementById("saveName");
 
+const start             = document.getElementById("start");
+const end               = document.getElementById("end");
+const hash              = document.getElementById("hash");
+
 let arduboyFile;
 
 arduboyFileInput.onchange = on_arduboyFileChange;
@@ -92,6 +96,11 @@ async function loadFiles() {
     if('description' in info) description  .value = info.description;
     if('sourceUrl'   in info) sourceURL    .value = info.sourceUrl;
     if('url'         in info) websiteURL   .value = info.url;
+
+    if('start'       in info) start        .value = info.start;
+    if('end'         in info) end          .value = info.end;
+    if('hash'        in info) hash         .value = info.hash;
+
     if('binaries' in info && info.binaries.length > 0) {
         if('filename' in info.binaries[0]) {
             const entryHex = entries.find(x => x.filename == info.binaries[0].filename);

@@ -154,7 +154,7 @@ function generateHtmlTable(data) {
                     var url = row[10];
                     var source = row[11];
 
-                    var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source };
+                    var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source, start: row[12], end: row[13], hash: row[14] };
                     items.push(item);
 
                 }
@@ -287,7 +287,7 @@ function generateHtmlTable_FullList(data) {
                         var url = row[10];
                         var source = row[11];
 
-                        var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source };
+                        var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source, start: row[12], end: row[13], hash: row[14] };
                         items.push(item);
 
                     };

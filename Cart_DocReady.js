@@ -268,7 +268,12 @@ $(document).ready(function () {
             saveName = $("#saveName"),
             description = $("#description"),
             addToRepo = $("#addToRepo"),
-            allFields = $([]).add(name).add(fileName).add(graphicName).add(version).add(developer).add(description).add(addToRepo),
+
+            start = $("#start"),
+            end = $("#end"),
+            hash = $("#hash"),
+
+            allFields = $([]).add(name).add(fileName).add(graphicName).add(version).add(developer).add(description).add(addToRepo).add(start).add(end).add(hash),
             tips = $(".validateTips");
 
         function uploadFile() {
@@ -283,6 +288,11 @@ $(document).ready(function () {
             var $versionNumber = $('#versionNumber').val();
             var $developerName = $('#developerName').val();
             var $descriptionVal = $('#description').val();
+
+            var $start = $('#start').val();
+            var $end = $('#end').val();
+            var $hash = $('#hash').val();
+
 
             // Hex file is mandatory and must be between < 85K, have no mime type and an extension of .hex ..
 
@@ -377,6 +387,45 @@ $(document).ready(function () {
                 valid = false;
             }
 
+            if ($start != "") {
+
+                if (parseInt($start) != $start) {
+                    start.addClass("ui-state-error");
+                    updateTips(tips, "EEPROM start address must be an integer.");
+                    valid = false;
+                }
+
+                else if (parseInt($start) < 16 || parseInt($start) > 1023) {
+                    start.addClass("ui-state-error");
+                    updateTips(tips, "EEPROM start address must be an between 16 and 1023.");
+                    valid = false;
+                }
+
+            }
+
+
+            if ($end != "") {
+
+                if ($start == "") {
+                    start.addClass("ui-state-error");
+                    updateTips(tips, "EEPROM start and end addresses must be entered.");
+                    valid = false;
+                }
+
+                else if (parseInt($end) != $end) {
+                    end.addClass("ui-state-error");
+                    updateTips(tips, "EEPROM end address must be an integer.");
+                    valid = false;
+                }
+
+                else if (parseInt($end) < 16 || parseInt($end) > 1023) {
+                    end.addClass("ui-state-error");
+                    updateTips(tips, "EEPROM end address must be an between 16 and 1023.");
+                    valid = false;
+                }
+
+            }
+
             // If the files are valid then upload them ..
 
             if (valid) {
@@ -441,12 +490,18 @@ $(document).ready(function () {
                             $gameTitle = baseFileName;
                         }
 
+                        if ($start == "") {
+                            $start = "na";
+                            $end = "na";
+                            $hash = "na";
+                        }
+
                         if (addToRepoChecked) {
-                            var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: "upload/" + dataFile, save: "upload/" + saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal };
+                            var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: "upload/" + dataFile, save: "upload/" + saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal, start: $start, end: $end, hash: $hash };
                             items.push(item);
                         }
                         else {
-                            var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: "temp/" + dataFile, save: "temp/" + saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal };
+                            var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: "temp/" + dataFile, save: "temp/" + saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal, start: $start, end: $end, hash: $hash };
                             items.push(item);
                         }
 

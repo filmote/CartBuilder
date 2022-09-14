@@ -202,6 +202,19 @@ function openInfo(itemIndex) {
         if  (data != "") data = "&data=../" + data;
         $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
 
+        var eepromInfo = "EEPROM Usage: None";
+
+        if (item.start != "na") {
+            eepromInfo = "EEPROM Usage: start " + item.start + ", end " + item.end;
+            if (item.hash == 0) {
+                eepromInfo = eepromInfo + ", unprotected.";
+            }
+            else {
+                eepromInfo = eepromInfo + ", hash protected.";
+            }
+        }
+
+        $('#infoEEPROMUsage').html(eepromInfo);
 
         // Download zip or Hex?
 
@@ -352,8 +365,8 @@ function createCSV(colCount) {
 
     var output = '';
 
-    output = 'List;Description;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source<eol/>';
-    output += '0;Bootloader;' + $("#loader").val() + ';;;;;' + ((typeof extraCats === "undefined" || extraCats == "")? '' : extraCats) + ';' + ((typeof fullList === "undefined" || fullList == "")? '' : fullList) + ';;;<eol/>'
+    output = 'List;Description;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source;Start;End;Hash<eol/>';
+    output += '0;Bootloader;' + $("#loader").val() + ';;;;;' + ((typeof extraCats === "undefined" || extraCats == "")? '' : extraCats) + ';' + ((typeof fullList === "undefined" || fullList == "")? '' : fullList) + ';;;;;;<eol/>'
 
     for (var i = 0; i < colCount - 2; i++) {
 
@@ -376,7 +389,7 @@ function createCSV(colCount) {
             output += cat.save; output += ";";
             output += cat.version; output += ";";
             output += cat.developer; output += ";";
-            output += cat.info; output += ";;;;<eol/>";
+            output += cat.info; output += ";;;;;;;<eol/>";
 
             var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
             var idsInOrder = ul.sortable("toArray");
@@ -401,16 +414,36 @@ function createCSV(colCount) {
                     output += ";";
                 }
                 else {
+                    output += items[index - 1].url; output += ";";
+                }
+
+                if (items[index - 1].source == undefined) {
+                    output += ";";
+                }
+                else {
                     output += items[index - 1].source; output += ";";
                 }
 
-                if (items[index - 1].url == undefined) {
+                if (items[index - 1].start == undefined) {
+                    output += ";";
+                }
+                else {
+                    output += items[index - 1].start; output += ";";
+                }
+
+                if (items[index - 1].end == undefined) {
+                    output += ";";
+                }
+                else {
+                    output += items[index - 1].end; output += ";";
+                }
+
+                if (items[index - 1].hash == undefined) {
                     output += ";<eol/>";
                 }
                 else {
-                    output += items[index - 1].source; output += ";<eol/>";
+                    output += items[index - 1].hash; output += ";<eol/>";
                 }
-
             }
 
         }

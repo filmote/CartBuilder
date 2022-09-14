@@ -120,6 +120,12 @@ li {
   font-size: 12px;
 }
 
+.infoEEPROMUsage {
+  font-size: 9px; 
+  color:#afafaf; 
+  font-weight: bold;
+}
+
 iframe {
   padding-top: 0px;
   margin-top: 0px;

@@ -128,13 +128,19 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         fwrite($myfile, "\nDescription: ");
         fwrite($myfile, $_POST['description']);
         fwrite($myfile, "\nReplace Existing: ");
-        fwrite($myfile, $_POST['replaceExistingGame']);
+        fwrite($myfile, $_POST['replaceExistingGame'] ?? 'off');
         fwrite($myfile, "\nPlatform: ");
         fwrite($myfile, $_POST['platform']);
-        fwrite($myfile, "\Website URL: ");
+        fwrite($myfile, "\nWebsite URL: ");
         fwrite($myfile, $_POST['websiteURL']);
-        fwrite($myfile, "\Source URL: ");
+        fwrite($myfile, "\nSource URL: ");
         fwrite($myfile, $_POST['sourceURL']);
+        fwrite($myfile, "\nStart: ");
+        fwrite($myfile, $_POST['start']);
+        fwrite($myfile, "\nEnd: ");
+        fwrite($myfile, $_POST['end']);
+        fwrite($myfile, "\nHash: ");
+        fwrite($myfile, $_POST['hash']);
         fclose($myfile);
 
     }

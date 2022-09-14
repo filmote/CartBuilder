@@ -1,6 +1,0 @@
-Title: 
-Version: 
-Developer: 
-Description: 
-Replace Existing: 
-Platform: 8BitCadeXL\Website URL: \Source URL: 

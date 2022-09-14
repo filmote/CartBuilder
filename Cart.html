@@ -152,6 +152,44 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
                 class="text ui-widget-content ui-corner-all" /></td>
           </tr>
         </table>
+
+        <table>
+          <tr>
+            <td width="210px">
+              <div><br /><b>EEPROM Usage:</b></div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="usesEEPROM">Game uses the EEPROM?</label>&nbsp;&nbsp;
+              </td><td><input type="checkbox" name="usesEEPROM" id="usesEEPROM" class="text ui-widget-content ui-corner-all" onclick="document.getElementById('eepromInfo').style.display=this.checked?'block':'none';" /></td>
+          </tr>
+        </table>
+        <div style="height:6px;"></div>
+
+        <div id="eepromInfo" name="eepromInfo" style="display: none;">
+          <table>
+          <tr>
+              <td width="210px"><label for="start">Start address:</label>&nbsp;&nbsp;&nbsp;
+              </td><td><input type="text" name="start" id="start" class="text ui-widget-content ui-corner-all" /></td>
+            </tr>
+            <tr>
+              <td width="210px"><label for="end">End address:</label>&nbsp;&nbsp;&nbsp;
+              </td><td><input type="text" name="end" id="end" class="text ui-widget-content ui-corner-all" /></td>
+            </tr>
+            <tr><td colspan="2"></td></tr>
+            <tr>
+              <td><label for="hash">Hash protection:</label>&nbsp;&nbsp;&nbsp;
+              </td><td>
+                <select name="hash" id="hash" class="text ui-widget-content ui-corner-all" >
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                </select></td>
+            </tr>
+          </table>
+        </div>
+
+
+
         <table>
           <tr>
             <td width="210px">
@@ -173,7 +211,7 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
           </tr>
           <tr><td colspan="2"></td></tr>
           <tr>
-            <td><label for="replaceExistingGame">Game compiled for ..</label>&nbsp;&nbsp;&nbsp;
+            <td><label for="platform">Game compiled for ..</label>&nbsp;&nbsp;&nbsp;
             </td><td>
               <select name="platform" id="platform" class="text ui-widget-content ui-corner-all" >
                 <option value="ArduboyFX">Arduboy FX</option>
@@ -226,6 +264,10 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
     <iframe name="infoPreview" id="infoPreview" src="" width="512" height="256">
     </iframe>
     <br />
+    <table><tr>
+      <td width="99%"><p id="infoEEPROMUsage" name="infoEEPROMUsage" class="infoEEPROMUsage">Version 1.0</p></td>
+    </tr></table>
+
     <table><tr>
       <td width="99%"><span style="font-size:9px; color:#afafaf; font-weight: bold;">Use 'A/Z/CTRL' (A button), 'S/X/ALT' (B Button) and the arrows keys to play.<br>'F' for full screen, 'F6' to restart. 'P' make screenshot, 'R' start/stop recording.</sub></td>
         <td><img id="deleteBin" src="icons/deleteBin.png" width="32px" style="opacity: .25;"/></td>
