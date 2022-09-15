@@ -40,11 +40,25 @@ var errorDialog;
 var whatNext;
 var infoPanel;
 var infoLIID;
-
+var eepromClashes;
 
 // -------------------------------------------------------------------------------------------
 //  Category Name
 // -------------------------------------------------------------------------------------------
+
+function SortByStart(a, b){
+    
+    var aStart = a.start.toLowerCase();
+    var bStart = b.start.toLowerCase(); 
+
+    if (aStart == "na") aStart = "9999";
+    if (bStart == "na") bStart = "9999";
+    if (aStart == "")   { aStart = "9999"; a.start = "na"; }
+    if (bStart == "")   { bStart = "9999"; b.start = "na"; }
+    
+    return (parseInt(aStart) < parseInt(bStart) ? -1 : ((parseInt(aStart) > parseInt(bStart)) ? 1 : 0));
+
+}
 
 $(document).ready(function () {
 
@@ -574,6 +588,22 @@ $(document).ready(function () {
 
 
     // -------------------------------------------------------------------------------------------
+    //  EEPROM Clashes Dialogue
+
+    eepromClashes = $( "#dlgEEPROMClashes" ).dialog({
+        autoOpen: false,
+        modal: true,
+        height: "auto",
+        width: "1300px",
+        buttons: {
+            Ok: function() {
+                $( this ).dialog( "close" );
+            }
+            }
+    });
+
+
+    // -------------------------------------------------------------------------------------------
     //  What Next Dialogue
 
     whatNext = $( "#dlgWhatNext" ).dialog({
@@ -773,19 +803,136 @@ $(document).ready(function () {
 
             $('#btnGetBin').click(function () {
 
+                // var colCount = $("#tab").find("tr:first th").length;
+
+
+                // if (allHeadersOK(colCount)) {
+
+                //     whatNext.dialog("open");
+
+                //     $('#output').val(createCSV(colCount));
+                //     $('#mode').val('bin');
+
+                //     $("#cartForm").submit();
+
+                // }
+
+
+
+
+
+
+
+
+
+
+
+                // If all OK, generate data ..
+
                 var colCount = $("#tab").find("tr:first th").length;
+                var output = '';
+                var selectedItems = [];
+                var alt = 0;
+
+                for (var i = 0; i < colCount - 2; i++) {
+
+                    var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
+                    var idsInOrder = ul.sortable("toArray");
+
+                    for (const value of idsInOrder) {
+
+                        var index = value.substring(2);
+
+                        selectedItems.push(items[index - 1]);
+
+//                        output += items[index - 1].name; output += ";";
+
+                    }
+
+                    selectedItems.sort(SortByStart);
+
+                    output = "<table cellpadding='0' cellspacing='0'><tr><td></td><td><img src='icons/Ruler.png' title='ruler' /></td></tr>";
 
 
-                if (allHeadersOK(colCount)) {
+                    for (const item of selectedItems) {
 
-                    whatNext.dialog("open");
+                        if (item.start == "na") break; 
 
-                    $('#output').val(createCSV(colCount));
-                    $('#mode').val('bin');
+                        var hasClashes = false;
 
-                    $("#cartForm").submit();
+
+                        // Determine clashes with other items ..
+
+                        var clashes = item.name + " (" + item.start + "," + item.end + ") clashes with ";
+
+                        for (const testItem of selectedItems) {
+
+                            if (testItem.start == "na") break; 
+
+                            if (item.name != testItem.name) {
+
+                                if (!(parseInt(item.start) >= parseInt(testItem.end) ||
+                                    parseInt(item.end) <= parseInt(testItem.start))) {
+
+                                    clashes = clashes + testItem.name.replace("\"", "").replace("'", "")  + " (" + testItem.start + "," + testItem.end + "), ";
+                                    hasClashes = true;
+
+                                }
+
+                            }
+
+                        }
+
+
+                        // Trim last comma off ..
+
+                        if (hasClashes) {
+                            clashes = clashes.slice(0, -2);
+                        }
+
+
+
+                        // Render row ..
+
+                        output = output + "<tr><td" + (alt == 1 ? " bgcolor='#ebebeb'" : "") + ">";
+
+                        if (hasClashes) { 
+                            output = output + "<img src='icons/Info.png' title='" + clashes + "' /> ";
+                        }
+                        else {
+                            output = output + "<img src='icons/Info_Blank.png' /> ";
+                        }
+
+                        output += item.name.replace("\"", "").replace("'", ""); output += "</td><td background='icons/Ruler" + (alt == 0 ? "2" : "3") + ".png' style='vertical-align: middle;'>";
+
+                        for (var j = 0; j < parseInt(item.start); j++) {
+                            output = output + "<img src='icons/spacer_white.png' />";
+                        }
+    
+
+
+                        for (var j = parseInt(item.start); j <= parseInt(item.end); j++) {
+                            if (item.hash == 0) {
+                                output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' />";
+                            }
+                            else {
+                                output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' />";
+                            }
+                        }
+
+                        output += "</td></tr>";
+
+                        alt = (alt == 0 ? 1 : 0);
+ 
+                    }
+
+                    output = output + "</table>";
 
                 }
+
+                document.getElementById("htmlEEPROMClashes").innerHTML = output;
+// alert(output);
+                eepromClashes.dialog("open");
 
             });
 
