@@ -49,14 +49,25 @@ var eepromClashes;
 function SortByStart(a, b){
     
     var aStart = a.start.toLowerCase();
+    var aEnd   = a.end.toLowerCase();
     var bStart = b.start.toLowerCase(); 
+    var bEnd =   b.end.toLowerCase(); 
 
     if (aStart == "na") aStart = "9999";
     if (bStart == "na") bStart = "9999";
     if (aStart == "")   { aStart = "9999"; a.start = "na"; }
     if (bStart == "")   { bStart = "9999"; b.start = "na"; }
-    
-    return (parseInt(aStart) < parseInt(bStart) ? -1 : ((parseInt(aStart) > parseInt(bStart)) ? 1 : 0));
+
+    if (aEnd == "na") aEnd = "9999";
+    if (bEnd == "na") bEnd = "9999";
+    if (aEnd == "")   { aEnd = "9999"; a.end = "na"; }
+    if (bEnd == "")   { bEnd = "9999"; b.end = "na"; }
+
+    var a = String(aStart).padStart(4, '0') + String(aEnd).padStart(4, '0');
+    var b = String(bStart).padStart(4, '0') + String(bEnd).padStart(4, '0')
+
+    return (a < b ? -1 : a > b ? 1 : 0);
+//    return (parseInt(aStart) < parseInt(bStart) ? -1 : ((parseInt(aStart) > parseInt(bStart)) ? 1 : 0));
 
 }
 
@@ -869,7 +880,7 @@ $(document).ready(function () {
 
                         if (item.name != testItem.name) {
 
-                            if (!(parseInt(item.start) >= parseInt(testItem.end) || parseInt(item.end) <= parseInt(testItem.start))) {
+                            if (!(parseInt(item.start) > parseInt(testItem.end) || parseInt(item.end) < parseInt(testItem.start))) {
 
                                 clashIndexes = clashIndexes + j + ",";
                                 hasClashes = true;
@@ -884,7 +895,6 @@ $(document).ready(function () {
                     // Trim last comma off ..
 
                     if (hasClashes) {
-                        //clashes = clashes.slice(0, -2);
                         clashIndexes = clashIndexes.slice(0, -1);
                     }
 
@@ -983,6 +993,7 @@ function highlightRows() {
             $('.tblClashes tr').eq(arguments[i] + 1).children('td:last-child').css('background-image','none');
             $('.tblClashes tr').eq(arguments[i] + 1).children('td:last-child').css('background-color','#fcf3cf');
         }
+
     }
 
 }
