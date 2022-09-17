@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.28
+// V1.29
 
 // First pass:  Render the categories and items used in the selected cart. 
 
@@ -49,11 +49,13 @@ function generateHtmlTable(data) {
     var html = '<table id=tab class="AltTable"><thead><tr><th valign="top" align="center" style="text-align:center; background-color: #25AAE2; column-width:600px;">';
     html += '<button type="button" id="btnGetData" class="buttonHeader">Download CSV</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button><div style="height:4px;"></div>';
+    html += '<div style="height:28px;"></div>';
     html += '<span class="search">Bootload Image:&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</span><div style="height:4px;"></div>';
     html += '<span class="search" id="searchLabel" name="searchLabel">Search Games:&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</span>';
     html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;">';
     html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button><div style="height:2px;"></div>';
+    html += '<button type="button" id="btnEEPROMMap" class="buttonHeader">EEPROM Map</button><div style="height:2px;"></div>';
     html += '<select name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option></select><div style="height:2px;"></div>';
     html += '<input name="search" id="search" onInput="doSearch()" class="searchBox" onkeydown="return event.key != \'Enter\';"/>';
     html += '</th>';

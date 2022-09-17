@@ -34,7 +34,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.28
+// V1.29
 
 
     session_start();
@@ -128,7 +128,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         fwrite($myfile, "\nDescription: ");
         fwrite($myfile, $_POST['description']);
         fwrite($myfile, "\nReplace Existing: ");
-        fwrite($myfile, $_POST['replaceExistingGame'] ?? 'off');
+
+        if (is_null($_POST['replaceExistingGame'])) {
+          fwrite($myfile, 'off');
+        }
+        else {
+            fwrite($myfile, $_POST['replaceExistingGame']);
+        }
+
         fwrite($myfile, "\nPlatform: ");
         fwrite($myfile, $_POST['platform']);
         fwrite($myfile, "\nWebsite URL: ");

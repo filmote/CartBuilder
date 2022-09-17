@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.28
+// V1.29
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -803,31 +803,24 @@ $(document).ready(function () {
 
             $('#btnGetBin').click(function () {
 
-                // var colCount = $("#tab").find("tr:first th").length;
+                var colCount = $("#tab").find("tr:first th").length;
 
 
-                // if (allHeadersOK(colCount)) {
+                if (allHeadersOK(colCount)) {
 
-                //     whatNext.dialog("open");
+                    whatNext.dialog("open");
 
-                //     $('#output').val(createCSV(colCount));
-                //     $('#mode').val('bin');
+                    $('#output').val(createCSV(colCount));
+                    $('#mode').val('bin');
 
-                //     $("#cartForm").submit();
+                    $("#cartForm").submit();
 
-                // }
+                }
 
-
-
-
+            });
 
 
-
-
-
-
-
-                // If all OK, generate data ..
+            $('#btnEEPROMMap').click(function () {
 
                 var colCount = $("#tab").find("tr:first th").length;
                 var output = '';
