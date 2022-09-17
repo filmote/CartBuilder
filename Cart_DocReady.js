@@ -922,10 +922,10 @@ $(document).ready(function () {
                     // Coloured band..
 
                     if (item.hash == 0) {
-                        output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (parseInt(item.end) - parseInt(item.start)) + "px' />";
+                        output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (parseInt(item.end) - parseInt(item.start) + 1) + "px' />";
                     }
                     else {
-                        output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (parseInt(item.end) - parseInt(item.start)) + "px' />";
+                        output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (parseInt(item.end) - parseInt(item.start) + 1) + "px' />";
                     }
 
                     output += "</td></tr>";
