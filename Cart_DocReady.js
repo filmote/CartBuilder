@@ -845,93 +845,97 @@ $(document).ready(function () {
 
                         selectedItems.push(items[index - 1]);
 
-//                        output += items[index - 1].name; output += ";";
-
                     }
 
                     selectedItems.sort(SortByStart);
+                
+                }
 
-                    output = "<table cellpadding='0' cellspacing='0'><tr><td></td><td><img src='icons/Ruler.png' title='ruler' /></td></tr>";
+                if (selectedItems.length == 0) return;
 
-
-                    for (const item of selectedItems) {
-
-                        if (item.start == "na") break; 
-
-                        var hasClashes = false;
+                output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler.png' title='ruler' /></td></tr>";
 
 
-                        // Determine clashes with other items ..
+                for (var i = 0; i < selectedItems.length; i++) {
 
-                        var clashes = item.name + " (" + item.start + "," + item.end + ") clashes with ";
+                    var hasClashes = false;
+                    item = selectedItems[i];
 
-                        for (const testItem of selectedItems) {
+                    if (item.start == "na") break; 
 
-                            if (testItem.start == "na") break; 
 
-                            if (item.name != testItem.name) {
+                    // Determine clashes with other items ..
 
-                                if (!(parseInt(item.start) >= parseInt(testItem.end) ||
-                                    parseInt(item.end) <= parseInt(testItem.start))) {
+                    var clashIndexes = i + ",";
 
-                                    clashes = clashes + testItem.name.replace("\"", "").replace("'", "")  + " (" + testItem.start + "," + testItem.end + "), ";
-                                    hasClashes = true;
+                    for (var j = 0; j < selectedItems.length; j++) {
 
-                                }
+                        testItem = selectedItems[j];
+
+                        if (testItem.start == "na") break; 
+
+                        if (item.name != testItem.name) {
+
+                            if (!(parseInt(item.start) >= parseInt(testItem.end) || parseInt(item.end) <= parseInt(testItem.start))) {
+
+                                clashIndexes = clashIndexes + j + ",";
+                                hasClashes = true;
 
                             }
 
                         }
 
-
-                        // Trim last comma off ..
-
-                        if (hasClashes) {
-                            clashes = clashes.slice(0, -2);
-                        }
-
-
-
-                        // Render row ..
-
-                        output = output + "<tr><td" + (alt == 1 ? " bgcolor='#ebebeb'" : "") + ">";
-
-                        if (hasClashes) { 
-                            output = output + "<img src='icons/Info.png' title='" + clashes + "' /> ";
-                        }
-                        else {
-                            output = output + "<img src='icons/Info_Blank.png' /> ";
-                        }
-
-                        output += item.name.replace("\"", "").replace("'", ""); output += "</td><td background='icons/Ruler" + (alt == 0 ? "2" : "3") + ".png' style='vertical-align: middle;'>";
-
-                        for (var j = 0; j < parseInt(item.start); j++) {
-                            output = output + "<img src='icons/spacer_white.png' />";
-                        }
-    
-
-
-                        for (var j = parseInt(item.start); j <= parseInt(item.end); j++) {
-                            if (item.hash == 0) {
-                                output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' />";
-                            }
-                            else {
-                                output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' />";
-                            }
-                        }
-
-                        output += "</td></tr>";
-
-                        alt = (alt == 0 ? 1 : 0);
- 
                     }
 
-                    output = output + "</table>";
+
+                    // Trim last comma off ..
+
+                    if (hasClashes) {
+                        //clashes = clashes.slice(0, -2);
+                        clashIndexes = clashIndexes.slice(0, -1);
+                    }
+
+
+
+                    // Render row ..
+
+                    output = output + "<tr><td" + (alt == 1 ? " bgcolor='#ebebeb'" : "") + ">";
+
+                    if (hasClashes) { 
+                        output = output + "&nbsp;<img src='icons/Info.png' onclick='clearRows(); highlightRows(" + clashIndexes + ");' /> ";
+                    }
+                    else {
+                        output = output + "&nbsp;<img src='icons/Info_Blank.png' /> ";
+                    }
+
+                    output += item.name.replace("\"", "").replace("'", ""); output += "</td><td background='icons/Ruler" + (alt == 0 ? "2" : "3") + ".png' style='vertical-align: middle;'>";
+
+
+
+                    // Blank band ..
+
+                    if (parseInt(item.start) > 0) {
+                        output = output + "<img src='icons/spacer_white.png' height='12px' width='" + parseInt(item.start) + "px' />";
+                    }
+
+                    
+                    // Coloured band..
+
+                    if (item.hash == 0) {
+                        output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (parseInt(item.end) - parseInt(item.start)) + "px' />";
+                    }
+                    else {
+                        output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (parseInt(item.end) - parseInt(item.start)) + "px' />";
+                    }
+
+                    output += "</td></tr>";
+
+                    alt = (alt == 0 ? 1 : 0);
 
                 }
 
+                output = output + "</table>";
                 document.getElementById("htmlEEPROMClashes").innerHTML = output;
-// alert(output);
                 eepromClashes.dialog("open");
 
             });
@@ -941,3 +945,51 @@ $(document).ready(function () {
     });
 
 });
+
+function clearRows() {
+
+    $(".tblClashes tr").each(function() {
+
+        var index = $(this).parent().children().index($(this));
+
+        if (index > 0) { 
+
+            if (index % 2 == 0) {
+                $(this).children('td:first').css('background-color','#ebebeb');
+                $(this).children('td:last-child').css('background-color','#ebebeb');
+                $(this).children('td:last-child').css('background-image','url(icons/Ruler3.png)');
+            }
+            else {
+                $(this).children('td:first').css('background-color','#ffffff');
+                $(this).children('td:last-child').css('background-color','#ffffff');
+                $(this).children('td:last-child').css('background-image','url(icons/Ruler2.png)');
+            }
+
+        }
+
+    });
+    
+
+}
+
+function highlightRows() {
+
+    for (var i = 0; i < arguments.length; i++) {
+
+        if (i == 0) {
+
+            if ($('.tblClashesSelected').val() == arguments[0]) return;
+
+            $('.tblClashesSelected').val(arguments[0]);
+            $('.tblClashes tr').eq(arguments[i] + 1).children('td:first').css('background-color','#f7dc6f ');
+            $('.tblClashes tr').eq(arguments[i] + 1).children('td:last-child').css('background-image','none');
+            $('.tblClashes tr').eq(arguments[i] + 1).children('td:last-child').css('background-color','#f7dc6f ');
+        }
+        else {
+            $('.tblClashes tr').eq(arguments[i] + 1).children('td:first').css('background-color','#fcf3cf');
+            $('.tblClashes tr').eq(arguments[i] + 1).children('td:last-child').css('background-image','none');
+            $('.tblClashes tr').eq(arguments[i] + 1).children('td:last-child').css('background-color','#fcf3cf');
+        }
+    }
+
+}
