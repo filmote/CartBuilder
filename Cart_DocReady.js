@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.29
+// V1.30
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -601,17 +601,34 @@ $(document).ready(function () {
     // -------------------------------------------------------------------------------------------
     //  EEPROM Clashes Dialogue
 
-    eepromClashes = $( "#dlgEEPROMClashes" ).dialog({
-        autoOpen: false,
-        modal: true,
-        height: "auto",
-        width: "1300px",
-        buttons: {
-            Ok: function() {
-                $( this ).dialog( "close" );
-            }
-            }
-    });
+    var w = window.innerWidth;
+    if (w > 1400) {
+        eepromClashes = $( "#dlgEEPROMClashes" ).dialog({
+            autoOpen: false,
+            modal: true,
+            height: "auto",
+            width: "1300px",
+            buttons: {
+                Ok: function() {
+                    $( this ).dialog( "close" );
+                }
+                }
+        });
+    }
+    else {
+        eepromClashes = $( "#dlgEEPROMClashes" ).dialog({
+            autoOpen: false,
+            modal: true,
+            height: "auto",
+            width: "800px",
+            buttons: {
+                Ok: function() {
+                    $( this ).dialog( "close" );
+                }
+                }
+        });
+
+    }
 
 
     // -------------------------------------------------------------------------------------------
@@ -833,6 +850,8 @@ $(document).ready(function () {
 
             $('#btnEEPROMMap').click(function () {
 
+                var w = window.innerWidth;
+
                 var colCount = $("#tab").find("tr:first th").length;
                 var output = '';
                 var selectedItems = [];
@@ -857,7 +876,12 @@ $(document).ready(function () {
 
                 if (selectedItems.length == 0) return;
 
-                output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler.png' title='ruler' /></td></tr>";
+                if (w > 1400) {
+                    output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler.png' title='ruler' /></td></tr>";
+                }
+                else {
+                    output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler_Small.png' title='ruler' /></td></tr>";
+                }
 
 
                 for (var i = 0; i < selectedItems.length; i++) {
@@ -899,10 +923,9 @@ $(document).ready(function () {
                     }
 
 
-
                     // Render row ..
 
-                    output = output + "<tr><td" + (alt == 1 ? " bgcolor='#ebebeb'" : "") + ">";
+                    output = output + "<tr><td" + (alt == 1 ? " bgcolor='#ebebeb'" : "") + " title='" + item.start + " to " + item.end + "'>";
 
                     if (hasClashes) { 
                         output = output + "&nbsp;<img src='icons/Info.png' onclick='clearRows(); highlightRows(" + clashIndexes + ");' /> ";
@@ -911,24 +934,45 @@ $(document).ready(function () {
                         output = output + "&nbsp;<img src='icons/Info_Blank.png' /> ";
                     }
 
-                    output += item.name.replace("\"", "").replace("'", ""); output += "</td><td background='icons/Ruler" + (alt == 0 ? "2" : "3") + ".png' style='vertical-align: middle;'>";
-
+                    if (w > 1400) {
+                        output += item.name.replace("\"", "").replace("'", ""); output += "</td><td title='" + item.start + " to " + item.end + "' background='icons/Ruler" + (alt == 0 ? "2" : "3") + ".png' style='vertical-align: middle;'>";
+                    }
+                    else {
+                        output += item.name.replace("\"", "").replace("'", ""); output += "</td><td title='" + item.start + " to " + item.end + "' background='icons/Ruler_Small" + (alt == 0 ? "2" : "3") + ".png' style='vertical-align: middle;'>";
+                    }
 
 
                     // Blank band ..
 
-                    if (parseInt(item.start) > 0) {
-                        output = output + "<img src='icons/spacer_white.png' height='12px' width='" + parseInt(item.start) + "px' />";
+                    if (w > 1400) {
+                        if (parseInt(item.start) > 0) {
+                            output = output + "<img src='icons/spacer_white.png' height='12px' width='" + parseInt(item.start) + "px' />";
+                        }
+                    }
+                    else {
+                        if (parseInt(item.start) > 0) {
+                            output = output + "<img src='icons/spacer_white.png' height='12px' width='" + (parseInt(item.start) / 2) + "px' />";
+                        }
                     }
 
                     
                     // Coloured band..
 
-                    if (item.hash == 0) {
-                        output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (parseInt(item.end) - parseInt(item.start) + 1) + "px' />";
+                    if (w > 1400) {
+                        if (item.hash == 0) {
+                            output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+                        }
+                        else {
+                            output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+                        }
                     }
                     else {
-                        output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (parseInt(item.end) - parseInt(item.start) + 1) + "px' />";
+                        if (item.hash == 0) {
+                            output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+                        }
+                        else {
+                            output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+                        }
                     }
 
                     output += "</td></tr>";
