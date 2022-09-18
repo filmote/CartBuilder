@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.30
+// V1.36
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -608,6 +608,7 @@ $(document).ready(function () {
             modal: true,
             height: "auto",
             width: "1300px",
+            height: ($(window).height() - 50),
             buttons: {
                 Ok: function() {
                     $( this ).dialog( "close" );
@@ -621,6 +622,7 @@ $(document).ready(function () {
             modal: true,
             height: "auto",
             width: "800px",
+            height: ($(window).height() - 50),
             buttons: {
                 Ok: function() {
                     $( this ).dialog( "close" );
@@ -850,139 +852,7 @@ $(document).ready(function () {
 
             $('#btnEEPROMMap').click(function () {
 
-                var w = window.innerWidth;
-
-                var colCount = $("#tab").find("tr:first th").length;
-                var output = '';
-                var selectedItems = [];
-                var alt = 0;
-
-                for (var i = 0; i < colCount - 2; i++) {
-
-                    var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
-                    var idsInOrder = ul.sortable("toArray");
-
-                    for (const value of idsInOrder) {
-
-                        var index = value.substring(2);
-
-                        selectedItems.push(items[index - 1]);
-
-                    }
-
-                    selectedItems.sort(SortByStart);
-                
-                }
-
-                if (selectedItems.length == 0) return;
-
-                if (w > 1400) {
-                    output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler.png' title='ruler' /></td></tr>";
-                }
-                else {
-                    output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler_Small.png' title='ruler' /></td></tr>";
-                }
-
-
-                for (var i = 0; i < selectedItems.length; i++) {
-
-                    var hasClashes = false;
-                    item = selectedItems[i];
-
-                    if (item.start == "na") break; 
-
-
-                    // Determine clashes with other items ..
-
-                    var clashIndexes = i + ",";
-
-                    for (var j = 0; j < selectedItems.length; j++) {
-
-                        testItem = selectedItems[j];
-
-                        if (testItem.start == "na") break; 
-
-                        if (item.name != testItem.name) {
-
-                            if (!(parseInt(item.start) > parseInt(testItem.end) || parseInt(item.end) < parseInt(testItem.start))) {
-
-                                clashIndexes = clashIndexes + j + ",";
-                                hasClashes = true;
-
-                            }
-
-                        }
-
-                    }
-
-
-                    // Trim last comma off ..
-
-                    if (hasClashes) {
-                        clashIndexes = clashIndexes.slice(0, -1);
-                    }
-
-
-                    // Render row ..
-
-                    output = output + "<tr><td" + (alt == 1 ? " bgcolor='#ebebeb'" : "") + " title='" + item.start + " to " + item.end + "'>";
-
-                    if (hasClashes) { 
-                        output = output + "&nbsp;<img src='icons/Info.png' onclick='clearRows(); highlightRows(" + clashIndexes + ");' /> ";
-                    }
-                    else {
-                        output = output + "&nbsp;<img src='icons/Info_Blank.png' /> ";
-                    }
-
-                    if (w > 1400) {
-                        output += item.name.replace("\"", "").replace("'", ""); output += "</td><td title='" + item.start + " to " + item.end + "' background='icons/Ruler" + (alt == 0 ? "2" : "3") + ".png' style='vertical-align: middle;'>";
-                    }
-                    else {
-                        output += item.name.replace("\"", "").replace("'", ""); output += "</td><td title='" + item.start + " to " + item.end + "' background='icons/Ruler_Small" + (alt == 0 ? "2" : "3") + ".png' style='vertical-align: middle;'>";
-                    }
-
-
-                    // Blank band ..
-
-                    if (w > 1400) {
-                        if (parseInt(item.start) > 0) {
-                            output = output + "<img src='icons/spacer_white.png' height='12px' width='" + parseInt(item.start) + "px' />";
-                        }
-                    }
-                    else {
-                        if (parseInt(item.start) > 0) {
-                            output = output + "<img src='icons/spacer_white.png' height='12px' width='" + (parseInt(item.start) / 2) + "px' />";
-                        }
-                    }
-
-                    
-                    // Coloured band..
-
-                    if (w > 1400) {
-                        if (item.hash == 0) {
-                            output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
-                        }
-                        else {
-                            output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
-                        }
-                    }
-                    else {
-                        if (item.hash == 0) {
-                            output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
-                        }
-                        else {
-                            output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
-                        }
-                    }
-
-                    output += "</td></tr>";
-
-                    alt = (alt == 0 ? 1 : 0);
-
-                }
-
-                output = output + "</table>";
-                document.getElementById("htmlEEPROMClashes").innerHTML = output;
+                generateClashesTable();
                 eepromClashes.dialog("open");
 
             });
@@ -992,6 +862,156 @@ $(document).ready(function () {
     });
 
 });
+
+function generateClashesTable() {
+// alert($("#chkHideWhales").is(":checked"));
+    var w = window.innerWidth;
+
+    var colCount = $("#tab").find("tr:first th").length;
+    var output = '';
+    var selectedItems = [];
+    var alt = 0;
+
+    for (var i = 0; i < colCount - 2; i++) {
+
+        var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
+        var idsInOrder = ul.sortable("toArray");
+
+        for (const value of idsInOrder) {
+
+            var index = value.substring(2);
+            selectedItems.push(items[index - 1]);
+
+        }
+
+        selectedItems.sort(SortByStart);
+    
+    }
+
+    if (selectedItems.length == 0) return;
+
+    if (w > 1400) {
+        output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler.png' title='ruler' /></td></tr>";
+    }
+    else {
+        output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler_Small.png' title='ruler' /></td></tr>";
+    }
+
+
+    for (var i = 0; i < selectedItems.length; i++) {
+
+        var hasClashes = false;
+        item = selectedItems[i];
+
+        if (item.start == "na") break; 
+
+
+        // Determine clashes with other items ..
+
+        var clashIndexes = i + ",";
+
+        for (var j = 0; j < selectedItems.length; j++) {
+
+            testItem = selectedItems[j];
+
+            if (testItem.start == "na") break; 
+
+            if (item.name != testItem.name) {
+
+                alert($("#chkHideWhales").is(":checked"));
+
+                if (!(parseInt(item.start) > parseInt(testItem.end) || parseInt(item.end) < parseInt(testItem.start))) {
+
+                    if ($("#chkHideWhales").is(":checked")) {
+
+                        clashIndexes = clashIndexes + j + ",";
+                        hasClashes = true;
+
+                    }
+                    else {
+
+                        if (parseInt(testItem.end) - parseInt(testItem.start) <= 256) {
+
+                            clashIndexes = clashIndexes + j + ",";
+                            hasClashes = true;
+
+                        }
+
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+        // Trim last comma off ..
+
+        if (hasClashes) {
+            clashIndexes = clashIndexes.slice(0, -1);
+        }
+
+
+        // Render row ..
+
+        output = output + "<tr><td" + (alt == 1 ? " bgcolor='#ebebeb'" : "") + " title='" + item.start + " to " + item.end + "'>";
+
+        if (hasClashes) { 
+            output = output + "&nbsp;<img src='icons/Info.png' onclick='clearRows(); highlightRows(" + clashIndexes + ");' /> ";
+        }
+        else {
+            output = output + "&nbsp;<img src='icons/Info_Blank.png' /> ";
+        }
+
+        output += item.name.replace("\"", "").replace("'", ""); output += "</td><td title='" + item.start + " to " + item.end + "' background='icons/Ruler" + (alt == 0 ? "2" : "3") + ".png' style='vertical-align: middle;'>";
+
+
+        // Blank band ..
+
+        if (w > 1400) {
+            if (parseInt(item.start) > 0) {
+                output = output + "<img src='icons/spacer_white.png' height='12px' width='" + parseInt(item.start) + "px' />";
+            }
+        }
+        else {
+            if (parseInt(item.start) > 0) {
+                output = output + "<img src='icons/spacer_white.png' height='12px' width='" + (parseInt(item.start) / 2) + "px' />";
+            }
+        }
+
+        
+        // Coloured band..
+
+        if (w > 1400) {
+            if (item.hash == 0) {
+                output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+            }
+            else {
+                output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+            }
+        }
+        else {
+            if (item.hash == 0) {
+                output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+            }
+            else {
+                output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+            }
+        }
+
+        output += "</td></tr>";
+
+        alt = (alt == 0 ? 1 : 0);
+
+    }
+
+    output = output + "</table>";
+    document.getElementById("htmlEEPROMClashes").innerHTML = output;
+    $('.tblClashesSelected').val("");
+
+}
 
 function clearRows() {
 
@@ -1025,7 +1045,10 @@ function highlightRows() {
 
         if (i == 0) {
 
-            if ($('.tblClashesSelected').val() == arguments[0]) return;
+            if ($('.tblClashesSelected').val() == arguments[0]) {
+                $('.tblClashesSelected').val("");
+                return;
+            }
 
             $('.tblClashesSelected').val(arguments[0]);
             $('.tblClashes tr').eq(arguments[i] + 1).children('td:first').css('background-color','#f7dc6f ');
