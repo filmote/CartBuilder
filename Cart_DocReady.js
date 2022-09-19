@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.36
+// V1.37
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -500,13 +500,23 @@ $(document).ready(function () {
 
                         if (typeof dataNameContent !== 'undefined') {
 
-                            dataFile = baseFileName + "_1.bin";
+                            if (addToRepoChecked) {
+                                dataFile = "upload/" + baseFileName + "_1.bin";
+                            }
+                            else {
+                                dataFile = "temp/" + baseFileName + "_1.bin";
+                            }
 
                         }
 
                         if (typeof saveNameContent !== 'undefined') {
 
-                            saveFile = baseFileName + "_2.bin";
+                            if (addToRepoChecked) {
+                                saveFile = "upload/" + baseFileName + "_1.bin";
+                            }
+                            else {
+                                saveFile = "temp/" + baseFileName + "_1.bin";
+                            }
 
                         }
 
@@ -522,11 +532,11 @@ $(document).ready(function () {
                         }
 
                         if (addToRepoChecked) {
-                            var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: "upload/" + dataFile, save: "upload/" + saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal, start: $start, end: $end, hash: $hash };
+                            var item = { name: $gameTitle, screen: "upload/" + baseFileName + ".png", hex: "upload/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal, start: $start, end: $end, hash: $hash };
                             items.push(item);
                         }
                         else {
-                            var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: "temp/" + dataFile, save: "temp/" + saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal, start: $start, end: $end, hash: $hash };
+                            var item = { name: $gameTitle, screen: "temp/" + baseFileName + ".png", hex: "temp/" + baseFileName + ".hex", data: dataFile, save: saveFile, version: $versionNumber, developer: $developerName, info: $descriptionVal, start: $start, end: $end, hash: $hash };
                             items.push(item);
                         }
 

@@ -34,7 +34,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.36
+// V1.37
 
 
     session_start();
@@ -142,12 +142,31 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         fwrite($myfile, $_POST['websiteURL']);
         fwrite($myfile, "\nSource URL: ");
         fwrite($myfile, $_POST['sourceURL']);
+
         fwrite($myfile, "\nStart: ");
-        fwrite($myfile, $_POST['start']);
+        if (is_null($_POST['start'])) {
+            fwrite($myfile, 'na');
+        }
+        else {
+            fwrite($myfile, $_POST['start']);
+        }
+  
+
         fwrite($myfile, "\nEnd: ");
-        fwrite($myfile, $_POST['end']);
+        if (is_null($_POST['end'])) {
+            fwrite($myfile, 'na');
+        }
+        else {
+            fwrite($myfile, $_POST['end']);
+        }
+
         fwrite($myfile, "\nHash: ");
-        fwrite($myfile, $_POST['hash']);
+        if (is_null($_POST['hash'])) {
+            fwrite($myfile, 'na');
+        }
+        else {
+            fwrite($myfile, $_POST['hash']);
+        }
         fclose($myfile);
 
     }
