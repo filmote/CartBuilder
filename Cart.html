@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <title>Cart Builder</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="Cart.css?v=V1.37" />
+  <link rel="stylesheet" href="Cart.css?v=V1.39" />
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
@@ -19,9 +19,17 @@
 <body>
 
 
-  <div id="dlgEEPROMClashes" title="EEPROM Use and Clashes" style="font-size: 13px;">
-    <input type="checkbox" id="chkHideWhales" class="chkHideWhales" onclick="generateClashesTable();" checked="false"/>Show whales (> 256 bytes)
-    <span id="htmlEEPROMClashes" class="htmlEEPROMClashes">...</span>
+  <div id="dlgEEPROMClashes" class="dlgEEPROMClashes" title="EEPROM Use and Clashes" style="font-size: 13px; overflow:hidden;" class="ui">
+    <div>
+      <div>
+      <input type="checkbox" id="chkHideWhalesFromView" class="chkHideWhalesFromView" onclick="generateClashesTable();" checked="true"/>Hide large items (>256 bytes)&nbsp;&nbsp;
+      <input type="checkbox" id="chkHideWhales" class="chkHideWhales" onclick="generateClashesTable();" checked="false"/>Hide whales when selecting clashes (> 256 bytes)
+      <table><tr><td width="219px">&nbsp;</td><td id="dlgEEPROMClashes_Ruler" class="dlgEEPROMClashes_Ruler" background="icons/Ruler_Small.png" style="width:520px;">&nbsp;</td></tr></table>
+      </div>
+      <div id="dlgBottom" class="dlgBottom" style="overflow-y:scroll;overflow-x:hidden;height:80vh;">
+      <span id="htmlEEPROMClashes" class="htmlEEPROMClashes">...</span>
+      </div>
+    </div>
     <input type="hidden" id="tblClashesSelected" class="tblClashesSelected" />
   </div>
 
@@ -307,9 +315,9 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
   var fullList;
   var extraCats;
 </script>
-<script src="Cart_DocReady.js?V=V1.37"></script>
-<script src="Cart_GenerateHTML.js?V=V1.37"></script>
-<script src="Cart_Utils.js?V=V1.37"></script>
-<script src="Cart_ArduboyFile.js?V=V1.37"></script>
+<script src="Cart_DocReady.js?V=V1.39"></script>
+<script src="Cart_GenerateHTML.js?V=V1.39"></script>
+<script src="Cart_Utils.js?V=V1.39"></script>
+<script src="Cart_ArduboyFile.js?V=V1.39"></script>
 
 

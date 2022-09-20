@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.37
+// V1.39
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -616,7 +616,6 @@ $(document).ready(function () {
         eepromClashes = $( "#dlgEEPROMClashes" ).dialog({
             autoOpen: false,
             modal: true,
-            height: "auto",
             width: "1300px",
             height: ($(window).height() - 50),
             buttons: {
@@ -625,12 +624,17 @@ $(document).ready(function () {
                 }
                 }
         });
+
+        $("#dlgEEPROMClashes_Ruler").css('background-image','url(icons/Ruler.png)');
+        $("#dlgEEPROMClashes_Ruler").css('width','1038px');
+        $("#dlgBottom").css('height', ($(window).height() - 220) + 'px');
+        
+
     }
     else {
         eepromClashes = $( "#dlgEEPROMClashes" ).dialog({
             autoOpen: false,
             modal: true,
-            height: "auto",
             width: "800px",
             height: ($(window).height() - 50),
             buttons: {
@@ -639,6 +643,9 @@ $(document).ready(function () {
                 }
                 }
         });
+
+        $("#dlgEEPROMClashes_Ruler").css('background-image','url(icons/Ruler_Small.png)');
+        $("#dlgBottom").css('height', ($(window).height() - 220) + 'px');
 
     }
 
@@ -874,7 +881,7 @@ $(document).ready(function () {
 });
 
 function generateClashesTable() {
-// alert($("#chkHideWhales").is(":checked"));
+
     var w = window.innerWidth;
 
     var colCount = $("#tab").find("tr:first th").length;
@@ -890,7 +897,22 @@ function generateClashesTable() {
         for (const value of idsInOrder) {
 
             var index = value.substring(2);
-            selectedItems.push(items[index - 1]);
+            item = items[index - 1];
+
+            if (!$("#chkHideWhalesFromView").is(":checked")) {
+
+                selectedItems.push(item);
+
+            }
+            else {
+
+                if (parseInt(item.end) - parseInt(item.start) <= 256) {
+
+                    selectedItems.push(item);
+
+                }
+
+            }
 
         }
 
@@ -901,10 +923,10 @@ function generateClashesTable() {
     if (selectedItems.length == 0) return;
 
     if (w > 1400) {
-        output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler.png' title='ruler' /></td></tr>";
+        output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td></td></tr>";
     }
     else {
-        output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td><img src='icons/Ruler_Small.png' title='ruler' /></td></tr>";
+        output = "<table id='tblClashes' class='tblClashes' cellpadding='0' cellspacing='0'><tr><td width='225px'></td><td></td></tr>";
     }
 
 
@@ -928,11 +950,9 @@ function generateClashesTable() {
 
             if (item.name != testItem.name) {
 
-                alert($("#chkHideWhales").is(":checked"));
-
                 if (!(parseInt(item.start) > parseInt(testItem.end) || parseInt(item.end) < parseInt(testItem.start))) {
 
-                    if ($("#chkHideWhales").is(":checked")) {
+                    if (!$("#chkHideWhales").is(":checked")) {
 
                         clashIndexes = clashIndexes + j + ",";
                         hasClashes = true;
@@ -946,7 +966,6 @@ function generateClashesTable() {
                             hasClashes = true;
 
                         }
-
 
                     }
 
@@ -996,10 +1015,10 @@ function generateClashesTable() {
 
         if (w > 1400) {
             if (item.hash == 0) {
-                output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+                output = output + "<img src='icons/spacer_red.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + ((parseInt(item.end) - parseInt(item.start)) + 1) + "px' />";
             }
             else {
-                output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + (((parseInt(item.end) - parseInt(item.start)) / 2) + 1) + "px' />";
+                output = output + "<img src='icons/spacer_green.png' title='" + item.start + " to " + item.end + "' height='16px' width='" + ((parseInt(item.end) - parseInt(item.start)) + 1) + "px' />";
             }
         }
         else {

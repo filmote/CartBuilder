@@ -155,3 +155,9 @@ iframe {
 .shiftLeft{
   transform: translate(-102px,0px);
 }
+
+
+.scroller{
+  overflow: auto;
+  background-color: blueviolet;
+}
