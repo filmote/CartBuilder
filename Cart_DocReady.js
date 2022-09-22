@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.39
+// V1.40
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -899,20 +899,7 @@ function generateClashesTable() {
             var index = value.substring(2);
             item = items[index - 1];
 
-            if (!$("#chkHideWhalesFromView").is(":checked")) {
-
-                selectedItems.push(item);
-
-            }
-            else {
-
-                if (parseInt(item.end) - parseInt(item.start) <= 256) {
-
-                    selectedItems.push(item);
-
-                }
-
-            }
+            selectedItems.push(item);
 
         }
 
@@ -985,7 +972,8 @@ function generateClashesTable() {
 
         // Render row ..
 
-        output = output + "<tr><td" + (alt == 1 ? " bgcolor='#ebebeb'" : "") + " title='" + item.start + " to " + item.end + "'>";
+        output = output + "<tr" + (parseInt(item.end) - parseInt(item.start) > 256 ? " class='trWhale' id='trWhale'" : "") + ">";
+        output = output + "<td" + (alt == 1 ? " bgcolor='#ebebeb'" : "") + " title='" + item.start + " to " + item.end + "'>";
 
         if (hasClashes) { 
             output = output + "&nbsp;<img src='icons/Info.png' onclick='clearRows(); highlightRows(" + clashIndexes + ");' /> ";
@@ -1042,6 +1030,27 @@ function generateClashesTable() {
 
 }
 
+function toggleWhales() {
+
+    $('.tblClashes').find('.trWhale').toggle('fade');
+    setTimeout(delayedColouring, 500);
+
+}
+
+function delayedColouring(){
+
+    $('.tblClashes').find('tr:visible').filter(':odd').each(function(i, obj) {
+        $(this).children('td:first').css({'background-color': '#ffffff'});        
+        $(this).children('td:last-child').css({'background-color': '#ffffff'});        
+        $(this).children('td:last-child').css('background-image','url(icons/Ruler2.png)');
+    });
+    $('.tblClashes').find('tr:visible').filter(':even').each(function(i, obj) {
+        $(this).children('td:first').css({'background-color': '#ebebeb'});        
+        $(this).children('td:last-child').css({'background-color': '#ebebeb'});        
+        $(this).children('td:last-child').css('background-image','url(icons/Ruler3.png)');
+    });
+
+}
 function clearRows() {
 
     $(".tblClashes tr").each(function() {
