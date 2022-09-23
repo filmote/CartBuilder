@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.40
+// V1.43
 
 var suppressOpenInfoDlg = false;
 
@@ -193,7 +193,7 @@ function openInfo(itemIndex) {
         }
         var gameinfo = ""
         if (gamenr > 0) gameinfo = " (Game " + gamenr + " of " +gamecount + ")";
-        if (item.name !="" || gameinfo != "") $('#ui-id-3').text(item.name + gameinfo);
+        if (item.name !="" || gameinfo != "") $('#ui-id-4').text(item.name + gameinfo);
         $('#infoImg').attr("src", item.screen);
         $('#infoDeveloper').text(item.developer);
         if (item.version != "") $('#infoVersion').text("Version " + item.version);

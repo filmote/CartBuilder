@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.40
+// V1.43
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -649,6 +649,9 @@ $(document).ready(function () {
 
     }
 
+    $("#chkHideWhalesFromView").prop('checked', false);
+
+    
 
     // -------------------------------------------------------------------------------------------
     //  What Next Dialogue
