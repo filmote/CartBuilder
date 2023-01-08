@@ -72,7 +72,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         exit(0);
     }
 
-    if ($dataFileName != "" && ($dataFileSize > 100000 || strtolower(substr($dataFileName, -4)) != ".bin")) {
+    if ($dataFileName != "" && ($dataFileSize > 1024*1024 || strtolower(substr($dataFileName, -4)) != ".bin")) {
         echo "ERR: Invalid data file.";
         exit(0);
     }
