@@ -365,7 +365,7 @@ $(document).ready(function () {
             }
 
 
-            // Data file is not mandatory and must be between < 100K, have no mime type and an extension of .bin ..
+            // Data file is not mandatory and must be between < 1M, have no mime type and an extension of .bin ..
 
             if (typeof $('#dataName')[0].files[0] !== 'undefined') {
 
@@ -375,7 +375,7 @@ $(document).ready(function () {
                     var mime = $('#dataName')[0].files[0].type;
                     var extension = $('#dataName').val().replace(/^.*\./, '');
 
-                    if (size > 100000 || extension != "bin") { // mime application/octet-stream
+                    if (size > 1024*1024 || extension != "bin") { // mime application/octet-stream
                         dataName.addClass("ui-state-error");
                         updateTips(tips, "Invalid data file selected.");
                         valid = false;
