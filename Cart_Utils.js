@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.43
+// V1.27
 
 var suppressOpenInfoDlg = false;
 
@@ -199,8 +199,14 @@ function openInfo(itemIndex) {
         if (item.version != "") $('#infoVersion').text("Version " + item.version);
         $('#infoInfo').html(item.info);
         var data = item.data;
-        if  (data != "") data = "&data=../" + data;
-        $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
+        if  (data != "") data = "&data=http://www.bloggingadeadhorse.com/cart/" + data;
+        // $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
+        //alert("http://www.bloggingadeadhorse.com/cart/" + item.hex);
+        $('#infoPreview').attr("src", "");
+        $('#infoPreview').attr("src", "arduboy_sim_web/player.html?blah=http://www.bloggingadeadhorse.com/cart/" + item.hex + data);
+
+
+        // http://www.bloggingadeadhorse.com/ppot/arduboy_sim_web/player.html?blah=https://github.com/Press-Play-On-Tape/PrinceOfArabia/releases/download/V1.01-Beta.016/PrinceOfArabia.hex&blah=https://github.com/Press-Play-On-Tape/PrinceOfArabia/releases/download/V1.01-Beta.016/fxdata.bin
 
         var eepromInfo = "EEPROM Usage: None";
 
@@ -255,7 +261,48 @@ function openInfo(itemIndex) {
         else {
             $('#source').hide();
         }
-        
+
+        $.ajax({
+            type: "GET",
+            url: "./Cart_GetLikes.php?hex=" + item.hex,
+            dataType: "text",
+
+        }).done(function (data) {
+
+            const details = data.split(";");
+            $('#titleID').val(details[0]);
+
+            if (details[2] == "0") {
+
+                if (details[1] == "0") {
+                    $('#likeImg').attr("src", "icons/Like_Empty.png");
+                    $('#likeNumber').text("Be the first to like this title.");
+                }
+                else {
+                    $('#likeImg').attr("src", "icons/Like_HasLikes.png");
+                    $('#likeNumber').text(details[1] + " Likes");
+                }
+
+                $("#likeImg").attr("onclick","incLikes()");
+
+            }
+            else {
+
+                $('#likeImg').attr("src", "icons/Like_Selected.png");
+                $('#likeNumber').text(details[1] + " Likes");
+                $("#likeImg").attr("onclick","decLikes()");
+
+            }
+
+        }).fail(function () {
+
+            // uploadHEXDialog.dialog("close");
+            // $('#errorMessage').text("An error occurred, the files couldn't be sent!");
+            // errorDialog.dialog("open");
+
+        });
+
+
         infoPanel.dialog("open");
         infoPreview.focus();
     }
@@ -601,3 +648,94 @@ $("#deleteBin").click(function() {
     }
 
 });
+
+
+function incLikes() {
+
+    var id = $('#titleID').val();
+
+    $.ajax({
+        type: "GET",
+        url: "./Cart_IncLikes.php?id=" + id,
+        dataType: "text",
+
+    }).done(function (data) {
+
+        const details = data.split(";");
+        $('#titleID').val(details[0]);
+
+        if (details[2] == "0") {
+
+            if (details[1] == "0") {
+                $('#likeImg').attr("src", "icons/Like_Empty.png");
+                $('#likeNumber').text("Be the first to like this title.");
+            }
+            else {
+                $('#likeImg').attr("src", "icons/Like_HasLikes.png");
+                $('#likeNumber').text(details[1] + " Likes");
+            }
+
+            $("#likeImg").attr("onclick","incLikes()");
+
+        }
+        else {
+
+            $('#likeImg').attr("src", "icons/Like_Selected.png");
+            $('#likeNumber').text(details[1] + " Likes");
+            $("#likeImg").attr("onclick","decLikes()");
+
+        }
+
+    }).fail(function () {
+
+        // uploadHEXDialog.dialog("close");
+        // $('#errorMessage').text("An error occurred, the files couldn't be sent!");
+        // errorDialog.dialog("open");
+
+    });
+}
+
+function decLikes() {
+
+    var id = $('#titleID').val();
+
+    $.ajax({
+        type: "GET",
+        url: "./Cart_DecLikes.php?id=" + id,
+        dataType: "text",
+
+    }).done(function (data) {
+
+        const details = data.split(";");
+        $('#titleID').val(details[0]);
+
+        if (details[2] == "0") {
+
+            if (details[1] == "0") {
+                $('#likeImg').attr("src", "icons/Like_Empty.png");
+                $('#likeNumber').text("Be the first to like this title.");
+            }
+            else {
+                $('#likeImg').attr("src", "icons/Like_HasLikes.png");
+                $('#likeNumber').text(details[1] + " Likes");
+            }
+
+            $("#likeImg").attr("onclick","incLikes()");
+
+        }
+        else {
+
+            $('#likeImg').attr("src", "icons/Like_Selected.png");
+            $('#likeNumber').text(details[1] + " Likes");
+            $("#likeImg").attr("onclick","decLikes()");
+
+        }
+
+    }).fail(function () {
+
+        // uploadHEXDialog.dialog("close");
+        // $('#errorMessage').text("An error occurred, the files couldn't be sent!");
+        // errorDialog.dialog("open");
+
+    });
+}

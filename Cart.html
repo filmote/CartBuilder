@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <title>Cart Builder</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="Cart.css?v=V1.43" />
+  <link rel="stylesheet" href="Cart.css?v=V1.27" />
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
@@ -69,7 +69,7 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
     <br/>
   </div>
 
-  <div id="dlgCatergory" title="Create new Category">
+  <div id="dlgCategory" title="Create new Category">
     <p class="validateTips">Please enter a category name:</p>
     <form name="frmCategoryForm" id="frmCategoryForm" action="Cart_CreateCSV.php" method="post">
       <fieldset>
@@ -271,6 +271,10 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
           <div id="infoDeveloper" name="infoDeveloper" class="infoDeveloper"></div>
           <div id="infoVersion" name="infoVersion" class="infoVersion"></div>
           <p id="infoInfo" name="infoInfo" class="infoInfo">Version 1.0</p>
+          <input type="hidden" id="titleID" class="titleID" />
+          <table>
+            <tr><td style="padding: 0px;"><img id="likeImg" class="likeImg" src="icons/Like_None.png" style="width:25px;"></td><td style="font-size:12px; padding-bottom: 0px;"><span id="likeNumber" class="likeNumber" style="color:#3f3f3f">0 likes</span></td></tr>
+          </table>
         </td>
       </tr>
     </table>
@@ -283,7 +287,7 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
     </tr></table>
 
     <table><tr>
-      <td width="99%"><span style="font-size:9px; color:#afafaf; font-weight: bold;">Use 'A/Z/CTRL' (A button), 'S/X/ALT' (B Button) and the arrows keys to play.<br>'F' for full screen, 'F6' to restart. 'P' make screenshot, 'R' start/stop recording.</sub></td>
+      <td width="99%"><span style="font-size:9px; color:#afafaf; font-weight: normal;">Use 'A/Z/CTRL' (A button), 'S/X/ALT' (B Button) and the arrows keys to play.<br>'F' for full screen, 'F6' to restart. 'P' make screenshot, 'R' start/stop recording.</sub></td>
         <td><img id="deleteBin" src="icons/deleteBin.png" width="32px" style="opacity: .25;"/></td>
         <td><a href="#" id="url" name="url" target="_new" title="Website"><img src="icons/url.png" width="32px" style="opacity: .25;"/></a></td>
         <td><a href="#" id="source" name="source" target="_new" title="Source Code"><img src="icons/source.png" width="32px" style="opacity: .25;"/></a></td>
@@ -314,9 +318,9 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
   var fullList;
   var extraCats;
 </script>
-<script src="Cart_DocReady.js?V=V1.43"></script>
-<script src="Cart_GenerateHTML.js?V=V1.43"></script>
-<script src="Cart_Utils.js?V=V1.43"></script>
-<script src="Cart_ArduboyFile.js?V=V1.43"></script>
+<script src="Cart_DocReady.js?V=V1.27"></script>
+<script src="Cart_GenerateHTML.js?V=V1.27"></script>
+<script src="Cart_Utils.js?V=V1.27"></script>
+<script src="Cart_ArduboyFile.js?V=V1.27"></script>
 
 

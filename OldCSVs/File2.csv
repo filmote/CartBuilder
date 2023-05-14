@@ -1,0 +1,11 @@
+List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes
+0;Bootloader;arduboy-fx-loader.png;;;;;;;
+1;Action;category-screens\Action.png;;;;;;;
+1;Hopper;Action\hopper.png;Action\hopper.hex;;;24;obono
+1;Lasers;Arcade\Lasers.png;Arcade\Lasers.hex;;;19;obono
+2;Adventure;category-screens\Adventure.png;;;;;
+2;Catacombsofthedamned;Action\Cotd.png;Action\Cotd.hex;;;40;jhhoward
+2;virus;arg\virus.png;arg\virus.hex;;;24;TEAMarg
+4;Runner;category-screens\Runner.png;;;;;
+4;hollowseeker;Arcade\hollowseeker.png;Arcade\hollowseeker.hex;;;21;obono
+4;Chromedino;Arcade\Chromedino.png;Arcade\Chromedino.hex;;;16;flaki

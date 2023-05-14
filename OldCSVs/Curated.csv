@@ -1,0 +1,157 @@
+List;Description;Title;Hex;Data;Save;Version;Developer;Info;Likes
+0;Bootloader;arduboy-fx-loader.png;;;;;;./Curated.csv;
+1;Action;category-screens/Action.png;;;;;;;
+1;Hopper;Action/hopper.png;Action/hopper.hex;;;1.0;Obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;24
+1;Lasers;Arcade/Lasers.png;Arcade/Lasers.hex;;;1.0;Obono;Lasers - A simple Ikaruga-like game.;19
+1;Bangi;Action/Bangi.png;Action/Bangi.hex;;;1.0;Igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;14
+1;Choplifter;Action/Choplifter.png;Action/Choplifter.hex;;;1.1.1;Press Play On Tape;Rescue the hostages from behind enemy lines - but look out for the tanks that patrol the grounds! An Apple II remake!;9
+1;Karateka;Action/Karatega.png;Action/Karatega.hex;;;0.9;Press Play On Tape;Rescue Princess Mariko from within the Akum'a castle fortress.;12
+1;Festive Fight;Misc/FestiveFight.png;Misc/FestiveFight.hex;;;1.0;Crait;Holiday mascots from throughout the calendar must fight in order to compete for the affection of the children throughout the world for some weird reason.;14
+1;To;Action/To.png;Action/To.hex;;;1.0;waday;You are the developer of the door with the teleport function. But just before completion, someone is trying to destroy the door. There seems to be no choice but to distort the space with the power of the door and to prevent destruction.;4
+1;Lode Runner;Action/LodeRunner.png;Action/LodeRunner.hex;Action/LevelData.bin;;1.0;Press Play On Tape;Collect all of the gold pieces without being touched by a guard then make your way to the top of the screen and to the next level. Stop guards by burning a hole in normal bricks so that they will fall in - revealing any gold they might be carrying.;
+2;Adventure;category-screens/Adventure.png;;;;;;;
+2;Catacombs Of The Damned;Action/Cotd.png;Action/Cotd.hex;;;1.0;jhhoward;Catacombs of the Damned! is a first person shooter / dungeon crawler where you navigate 10 floors of a randomly generated dungeon dispatching monsters with your magic fireballs whilst collecting as much loot as possible.;40
+2;Virus LQP-79;arg/virus.png;arg/virus.hex;;;1.0;Team ARG;A virus turned your neighbours into Zombies but not all are infected. Find them .. quick!;24
+2;Glove;Action/Glove.png;Action/Glove.hex;;;1.0;fuopy;Glove is an action-adventure game created in the style of the classic Gauntlet series. Navigate from room to room, blasting bad guys and collecting treasure along the way;18
+2;Mazogs;Action/Mazogs.png;Action/Mazogs.hex;;;1.0;Brian;A port of the 1982 game ‘Mazogs’ for the ZX81 adapted for the Arduboy;9
+2;ArduIndy;Action/ArduIndy.png;Action/ArduIndy.hex;;;2.5;Jacoste;ArduIndy - Inspired by ZX Spectrum game “Sabre Wulf”.;8
+2;Rayne the Rogue;Action/Raynetherogue.png;Action/Raynetherogue.hex;;;1.0;shdwwzrd;As a child Rayne watched the rich from the streets of the village and burned with jealousy. After years and years of poverty an idea formed. Rayne has decided to sneak into the lairs of dragons and steel their treasures. Rayne need your help to navigate the dangerous caves and avoid the dragon’s breath to become the wealthiest person in the village - but take heed the further Rayne gets the more treacherous it will be!;8
+2;Rayne the Rogue 2;Action\RAYNE2.png;Action\RAYNE2.hex;;;1.0;shdwwzrd;After barely escaping the dragon’s lairs Rayne traveled the world in search for the next big adventure. Rayne came across a rumor of a magic lamp hidden within a castle. The lamp is guarded by vicious creatures hunting down any interlopers. Help Rayne navigate the castle and avoid the beasts to get the lamp.;8
+2;Zoo at Midnight;Action/zooatmidnight.png;Action/zooatmidnight.hex;;;1.0;Hundstrasse;Scrawf must sneak around the zoo to collect the food ans feed the animals before and escaping - all without being caught in the flashlight beam of the zoo wardens!;5
+2;CyberHack;Arcade/CyberHack.png;Arcade/CyberHack.hex;;;1.0;Press Play On Tape;The corrupted Corpo has to be stopped and your hacking skills will be invaluable. Inspired by the game CyberPunk.;
+3;Arcade;category-screens/Arcade.png;;;;;;;
+3;Beam 'em Up;Arcade\BeamEmUp.png;Arcade\BeamEmUp.hex;;;1.0;BenUnwired;You play a space squid that just wants to mess with some local cows. Move around the multi-screen landscape and use the A button to tractor beam the creatures and move them around the screen. Stopping the beam will let them go, but they’re pretty resilient.;0
+3;Ravine Despoiler;Arcade\RavineDespoiler.png;Arcade\RavineDespoiler.hex;;;1.0;BenUnwired;Based on the Atari arcade game Canyon Bomber. You can speed up or slow down your plane and drop bombs in the canyon to knock out boulders for points. Missing rocks will result in losing points, while hitting multiple boulders at once gives extra points. The game is over when the canyon is emptied. I'm not sure what the theoretical high score is, but my best games have been around 240 with several misses.;0
+3;Fire Panic;Action/FirePanic.png;Action/FirePanic.hex;;;1.0;Press Play On Tape;A remake of the classic Game and Watch game 'Fire'. Save the residents of the burning tower by catching them in your safety net and bouncing them into the awaiting ambulance before rushing them to hospital.;25
+3;Kong;Arcade/Kong.png;Arcade/Kong.hex;;;1.0.3;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong. Kong has stolen your lunch again. Avoid the barrels and topple the gorilla to retrieve it!;24
+3;Kong 2;Arcade/Kong2.png;Arcade/Kong2.hex;;;1.0;Press Play On Tape;A remake of the classic Game and Watch game Donkey Kong II. Kong has been locked up but Kong Jnr can save him!;19
+3;Turtle Bridge;Arcade/Turtlebridge.png;Arcade/Turtlebridge.hex;;;1.3;Press Play On Tape;A remake of the classic Game and Watch game Turtle Bridge. Carry the package to the awaiting truck by jumping across the turtle’s backs. Watch out as they may dive for a snack!;19
+3;Space Cab;Arcade/SpaceCab.png;Arcade/SpaceCab.hex;;;1.0.1;Press Play On Tape;A tribute to the classic Commodore 64 game Space Taxi! Collect and deliver customers to their destination as quickly as possible to make the most money! But be careful and make sure you do not run out of fuel land without deploying your landing gear or squash a customer.;12
+3;Lion Tamer;Arcade/LionTamer.png;Arcade/LionTamer.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Lion Tamer. Someone has left the lion’s cage doors open! Keep them from escaping by blocking their path with your trusty chair. Play alone or with a second lion tamer!;
+3;Oil Panic;Arcade/OilPanic.png;Arcade/OilPanic.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;
+3;Rooftop Rescue;Action/rooftop.png;Action/rooftop.hex;;;1.0;Prototype;Rescue the trapped people as fire consumes the city.;21
+3;BiriBiriBeat;Arcade/biribiribeat.png;Arcade/biribiribeat.hex;;;;;;
+3;Back To The Jungle;Arcade/Backtothejungle.png;Arcade/Backtothejungle.hex;;;1.8;eried;The Zoo had to close, what can the animals do? A small arcade game, inspired slighty on frogger (but sideways).;11
+3;Fatsche;Arcade/Fatsche.png;Arcade/Fatsche.hex;;;1.0;veritazz;Defend the town from the marauders.;10
+3;Burgard Time;Arcade/BurgardTime.png;Arcade/BurgardTime.hex;;;1.0;pixelplatforms;Peter Pepper  must walk over hamburger ingredients located across a maze of platforms while avoiding characters who pursue him.;9
+3;APara;Arcade/Apara.png;Arcade/APara.hex;;;1.0;leovt;Catch the paratroopers jumping out of a helicopter before they fall in the water.;4
+3;Chicken Launcher;Arcade/Chickenlauncher.png;Arcade/Chickenlauncher.hex;;;1.1;Crait;Shoot a chicken as far as you can. Try to hit springboards to give you a boost but watch out for spikes! ;4
+4;Runner;category-screens/Runner.png;;;;;;;
+4;Hollow Seeker;Arcade/hollowseeker.png;Arcade/hollowseeker.hex;;;1.0;Obono;Go forward in right direction. Seek a hollow as refuge not to be crushed.;21
+4;Flappy Ball;Arcade/Flappyball.png;Arcade/Flappyball.hex;;;1.0;Chris;A flappy bird clone.;6
+4;Flappy Bird;Arcade/Flappybird.png;Arcade/Flappybird.hex;;;1.0;GameExpress;A flappy bird clone.;
+4;Zoo Escape;Action/ZooEscape.png;Action/ZooEscape.hex;;;1.0;FerJerez;The animals have escaped! Avoid the animals by jumping over them and landing on the crocodiles mouth to snap it shut.;9
+4;Shadow Runner;arg/ShadowRunner.png;arg/ShadowRunner.hex;;;1.0;Team ARG;A shadow lost his kid by wandering too far away from the light. Now it must find its coloured equal to become one again.;7
+4;Roo Run;Arcade/Roorun.png;Arcade/Roorun.hex;;;1.0;Crait;The zoo had to close and now all the animals are trying to escape! Help the kangaroo run away from the animal control who’s trying to catch him.;5
+4;Leanna The Lion;Arcade/Leannathelion.png;Arcade/Leannathelion.hex;;;1.0;shdwwzrd;Leanna may be a lion, but she knows what she likes: She wants fresh meat from her favorite restaurant.;10
+5;Platformer;category-screens/Platformer.png;;;;;;;
+5;Castle Boy;Platformer/CastleBoy.png;Platformer/CastleBoy.hex;;;1.0;jlauener;A Castlvania demake.;33
+5;SanSan;Action/Sansan.png;Action/Sansan.hex;;;1.0;chame;SanSan is a name of little Santa. A weapon is his bag! This is Son Son, Rygar inspired action game, but add some original ideas.;18
+5;Mystic Balloon;arg/MysticBalloon.png;arg/MysticBalloon.hex;;;1.0;Team ARG;Jump around, jump up and get down, jump around, float around, jump float, jump, float. Collect those coins.;17
+5;Midnight Wild;Misc/MidnightWild.png;Misc/MidnightWild.hex;;;1.3;Crait;Something’s gone awry out West! Help Dusty Argile adventure out and defeat the baddies who are causing a commotion and stopping him from getting a good night’s rest. Put them to sleep with your handy lasso and rack up as many points as you can, but watch out for falling barrels, cacti, whirling tumbleweeds, snakes, and coyotes! Most of all, watch out for the mad bull and crazy Texan twister!;28
+5;Omega Horizon;Platformer/OmegaHorizon.png;Platformer/OmegaHorizon.hex;;;1.3;shdwwzrd;The planet of Turnax has extensive mineral deposits of high value to the Interplanetary Allied Confederation (IPAC). Recent unanticipated attacks by primative species have proven damaging to mining operations. Your mission is to eliminate the primitive hierarchy in minimal time.;15
+5;Jetpac;Action/Jetpac.png;Action/Jetpac.hex;;;1.0;TheArduinoGuy;You are an astronaut on an alien planet with a Jet Pac. Assemble you rocket and gather fuel before taking off.;5
+5;Joustish;Arcade/joustish.png;Arcade/joustish.hex;;;1.0;wuuff;A game quite like Joust!;8
+5;Epic Cratres of Mass Destruction;arg/ecomd.png;arg/ecomd.hex;;;1.0;Team ARG;Obviously .. something went wrong. That's for sure! You are hired to fix it. No questions asked. Licensed to shoot all that moves!;10
+5;Super Crate;Platformer/supercrate.png;Platformer/supercrate.hex;;;1.0;uXe;A platform-action-shooting game.;4
+5;Ninja Fuzz;Platformer/ninjafuzz.png;Platformer/ninjafuzz.hex;;;1.0;Hundstrasse;Guide the Fuzzgrawth up the three towers to collect the three ‘things’! It’s a fast paced platformer against the clock with randomly ordered levels.;9
+5;Bounce;Platformer/bounce.png;Platformer/bounce.hex;;;1.0;Joshimuz;The Bounce is a bouncy ball physics platformer game. Simple to understand yet incredibly hard to master, what seems easy at first glance is actually pretty rage inducing when you get to the later levels. ;9
+5;Not Just A Hat Rack;Platformer/njahr.png;Platformer/njahr.hex;;;1.0;Hundstrasse;A fast paced platformer.;
+6;Strategy;category-screens/Strategy.png;;;;;;;
+6;MicroCity;Arcade\microcity.png;Arcade\microcity.hex;;;1.3;jhhoward;MicroCity is a city simulation game inspired by SimCity.;37
+6;MicroTD;Puzzle/microtd.png;Puzzle/microtd.hex;;;1.1;drummyfish;Defend your territory from the enemy attackers.;19
+6;Ardulem;Puzzle/Ardulem.png;Puzzle/Ardulem.hex;;;1.0;banban;Lemmings on Arduboy!;20
+7;Puzzle;category-screens/Puzzle.png;;;;;;;
+7;Circuit Dude;Puzzle/CircuitDude.png;Puzzle/CircuitDude.hex;;;3.2;Crait;Help Circuit Dude build an awesome invention by leading him through 75 unique levels, completing circuits and plugging in microchips. After all chips are inserted into their sockets, the exit will activate and you can advance to the next puzzle! What kind of secret invention is Circuit Dude building? Complete all of the levels to find out!;30
+7;Atomic Puzzle Pack;Puzzle/Atomicpuzzlepack.png;Puzzle/Atomicpuzzlepack.hex;;;1.0;Atomic;Three different puzzle games in one!;19
+7;Darkstar;Misc/Darkstar.png;Misc/Darkstar.hex;;;1.0;Mr.Blinky;A little puzzle game based on the HP48 / TI83 calculator game Dstar.;14
+7;Sensitive;Puzzle/Sensitive.png;Puzzle/Sensitive.hex;;;2.0;spinal;A remake of the classic C64 game Sensitive by Oliver Kirwa.  This version features grey-scale graphics.;13
+7;Logix;Puzzle/Logix.png;Puzzle/Logix.hex;;;1.0;Press Play on Tape;Logix is an educational game that teaches the basic logic gates used in digital electronics. Once you have completed some introductory puzzles that feature a single gate each, you can move on to harder puzzles that test your learning!;21
+7;Tiny Sokoban;Puzzle/tinysokoban.png;Puzzle/tinysokoban.hex;;;1.0;akkera102;A clone of Sokoban (1982) using the Yoshio Murase Levels. These levels are very small but difficult and interesting.;5
+7;MAZEZAM;Puzzle/MAZEZAM.png;Puzzle/MAZEZAM.hex;;;1.0;ardubeast;The game is similar to Sokoban since the player is able to push (and not pull) boxes. One difference is that the boxes can only be pushed horizontally, and any push causes all of the boxes in that particular row to be moved. Another difference is that the player is only trying to exit the level as opposed to putting the boxes in the correct locations.;10
+7;Chie Magari Ita;Puzzle/chiemagari.png;Puzzle/chiemagari.hex;;;1.0;Obono;A puzzle game. Tere are 10 different pieces. You must place all of them into the frame without overlapping.;11
+7;Pipes;Puzzle/Pipes.png;Puzzle/Pipes.hex;;;1.0;Press Play on Tape;A version of the classic pipes game where you must lay pipe between each pair of nodes without the pipes crossing each other. This version has puzzles ranging from 5 x 5 to 9 x 9.;7
+7;AMaze;Puzzle/AMaze.png;Puzzle/AMaze.hex;;;1.0;Keyboard_Camper;Navigate through randomly generated mazes.;6
+7;Crates 3D;Puzzle/Crates3d.png;Puzzle/Crates3d.hex;;;1.0;Brian;A port of the 3D puzzle game originally written for the TI-83 calculator.;6
+7;Ring Puzzle;Puzzle/ringpuzzle.png;Puzzle/ringpuzzle.hex;;;1.0;SSNikolaevich;A simple puzzle game with toroidal topology;2
+7;Lite Out;Puzzle/LiteOut.png;Puzzle/LiteOut.hex;;;1.0;kmk1018;Lite/Out is a game where you have to turn off all of the lights, but every time you change a light, the surrounding lights change. The game consists of a 5-by-5 grid where some of the blocks are lit up. You’ll complete the level when all of the blocks are not lit.;1
+7;2048;Puzzle/2048.png;Puzzle/2048.hex;;;1.0;Yuki;The classic 2048 sliding tile puzzle.;7
+7;1010;Puzzle/1010.png;Puzzle/1010.hex;;;1.0;MWM;1010! is a wildly addicting brain teaser - a simple puzzle game that will challenge you, while also training your brain. Put your puzzle skills to the test with this exciting title - we dare you to try and put it down.;
+7;Term Twirl;Puzzle/termtwirl.png;Puzzle/termtwirl.hex;;;1.0;Corruptio;This is clone of classic Text Twist, with 1900 random levels. Add to your score by unjumbling the letters to make words. If you use all six letters to make a word within the allotted time, then you can continue to the next level. There is a large bonus for finding all the words before time runs out.;
+8;Skill;category-screens/Skill.png;;;;;;;
+8;Curse of Astarok;Puzzle/curse.png;Puzzle/curse.hex;;;1.0;Press Play On Tape;The evil Astarok has cast a nasty curse on the folk of Griford and turned them into pumpkins! The town’s people have asked you to battle the AstaroK and his evil friends in their hideout - an old castle on the edge of town. Can you release the town from the curse of AztaroK?;17
+8;Trials of Astarok;Puzzle/Astarok.png;Puzzle/Astarok.hex;;;1.0;Press Play On Tape;Each year the people of the village choose a new champion to protect them from Astarok. Compete in the trials to see how far you can get and you could be that champion! Your choice of runes will select different courses … some are easier than others!;17
+8;Knight Move;Puzzle/knightmove.png;Puzzle/knightmove.hex;;;1.0;Obono;An action-puzzle game where you control a knight piece of the chess which can move in an L shape on the 8×4 board.;21
+8;SameGame;Arcade/Samegame.png;Arcade/Samegame.hex;;;1.0;Obono;A famous tile-matching puzzle.;13
+8;Stairs Sweep;Puzzle/stairssweep.png;Puzzle/stairssweep.hex;;;1.0;Obono;A falling block puzzle game.;
+8;Psi Colo;Puzzle/psicolo.png;Puzzle/psicolo.hex;;;1.0;Obono;A puzzle game with dice.;10
+8;Minesweeper;Puzzle/Minesweeper.png;Puzzle/Minesweeper.hex;;;1.0;Pharap;The classic Minesweeper for the Arduboy.;13
+8;Begemmed;arg/begemmed.png;arg/begemmed.hex;;;1.0;Team ARG;Get three or more matching gems in a row by swapping adjacent gems.;10
+8;Blob Attack;arg/Blobattack.png;arg/Blobattack.hex;;;1.0;Team ARG;A falling block game.;9
+8;Sudoku;Puzzle/sudoku.png;Puzzle/sudoku.hex;;;1.0;neilsunw;Play Sudoku on your Arduboy. Includes 45 puzzles (easy, medium, hard) and allows custom puzzles to be entered manually or via serial input.;5
+8;Box Stacker;Puzzle/Boxstacker.png;Puzzle/Boxstacker.hex;;;1.0;dragula96;Stacker clone like the game at the arcade that gives you a chance to win a prize, however in this one the only thing you win is satisfaction!.;4
+8;Diamonds;Arcade/diamonds.png;Arcade/diamonds.hex;;;1.0;redbug;Diamonds is a mix between a breakout game and a puzzle game. Original game was released on HP48 more than 20 years ago.;5
+8;Bombzzle;Puzzle/Bombzzle.png;Puzzle/Bombzzle.hex;;;1.0;HokuHakase;An explosive puzzle game!;4
+8;Tres;Puzzle/Tres.png;Puzzle/Tres.hex;;;1.0;cajogold;A Threes! clone.;3
+8;Zoo;Puzzle/Zoo.png;Puzzle/Zoo.hex;;;1.0;Yuki;A beautiful begemmed style of game.;
+8;New Blocks on the Kid;Puzzle/NBOTK.png;Puzzle/NBOTK.hex;;;1.0;bateske;There is a new falling block game in town.;
+9;Tabletop;category-screens/Tabletop.png;;;;;;;
+9;Arduchess;Misc/Arduchess.png;Misc/arduchess.hex;;;1.0;Brow1067;Play chess on the Arduboy!
+9;Blackjack;Misc/Blackjack.png;Misc/Blackjack.hex;;;.0;Press Play on Tape;The classic casino game. This implementation plays a ‘unified’ version of the various BlackJack games from different casinos around the world. It allows splits, double up and insurance on a dealer blackjack and so forth.;11
+9;Dice of Fate;arg/Diceoffate.png;arg/Diceoffate.hex;;;1.0;Team ARG;A dice utility. Choose between a coin or a 4, 6, 8, 10, 12, 20 or 100 sided dice.;5
+9;Reversi;Puzzle/reversi.png;Puzzle/reversi.hex;;;1.0;Obono;Reversi is a strategy board game for two players, played on an 8×8 uncheckered board.;15
+9;Quarto;Puzzle/quarto.png;Puzzle/quarto.hex;;;1.0;Obono;An abstract strategy board game played on a 4x4 board with 16 unique pieces.;10
+9;Little Rook Chess;Demos/littlerookchess.png;Demos/littlerookchess.hex;;;1.0;olikraus;Chess, obviously.;13
+9;Farkle;Puzzle/Farkle.png;Puzzle/Farkle.hex;;;1.0;Press Play On Tape;A dice game of tactics and luck.;11
+9;Micro Checkers;Puzzle/MicroCheckers.png;Puzzle/MicroCheckers.hex;;;1.0;Jezzamon;The classic Chinese game of checkers.;11
+9;German Whist;Puzzle/Whist.png;Puzzle/Whist.hex;;;1.0;Press Play On Tape;German Whist is an adaptation of classic Whist for two players. There is nothing German about it - as far as anyone can tell it is of British origin.;7
+9;Cribbage;Puzzle/Cribbage.png;Puzzle/Cribbage.hex;;;1.0.1;Press Play On Tape;Classic English game of Cribbage - a luck and tactics card game.;6
+9;Dominoes;Puzzle/Dominoes.png;Puzzle/Dominoes.hex;;;1.0;Press Play On Tape;All Fives is a popular variant of Dominoes where players the goal of the game is not just to go out, but to make the open ends of the layout add up to 5 (or a multiple of five). One or two players.;
+9;Yatzy;Puzzle/Yatzy.png;Puzzle/Yatzy.hex;;;1.3;shdwwzrd;A dice game where you need to role combinations before running out of attempts.;
+10;Racing;category-screens/Racing.png;;;;;;;
+10;'Ard Drivin';Racing/Arddriving.png;Racing/Arddriving.hex;;;1.0;Rem;A fast paced racing sim.;23
+10;Bone Shakers;Racing/BoneShakers.png;Racing/BoneShakers.hex;;;1.0;jhhoward;Bone Shakers is a racing game where skeletons ride unicycles around a dungeon race track. In part inspired by Super Mario Kart for the SNES.;15
+10;Road Trip;Racing/RoadTrip.png;Racing/RoadTrip.hex;;;1.1;Press Play on Tape;Inspired by the Atari 2600 game Enduro. Strap on your goggles. Sink into your seat. And leave all your fears in the pit. You’re about to enter the race of your life. You’ll be required to pass lots of cars each day. From sunrise to sunset - as fast as you can. Welcome to the National Enduro!;
+10;ArduRacer;Racing/ArduRacer.png;Racing/ArduRacer.hex;;;1.0;tonym128;A top down racing time trail racing game for the ArduBoy similar to Trackmania;9
+10;Crazy Kart;Racing/CrazyKart.png;Racing/CrazyKart.hex;;;1.0;Alberto;Mario Kart for the Arduboy.;11
+10;Randocity;Racing/Randocity.png;Racing/Randocity.hex;;;1.0;Paul Wasson;Arduboy large open-world procedurally generated city motorcycle game with 3 play modes.;15
+11;RPG;category-screens/RPG.png;;;;;;;
+11;ArduRogue;RPG\ardurogue.png;RPG\ardurogue.hex;;;1.0;brow1067;ArduRogue: a traditional roguelike for the Arduboy.;0
+11;Ardynia;RPG/ardynia.png;RPG/ardynia.hex;;;1.0;city41;Ardynia - a Zelda style adventure.;49
+11;Arduventure;RPG/Arduventure.png;RPG/Arduventure.hex;;;1.0;Team ARG;Arduventure is a classic top-down 8-Bit RPG with original monochrome graphics and musical score. Collect items, weapons, armor, amulets and magic to fight enemies in turn-based battle system. Explore a massive world map larger than the one in Zelda: Links Awakening!;34
+11;Dark and Under;RPG/darkandunder.png;RPG/darkandunder.hex;;;1.0;Garage Collective;A dungeon crawler for the Arduboy.;39
+11;Star Honor;RPG/starhonor.png;RPG/starhonor.hex;;;1.0;Wenceslao;Star Honor is a Roguelike space adventure where you are field promoted into the Captain’s chair of the USS Arduino. Your home world has become the victim of the a biological weapon deployed by enemies. You posses the only hope for your world, a cure for the phage. With a skeleton crew, a limping vessel and time running out, you must travel world to world, seeking supplies, upgrades and doing battle to make it home and save your planet.;20
+11;Tackle Box;Arcade/tacklebox.png;Arcade/tacklebox.hex;;;1.0;city41;Similar to the classic Legend of the River King, Tackle Box is a fishing-themed role playing video game.;19
+11;Mini Rogue;RPG/MiniRogue.png;RPG/MiniRogue.hex;;;1.0;Press Play On Tape;Mini Rogue is a 9-card game in which a single player delves into a deep dungeon to get the famous ruby called The Og’s Blood on the bottom floor. The player must choose how to spend their resources in order to be powerful enough to confront ever difficult monsters. Random events and encounters make every play-through a unique experience.;16
+11;Under The Tower;RPG/underthetower.png;RPG/underthetower.hex;;;1.0;wuuff;n a dying city, cut off from the world due to plague, The Tower stands above its center. While the rich and powerful gather in the tower, safe from the devastation below, those below are not so lucky. Among the trash on mud flats by the river, scavengers seek to find anything valuable. They are known as Mudlarks. This is the tale of one of the many unfortunate souls that lives…;14
+11;Hello Commander;RPG/HelloCommander.png;RPG/HelloCommander.hex;;;1.0;Fmanga;“Hello, Commander” is a Turn-Based Strategy game for the Arduboy.;13
+11;Rogue;RPG/Rogue.png;RPG/Rogue.hex;;;1.0;BlueMax;Rogue-like ascii based adventure for the Arduboy;13
+11;Shattered Lands;RPG/shatteredlands.png;RPG/shatteredlands.hex;;;1.4;tuxinator2009;Shattered Lands - a multi-part RPG saga for Arduboy.;12
+11;Fantasy Rampage;arg/Fantasy.png;arg/Fantasy.hex;;;1.0;Team ARG;A two-player card battle game.;10
+12;Shooter;category-screens/Shooter.png;;;;;;;
+12;MicroTank;Arcade/microtank.png;Arcade/microtank.hex;;;1.0;hartmann1301;You start with a small tank and your goal is to get as deep as possilbe into enemy territory. Some enemys drop coins for upgrading the weapon of your choice.;22
+12;Sirene;arg/Sirene.png;arg/Sirene.hex;;;1.0;Team ARG;There's trouble under the sea, but Nina will fight her way to the heart of it. An aquatic shoot-em-up adventure!;
+12;1944 The Battle of Midway;Arcade/1944.png;Arcade/1944.hex;;;1.0;Press Play On Tape;A remake of the classic CapCom game 1944 The Battle of Midway.;20
+12;Juno First;Action/Junofirst.png;Action/Junofirst.hex;;;1.0.1;Press Play On Tape;Kill each wave of attacking aliens before you fuel or health runs out. Rescue the captured astronaut to get extra points! ;19
+12;1nvader;Shooter/1nvader.png;Shooter/1nvader.hex;;;1.0;Press Play On Tape;1NVADER is a one or two-player game played with one button, one laser, one 1NVADER, and one life. Play co-operatively, or competitively with a friend, or face the 1NVADER alone.;22
+12;OBS (One Button Shooter);category-screens/ppot/OBS.png;Shooter\OBS.hex;;;1.0;Press Play On Tape;Youe ship has been damaged by some space debris. The steering is broken and you cannot navigate. You discover that by firing the laser you can steer ..sort of! Avoid the asteroids and enemy ships and fly home.;0
+12;Evade;Arcade/Evade.png;Arcade/Evade.hex;;;1.0;Modus Create;Side scrolling space shooter.;14
+12;Evade 2;Arcade/Evade2.png;Arcade/Evade2.hex;;;1.0;Modus Create;A space flight / fight simulator.;13
+12;ArduBullets;Shooter/ardubullets.png;Shooter/ardubullets.hex;;;1.0;Obono;Avoid voluminous bullets and defeat enemy squadron in one minute.;19
+12;Trench Run;Action/Trenchrun.png;Action/Trenchrun.hex;;;1.0;Lucas Salton Cardinali;Inspired by the Star Wars Battle Pod Arcade Game. It depicts the rebels assault on the Doom Sphere, the Empire enormous space station and you, as a Rebel pilot, have to destroy the Imperial Fighters until you get a chance to shoot into the Exhaustion Port and destroy it.;14
+12;i4Arduboy;Shooter/l4arduboy.png;Shooter/l4arduboy.hex;;;1.0;Yomogimaru;i4arduboy is a horizontal shmup. Control a submarine and snipe far enemies on off-screen with torpedos!;12
+12;LoveRush;Arcade/Loverush.png;Arcade/Loverush.hex;;;1.0;Vampirics;A cute infinite shooter for Arduboy.;11
+12;Trolly Fish;arg/trollyfish.png;arg/trollyfish.hex;;;1.0;Team ARG;Little fish. Big fish, swimming in the water. Com back here, man. Give me back my star!;10
+12;Humanity Revenge;Shooter/HumanityRevenge.png;Shooter/HumanityRevenge.hex;;;1.0;giangregorioc;;9
+12;Suit Shooter;Shooter/SuitShooter.png;Shooter/SuitShooter.hex;;;2.0;Crait;Launch suits of cards at falling cards in order to create matches and score points. Watch out, though! Missing cards will hurt you! The cards start out falling slowly, but get faster as you score more points and regain health.;5
+12;Millipe;Arcade/Millipe.png;Arcade/Millipe.hex;;;1.0;Dreamer2345;A small Centipede clone.;3
+12;Kemono Patrol;Shooter/KemonoPatrol.png;Shooter/KemonoPatrol.hex;;;1.0;metalidol;A moon buggy-style game.;
+12;Siege;Action/Siege.png;Action/Siege.hex;;;1.0;shdwwzrd;The king needs your help to keep the Dark Lord’s army from destroying the kingdom. The Wizards will arrive after the 5th day and the rest of our army will be back in 20 days. The king is counting on you to hold the wall. Hold strong, noble archer, HOLD STRONG!;2
+13;Sports;category-screens\Sports.png;;;;;;;
+13;18-Hole Mini Golf;Sports\ardugolf.png;Sports\ardugolf.hex;;;1.0;brow1067;18-hole Mini Golf game with stunning vector graphics!;11
+14;Application;category-screens/Application.png;;;;;;;
+14;Ardutosh;Application/Ardutosh.png;Application/Ardutosh.hex;;;.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;31
+14;Golfer's Companion;Application/GolfCompanion.png;Application/GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;11
+14;Coder's Toolbox;Application/Toolbox.png;Application/Toolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;16
+14;Ardu Remote;Application/ArduRemote.png;Application/ArduRemote.hex;;;1.0;eried;Use your Arduboy as a remote keyboard / mouse.;5
+14;Calendar;Application/Calendar.png;Application/Calendar.hex;;;1.0;hartmann1301;A calendar for the Arduboy. Make notes on important days.;2

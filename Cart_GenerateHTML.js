@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.43
+// V1.27
 
 // First pass:  Render the categories and items used in the selected cart. 
 
@@ -56,7 +56,7 @@ function generateHtmlTable(data) {
     html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnEEPROMMap" class="buttonHeader">EEPROM Map</button><div style="height:2px;"></div>';
-    html += '<select name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option></select><div style="height:2px;"></div>';
+    html += '<select name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option><option value="SSD1306/arduboyloader.png">SSD1306</option><option value="category-screens/Wheezer_Homescreen.png">Wheezer</option></select><div style="height:2px;"></div>';
     html += '<input name="search" id="search" onInput="doSearch()" class="searchBox" onkeydown="return event.key != \'Enter\';"/>';
     html += '</th>';
 

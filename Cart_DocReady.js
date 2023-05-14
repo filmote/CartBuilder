@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.43
+// V1.27
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -67,7 +67,6 @@ function SortByStart(a, b){
     var b = String(bStart).padStart(4, '0') + String(bEnd).padStart(4, '0')
 
     return (a < b ? -1 : a > b ? 1 : 0);
-//    return (parseInt(aStart) < parseInt(bStart) ? -1 : ((parseInt(aStart) > parseInt(bStart)) ? 1 : 0));
 
 }
 
@@ -133,14 +132,14 @@ $(document).ready(function () {
             return valid;
         }
 
-        categoryDialog = $("#dlgCatergory").dialog({
+        categoryDialog = $("#dlgCategory").dialog({
             autoOpen: false,
             height: "auto",
             width: 380,
             modal: true,
             open: function (event, ui) {
                 $('#guid').val(generateGUID());
-                $('#dlgCatergory').css('overflow', 'hidden'); //this line does the actual hiding
+                $('#dlgCategory').css('overflow', 'hidden'); //this line does the actual hiding
             },
             buttons: {
                 "Create": addCategory,
@@ -333,7 +332,7 @@ $(document).ready(function () {
                 var mime = $('#hexName')[0].files[0].type;
                 var extension = $('#hexName').val().replace(/^.*\./, '');
 
-                if (size > 85000 || mime != "" || extension != "hex") { // mime application/octet-stream
+                if (size > 90000 || mime != "" || extension != "hex") { // mime application/octet-stream
                     fileName.addClass("ui-state-error");
                     updateTips(tips, "Invalid HEX file selected.");
                     valid = false;
@@ -375,7 +374,7 @@ $(document).ready(function () {
                     var mime = $('#dataName')[0].files[0].type;
                     var extension = $('#dataName').val().replace(/^.*\./, '');
 
-                    if (size > 100000 || extension != "bin") { // mime application/octet-stream
+                    if (size > 3000000 || extension != "bin") { // mime application/octet-stream
                         dataName.addClass("ui-state-error");
                         updateTips(tips, "Invalid data file selected.");
                         valid = false;
@@ -396,7 +395,7 @@ $(document).ready(function () {
                     var mime = $('#saveName')[0].files[0].type;
                     var extension = $('#saveName').val().replace(/^.*\./, '');
 
-                    if (size > 100000 || extension != "bin") { // mime application/octet-stream
+                    if (size > 1000000 || extension != "bin") { // mime application/octet-stream
                         saveName.addClass("ui-state-error");
                         updateTips(tips, "Invalid save file selected.");
                         valid = false;
@@ -688,27 +687,59 @@ $(document).ready(function () {
   // -------------------------------------------------------------------------------------------
     // Read the cart file and create the table ..
 
-    var fileName = "./flashcart-index.csv";
-    fullList = "./flashcart-index.csv";
+    var fileName = "./Cart_GetList.php?listId=1&filename=full";
+    fullList = "./Cart_GetList.php?listId=1&filename=full";
     extraCats = "";
 
     let searchParams = new URLSearchParams(window.location.search);
 
     if (searchParams.has('file')) {
+
         fileName = searchParams.get('file');
+
+        if (fileName.toLowerCase()=="flashcart-index.csv")  { fileName = "./Cart_GetList.php?listId=1&filename=file"; }
+        if (fileName.toLowerCase()=="ppot.csv")             { fileName = "./Cart_GetList.php?listId=2&filename=file"; }
+        if (fileName.toLowerCase()=="curated.csv")          { fileName = "./Cart_GetList.php?listId=3&filename=file"; }
+        if (fileName.toLowerCase()=="8bitcadexl.csv")       { fileName = "./Cart_GetList.php?listId=4&filename=file"; }
+        if (fileName.toLowerCase()=="ppot_xl.csv")          { fileName = "./Cart_GetList.php?listId=5&filename=file"; }
+        if (fileName.toLowerCase()=="ssd1306.csv")          { fileName = "./Cart_GetList.php?listId=6&filename=file"; }
+
+        if (fileName.toLowerCase()=="flashcart-index")      { fileName = "./Cart_GetList.php?listId=1&filename=file"; }
+        if (fileName.toLowerCase()=="ppot")                 { fileName = "./Cart_GetList.php?listId=2&filename=file"; }
+        if (fileName.toLowerCase()=="curated")              { fileName = "./Cart_GetList.php?listId=3&filename=file"; }
+        if (fileName.toLowerCase()=="8bitcadexl")           { fileName = "./Cart_GetList.php?listId=4&filename=file"; }
+        if (fileName.toLowerCase()=="ppot_xl")              { fileName = "./Cart_GetList.php?listId=5&filename=file"; }
+        if (fileName.toLowerCase()=="ssd1306")              { fileName = "./Cart_GetList.php?listId=6&filename=file"; }
+
     }
 
     if (searchParams.has('list')) {
+
         fullList = "./" + searchParams.get('list');
+
+        if (fullList.toLowerCase()=="./flashcart-index.csv")  { fullList = "./Cart_GetList.php?listId=1&filename=full"; }
+        if (fullList.toLowerCase()=="./ppot.csv")             { fullList = "./Cart_GetList.php?listId=2&filename=full"; }
+        if (fullList.toLowerCase()=="./curated.csv")          { fullList = "./Cart_GetList.php?listId=3&filename=full"; }
+        if (fullList.toLowerCase()=="./8bitcadexl.csv")       { fullList = "./Cart_GetList.php?listId=4&filename=full"; }
+        if (fullList.toLowerCase()=="./ppot_xl.csv")          { fullList = "./Cart_GetList.php?listId=5&filename=full"; }
+        if (fullList.toLowerCase()=="./ssd1306.csv")          { fullList = "./Cart_GetList.php?listId=6&filename=full"; }
+
+        if (fullList.toLowerCase()=="./flashcart-index")      { fullList = "./Cart_GetList.php?listId=1&filename=full"; }
+        if (fullList.toLowerCase()=="./ppot")                 { fullList = "./Cart_GetList.php?listId=2&filename=full"; }
+        if (fullList.toLowerCase()=="./curated")              { fullList = "./Cart_GetList.php?listId=3&filename=full"; }
+        if (fullList.toLowerCase()=="./8bitcadexl")           { fullList = "./Cart_GetList.php?listId=4&filename=full"; }
+        if (fullList.toLowerCase()=="./ppot_xl")              { fullList = "./Cart_GetList.php?listId=5&filename=full"; }
+        if (fullList.toLowerCase()=="./ssd1306")              { fullList = "./Cart_GetList.php?listId=6&filename=full"; }
+
     }
     
     if (searchParams.has('extraCats')) {
         extraCats = "./" + searchParams.get('extraCats');
     }
 
-    if (fileName == "./flashcart-index.csv") {
+    if (fileName == "./Cart_GetList.php?listId=1&filename=full") {
 
-        if (fullList == "./flashcart-index.csv") {
+        if (fullList == "./Cart_GetList.php?listId=1&filename=full") {
             fullList = "";
         }
         else if (fullList != "") {

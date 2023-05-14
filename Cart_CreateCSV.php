@@ -34,7 +34,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.43
+// V1.27
+
+
+    session_start();
 
     #CSV indices
     const ID_LIST = 0;
@@ -272,10 +275,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           if (count($row) == 1 && $row[ID_LIST] == "") continue; #ignore blank lines
           while (count($row) < 10) $row[] = "";
           $header = DefaultHeader();
-          if ($row[ID_TITLESCREEN] == "")
+          if ($row[ID_TITLESCREEN] == "" || is_null($row[ID_TITLESCREEN]))
           {
             BuildFailed('<P>Missing PNG image filename in CSV file at line ' . key($csv) . ' "' . current($csv) . '"</p><p>PNG image files are mandatory.');
           }
+          // if ($row[ID_HEXFILE] == "" || is_null($row[ID_HEXFILE]))
+          // {
+          //   BuildFailed('<P>Null / missing HEX filename in CSV file at line ' . key($csv) . ' "' . current($csv) . '"</p><p>HEX image files are mandatory.' . $row[ID_TITLE]);
+          // }          
           $title = LoadTitleScreenData(FixPath($row[ID_TITLESCREEN]));
           $program = LoadHexFileData(FixPath($row[ID_HEXFILE]));
           $programsize = strlen($program);

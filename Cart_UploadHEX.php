@@ -34,7 +34,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.43
+// V1.27
 
 
     session_start();
@@ -62,7 +62,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     // Check to see if the files are of the right type ..
 
-    if ($hexFileType != "application/octet-stream" || $hexFileSize > 85000 || strtolower(substr($hexFileName, -4)) != ".hex") {
+    if ($hexFileType != "application/octet-stream" || $hexFileSize > 90000 || strtolower(substr($hexFileName, -4)) != ".hex") {
         echo "ERR: Invalid HEX file.";
         exit(0);
     }
@@ -72,12 +72,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         exit(0);
     }
 
-    if ($dataFileName != "" && ($dataFileSize > 100000 || strtolower(substr($dataFileName, -4)) != ".bin")) {
+    if ($dataFileName != "" && ($dataFileSize > 3000000 || strtolower(substr($dataFileName, -4)) != ".bin")) {
         echo "ERR: Invalid data file.";
         exit(0);
     }
 
-    if ($saveFileName != "" && ($saveFileSize > 100000 || strtolower(substr($saveFileName, -4)) != ".bin")) {
+    if ($saveFileName != "" && ($saveFileSize > 1000000 || strtolower(substr($saveFileName, -4)) != ".bin")) {
         echo "ERR: Invalid save file.";
         exit(0);
     }
