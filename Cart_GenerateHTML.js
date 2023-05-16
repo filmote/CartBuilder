@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.27
+// V1.30
 
 // First pass:  Render the categories and items used in the selected cart. 
 
@@ -56,7 +56,7 @@ function generateHtmlTable(data) {
     html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnEEPROMMap" class="buttonHeader">EEPROM Map</button><div style="height:2px;"></div>';
-    html += '<select name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option><option value="SSD1306/arduboyloader.png">SSD1306</option><option value="category-screens/Wheezer_Homescreen.png">Wheezer</option></select><div style="height:2px;"></div>';
+    html += '<select name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="arduboy-mini-loader.png">Arduboy Mini</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option><option value="SSD1306/arduboyloader.png">SSD1306</option><option value="category-screens/Wheezer_Homescreen.png">Wheezer</option></select><div style="height:2px;"></div>';
     html += '<input name="search" id="search" onInput="doSearch()" class="searchBox" onkeydown="return event.key != \'Enter\';"/>';
     html += '</th>';
 
@@ -386,3 +386,42 @@ function generateExtraCats(data) {
     });
 
 }
+
+
+
+
+delete from List_Details where cateogryid = 17 and titleid in (330, 331, 
+332,  333,
+ 334,
+ 335,
+ 336,
+ 337,
+ 464,
+ 339,
+ 340,
+ 341,
+ 342,
+ 343,
+ 344,
+ 345,
+ 346,
+ 347,
+ 348,
+ 349,
+ 350,
+ 351,
+ 352,
+ 353,
+ 354,
+ 355,
+ 356,
+ 357,
+ 358,
+ 359,
+ 360,
+ 361,
+ 362,
+ 363,
+ 364,
+ 562,
+ 563)

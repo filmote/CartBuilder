@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.27
+// V1.30
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -703,6 +703,7 @@ $(document).ready(function () {
         if (fileName.toLowerCase()=="8bitcadexl.csv")       { fileName = "./Cart_GetList.php?listId=4&filename=file"; }
         if (fileName.toLowerCase()=="ppot_xl.csv")          { fileName = "./Cart_GetList.php?listId=5&filename=file"; }
         if (fileName.toLowerCase()=="ssd1306.csv")          { fileName = "./Cart_GetList.php?listId=6&filename=file"; }
+        if (fileName.toLowerCase()=="arduboy-mini.csv")     { fileName = "./Cart_GetList.php?listId=7&filename=file"; }
 
         if (fileName.toLowerCase()=="flashcart-index")      { fileName = "./Cart_GetList.php?listId=1&filename=file"; }
         if (fileName.toLowerCase()=="ppot")                 { fileName = "./Cart_GetList.php?listId=2&filename=file"; }
@@ -710,6 +711,7 @@ $(document).ready(function () {
         if (fileName.toLowerCase()=="8bitcadexl")           { fileName = "./Cart_GetList.php?listId=4&filename=file"; }
         if (fileName.toLowerCase()=="ppot_xl")              { fileName = "./Cart_GetList.php?listId=5&filename=file"; }
         if (fileName.toLowerCase()=="ssd1306")              { fileName = "./Cart_GetList.php?listId=6&filename=file"; }
+        if (fileName.toLowerCase()=="arduboy-mini")         { fileName = "./Cart_GetList.php?listId=7&filename=file"; }
 
     }
 
@@ -723,6 +725,7 @@ $(document).ready(function () {
         if (fullList.toLowerCase()=="./8bitcadexl.csv")       { fullList = "./Cart_GetList.php?listId=4&filename=full"; }
         if (fullList.toLowerCase()=="./ppot_xl.csv")          { fullList = "./Cart_GetList.php?listId=5&filename=full"; }
         if (fullList.toLowerCase()=="./ssd1306.csv")          { fullList = "./Cart_GetList.php?listId=6&filename=full"; }
+        if (fullList.toLowerCase()=="./arduboy-mini.csv")     { fullList = "./Cart_GetList.php?listId=7&filename=full"; }
 
         if (fullList.toLowerCase()=="./flashcart-index")      { fullList = "./Cart_GetList.php?listId=1&filename=full"; }
         if (fullList.toLowerCase()=="./ppot")                 { fullList = "./Cart_GetList.php?listId=2&filename=full"; }
@@ -730,6 +733,7 @@ $(document).ready(function () {
         if (fullList.toLowerCase()=="./8bitcadexl")           { fullList = "./Cart_GetList.php?listId=4&filename=full"; }
         if (fullList.toLowerCase()=="./ppot_xl")              { fullList = "./Cart_GetList.php?listId=5&filename=full"; }
         if (fullList.toLowerCase()=="./ssd1306")              { fullList = "./Cart_GetList.php?listId=6&filename=full"; }
+        if (fullList.toLowerCase()=="./arduboy-mini")         { fullList = "./Cart_GetList.php?listId=7&filename=full"; }
 
     }
     
