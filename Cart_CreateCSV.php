@@ -346,7 +346,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           $previouspage = $currentpage;
           $currentpage = $nextpage;
         }
-        $binfile .= str_repeat(chr(0xFF), 256); #use blank header to signal end of FX file system
+        if (strlen($binfile) < 16776960) $binfile .= str_repeat(chr(0xFF), 256); #use blank header to signal end of FX file system
         $filename = "flashcart-image.bin";
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
