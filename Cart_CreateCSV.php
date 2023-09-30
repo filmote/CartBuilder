@@ -171,7 +171,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       $bytes = file_get_contents($filename);
       if (is_string($bytes))
       {
-        return $bytes . str_repeat(chr(0xFF), 256 - strlen($bytes) % 256);
+        return $bytes . str_repeat(chr(0xFF), (256 - strlen($bytes) % 256) % 256);
       }
       return false;
     }
@@ -182,7 +182,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       $bytes = file_get_contents($filename);
       if (is_string($bytes))
       {
-        return $bytes . str_repeat(chr(0xFF), 4096 - strlen($bytes) % 4096);
+        return $bytes . str_repeat(chr(0xFF), (4096 - strlen($bytes) % 4096) % 4096);
       }
       return false;
     }
@@ -294,7 +294,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           $programpage = $currentpage + 5;
           $datapage    = $programpage + ($programsize >> 8);
           $alignpage   = $datapage + ($datasize >> 8);
-          if ($savesize > 0) $alignsize = (16 - $alignpage % 16) * 256;
+          if ($savesize > 0) $alignsize = ((16 - $alignpage % 16) % 16) * 256;
           else $alignsize = 0;
           $slotsize = (($programsize + $datasize + $alignsize + $savesize) >> 8) + 5;
           $savepage    = $alignpage + ($alignsize >> 8);
@@ -320,6 +320,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
               $program[0x17] = chr($datapage & 0xFF);
               $header[17] = chr($datapage >> 8);
               $header[18] = chr($datapage & 0xFF);
+              $header[21] = chr(($datasize >> 8) >> 8);
+              $header[22] = chr(($datasize >> 8) & 0xFF);
             }
             if ($savesize > 0)
             {

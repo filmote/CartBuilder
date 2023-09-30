@@ -200,6 +200,7 @@ function openInfo(itemIndex) {
         $('#infoInfo').html(item.info);
         var data = item.data;
         if  (data != "") data = "&data=http://www.bloggingadeadhorse.com/cart/" + data;
+        // var urlParams = item.params;
         // $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
         //alert("http://www.bloggingadeadhorse.com/cart/" + item.hex);
         $('#infoPreview').attr("src", "");
