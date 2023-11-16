@@ -187,6 +187,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       return false;
     }
 
+    function LoadRTCFile($filename)
+    {
+      if (!is_file($filename)) return false;
+      $bytes = file_get_contents($filename);
+      if (is_string($bytes))
+      {
+        return $bytes;
+      }
+      return false;
+    }
+
     function PatchMenuButton(&$program)
     {
       global $MenuButtonPatch;
@@ -284,6 +295,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           //   BuildFailed('<P>Null / missing HEX filename in CSV file at line ' . key($csv) . ' "' . current($csv) . '"</p><p>HEX image files are mandatory.' . $row[ID_TITLE]);
           // }          
           $title = LoadTitleScreenData(FixPath($row[ID_TITLESCREEN]));
+          if ((int)$row[ID_LIST] == 0) #loader screen
+          {
+             $RTCdata = LoadRTCfile(FixPath($row[ID_DATAFILE]));
+             if ($RTCdata)
+             {
+               if (strlen($RTCdata) > 1024) $title = $title . substr($RTCdata, -1024);
+               else $title = $title . str_repeat(chr(0xFF), 1024 - strlen($RTCdata)) . $RTCdata;
+             }
+          }
           $program = LoadHexFileData(FixPath($row[ID_HEXFILE]));
           $programsize = strlen($program);
           $datafile = LoadDataFile(FixPath($row[ID_DATAFILE]));
@@ -341,6 +361,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           }
           if (strlen($stringdata) > 199) $stringdata = substr($stringdata,0,199);
           for ($i = 0; $i < strlen($stringdata); $i++) $header[57 + $i] = $stringdata[$i];
+          if ((int)$row[ID_LIST] == 0) #loader screen
+          {
+             if ($RTCdata)
+             {
+               if (strlen($RTCdata) > 1024)
+               {
+                  for ($i = 256 - (strlen($RTCdata) - 1024); $i < 256; $i++) $header[$i] = $RTCdata[$i];
+               }
+               $header[15] = chr(0x7F);
+             }
+          }
           PatchMenuButton($program);
           $binfile .= $header . $title . $program . $datafile . str_repeat(chr(0xFF), $alignsize) . $savefile;
           $previouspage = $currentpage;
