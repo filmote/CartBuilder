@@ -414,7 +414,7 @@ function createCSV(colCount) {
     var output = '';
 
     output = 'List;Description;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source;Start;End;Hash<eol/>';
-    if (false) {
+    if ($("#rtc").is(":checked")) {
         output += '0;Bootloader;' + $("#loader").val() + ';;FXFiles/RTC-data.bin;;;' + ((typeof extraCats === "undefined" || extraCats == "")? '' : extraCats) + ';' + ((typeof fullList === "undefined" || fullList == "")? '' : fullList) + ';;;;;;<eol/>'
     }
     else {
