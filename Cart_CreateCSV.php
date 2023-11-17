@@ -300,14 +300,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              $RTCdata = LoadRTCfile(FixPath($row[ID_DATAFILE]));
              if ($RTCdata)
              {
-               if (strlen($RTCdata) > 1024) $title = $title . substr($RTCdata, -1024);
-               else $title = $title . str_repeat(chr(0xFF), 1024 - strlen($RTCdata)) . $RTCdata;
+               $title = substr($RTCdata, -2048);
              }
+             $datafile = '';
           }
+          else
+          {
+            $datafile = LoadDataFile(FixPath($row[ID_DATAFILE]));
+          }
+          $titlesize = strlen($title);
+          $datasize = strlen($datafile);
           $program = LoadHexFileData(FixPath($row[ID_HEXFILE]));
           $programsize = strlen($program);
-          $datafile = LoadDataFile(FixPath($row[ID_DATAFILE]));
-          $datasize = strlen($datafile);
           $savefile = LoadSaveFile(FixPath($row[ID_SAVEFILE]));
           $savesize = strlen($savefile);
           $id = hash("sha256" , $program . $datafile, true);
@@ -316,7 +320,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           $alignpage   = $datapage + ($datasize >> 8);
           if ($savesize > 0) $alignsize = ((16 - $alignpage % 16) % 16) * 256;
           else $alignsize = 0;
-          $slotsize = (($programsize + $datasize + $alignsize + $savesize) >> 8) + 5;
+          $slotsize = (($titlesize + $programsize + $datasize + $alignsize + $savesize) >> 8) + 1;
           $savepage    = $alignpage + ($alignsize >> 8);
           $nextpage += $slotsize;
           $header[7]  = chr((int)$row[ID_LIST]); #list number
@@ -365,9 +369,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           {
              if ($RTCdata)
              {
-               if (strlen($RTCdata) > 1024)
+               $n = strlen($RTCdata) - 2048;   
+               if ($n > 0)
                {
-                  for ($i = 256 - (strlen($RTCdata) - 1024); $i < 256; $i++) $header[$i] = $RTCdata[$i];
+                  for ($i = 0; $i < $n; $i++) $header[256 - $n + $i] = $RTCdata[$i];
                }
                $header[15] = chr(0x7F);
              }
