@@ -11,6 +11,7 @@ $databasename = '';
 
 $d1 = false;
 $d2 = false;
+
 $d3 = false;
 $d4 = false;
 
@@ -75,12 +76,12 @@ if (isset($_GET['device'])) {
 
   $platform = $platform . ")";
 
-  $query = "select TI.ID,TI.Title,TI.Developer,TI.Version,TI.Website,TI.Source,TI.EEPROM_Start,TI.EEPROM_End,TI.EEPROM_Hash,TI.Description,CT.Description from Titles TI left join List_Details LD on TI.ID = LD.TitleID and LD.ListID = 1 left join Categories CT on LD.CategoryID = CT.ID and CT.ListID = 1 inner join List_Details LD2 on TI.ID = LD2.TitleID and LD2.ListID in " . $platform;
+  $query = "select distinct TI.ID,TI.Title,TI.Developer,TI.Version,TI.Website,TI.Source,TI.EEPROM_Start,TI.EEPROM_End,TI.EEPROM_Hash,TI.Description,CT.Description as Category from Titles TI left join List_Details LD on TI.ID = LD.TitleID and LD.ListID = 1 left join Categories CT on LD.CategoryID = CT.ID and CT.ListID = 1 inner join List_Details LD2 on TI.ID = LD2.TitleID and LD2.ListID in " . $platform;
   // die(">>> " .  $query);
 
 }
 else {   
-  $query = "select TI.ID,TI.Title,TI.Developer,TI.Version,TI.Website,TI.Source,TI.EEPROM_Start,TI.EEPROM_End,TI.EEPROM_Hash,TI.Description,CT.Description from Titles TI left join List_Details LD on TI.ID = LD.TitleID and ListID = 1 left join Categories CT on LD.CategoryID = CT.ID and CT.ListID = 1";
+  $query = "select distinct TI.ID,TI.Title,TI.Developer,TI.Version,TI.Website,TI.Source,TI.EEPROM_Start,TI.EEPROM_End,TI.EEPROM_Hash,TI.Description,CT.Description as Category from Titles TI left join List_Details LD on TI.ID = LD.TitleID and ListID = 1 left join Categories CT on LD.CategoryID = CT.ID and CT.ListID = 1";
   // die(">>> no params " .  $query);
 }
 
@@ -100,6 +101,12 @@ if ($result->num_rows > 0) {
     }
     else {
       $data = $data . ', "info" : ' . json_encode($row["Description"]). ', ';
+    }
+    if (trim($row["Category"]) == "") {
+      $data = $data . ' "category" : "", ';
+    }
+    else {
+      $data = $data . ' "category" : ' . json_encode($row["Category"]). ', ';
     }
     $data = $data . '"program": {';
 

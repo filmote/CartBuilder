@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.30
+// V1.36
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -332,9 +332,37 @@ $(document).ready(function () {
                 var mime = $('#hexName')[0].files[0].type;
                 var extension = $('#hexName').val().replace(/^.*\./, '');
 
-                if (size > 90000 || mime != "" || extension != "hex") { // mime application/octet-stream
+                if (size > 90000) { // mime application/octet-stream
                     fileName.addClass("ui-state-error");
-                    updateTips(tips, "Invalid HEX file selected.");
+                    updateTips(tips, "Invalid HEX file selected (size).");
+                    valid = false;
+                }
+
+            }
+
+            if (valid) {
+
+                var size = $('#hexName')[0].files[0].size;
+                var mime = $('#hexName')[0].files[0].type;
+                var extension = $('#hexName').val().replace(/^.*\./, '');
+
+                if (mime != "") { // mime application/octet-stream
+                    fileName.addClass("ui-state-error");
+                    updateTips(tips, "Invalid HEX file selected (mime " + mime + ").");
+                    valid = false;
+                }
+
+            }
+
+            if (valid) {
+
+                var size = $('#hexName')[0].files[0].size;
+                var mime = $('#hexName')[0].files[0].type;
+                var extension = $('#hexName').val().replace(/^.*\./, '');
+
+                if (extension != "hex") { // mime application/octet-stream
+                    fileName.addClass("ui-state-error");
+                    updateTips(tips, "Invalid HEX file selected (extension " + extension + ").");
                     valid = false;
                 }
 

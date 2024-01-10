@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.30
+// V1.36
 
 var suppressOpenInfoDlg = false;
 
@@ -200,11 +200,13 @@ function openInfo(itemIndex) {
         $('#infoInfo').html(item.info);
         var data = item.data;
         if  (data != "") data = "&data=http://www.bloggingadeadhorse.com/cart/" + data;
+        var saveFile = item.save;
+        if  (saveFile != "") saveFile = "&save=http://www.bloggingadeadhorse.com/cart/" + saveFile;
         // var urlParams = item.params;
         // $('#infoPreview').attr("src", "projectABE/index.html?url=../" + item.hex + data + "&skin=BareFit");
         //alert("http://www.bloggingadeadhorse.com/cart/" + item.hex);
         $('#infoPreview').attr("src", "");
-        $('#infoPreview').attr("src", "arduboy_sim_web/player.html?blah=http://www.bloggingadeadhorse.com/cart/" + item.hex + data);
+        $('#infoPreview').attr("src", "arduboy_sim_web/player.html?blah=http://www.bloggingadeadhorse.com/cart/" + item.hex + data + saveFile);
 
 
         // http://www.bloggingadeadhorse.com/ppot/arduboy_sim_web/player.html?blah=https://github.com/Press-Play-On-Tape/PrinceOfArabia/releases/download/V1.01-Beta.016/PrinceOfArabia.hex&blah=https://github.com/Press-Play-On-Tape/PrinceOfArabia/releases/download/V1.01-Beta.016/fxdata.bin
