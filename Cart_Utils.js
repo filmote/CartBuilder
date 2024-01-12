@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.36
+// V1.38
 
 var suppressOpenInfoDlg = false;
 
@@ -225,6 +225,7 @@ function openInfo(itemIndex) {
 
         $('#infoEEPROMUsage').html(eepromInfo);
 
+
         // Download zip or Hex?
 
         if (item.data != "" || item.save != "") {
@@ -235,6 +236,21 @@ function openInfo(itemIndex) {
         else {
 
             $('#downloadLink').attr("href", item.hex);
+
+        }
+
+
+        
+        // Upload to device, zip or bin?
+
+        if (item.data != "" || item.save != "") {
+
+            $('#uploadToDeviceLink').attr("href", item.hex.substring(0, item.hex.length - 3) + "fx.zip");
+
+        }
+        else {
+
+            $('#uploadToDeviceLink').attr("href", item.hex);
 
         }
 
@@ -560,7 +576,6 @@ function clearSearch() {
 
     for (var idx = 0; idx < items.length; idx++) {
 
-        //$('#li' + (idx + 1)).css("-webkit-filter", "drop-shadow(4px 4px 4px rgba(0, 0, 0, .15))");
         $('#li' + (idx + 1)).show();
 
     }
@@ -643,7 +658,7 @@ function doSearch() {
 
 $("#deleteBin").click(function() {
 
-    var itemId = "li" + $("#itemId").val();
+    var itemId = $("#itemId").val();
     var sourceElement = document.getElementById(itemId);
 
     if (sourceElement.parentElement.id != "dvUnused") {
@@ -657,6 +672,19 @@ $("#deleteBin").click(function() {
 
 });
 
+
+
+$("#uploadToDeviceLink").click(function() {
+
+    var itemId = "li" + $("#itemId").val();
+    var sourceElement = document.getElementById(itemId);
+
+    $('#uploadToDeviceID').text(itemId);
+
+    $("#dlgInfoPanel").dialog("close");
+    $("#dlgUploadToDevice").dialog("open");
+
+});
 
 function incLikes() {
 

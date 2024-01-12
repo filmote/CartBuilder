@@ -32,13 +32,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.36
+// V1.38
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
 var errorDialog;
 var whatNext;
 var infoPanel;
+var uploadToDevice;
 var infoLIID;
 var eepromClashes;
 
@@ -709,8 +710,24 @@ $(document).ready(function () {
             $( this ).dialog( "close" );
         }
         }
-    });
+    }); 
     
+
+
+    // -------------------------------------------------------------------------------------------
+    //  Upload to Device
+
+    uploadToDevice = $( "#dlgUploadToDevice" ).dialog({
+        autoOpen: false,
+        modal: true,
+        height: "auto",
+        width: "544px",
+        buttons: {
+        Ok: function() {
+            $( this ).dialog( "close" );
+        }
+        }
+    });
 
   // -------------------------------------------------------------------------------------------
     // Read the cart file and create the table ..
