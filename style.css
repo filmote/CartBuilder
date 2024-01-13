@@ -1,5 +1,5 @@
 
-
+/*
 a{
 color: white;
 
@@ -7,7 +7,7 @@ color: white;
 a:hover{
 	color:yellow;
 }
-
+*/
 :root {
   --progress-bar-width: 300px;
   --progress-bar-height: 300px;
@@ -31,7 +31,7 @@ a:hover{
   height: calc(var(--progress-bar-height) - 30px);
   border-radius: 50%;
   background-color: lightgrey;
-  background-image: url("./images/buttons.png");
+  background-image: url("icons/buttons.png");
   			  background-repeat: no-repeat;
 	  background-position: center;
 		  background-size: 120%;
@@ -55,7 +55,7 @@ text-align: center;
 }
 
 
-
+/*
 .interesting{
 	background-color: rgba(0,0,0,0.2);
 	border-radius: 5px;
@@ -72,6 +72,7 @@ h3{
 	color: white;
 }
 
+
 body {
   font-family: sans-serif;
   background-color: #8B2DB4;
@@ -79,6 +80,8 @@ body {
   margin: 0px;
     cursor: default;
 }
+*/
+
 
 .main {
   height: 100%;
@@ -100,8 +103,8 @@ body {
 }
 
 .credits {
-	color: white;
-	font-size: 10pt;
+	color: gray;
+	font-size: 8pt;
 }
 
 
@@ -130,9 +133,9 @@ body {
 
 
 #instructions{
-	font-size: 10pt;
+	font-size: 9pt;
 	//padding: 10px;
-	color: white;
+	color: black;
 }
 
 
@@ -167,6 +170,7 @@ body {
   color: #333;
 }
 
+
 .board {
 	  border-radius: 20px;
   border: 2px solid #aaa;
@@ -186,7 +190,7 @@ body {
 .board svg {
   font-family: sans-serif;
 }
-
+/*
 label, input, select {
   display: block;
   margin: 0 0 15px 0;
@@ -203,7 +207,7 @@ select, input {
 	position: relative;
 
 }
-
+*/
 
 .bottomSpacer{
 	width: 20px;
@@ -241,7 +245,7 @@ border: 2px solid rgba(0,0,0,0);
 	margin: 1.5px 5px 1px 5px;
 
 }
-
+/*
 input[type=file] {
 	display: inline-block;
 	display: none;
@@ -276,7 +280,7 @@ button[type=submit]:hover{
 	background-color: #befdc1;
 }
 
-
+*/
 #uploadBtn{
 	
 	cursor: pointer;
@@ -299,7 +303,7 @@ button[type=submit]:hover{
 
 #uploadIco{
 padding-top: 15px;
-		background-image: url("./images/upload-icon.png");
+		background-image: url("icons/upload-icon.png");
 		height: 100px;
 		width: 100px;
 			  background-repeat: no-repeat;
@@ -314,7 +318,7 @@ padding-top: 15px;
 
 #resetBtn{
 	
-	  background: rgba(255,255,255,0.1);
+	  background: rgba(0,255,255,0.1);
 	  cursor: pointer;
 
 position: absolute;
@@ -323,13 +327,14 @@ left: 200px;
 
 	height:30px;
 	width: 30px;
-	background-image: url("./images/reset-icon.png");
+	background-image: url("icons/reset-icon.png");
 	  background-repeat: no-repeat;
 	  background-position: center;
 	  background-size: 69%;
 	  border: 2px solid rgba(0,0,0,0);
 	 border-radius: 100%;
 }
+
 #resetBtn:hover{
 	border: 2px solid white;
 }

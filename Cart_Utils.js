@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.38
+// V1.56
 
 var suppressOpenInfoDlg = false;
 
@@ -673,13 +673,16 @@ $("#deleteBin").click(function() {
 });
 
 
-
+// FlashCode
 $("#uploadToDeviceLink").click(function() {
+//uploadToDeviceID
 
-    var itemId = "li" + $("#itemId").val();
+
+    var itemId = $("#itemId").val();
     var sourceElement = document.getElementById(itemId);
+    var itemX = items[itemId - 1];
 
-    $('#uploadToDeviceID').text(itemId);
+    $('#fileName').text(itemX.hex);
 
     $("#dlgInfoPanel").dialog("close");
     $("#dlgUploadToDevice").dialog("open");

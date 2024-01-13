@@ -13,26 +13,26 @@ function debug(variableObject) {
 const progressPercent = document.getElementById('progressPercent');
 const progressTime = document.getElementById('progressTime');
 const progressBar = document.getElementById('progressBar');
-const resetBtn = document.getElementById('resetBtn');
+//const resetBtn = document.getElementById('resetBtn');
 const fileInput = document.getElementById('fileInput');
 const fileButton = document.getElementById('fileButton');
 const fileName = document.getElementById('fileName');
 const uploadBtn = document.getElementById('uploadBtn');
 
 uploadBtn.addEventListener('click', handleSubmit, false);
-resetBtn.addEventListener('click', handleReset, false);
-fileButton.addEventListener('click', () => fileInput.click());
+//resetBtn.addEventListener('click', handleReset, false);
+//fileButton.addEventListener('click', () => fileInput.click());
 
-fileInput.addEventListener('change', (event) => {
-	const file = event.target.files[0];
-	if (file)
-		fileName.textContent = file.name;
-});
+//fileInput.addEventListener('change', (event) => {
+//	const file = event.target.files[0];
+//	if (file)
+//		fileName.textContent = file.name;
+//});
 
 
 // --- Drag Drop Handling ---
 
-
+/*
 let dragCounter = 0;
 
 document.addEventListener('dragenter', (e) => {
@@ -64,7 +64,7 @@ document.addEventListener('drop', (e) => {
 	document.body.style.backgroundColor = ''; // Revert to original color
 	e.preventDefault()
 });
-	
+	*/
 	
 // --- Progress Bar Animation ---
 // Library calls: drawInit(), drawComplete() and drawPercentage(percentVal)
@@ -360,46 +360,41 @@ async function handleSubmit(e) {
     let fileType = 0;
     let fileContents;
 
-    let file = fileInput.files[0];
+    let file = new Blob();
+    let qualFileName = $('#fileName').text();
     const readerF = new FileReader();
 
-    if (!file) {
 
-        // If no file is provided, use the default file
-
-        const response = await fetch('Whole Enchilada.bin');
-        if (!response.ok) {
-            alert("Error loading default file");
-            return;
-        }
-        fileType = 2;
-        console.log("awaiting blob");
-        file = await response.blob();
-        console.log("blobbed");
-
-    } else {
-
-        //User uploaded a file, determine if it is a HEX or BIN and set the fileType
-
-        const name = fileInput.files[0].name;
-        const lastDot = name.lastIndexOf('.');
-        const fileName = name.substring(0, lastDot);
-        const ext = name.substring(lastDot + 1);
-
-        if (ext == "hex") {
-            console.log("hex file detected");
-            fileType = 1;
-        } else if (ext == "bin") {
-            console.log("bin file detected");
-            fileType = 2;
-        } else if (ext == "arduboy") {
-            console.log("arduboy file detected");
-            fileType = 3;
-        } else {
-            alert("Only .hex .bin and .arduboy files are supported");
-        }
+    const response = await fetch(qualFileName);
+    if (!response.ok) {
+        alert("Error loading default file");
+        return;
     }
 
+    const name = qualFileName;
+    const lastDot = name.lastIndexOf('.');
+    const fileName = name.substring(0, lastDot);
+    const ext = name.substring(lastDot + 1);
+
+    if (ext == "hex") {
+        console.log("hex file detected");
+        fileType = 1;
+    } else if (ext == "bin") {
+        console.log("bin file detected");
+        fileType = 2;
+    } else if (ext == "arduboy") {
+        console.log("arduboy file detected");
+        fileType = 3;
+    } else {
+        alert("Only .hex .bin and .arduboy files are supported");
+    }
+
+
+    console.log("awaiting blob");
+    file = await response.blob();
+    console.log("blobbed");
+
+    
     readerF.onload = async function (event) {
 
         fileContents = event.target.result;
@@ -419,12 +414,7 @@ async function handleSubmit(e) {
     } else if (fileType == 2) {
         readerF.readAsArrayBuffer(file);
     } else if (fileType == 3) {
-        // will need to process zip here?
-        // just calling to debugge
-
         loadFile(file);
-
-        //flashArduboy();
     }
 
 }
@@ -612,8 +602,9 @@ let filters = [{ // Port filters for Arduino Leonardo in Bootloader and Applicat
 	}
 ];
 	
-	
+/*	
 async function handleReset(e) {
+    alert("Please use Chromium based browsers!");
 	if (!("serial" in navigator)) {
 		alert("Please use Chromium based browsers!");
 	}
@@ -627,7 +618,7 @@ async function handleReset(e) {
 	await port.close();
 	await waitforme(500);
 }
-
+*/
 class SerialPortManager {
     constructor() {
         this.port = null;
