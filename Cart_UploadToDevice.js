@@ -202,6 +202,22 @@ function padDataToBlockSize(data, blockSize) {
 }
 
 
+async function handleReset() {
+	if (!("serial" in navigator)) {
+		alert("Please use Chromium based browsers!");
+	}
+	port = await navigator.serial.requestPort({
+		filters
+	});
+	await port.open({
+		baudRate: 1200
+	});
+	await waitforme(500);
+	await port.close();
+	await waitforme(500);
+}
+
+
 async function handleSubmit(e) {
 
     if (!("serial" in navigator)) {
@@ -228,6 +244,7 @@ async function handleSubmit(e) {
 
     if (qualFileName == "Unique Cart") {
         flashFx(flashCartFile);
+        handleReset();
         return;
     }
 
@@ -324,7 +341,8 @@ async function handleSubmit(e) {
             saveFileData = padToMultiple(saveFileData, 4096);
 
             if (flashFileData) {
-                devData = devData + saveFileData;
+                devData = new Uint8Array([ ...flashFileData, ...saveFileData ]);
+//                flashFileData.concat(saveFileData);
             } else {
                 console.log("Save File found, but no Data File. Aborting!");
                 return;
