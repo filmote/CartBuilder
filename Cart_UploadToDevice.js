@@ -13,58 +13,12 @@ function debug(variableObject) {
 const progressPercent = document.getElementById('progressPercent');
 const progressTime = document.getElementById('progressTime');
 const progressBar = document.getElementById('progressBar');
-//const resetBtn = document.getElementById('resetBtn');
 const fileInput = document.getElementById('fileInput');
 const fileButton = document.getElementById('fileButton');
 const fileName = document.getElementById('fileName');
 const uploadBtn = document.getElementById('uploadBtn');
 
 uploadBtn.addEventListener('click', handleSubmit, false);
-//resetBtn.addEventListener('click', handleReset, false);
-//fileButton.addEventListener('click', () => fileInput.click());
-
-//fileInput.addEventListener('change', (event) => {
-//	const file = event.target.files[0];
-//	if (file)
-//		fileName.textContent = file.name;
-//});
-
-
-// --- Drag Drop Handling ---
-
-/*
-let dragCounter = 0;
-
-document.addEventListener('dragenter', (e) => {
-	dragCounter++;
-	document.body.style.backgroundColor = '#9831c4'; // Change to your preferred color
-});
-
-document.addEventListener('dragleave', (e) => {
-	dragCounter--;
-	if (dragCounter === 0) {
-		document.body.style.backgroundColor = ''; // Revert to original color
-	}
-});
-
-document.addEventListener('dragover', (e) => {
-	e.preventDefault();
-});
-
-document.addEventListener('drop', (e) => {
-
-	dragCounter = 0; // Reset counter on drop
-	const fileDrop = e.dataTransfer.files[0];
-	if (fileDrop) {
-		fileName.textContent = fileDrop.name;
-		document.getElementById('fileInput').files = e.dataTransfer.files;
-		console.log(document.getElementById('fileInput').files);
-
-	}
-	document.body.style.backgroundColor = ''; // Revert to original color
-	e.preventDefault()
-});
-	*/
 	
 // --- Progress Bar Animation ---
 // Library calls: drawInit(), drawComplete() and drawPercentage(percentVal)
@@ -228,47 +182,6 @@ function computeEstimate() {
 // --- Library Interface ---
 
 
-
-function processArduboyInfo(info) {
-	
-	
-	let fileName = '';
-	let flashData = '';
-	let flashSave = '';
-	
-	
-
-    if (info.binaries && info.binaries.length > 0) {
-        const binaries = info.binaries;
-
-        binaries.forEach(binary => {
-            fileName = binary.filename;
-            flashData = binary.flashdata;
-            flashSave = binary.flashsave;
-
-        });
-    } else {
-        console.log("No binaries found in the JSON");
-    }
-
-    return { fileName, flashData, flashSave };
-}
-
-function fixJSON(inputJSON) {
-    let lines = inputJSON.split("\n");
-    
-    for (let i = 0; i < lines.length - 1; i++) {
-        let line = lines[i].trim();
-        let nextLine = lines[i + 1].trim();
-
-        if (line.endsWith(",") && (nextLine.startsWith("]") || nextLine.startsWith("}"))) {
-            lines[i] = line.substring(0, line.length - 1);
-        }
-    }
-
-    return lines.join("\n");
-}
-
 function padToMultiple(data, multiple) {
     const remainder = data.length % multiple;
     if (remainder === 0) return data; // Already a multiple, no padding needed
@@ -289,67 +202,6 @@ function padDataToBlockSize(data, blockSize) {
 }
 
 
-async function loadFile(file) {
-    var zip = new JSZip();
-
-    try {
-        const zipContents = await JSZip.loadAsync(file);
-        const content = await zipContents.file("info.json").async("string");
-
-        let fixedJSON = fixJSON(content);
-        const info = JSON.parse(fixedJSON);
-        const {
-            fileName,
-            flashData,
-            flashSave
-        } = processArduboyInfo(info);
-
-        let hexFileData,
-        flashFileData,
-        saveFileData;
-
-        if (fileName) {
-            console.log("Hex File: ", fileName);
-            hexFileData = await zipContents.file(fileName).async("string");
-        }
-        if (flashData) {
-            console.log("Bin File: ", flashData);
-            flashFileData = await zipContents.file(flashData).async("uint8array");
-        }
-        if (flashSave) {
-            console.log("Save File: ", flashSave);
-            saveFileData = await zipContents.file(flashSave).async("uint8array");
-        } else {
-            console.log("No Save File Detected");
-        }
-
-        let devData;
-
-        if (flashFileData) {
-            flashFileData = padToMultiple(flashFileData, 256); //FX_PAGESIZE
-            devData = flashFileData;
-        }
-
-        if (saveFileData) {
-            saveFileData = padToMultiple(saveFileData, 4096);
-            if (flashFileData) {
-                devData = devData + saveFileData;
-            } else {
-                console.log("Save File found, but no Data File. Aborting!");
-                return;
-            }
-        }
-
-        const paddedData = padDataToBlockSize(devData, FX_BLOCKSIZE);
-
-        await flashArduboy(hexFileData, paddedData);
-
-    } catch (e) {
-        console.error("Error processing file:", e);
-    }
-}
-
-
 async function handleSubmit(e) {
 
     if (!("serial" in navigator)) {
@@ -361,10 +213,27 @@ async function handleSubmit(e) {
     let fileContents;
 
     let file = new Blob();
+    let flashFileData = new Blob();
+    let saveFileData = new Blob();
     let qualFileName = $('#fileName').text();
+    let qualDateFileName = $('#dataFileName').val();
+    let qualSaveFileName = $('#saveFileName').val();
+    let hasDateFile = $('#hasDataFile').val();
+    let hasSaveFile = $('#hasSaveFile').val();
     const readerF = new FileReader();
+    const readerD = new FileReader();
 
 
+    // If the cart has been generated then immedaitely flash it.
+
+    if (qualFileName == "Unique Cart") {
+        flashFx(flashCartFile);
+        return;
+    }
+
+
+    // Otherwise, flash the game that has been selected ..
+    
     const response = await fetch(qualFileName);
     if (!response.ok) {
         alert("Error loading default file");
@@ -376,14 +245,11 @@ async function handleSubmit(e) {
     const fileName = name.substring(0, lastDot);
     const ext = name.substring(lastDot + 1);
 
-    if (ext == "hex") {
-        console.log("hex file detected");
+    if (hasDateFile == "N" && hasSaveFile == "N") {
+        console.log("standalone hex file detected");
         fileType = 1;
-    } else if (ext == "bin") {
-        console.log("bin file detected");
-        fileType = 2;
-    } else if (ext == "arduboy") {
-        console.log("arduboy file detected");
+    } else if (hasDateFile == "Y" || hasSaveFile == "Y") {
+        console.log("FX files detected");
         fileType = 3;
     } else {
         alert("Only .hex .bin and .arduboy files are supported");
@@ -409,12 +275,67 @@ async function handleSubmit(e) {
 
     };
 
+    readerD.onload = async function (event) {
+
+        hexFileData = event.target.result;
+
+    };
+
     if (fileType == 1) {
         readerF.readAsText(file);
-    } else if (fileType == 2) {
-        readerF.readAsArrayBuffer(file);
     } else if (fileType == 3) {
-        loadFile(file);
+
+        let devData;
+
+
+        // Read this way so that the result is in the correct format ':001122 ..'
+
+        readerD.readAsText(file);
+
+
+        // Does a data file exit?
+
+        if (hasDateFile == "Y") {
+
+            const requestDataFile = async () => {
+                const response = await fetch(qualDateFileName);
+                const arrayBuffer = await response.arrayBuffer();
+                flashFileData = new Uint8Array(arrayBuffer);
+            }
+
+            await requestDataFile();
+            flashFileData = padToMultiple(flashFileData, 256); //FX_PAGESIZE
+            devData = flashFileData;
+
+        }
+
+
+        // Does a save file exist?
+
+        if (hasSaveFile == "Y") {
+
+            const requestSaveFile = async () => {
+                const response = await fetch(qualSaveFileName);
+                const arrayBuffer = await response.arrayBuffer();
+                saveFileData = new Uint8Array(arrayBuffer);
+            }
+
+            await requestSaveFile();
+            saveFileData = padToMultiple(saveFileData, 4096);
+
+            if (flashFileData) {
+                devData = devData + saveFileData;
+            } else {
+                console.log("Save File found, but no Data File. Aborting!");
+                return;
+            }
+        }
+
+        const paddedData = padDataToBlockSize(devData, FX_BLOCKSIZE);
+
+        await flashArduboy(hexFileData, paddedData);
+
+
     }
 
 }

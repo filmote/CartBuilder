@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
   <head>
@@ -441,14 +440,12 @@ async function handleSubmit(e) {
 
         // If no file is provided, use the default file
 
-//        const response = await fetch('Whole Enchilada.bin');
-        const response = await fetch('Action/Choplifter.hex');
+        const response = await fetch('Whole Enchilada.bin');
         if (!response.ok) {
             alert("Error loading default file");
             return;
         }
-//        fileType = 2;
-        fileType = 1;
+        fileType = 2;
         console.log("awaiting blob");
         file = await response.blob();
         console.log("blobbed");

@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.56
+// V2.05
 
 // First pass:  Render the categories and items used in the selected cart. 
 
@@ -48,8 +48,9 @@ function generateHtmlTable(data) {
 
     var html = '<table id=tab class="AltTable"><thead><tr><th valign="top" align="center" style="text-align:center; background-color: #25AAE2; column-width:600px;">';
     html += '<button type="button" id="btnGetData" class="buttonHeader">Download CSV</button><div style="height:2px;"></div>';
-    html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button><div style="height:4px;"></div>';
-    html += '<div style="height:28px;"></div>';
+    html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button><div style="height:2px;"></div>';
+    html += '<button type="button" id="btnFlashDevice" class="buttonHeader">Flash Cart</button><div style="height:2px;"></div>';
+//    html += '<div style="height:28px;"></div>';
     html += '<span class="search"><input type="checkbox" id="rtc" name="rtc" value="0" style="position:relative;left:-5px;width:11px;opacity:0.45"><label for="rtc" style="position:relative;left:-5px;">RTC</label>&nbsp;&nbsp;&nbsp;&nbsp;Boot menu:</span><div style="height:4px;"></div>';
     html += '<span class="search" id="searchLabel" name="searchLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search Games:</span>';
     html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;">';

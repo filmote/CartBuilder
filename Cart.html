@@ -8,8 +8,8 @@
   <meta charset="UTF-8">
   <title>Cart Builder</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="Cart.css?v=V1.56" />
-  <link rel="stylesheet" href="style.css?v=V1.56" />
+  <link rel="stylesheet" href="Cart.css?v=V2.05" />
+  <link rel="stylesheet" href="style.css?v=V2.05" />
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
@@ -321,16 +321,41 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
       <br/>
       <div class="bottomContainer">
          <div class="fileButtonWrapper">
-            <div id="fileName">xxx</div>
-         </div>
+          <div id="fileName">x1</div>
+          <input type="hidden" id="dataFileName" />
+          <input type="hidden" id="saveFileName" />
+          <input type="hidden" id="hasDataFile" />
+          <input type="hidden" id="hasSaveFile" />
+        </div>
       </div>
       <h3>Instructions</h3>
-      <div id="instructions">Connect your Arduboy FX to USB and power on, then click the Upload button.<BR>The Arduboy FX must be in the bootloader menu to perform the upload.</div>
+      <div id="instructions">Connect your Arduboy FX to USB and power on, then click the Upload button.<br/>The Arduboy FX must be in the bootloader menu to perform the upload.</div>
       <br><br>
       <div class="credits">Thank you to Mr. Blinky, Haloopdy and Benjamin Naigener!</div>
  </center> 
 
   </div>
+
+
+  <div id="dlgUploadToDevice_Start" title="Upload to Arduboy">
+    <center>
+      <br/>
+      <div id="progressBar" class="circular-progress" data-inner-circle-color="lightgrey" data-percentage="0" data-progress-color="#FBF157" data-bg-color="black">
+         <div class="inner-circle"></div>
+         <div class="progressHolder">
+            <div id="progressPercent"></div>
+            <div id="progressTime"></div>
+         </div>
+      </div>
+    <h3>One moment please ..</h3>
+    <img width="48px" src="icons/Wait.gif"><br/>
+    <br/>
+    <div id="instructions">Generating a unique cart image for you.<br/>This shouldn't take more than 10 or so seconds!</div>
+    <br>
+   </center> 
+  
+    </div>
+
 
   <form name="cartForm" id="cartForm" action="Cart_CreateCSV.php" method="post">
 
@@ -355,9 +380,9 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
   var fullList;
   var extraCats;
 </script>
-<script src="Cart_DocReady.js?V=V1.56"></script>
-<script src="Cart_GenerateHTML.js?V=V1.56"></script>
-<script src="Cart_Utils.js?V=V1.56"></script>
-<script src="Cart_ArduboyFile.js?V=V1.56"></script>
-<script src="Cart_UploadToDevice.js?V=v1.37"></script>
+<script src="Cart_DocReady.js?V=V2.05"></script>
+<script src="Cart_GenerateHTML.js?V=V2.05"></script>
+<script src="Cart_Utils.js?V=V2.05"></script>
+<script src="Cart_ArduboyFile.js?V=V2.05"></script>
+<script src="Cart_UploadToDevice.js?V=v1.63"></script>
 
