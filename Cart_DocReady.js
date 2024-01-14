@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.06
+// V2.07
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -978,6 +978,11 @@ $(document).ready(function () {
             // FlashCode
 
             $('#btnFlashDevice').click(function () {
+
+                if (!("serial" in navigator)) {
+                    alert("Please use Chromium based browsers!");
+                    return;
+                }
 
                 uploadToDevice_Start.dialog("open");
                 var colCount = $("#tab").find("tr:first th").length;

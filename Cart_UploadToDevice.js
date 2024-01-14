@@ -342,7 +342,6 @@ async function handleSubmit(e) {
 
             if (flashFileData) {
                 devData = new Uint8Array([ ...flashFileData, ...saveFileData ]);
-//                flashFileData.concat(saveFileData);
             } else {
                 console.log("Save File found, but no Data File. Aborting!");
                 return;
