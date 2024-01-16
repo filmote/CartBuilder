@@ -1,4 +1,4 @@
-
+//V2.26
 
 // -- debug helper
 
@@ -243,7 +243,7 @@ async function handleSubmit(e) {
     // If the cart has been generated then immedaitely flash it.
 
     if (qualFileName == "Unique Cart") {
-        flashFx(flashCartFile);
+        await flashFx(flashCartFile);
         handleReset();
         return;
     }
@@ -848,7 +848,11 @@ async function flashArduboy(hexFileData, devData) {
         throw new Error("No flash data provided!");
     }
 
+    const hexFileBlocks = hexFileData.length / FX_BLOCKSIZE; 
     const devDataBlocks = devData.length / FX_BLOCKSIZE;
+    blocks = hexFileBlocks + devDataBlocks;
+    blockCount = 0;
+
     console.log("devDataBlocks: ", devDataBlocks);
 	
     let parsedHexData = parseIntelHex(hexFileData);
@@ -869,8 +873,11 @@ async function flashArduboy(hexFileData, devData) {
         let readBlock = 0;
         // flash external memory
         for (let block = blockStartAddr; block < FX_BLOCKS_PER_FULLCART; block++) {
+            drawPercentage((blockCount / blocks) * 100);
             await flashBlock(serial1, block, devData, readBlock);
             readBlock++;
+            blockCount++;
+			console.log(blockCount);
         }
 
         await waitforme(500);
@@ -880,7 +887,7 @@ async function flashArduboy(hexFileData, devData) {
         let address = 0;
         // flash hex
         do {
-            //drawPercentage((pageStart / parsedHexData.data.length) * 100);
+            drawPercentage((blockCount / blocks) * 100);
             await serial1.writeAndRead(new Uint8Array([0x41, (address >> 8) & 0xFF, address & 0xFF])); //addresss command
             let txx = flashHexPage(parsedHexData, pageStart); //generate  page data
             cmd = new Uint8Array([0x42, 0x00, 0x80, 0x46]); //flash page write command ('B' + 2bytes size + 'F')
@@ -890,6 +897,8 @@ async function flashArduboy(hexFileData, devData) {
 
             pageStart += 128;
             address += 64;
+            blockCount = blockCount + (128 / FX_BLOCKSIZE);
+			console.log(blockCount);
         } while (pageStart < parsedHexData.data.length);
         console.log("Finished!");
         await leaveBootloader(serial1);

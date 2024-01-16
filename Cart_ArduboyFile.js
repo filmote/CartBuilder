@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.07
+// V2.26
 (() => {
 
 //const arduboyFileButton = document.getElementById("arduboyFileButton");
