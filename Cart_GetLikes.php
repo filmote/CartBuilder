@@ -11,19 +11,6 @@ $databasename = '';
 
 readCreds($hostname, $username, $password, $databasename);
 
-//$notdepreciated = intval(phpversion()[0]) <= 5;
-//if ($notdepreciated)
-//{
-//  if (!$connection_result = mysql_connect($hostname, $username, $password)) {
-//  	die('Error Connecting to MySQL Database: ' . mysql_error());
-//  }
-//  
-//  if (!$db_result = mysql_select_db($databasename, $connection_result)) {
-//  	die('Error Selecting the MySQL Database: ' . mysql_error());
-//  }
-//}
-//else
-//{
   if (!$connection_result = mysqli_connect($hostname, $username, $password)) {
   	die('Error Connecting to MySQL Database: ' . mysqli_error($connection_result));
   }
@@ -31,7 +18,7 @@ readCreds($hostname, $username, $password, $databasename);
   if (!$db_result = mysqli_select_db($connection_result, $databasename)) {
   	die('Error Selecting the MySQL Database: ' . mysqli_error($connection_result));
   }
-//}
+
 
 $hex = $_GET['hex'];
 $session = session_id();
