@@ -11,43 +11,40 @@ $databasename = '';
 
 readCreds($hostname, $username, $password, $databasename);
 
-if (!$connection_result = mysql_connect($hostname, $username, $password)) {
-	die('Error Connecting to MySQL Database: ' . mysql_error());
+if (!$connection_result = mysqli_connect($hostname, $username, $password)) {
+  	die('Error Connecting to MySQL Database: ' . mysqli_error($connection_result));
+}
+  
+if (!$db_result = mysqli_select_db($connection_result, $databasename)) {
+  	die('Error Selecting the MySQL Database: ' . mysqli_error($connection_result));
 }
 
-if (!$db_result = mysql_select_db($databasename, $connection_result)) {
-	die('Error Selecting the MySQL Database: ' . mysql_error());
-}
 
 $id = $_GET['id'];
 $session = session_id();
 
 $query = "SELECT count(*) from Likes where TitleID = " . $id . " and SessionID = '" . $session . "'";
-$export = mysql_query ($query ) or die ( "Sql error : " . mysql_error( ) );
+$export = mysqli_query ( $connection_result, $query ) or die ( "Sql error : " . mysqli_error($connection_result));
 
-while( $row = mysql_fetch_row( $export ) ) {
+while( $row = mysqli_fetch_row( $export ) ) {
 
     if ($row[0] > "0") {
 
 		$query = "delete from Likes where TitleID = " . $id . " and SessionID = '" . $session . "'";
-		$export = mysql_query ($query ) or die ( "Sql error : " . mysql_error( ) );
+		$export = mysqli_query ( $connection_result, $query ) or die ( "Sql error : " . mysqli_error($connection_result));
 		$query = "update Titles set likes = likes - 1 where id = " . $id;
-		$export = mysql_query ($query ) or die ( "Sql error : " . mysql_error( ) );
-
+		$export = mysqli_query ( $connection_result, $query ) or die ( "Sql error : " . mysqli_error($connection_result));
 	}
 
 }
 
-
 // Get current status ..
 
 $query = "SELECT ti.id, ti.likes, case when li.TitleID is null then 0 else 1 end as SessionFound FROM Titles ti left join Likes li on ti.id = li.TitleID and li.SessionID = '" . $session . "' where ti.id = " . $id;
-$export = mysql_query ($query ) or die ( "Sql error : " . mysql_error( ) );
+$export = mysqli_query ( $connection_result, $query ) or die ( "Sql error : " . mysqli_error($connection_result));
 
-while( $row = mysql_fetch_row( $export ) )
-{
+while( $row = mysqli_fetch_row( $export ) ) {
 	$line = $row[0].";".$row[1].";".$row[2];
 }
-
 echo $line;
 ?>

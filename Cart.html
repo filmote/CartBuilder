@@ -8,12 +8,14 @@
   <meta charset="UTF-8">
   <title>Cart Builder</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="Cart.css?v=V1.30" />
+  <link rel="stylesheet" href="Cart.css?v=V2.27" />
+  <link rel="stylesheet" href="style.css?v=V2.27" />
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
   <script src="zip.min.js"></script>
+  <script src="jszip.min.js"></script>
 </head>
 
 <body>
@@ -292,9 +294,70 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
         <td><a href="#" id="url" name="url" target="_new" title="Website"><img src="icons/url.png" width="32px" style="opacity: .25;"/></a></td>
         <td><a href="#" id="source" name="source" target="_new" title="Source Code"><img src="icons/source.png" width="32px" style="opacity: .25;"/></a></td>
         <td><a href="#" id="downloadLink" name="downloadLink" download title="Download Hex File"><img src="icons/download.png" width="32px" style="opacity: .25;"/></a></td>
+        <!-- FlashCode -->
+        <td>&nbsp;</td>
+        <td><img id="uploadToDeviceLink" src="icons/Zap.png" width="20px" style="opacity: .25;"/></td>
       </tr></table>
     
   </div>
+
+
+  <!-- FlashCode -->
+
+  <div id="dlgUploadToDevice" title="Upload to Arduboy">
+  <center>
+    <br/>
+      <div id="progressBar" class="circular-progress" data-inner-circle-color="lightgrey" data-percentage="0" data-progress-color="#FBF157" data-bg-color="black">
+         <div class="inner-circle"></div>
+         <div class="progressHolder">
+            <div id="progressPercent"></div>
+            <div id="progressTime"></div>
+            <div id="uploadBtn">
+               <div id="uploadIco"></div>
+               <div id="uploadTxt">Upload</div>
+            </div>
+         </div>
+      </div>
+      <br/>
+      <div class="bottomContainer">
+         <div class="fileButtonWrapper">
+          <div id="fileName">x1</div>
+          <input type="hidden" id="dataFileName" />
+          <input type="hidden" id="saveFileName" />
+          <input type="hidden" id="hasDataFile" />
+          <input type="hidden" id="hasSaveFile" />
+        </div>
+      </div>
+      <h3>Instructions</h3>
+      <div id="instructions">Connect your Arduboy FX to USB and power on, then click the Upload button.<br/>The Arduboy FX must be in the bootloader menu to perform the upload.</div>
+      <br><br>
+      <div class="credits">Thank you to Mr. Blinky, Haloopdy and Benjamin Naigener!</div>
+ </center> 
+
+  </div>
+
+
+  <div id="dlgUploadToDevice_Start" title="Upload to Arduboy">
+    <center>
+      <br/>
+      <div id="progressBar" class="circular-progress" data-inner-circle-color="lightgrey" data-percentage="0" data-progress-color="#FBF157" data-bg-color="black">
+         <div class="inner-circle"></div>
+         <div class="progressHolder">
+            <div id="progressPercent"></div>
+            <div id="progressTime"></div>
+         </div>
+      </div>
+    <h3>One moment please ..</h3>
+    <img width="48px" src="icons/Wait.gif"><br/>
+    <br/>
+    <div id="instructions">Generating a unique cart image for you.<br/>This may take a while - depending on the number of games chosen!</div>
+    <br/>
+    <div id="instructions">Web Serial is a relatively new technology.<br/>Please ensure your version of Chrome is up to date.</div>
+    <br>
+   </center> 
+  
+    </div>
+
 
   <form name="cartForm" id="cartForm" action="Cart_CreateCSV.php" method="post">
 
@@ -303,6 +366,7 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
     <input type="hidden" id="mode" name="mode" />
 
   </form>
+
 <div id="dvHidden" name="dvHidden" style="visibility: hidden;" >
 
 </div>
@@ -318,9 +382,9 @@ python flashcart-writer.py {path to bin file}/flashcart-image.bin
   var fullList;
   var extraCats;
 </script>
-<script src="Cart_DocReady.js?V=V1.36"></script>
-<script src="Cart_GenerateHTML.js?V=V1.36"></script>
-<script src="Cart_Utils.js?V=V1.36"></script>
-<script src="Cart_ArduboyFile.js?V=V1.36"></script>
-
+<script src="Cart_DocReady.js?V=V2.27"></script>
+<script src="Cart_GenerateHTML.js?V=V2.27"></script>
+<script src="Cart_Utils.js?V=V2.27"></script>
+<script src="Cart_ArduboyFile.js?V=V2.27"></script>
+<script src="Cart_UploadToDevice.js?V=V2.27"></script>
 

@@ -32,15 +32,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.36
+// V2.27
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
 var errorDialog;
 var whatNext;
 var infoPanel;
+var uploadToDevice;
+var uploadToDevice_Start;
 var infoLIID;
 var eepromClashes;
+var flashCartFile;
 
 // -------------------------------------------------------------------------------------------
 //  Category Name
@@ -274,6 +277,9 @@ $(document).ready(function () {
             event.preventDefault();
             uploadFile();
         });
+
+
+
 
     });
 
@@ -709,8 +715,36 @@ $(document).ready(function () {
             $( this ).dialog( "close" );
         }
         }
-    });
+    }); 
     
+
+
+    // -------------------------------------------------------------------------------------------
+    //  Upload to Device
+
+    uploadToDevice = $( "#dlgUploadToDevice" ).dialog({
+        autoOpen: false,
+        modal: true,
+        height: "auto",
+        width: "544px",
+        buttons: {
+        Ok: function() {
+            $( this ).dialog( "close" );
+        }
+        }
+    });
+
+    uploadToDevice_Start = $( "#dlgUploadToDevice_Start" ).dialog({
+        autoOpen: false,
+        modal: true,
+        height: "auto",
+        width: "544px",
+        buttons: {
+        Ok: function() {
+            $( this ).dialog( "close" );
+        }
+        }
+    });
 
   // -------------------------------------------------------------------------------------------
     // Read the cart file and create the table ..
@@ -940,6 +974,46 @@ $(document).ready(function () {
 
             });
 
+
+            // FlashCode
+
+            $('#btnFlashDevice').click(function () {
+
+                if (!("serial" in navigator)) {
+                    alert("Please use Chromium based browsers!");
+                    return;
+                }
+
+                uploadToDevice_Start.dialog("open");
+                var colCount = $("#tab").find("tr:first th").length;
+
+                $('#output').val(createCSV(colCount));
+                $('#mode').val('bin');
+
+                $('#fileName').text("Unique Cart");
+                $('#dataFileName').val("");
+                $('#saveFileName').val("");
+            
+                $('#hasDataFile').val("N");
+                $('#hasSaveFile').val("N");
+
+                const requestBinFile = async () => {
+
+                    const response = await  fetch('Cart_CreateCSV.php', {
+                        method: 'POST',
+                        body: new FormData(document.querySelector('#cartForm')) 
+                      })
+                      .then(response => response.arrayBuffer()); 
+
+                    flashCartFile = new Uint8Array(response);
+                    uploadToDevice_Start.dialog("close");
+                    uploadToDevice.dialog("open");
+
+                }
+    
+                requestBinFile();
+
+            });
         }
 
     });

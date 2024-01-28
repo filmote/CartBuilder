@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V1.36
+// V2.27
 
 // First pass:  Render the categories and items used in the selected cart. 
 
@@ -47,15 +47,16 @@ function generateHtmlTable(data) {
     }
 
     var html = '<table id=tab class="AltTable"><thead><tr><th valign="top" align="center" style="text-align:center; background-color: #25AAE2; column-width:600px;">';
-    html += '<button type="button" id="btnGetData" class="buttonHeader">Download CSV</button><div style="height:2px;"></div>';
-    html += '<button type="button" id="btnUploadFile" class="buttonHeader">Upload CSV</button><div style="height:4px;"></div>';
-    html += '<div style="height:28px;"></div>';
+    html += '<button type="button" id="btnGetData" class="buttonHeader" alt="Download the cart configuration as a CSV file">Download CSV</button><div style="height:2px;"></div>';
+    html += '<button type="button" id="btnUploadFile" class="buttonHeader" alt="Upload a previously saved custom cart CSV file">Upload CSV</button><div style="height:2px;"></div>';
+    html += '<button type="button" id="btnFlashDevice" class="buttonHeader" alt="Upload a new game">Upload</button><div style="height:2px;"></div>';
+//    html += '<div style="height:28px;"></div>';
     html += '<span class="search"><input type="checkbox" id="rtc" name="rtc" value="0" style="position:relative;left:-5px;width:11px;opacity:0.45"><label for="rtc" style="position:relative;left:-5px;">RTC</label>&nbsp;&nbsp;&nbsp;&nbsp;Boot menu:</span><div style="height:4px;"></div>';
     html += '<span class="search" id="searchLabel" name="searchLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search Games:</span>';
     html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;">';
-    html += '<button type="button" id="btnAddCol" class="buttonHeader">Add Column</button><div style="height:2px;"></div>';
-    html += '<button type="button" id="btnGetBin" class="buttonHeader">Download BIN</button><div style="height:2px;"></div>';
-    html += '<button type="button" id="btnEEPROMMap" class="buttonHeader">EEPROM Map</button><div style="height:2px;"></div>';
+    html += '<button type="button" id="btnAddCol" class="buttonHeader" alt="Add a new column to the cart">Add Column</button><div style="height:2px;"></div>';
+    html += '<button type="button" id="btnGetBin" class="buttonHeader" alt="Download a BIN file for uploading to an Arduboy manually"h>Download BIN</button><div style="height:2px;"></div>';
+    html += '<button type="button" id="btnEEPROMMap" class="buttonHeader" alt="Display a heat map of EEPROM use and collisions">EEPROM Map</button><div style="height:2px;"></div>';
     html += '<select name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="arduboy-mini-loader.png">Arduboy Mini</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option><option value="SSD1306/arduboyloader.png">SSD1306</option><option value="category-screens/Wheezer_Homescreen.png">Wheezer</option></select><div style="height:2px;"></div>';
     html += '<input name="search" id="search" onInput="doSearch()" class="searchBox" onkeydown="return event.key != \'Enter\';"/>';
     html += '</th>';
