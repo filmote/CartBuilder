@@ -1,0 +1,11 @@
+Title: Sudoku - Random
+Version: 1.0
+Developer: Expensive Notes
+Description: Sudoku
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

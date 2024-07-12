@@ -1,0 +1,11 @@
+Title: Morse Code Writer
+Version: 2.06
+Developer: TropicAnthropic
+Description: Simple App to write and play Morse code messages.
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: https://github.com/TropicAnthropic/MorseCodeWriter
+Source URL: https://github.com/TropicAnthropic/MorseCodeWriter/blob/main/MorseCodeWriter.ino
+Start: 
+End: 
+Hash: 0

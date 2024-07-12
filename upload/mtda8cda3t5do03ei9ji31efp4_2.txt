@@ -1,0 +1,11 @@
+Title: Jelliboi
+Version: v1.1
+Developer: Freezingsnail
+Description: A game about the lifecycle of jellyfish  Gather food to advance through life for a highscore
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/jelliboi-game-jam-3
+Source URL: https://github.com/FreezingSnail/JelliBoi
+Start: 
+End: 
+Hash: 0

@@ -1,0 +1,7 @@
+List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source
+0;Bootloader;arduboy-fx-loader.png;;;;;;;;;
+1;Application;category-screens/Application.png;;;;;;;;;;
+1;Hopper;Action/hopper.png;Action/hopper.hex;;;1.0;Obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;;https://github.com/obono/ArduboyWorks;https://github.com/obono/ArduboyWorks;
+1;Lasers;Arcade/Lasers.png;Arcade/Lasers.hex;;;1.0;Obono;Lasers - A simple Ikaruga-like game.;;https://github.com/obono/ArduboyWorks;https://github.com/obono/ArduboyWorks;
+2;Tools;category-screens/Tools.png;;;;;;;;;;
+2;Welcome;Application/welcome.png;Application/welcome.hex;;;1.0;Bateske;Instructions on how to drive your new FX. This is the default application the FX comes pre-installed with.;;;;

@@ -1,0 +1,11 @@
+Title: Wolfenduino
+Version: 1.0
+Developer: James Howard
+Description: 
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://github.com/jhhoward/WolfenduinoFX/releases
+Source URL: https://github.com/jhhoward/WolfenduinoFX
+Start: 
+End: 
+Hash: 0

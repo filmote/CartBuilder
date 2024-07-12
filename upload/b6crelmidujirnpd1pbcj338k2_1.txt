@@ -1,0 +1,11 @@
+Title: Tiny-Lander
+Version: 1
+Developer: Roger Buehler
+Description: Tiny Lander GPLv3
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: http://www.bloggingadeadhorse.com/cart/Cart.html
+Source URL: http://www.bloggingadeadhorse.com/cart/Cart.html
+Start: 
+End: 
+Hash: 0

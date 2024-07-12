@@ -1,0 +1,11 @@
+Title: The Icarus Device
+Version: 1
+Developer: TropicAnthropic
+Description: run and gun shooter platformer
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

@@ -1,0 +1,11 @@
+Title: Prince of Arabia
+Version: 1.3
+Developer: Press Play on Tape
+Description: This game is only compatible with an FX enabled Arduboy
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/prince-of-arabia-fx/10926
+Source URL: https://github.com/Press-Play-On-Tape/PrinceOfArabia
+Start: 
+End: 
+Hash: 0

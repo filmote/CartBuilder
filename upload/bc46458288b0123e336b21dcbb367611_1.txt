@@ -1,0 +1,11 @@
+Title: Break The Code
+Version: V 1.1
+Developer: Roger Rabbit
+Description: Break The Code is a new game for the Arduboy based on the well known Simon or Senso. The player has to repeat a sequence of codes in order to open the safe.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/tscha70/BreakTheCode/tree/main/BreakTheCode_V1.1
+Start: 364
+End: 366
+Hash: 0

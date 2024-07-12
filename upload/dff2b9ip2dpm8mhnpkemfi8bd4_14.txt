@@ -1,0 +1,6 @@
+Title: ArduGolf FX
+Version: 1.0
+Developer: brow1067
+Description: Play miniature golf on the Arduboy!
+Replace Existing: 
+Platform: ArduboyFX

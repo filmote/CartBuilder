@@ -1,0 +1,11 @@
+Title: Dazzle Dash
+Version: 1.1
+Developer: Peter Brown
+Description: A cute fast paced platformer for speedrunning!
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/dazzle-dash-cute-speedrunning-platformer/11772
+Source URL: https://github.com/tiberiusbrown/abc/tree/master/examples/platformer
+Start: 
+End: 
+Hash: 0

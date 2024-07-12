@@ -1,0 +1,10 @@
+List,Description,Title,Hex,Data,Save,Version,Developer,Info,Likes,URL,Source,Start,End,Hash
+0,Bootloader,arduboy-fx-loader.png,,,,,,./Cart_GetList.php?listId=3&filename=full,,,,,,
+1,New,temp/5311ecb1-19ab-438a-897a-3a3c9347d91b.png,,,,undefined,undefined,undefined,,,,,,
+1,Beam 'em Up,Arcade/BeamEmUp.png,Arcade/BeamEmUp.hex,,,1,BenUnwired,"You play a space squid that just wants to mess with some local cows. Move around the multi-screen landscape and use the A button to tractor beam the creatures and move them around the screen. Stopping the beam will let them go, but they're pretty resilient.",,https://community.arduboy.com/t/beam-em-up-game-jam-5/9200,https://github.com/unwiredben/arduboy-beamemup,,,
+1,Hello Commander,RPG/HelloCommander.png,RPG/HelloCommander.hex,,,1,Fmanga,"Hello, Commander' is a Turn-Based Strategy game for the Arduboy.",,https://community.arduboy.com/t/hello-commander/4601,https://github.com/felipemanga/HelloCommander,na,na,na
+1,i4Arduboy,Shooter/l4arduboy.png,Shooter/l4arduboy.hex,,,1,Yomogimaru,i4arduboy is a horizontal shmup. Control a submarine and snipe far enemies on off-screen with torpedos!,,https://community.arduboy.com/t/i4arduboy-a-shmup-with-long-range-sniping/569,https://github.com/yomogimaru/i4arduboy,150,174,0
+1,Humanity Revenge,Shooter/HumanityRevenge.png,Shooter/HumanityRevenge.hex,,,1,giangregorioc,"It's a shoot 'em up quite hard, with 3 ship to choose from (different speed and weapons), 5 enemies with different characteristics, three big bosses, bomb and power-up, highscore and so on.",,https://community.arduboy.com/t/humanity-revenge-is-back-humanity-revenge-directors-cut/4296,https://github.com/giangregorio/Humanity_Revenge_DC,32,45,0
+1,Kemono Patrol,Shooter/KemonoPatrol.png,Shooter/KemonoPatrol.hex,,,1,metalidol,A moon buggy-style game.,,https://twitter.com/metalidol/status/843874920052346881,https://t.co/rpeVJjLoLJ,na,na,na
+2,Games,temp/f88dc07d-5408-48b0-b420-af050d6c926e.png,,,,undefined,undefined,undefined,,,,,,
+3,Archive,temp/63162f69-1b59-467c-8cee-9f89f09714ca.png,,,,undefined,undefined,undefined,,,,,,

@@ -1,0 +1,11 @@
+Title: ExolonFX
+Version: 1.0
+Developer: marggines - smBIT
+Description: zx spectrum game
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/marggines/ExolonFX
+Start: 
+End: 
+Hash: 0

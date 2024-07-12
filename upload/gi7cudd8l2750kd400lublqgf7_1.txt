@@ -1,0 +1,11 @@
+Title: Break The Code
+Version: V1
+Developer: Roger Buehler
+Description: Become a burglar and crack the code of the safe to receive a reward.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://github.com/tscha70/BreakeTheCode
+Source URL: https://github.com/tscha70/BreakeTheCode/tree/main/BreakTheCode_V1
+Start: 348
+End: 350
+Hash: 0

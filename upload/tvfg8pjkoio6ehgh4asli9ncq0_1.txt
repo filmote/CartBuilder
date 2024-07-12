@@ -1,0 +1,11 @@
+Title: ArduMania
+Version: 1.1
+Developer: Electro LIB
+Description: ArduMania
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://www.tinyjoypad.com
+Source URL: https://www.tinyjoypad.com/arduboy
+Start: 36
+End: 45
+Hash: 0

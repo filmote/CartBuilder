@@ -1,0 +1,11 @@
+Title: Tiny-Lander
+Version: 1.0
+Developer: Roger Buehler
+Description: TinyLander GPLv3
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://github.com/tscha70/
+Source URL: https://github.com/tscha70/
+Start: 
+End: 
+Hash: 0

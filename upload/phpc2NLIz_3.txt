@@ -1,0 +1,11 @@
+Title: Manic Miner FX
+Version: 
+Developer: marggines smBIT
+Description: Platform Game
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/marggines/manic_minerFX
+Start: 
+End: 
+Hash: 0

@@ -1,0 +1,14 @@
+List;Description;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source;Start;End;Hash
+0;Bootloader;arduboy-fx-loader.png;;;;;;./Cart_GetList.php?listId=1&filename=full;;;;;;
+1;MTG;temp/d94fee12-ce1a-4e42-a939-72cebe456097.png;;;;undefined;undefined;undefined;;;;;;;
+1;Life Triumph;temp/ima6p112dl7g4do0ilthtqv670_4.png;temp/ima6p112dl7g4do0ilthtqv670_4.hex;;;2.10;@keigu1;MtG Life Counter;;;;na;na;na;
+2;Games;temp/4615d198-7224-4d5e-aa8a-26be4cda0ec0.png;;;;undefined;undefined;undefined;;;;;;;
+2;Chirno's PERFECT math gam;temp/phpIgSeiA_2.png;temp/phpIgSeiA_2.hex;;;1.0;@keigu;clone of ChibitamiDotNetWorks.;;;;na;na;na;
+2;Blade Runner;Action/BladeRunner.png;Action/BladeRunner.hex;;;1.0;NoobGeek;Your task is to move from one platform to another through the constructed blade-bridge. If you get to the exact center of the bridge, you earn one coin. Perfect hit 5 times in a row gives +5 coins. At the hard level, these indicators double. Well, also you will find a small bonus in the store :);;https://community.arduboy.com/t/blade-runner/9698;https://github.com/NoobGeek-Ilya/BladeRunner;na;na;;
+2;Single Ennead;Puzzle/single_ennead.png;Puzzle/single_ennead.hex;;;1.0;Corruptio;This is a demake of the Triple Triad trading card game from the Final Fantasy franchise. In this clone, there are 100 cards to collect, each with different art and flavor text.;;https://community.arduboy.com/t/single-ennead-a-triple-triad-demake/10013;https://github.com/justecorruptio/single_ennead;na;na;;
+2;Quarto;Puzzle/quarto.png;Puzzle/quarto.hex;;;1.0;Obono;An abstract strategy board game played on a 4x4 board with 16 unique pieces.;;https://community.arduboy.com/t/quarto-an-abstract-strategy-board-game/8226;https://github.com/obono/ArduboyWorks;992;1007;0;
+2;Yatzy;Puzzle/Yatzy.png;Puzzle/Yatzy.hex;;;1.3;shdwwzrd;A dice game where you need to role combinations before running out of attempts.;;https://community.arduboy.com/t/yatzy-a-neo-retro-game/3295;;986;987;0;
+2;Psi Colo;Puzzle/psicolo.png;Puzzle/psicolo.hex;;;1.0;Obono;A puzzle game with dice.;;https://community.arduboy.com/t/psi-colo-a-puzzle-game-with-dice/6148;https://github.com/obono/ArduboyWorks;896;923;0;
+2;Sudoku;Puzzle/sudoku.png;Puzzle/sudoku.hex;;;1.0;neilsunw;Play Sudoku on your Arduboy. Includes 45 puzzles (easy, medium, hard) and allows custom puzzles to be entered manually or via serial input.;;https://community.arduboy.com/t/sudoku-nbp-arduboy-game/1713;https://github.com/neilsunw/sudoku_AB_v11;16;891;0;
+3;Application;category-screens/Application.png;;;;;;;;;;;;;
+3;Morse Code Trainer;Application/morse_V0.10.png;Application/morse_V0.10.hex;;;V0.10;obono;Decode Morse code to Alphabet or Japanese letters. (Actually this is not a game!);;https://community.arduboy.com/t/morse-code-trainer/10702;https://github.com/obono/ArduboyWorks;na;na;na;

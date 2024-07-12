@@ -1,0 +1,11 @@
+Title: Tiny-SQuest
+Version: 1
+Developer: Electro LIB
+Description: Tiny SQuest like SeaQuest atari 2600 GPLv3
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://sites.google.com/view/arduino-collection
+Source URL: https://sites.google.com/view/arduino-collection
+Start: 
+End: 
+Hash: 0

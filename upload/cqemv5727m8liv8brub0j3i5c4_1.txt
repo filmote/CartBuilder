@@ -1,0 +1,11 @@
+Title: arduboy flashlight
+Version: 1.0.0
+Developer: fishbowlforever
+Description: a flashlight for the arduboy made by my bro and myself
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://fishbowl-forever.itch.io/arduboy-flashlight
+Source URL: 
+Start: 
+End: 
+Hash: 0

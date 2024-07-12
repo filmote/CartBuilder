@@ -1,0 +1,11 @@
+Title: TinySQuest
+Version: 1
+Developer: ElectroLIB
+Description: TinySQuest like SeaQuest atari 2600
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://www.tinyjoypad.com
+Source URL: https://sites.google.com/view/arduino-collection
+Start: 
+End: 
+Hash: 0

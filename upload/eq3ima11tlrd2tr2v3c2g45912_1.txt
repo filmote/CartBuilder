@@ -1,0 +1,11 @@
+Title: Prince of Arabia
+Version: v1.2
+Developer: Press Play On Tape
+Description: Escape the dungeons and free the princess
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/prince-of-arabia-fx/10926
+Source URL: https://github.com/Press-Play-On-Tape/PrinceOfArabia
+Start: 
+End: 
+Hash: 0

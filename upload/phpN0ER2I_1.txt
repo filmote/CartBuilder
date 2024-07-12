@@ -1,0 +1,11 @@
+Title: Mini Pomodoro
+Version: 1
+Developer: Wesley Werner
+Description: A productivity timer for the Pomodoro Technique
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/pomodoro-timer/11273
+Source URL: https://codeberg.org/wesbot/minipomodoro
+Start: 
+End: 
+Hash: 0

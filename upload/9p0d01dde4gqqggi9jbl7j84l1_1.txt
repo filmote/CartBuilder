@@ -1,0 +1,6 @@
+Title: Slangin
+Version: v1.0
+Developer: Rudis Muiznieks
+Description: Earn as much money as you can slangin drugs on the streets of New York for 30 days. But watch out for Officer Hardass!
+Replace Existing: 
+Platform: ArduboyFX\Website URL: https://code.sitosis.com/rudism/slangin\Source URL: https://code.sitosis.com/rudism/slangin

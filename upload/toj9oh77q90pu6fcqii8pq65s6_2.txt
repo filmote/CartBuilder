@@ -1,0 +1,11 @@
+Title: ArduRacerFx
+Version: 0.970
+Developer: tonym128
+Description: An ArduboyFx car racing time trial game 
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/arduracerfx-car-racing-time-trial-game/11641
+Source URL: https://github.com/tonym128/ArduRacerFX
+Start: 
+End: 
+Hash: 0

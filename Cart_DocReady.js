@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.27
+// V2.30
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -169,7 +169,7 @@ $(document).ready(function () {
 
     $(function () {
         var form,
-            name = $("#fileName"),
+            name = $("#fileNameCSV"),
             allFields = $([]).add(name),
             tips = $(".validateTips");
 
@@ -179,7 +179,7 @@ $(document).ready(function () {
             var valid = true;
             allFields.removeClass("ui-state-error");
 
-            if (typeof $('#fileName')[0].files[0] === 'undefined') {
+            if (typeof $('#fileNameCSV')[0].files[0] === 'undefined') {
                 name.addClass("ui-state-error");
                 updateTips(tips, "Please select a CSV file to upload.");
                 valid = false;
@@ -190,9 +190,9 @@ $(document).ready(function () {
 
             if (valid) {
 
-                var size = $('#fileName')[0].files[0].size;
-                var mime = $('#fileName')[0].files[0].type;
-                var extension = $('#fileName').val().replace(/^.*\./, '');
+                var size = $('#fileNameCSV')[0].files[0].size;
+                var mime = $('#fileNameCSV')[0].files[0].type;
+                var extension = $('#fileNameCSV').val().replace(/^.*\./, '');
 
                 if (size > 131072 || (mime != "text/csv" && mime != "application/vnd.ms-excel") || extension != "csv") {
                     name.addClass("ui-state-error");
@@ -746,7 +746,7 @@ $(document).ready(function () {
         }
     });
 
-  // -------------------------------------------------------------------------------------------
+    // -------------------------------------------------------------------------------------------
     // Read the cart file and create the table ..
 
     var fileName = "./Cart_GetList.php?listId=1&filename=full";

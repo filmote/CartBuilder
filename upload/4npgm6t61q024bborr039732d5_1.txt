@@ -1,0 +1,11 @@
+Title: Arduboy Phone Simulator
+Version: 1.0
+Developer: Physics Dude
+Description: Aesthetically pleasing cellphone simulant with functional DTMF keying.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: http://thestuffwebuild.com/
+Source URL: https://github.com/Physics-Dude/Arduboy-Phone-Simulator
+Start: 
+End: 
+Hash: 0

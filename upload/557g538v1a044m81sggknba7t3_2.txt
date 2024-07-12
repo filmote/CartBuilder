@@ -1,0 +1,6 @@
+Title: CandyWar
+Version: v1.2.0
+Developer: Rudis Muiznieks
+Description: A family friendly trading simulation based on an old TI 8x calculator game
+Replace Existing: on
+Platform: ArduboyFX\Website URL: https://code.sitosis.com/rudism/slangin\Source URL: https://code.sitosis.com/rudism/slangin

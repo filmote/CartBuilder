@@ -1,0 +1,11 @@
+Title: Tiny-SQuest
+Version: 1
+Developer: DanielC
+Description: TinySQuest like SeaQuest atari 2600
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: www.tinyjoypad.com
+Source URL: https://github.com/phoenixbozo
+Start: 
+End: 
+Hash: 0

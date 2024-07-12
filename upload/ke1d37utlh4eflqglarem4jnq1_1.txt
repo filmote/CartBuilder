@@ -1,0 +1,11 @@
+Title: Candlelight
+Version: 1.0
+Developer: Onebit
+Description: platformer
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

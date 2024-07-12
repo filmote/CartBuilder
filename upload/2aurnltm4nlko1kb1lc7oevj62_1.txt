@@ -1,0 +1,11 @@
+Title: Tiny Lander
+Version: 1.0
+Developer: Roger Buehler
+Description: Lunar Lander
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/tscha70/TinyLanderV1.0
+Start: 
+End: 
+Hash: 0

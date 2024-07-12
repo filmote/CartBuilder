@@ -1,0 +1,8 @@
+List;Description;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source;Start;End;Hash
+0;Bootloader;arduboy-fx-loader.png;;;;;;./Cart_GetList.php?listId=3&filename=full;;;;;;
+1;New;temp/5311ecb1-19ab-438a-897a-3a3c9347d91b.png;;;;undefined;undefined;undefined;;;;;;;
+1;Hopper;Action/hopper.png;Action/hopper.hex;;;1.0;Obono;There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.;;https://community.arduboy.com/t/hopper-a-simple-action-game/4293;https://github.com/obono/ArduboyWorks;800;831;0;
+2;Games;temp/f88dc07d-5408-48b0-b420-af050d6c926e.png;;;;undefined;undefined;undefined;;;;;;;
+2;Lasers;Arcade/Lasers.png;Arcade/Lasers.hex;;;1.0;Obono;Lasers - A simple Ikaruga-like game.;;https://community.arduboy.com/t/lasers-a-simple-ikaruga-like-game/7310s;https://github.com/obono/ArduboyWorks;960;991;0;
+3;Archive;temp/63162f69-1b59-467c-8cee-9f89f09714ca.png;;;;undefined;undefined;undefined;;;;;;;
+3;Bangi;Action/Bangi.png;Action/Bangi.hex;;;1.0;Igvina;Bangi is a classic arcade game where you must shoot and destroy each of the balloons that appear in each level.;;https://community.arduboy.com/t/bangi-destroy-all-the-balloons/2016;http://moblynx.com/arduboy/Bangi_1.0_arduboy.zip;144;152;0;

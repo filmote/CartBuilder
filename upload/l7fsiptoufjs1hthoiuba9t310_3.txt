@@ -1,0 +1,11 @@
+Title: TetroiDemo
+Version: 2.0
+Developer: Roger Rabbit
+Description: This is a demo version of a well known an famous game from the 80s. The intention is to learn the concepts of programming in C.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 16
+End: 33
+Hash: 0

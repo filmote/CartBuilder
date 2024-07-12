@@ -1,0 +1,11 @@
+Title: All Your Ardu
+Version: 1.4
+Developer: FreezingSnail
+Description: SHMUP game for the Arduboy meme jam with references to Zero Wing
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: https://github.com/FreezingSnail/AllYourArdu
+Source URL: https://github.com/FreezingSnail/AllYourArdu
+Start: 
+End: 
+Hash: 0

@@ -1,0 +1,17 @@
+List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source
+0;Bootloader;arduboy-fx-loader.png;;;;;;./Curated.csv;;;
+1;Action;category-screens/Action.png;;;;;;;;;;
+2;Adventure;category-screens/Adventure.png;;;;;;;;;;
+3;Arcade;category-screens/Arcade.png;;;;;;;;;;
+3;Oil Panic;Arcade/OilPanic.png;Arcade/OilPanic.hex;;;1.0;Press Play On Tape;Inspired by yet another Game and Watch - PPOT presents Oil Panic. Catch all the oil before it sets the shop on fire!;;;;
+4;Runner;category-screens/Runner.png;;;;;;;;;;
+4;Flappy Bird;Arcade/Flappybird.png;Arcade/Flappybird.hex;;;1.0;GameExpress;A flappy bird clone.;;;;
+5;Platformer;category-screens/Platformer.png;;;;;;;;;;
+5;Castle Boy;Platformer/CastleBoy.png;Platformer/CastleBoy.hex;;;1.0;jlauener;A Castlvania demake.;;;;
+6;Strategy;category-screens/Strategy.png;;;;;;;;;;
+7;Application;category-screens/Application.png;;;;;;;;;;
+7;Ardutosh;Application/Ardutosh.png;Application/Ardutosh.hex;;;.0;jhhoward;Ardutosh is an OS / desktop environment for the Arduboy. The style is inspired by the classic Macintosh interface. It has the following features: Serial terminal, Remote app, Notes text editor, EEPROM hex editor, Battery voltage monitor, Internal temperature monitor, LED tester;;;;
+7;Golfer's Companion;Application/GolfCompanion.png;Application/GolfCompanion.hex;;;1.0;Vampirics;The Golf Companion for the Arduboy. Keep scores for up to 4 players.;;;;
+7;Coder's Toolbox;Application/Toolbox.png;Application/Toolbox.hex;;;1.0;Press Play on Tape;A toolbox of tools for developing ArduboyTones compatible music and Sprites compatible images. The toolbox permits you to save the progress of your creations in EEPROM allowing you to complete your masterpieces over a number of sessions. Once complete, the output can be downloaded using a serial monitor (like that shipped with the Arduino IDE) in a format you can then paste directly into an Arduboy sketch.;;;;
+7;Ardu Remote;Application/ArduRemote.png;Application/ArduRemote.hex;;;1.0;eried;Use your Arduboy as a remote keyboard / mouse.;;;;
+7;Calendar;Application/Calendar.png;Application/Calendar.hex;;;1.0;hartmann1301;A calendar for the Arduboy. Make notes on important days.;;;;

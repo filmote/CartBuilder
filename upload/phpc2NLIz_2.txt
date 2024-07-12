@@ -1,0 +1,11 @@
+Title: Jumping Jack
+Version: 
+Developer: marggines smBIT
+Description: Platform game
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/marggines/JumpingJack
+Start: 
+End: 
+Hash: 0

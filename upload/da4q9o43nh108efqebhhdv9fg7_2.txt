@@ -1,0 +1,11 @@
+Title: 0x0Emul
+Version: 1.1
+Developer: Daniel C Electro L.I.B
+Description: 0x0Emul is a program that interprets hexadecimal code from data created with ABasm by Fuopy retrieved from the EEPROM. It includes 3 features 1 Retrieve the code present in the EEPROM and send it to the Arduino IDE terminal. 2 Allows installing in the EEPROM a code present in the menu of 0x0Emul for reediting with ABasm by Fuopy. 3 Emulate the program or game in HEX format.
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: https://www.tinyjoypad.com
+Source URL: https://github.com/phoenixbozo/TinyJoypad/tree/main/TinyJoypad
+Start: 768
+End: 1023
+Hash: 0

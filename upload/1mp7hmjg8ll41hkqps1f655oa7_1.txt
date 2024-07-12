@@ -1,0 +1,11 @@
+Title: Omega Chase
+Version: 1.0
+Developer: Karl P. Williams
+Description: Omega Chase is an Arduboy port of the classic arcade style shooter game Omega Race.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/omega-chase-an-arcade-style-shooter/11092/1
+Source URL: https://github.com/Karl-Williams/OmegaChase
+Start: 
+End: 
+Hash: 0

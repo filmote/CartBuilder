@@ -1,0 +1,11 @@
+Title: Tetroi
+Version: 1.0
+Developer: Roger Buehler
+Description: An Arduboy clone of a very well known and successful game from the 80s
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://github.com/tscha70/Tetroi/tree/main
+Source URL: https://github.com/tscha70/Tetroi/tree/main
+Start: 
+End: 
+Hash: 0

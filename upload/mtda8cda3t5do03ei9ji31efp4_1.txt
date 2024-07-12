@@ -1,0 +1,11 @@
+Title: Maze Runner
+Version: v1.0
+Developer: Freezingsnail
+Description: You are a snail whos unicycle keeps falling into mazes Traverse the various mazes looking for the 5 pieces of your unicycle to advance  Try and complete each stage in the least amount of steps Art by Vampirics A and B return to level select while in game
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/maze-runner-v1
+Source URL: https://github.com/FreezingSnail/Maze-Rider
+Start: 
+End: 
+Hash: 0

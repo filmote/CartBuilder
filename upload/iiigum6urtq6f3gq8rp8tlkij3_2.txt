@@ -1,0 +1,6 @@
+Title: Sensitive
+Version: 2.0
+Developer: Spinal
+Description: Remake of the C64 game by the same name. This update provides flicker free greyscale.
+Replace Existing: on
+Platform: ArduboyFX\Website URL: \Source URL: 

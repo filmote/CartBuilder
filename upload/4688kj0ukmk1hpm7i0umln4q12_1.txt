@@ -1,0 +1,11 @@
+Title: ArduDemon
+Version: 1.0
+Developer: Sublinear
+Description: ArduDemon is an Action RPG where you start in the small medieval town of Ravensguard and descend underneath into the catacombs of a randomly generated dungeon to destroy the evil that has come to the town!
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/ardudemon-top-down-arpg-dungeon-crawler/11919
+Source URL: https://github.com/sub1inear/ArduDemon
+Start: 564
+End: 599
+Hash: 1

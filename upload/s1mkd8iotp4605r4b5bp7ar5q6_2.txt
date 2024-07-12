@@ -1,0 +1,11 @@
+Title: tiny-lander
+Version: 1.0
+Developer: Roger Buehler
+Description: Tiny Lander like Lunar Lander for ARDUBOY I am a big fan of the tiny joypad platform.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: URL=https://github.com/tscha70/
+Source URL: URL=https://github.com/tscha70/
+Start: 
+End: 
+Hash: 0

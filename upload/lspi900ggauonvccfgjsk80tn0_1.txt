@@ -1,0 +1,11 @@
+Title: HigherLower
+Version: 1.3.0
+Developer: nchpmn
+Description: A game of logic to guess the random number using only two clues HIGHER or LOWER
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/higherlower-a-very-simple-number-guessing-game/11301
+Source URL: https://github.com/nchpmn/HigherLower
+Start: 
+End: 
+Hash: 0

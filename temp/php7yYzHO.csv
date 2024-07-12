@@ -1,0 +1,4 @@
+"0","Bootloader","arduboy-fx-loader.png",,,,,,,"0",,,,,
+"0","Bootloader","arduboy-fx-loader.png",,,,,,,"0",,,,,
+"1","Action","category-screens/Action.png",,,,,,,"0",,,,,
+"1","Hopper","Action/hopper.png","Action/hopper.hex",,,"1.0","Obono","There are square panels around you. You must jump on them and go up (foreground side). If you miss the panel and fall toward bottom, the game is over.","0","https://community.arduboy.com/t/hopper-a-simple-action-game/4293","https://github.com/obono/ArduboyWorks","800","831","0"

@@ -1,0 +1,11 @@
+Title: QR Code Generator FX
+Version: 1.0
+Developer: haloopdy
+Description: Generate QR codes directly on your device! Save up to six strings!
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/qr-code-generator-contest-complete/11730
+Source URL: https://github.com/randomouscrap98/arduboy_qr
+Start: 
+End: 
+Hash: 0

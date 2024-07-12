@@ -1,0 +1,6 @@
+Title: Slangin'
+Version: v1.2.0
+Developer: Rudis Muiznieks
+Description: Based on the old Drug Wars game for TI 8x calculators
+Replace Existing: on
+Platform: ArduboyFX\Website URL: https://code.sitosis.com/rudism/slangin\Source URL: https://code.sitosis.com/rudism/slangin

@@ -1,0 +1,8 @@
+List;Discription;Title;Hex;Data;Save;Version;Developer;Info;Likes;URL;Source
+0;Bootloader;arduboy-fx-loader.png;;;;;;;;;
+1;Multi;category-screens/Multi.png;;;;;;;;;;
+1;Breakout-v;Action/Breakout-v.png;Action/Breakout-v.hex;;;1.0;boochow;Simple breakout game for Arduboy. Vertical screen version.;;https://github.com/boochow/breakout-v;https://github.com/boochow/breakout-v;
+1;Miss Snake;Arcade/MissSnake.png;Arcade/MissSnake.hex;;;1.0;mad4j;Snake - just like on the Nokia 5110 but on an Arduboy instead.;;https://github.com/mad4j/arduboy-misssnake;https://github.com/mad4j/arduboy-misssnake;
+1;Garboyle's Quest;Arcade/GarboylesQuest.png;Arcade/GarboylesQuest.hex;;;1.0;Cedric Martin;A remake of the CAPCOMM game of the same name.;;https://github.com/skaterced/Garboyle-s_Quest;https://github.com/skaterced/Garboyle-s_Quest;
+2;Tools;category-screens/Tools.png;;;;;;;;;;
+2;Welcome;Application/welcome.png;Application/welcome.hex;;;1.0;Bateske;Instructions on how to drive your new FX. This is the default application the FX comes pre-installed with.;;;;

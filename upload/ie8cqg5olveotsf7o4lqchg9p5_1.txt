@@ -1,0 +1,11 @@
+Title: Sensitive
+Version: 2.0
+Developer: Spinal
+Description: Greyscale puzzle game where the aim is to remove all of the striped tiles and get to the exit.
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

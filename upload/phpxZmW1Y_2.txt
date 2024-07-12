@@ -1,0 +1,11 @@
+Title: Shadows and Eternity
+Version: 1.5
+Developer: Dolorre
+Description: Shadows and Eternity is a sci fi text based adventure where your goal is to survive the day.
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

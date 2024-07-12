@@ -1,0 +1,11 @@
+Title: Old Miner
+Version: 0.1
+Developer: Jason Altekruse
+Description: Action game based on an old flash game called "Gold Miner".
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/old-miner-clone-of-the-flash-game-gold-minder/12014
+Source URL: https://github.com/jaltekruse/Old-Miner/
+Start: 
+End: 
+Hash: 0

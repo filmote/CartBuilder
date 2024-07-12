@@ -1,0 +1,11 @@
+Title: Shadows and Eternity
+Version: 1.25
+Developer: Dolorre
+Description: A sci fi text based adventure game where your goal is to survive the day
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

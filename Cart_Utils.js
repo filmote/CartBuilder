@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.27
+// V2.30
 
 var suppressOpenInfoDlg = false;
 
@@ -213,7 +213,7 @@ function openInfo(itemIndex) {
 
         var eepromInfo = "EEPROM Usage: None";
 
-        if (item.start != "na") {
+        if (item.start != "na" && item.start != "") {
             eepromInfo = "EEPROM Usage: start " + item.start + ", end " + item.end;
             if (item.hash == 1) {
                 eepromInfo = eepromInfo + ", hash protected.";

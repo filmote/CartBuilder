@@ -1,0 +1,11 @@
+Title: SOS
+Version: 1.0
+Developer: Expensive Notes
+Description: 
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/ExpensiveNotes/ArduBoySOS/blob/main/sos_graphics.ino
+Start: 
+End: 
+Hash: 0

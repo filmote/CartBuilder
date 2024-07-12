@@ -1,0 +1,11 @@
+Title: ArduJudge
+Version: 1.1.0
+Developer: raspberrybrain
+Description: A barebones remake of the Game and Watch game Judge. If your number is bigger than or equal to the enemy on the right hit the A button to whack him with your hammer. If it is smaller hit B to dodge. Hits are worth three points and dodges are worth two. If you hit the wrong button the enemy gets the points. First one to ninety nine points wins.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/ajsaucier/ArduJudge
+Start: 
+End: 
+Hash: 0

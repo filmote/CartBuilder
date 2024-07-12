@@ -1,0 +1,11 @@
+Title: Morse Code Creator
+Version: 2.06
+Developer: TropicAnthropic
+Description: Application for creating morse code messages.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://github.com/TropicAnthropic/MorseCodeWriter
+Source URL: https://github.com/TropicAnthropic/MorseCodeWriter/blob/main/MorseCodeWriter.ino
+Start: 
+End: 
+Hash: 0

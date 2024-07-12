@@ -1,0 +1,11 @@
+Title: Tetroi
+Version: Version 20
+Developer: Roger Rabbit
+Description: The player's aim is to turn the falling shapes so that they form rows without gaps.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/tscha70/Tetroi/tree/main/Tetroi-20
+Start: 16
+End: 30
+Hash: 0

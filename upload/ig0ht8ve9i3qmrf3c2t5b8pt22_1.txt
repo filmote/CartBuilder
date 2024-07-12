@@ -1,0 +1,11 @@
+Title: Creapawn
+Version: 1.0.3
+Developer: Revlis
+Description: Gather pawns by your side in order to defeat the four wicked lords and their goons and save the land from their corruption.
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: https://community.arduboy.com/t/creapawn-a-monster-battling-rpg
+Source URL: https://github.com/Revlis64/Creapawn
+Start: 600
+End: 707
+Hash: 0

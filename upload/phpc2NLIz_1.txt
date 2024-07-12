@@ -1,0 +1,11 @@
+Title: Street Racer
+Version: 
+Developer: marggines smBit
+Description: Fast game to break records.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/marggines/Street-Racer
+Start: 
+End: 
+Hash: 0

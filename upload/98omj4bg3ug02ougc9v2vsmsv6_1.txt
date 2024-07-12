@@ -1,0 +1,11 @@
+Title: Factor-9
+Version: 5.02
+Developer: TropicAnthropic
+Description: You are Factor9. The Entity is dying you must decent to the nucleolus to save it. You are our last hope.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: https://github.com/TropicAnthropic/Factor-9/blob/main/Factor_9_5_02.ino
+Start: 
+End: 
+Hash: 0

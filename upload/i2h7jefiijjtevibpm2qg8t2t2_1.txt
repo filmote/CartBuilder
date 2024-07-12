@@ -1,0 +1,11 @@
+Title: KUBE
+Version: 2.0
+Developer: Onebit
+Description: Isometric puzzle game.
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

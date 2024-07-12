@@ -1,0 +1,11 @@
+Title: Defenduino
+Version: 1.2
+Developer: Alex McChesney
+Description: An arcade classic comes to your Arduboy. Skim the planets surface defending the helpless humanoids from the evil alien landers intent on abducting them and becoming powerful mutants. Controls Fly your ship with updownleft and right. Press B to fire and A to activate your smart bomb In an emergency pressing AB together will activate your hyperdrive and send you to a random part of the planet. but beware It may not be a safe spot. You start with three lives and three bombs. An extra life and smart bomb are awarded every 10000 points. 
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://washingup.itch.io/defenduino
+Source URL: https://bitbucket.org/alexmcchessers/defenduino/src/master/
+Start: 
+End: 
+Hash: 0

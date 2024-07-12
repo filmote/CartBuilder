@@ -1,0 +1,11 @@
+Title: Tiny-Lander
+Version: 1.0
+Developer: Buehler
+Description: Tiny Lander is adaption of Lunar Lander  for the nice ATTiny85 Arduboy and more This is my first game for the ATTiny85.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: https://github.com/tscha70/
+Source URL: https://github.com/tscha70/
+Start: 
+End: 
+Hash: 0

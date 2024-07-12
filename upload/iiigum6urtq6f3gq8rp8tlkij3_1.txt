@@ -1,0 +1,6 @@
+Title: Sensitive
+Version: 2.0
+Developer: Spinal
+Description: Flicker free Greyscale version of Sensitive.
+Replace Existing: on
+Platform: ArduboyFX\Website URL: \Source URL: 

@@ -1,0 +1,11 @@
+Title: Wolfenduino 3D FX
+Version: 
+Developer: 
+Description: 
+Replace Existing: on
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

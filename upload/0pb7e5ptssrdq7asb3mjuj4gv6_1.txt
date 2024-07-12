@@ -1,0 +1,11 @@
+Title: Prince of Arabia
+Version: 1.00
+Developer: Press Play On Tape
+Description: 
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

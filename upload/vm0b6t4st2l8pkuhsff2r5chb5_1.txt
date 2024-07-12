@@ -1,0 +1,6 @@
+Title: Maxigo
+Version: 1.0
+Developer: Sebastian N
+Description: Classic five in a row game with AI and local player versus player modes.
+Replace Existing: 
+Platform: ArduboyFX\Website URL: https://maxigo.eu/\Source URL: 

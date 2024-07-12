@@ -49,11 +49,11 @@ const ID_INFO = 8;
 const ID_LIKES = 9;
 const ID_MAX = 10;
 
-$fileName = $_FILES["fileName"]["name"]; // The file name
-$fileTmpLoc = $_FILES["fileName"]["tmp_name"]; // File in the PHP tmp folder
-$fileType = $_FILES["fileName"]["type"]; // The type of file it is
-$fileSize = $_FILES["fileName"]["size"]; // File size in bytes
-$fileErrorMsg = $_FILES["fileName"]["error"]; // 0 for false... and 1 for true
+$fileName = $_FILES["fileNameCSV"]["name"]; // The file name
+$fileTmpLoc = $_FILES["fileNameCSV"]["tmp_name"]; // File in the PHP tmp folder
+$fileType = $_FILES["fileNameCSV"]["type"]; // The type of file it is
+$fileSize = $_FILES["fileNameCSV"]["size"]; // File size in bytes
+$fileErrorMsg = $_FILES["fileNameCSV"]["error"]; // 0 for false... and 1 for true
 
 session_id(basename($fileTmpLoc));
 session_start();

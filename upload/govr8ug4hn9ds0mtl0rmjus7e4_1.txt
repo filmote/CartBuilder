@@ -1,0 +1,11 @@
+Title: A Ching
+Version: 1.00
+Developer: Tropic Anthropic
+Description: A divination app based on the Hexagrams of the I Ching.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

@@ -1,0 +1,11 @@
+Title: Dark and Under
+Version: 1.0
+Developer: Garage Collective
+Description: Explore the Kingdom of Usmal and attempt to foil a conspiracy aiming at the Kings Demise. Pass through various regions of the world filled with dangerous dungeons and battle a variety of enemies ranging from rats to ghostly knights.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

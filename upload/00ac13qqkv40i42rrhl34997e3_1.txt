@@ -1,0 +1,11 @@
+Title: Mastermind
+Version: 1
+Developer: FrankVanDeVen
+Description: Mastermind game
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0
