@@ -1,0 +1,11 @@
+Title: Big Wave Dave
+Version: 1.0
+Developer: Onebit
+Description: Action surfing game.
+Replace Existing: off
+Platform: ArduboyFX
+Website URL: 
+Source URL: 
+Start: 
+End: 
+Hash: 0

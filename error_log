@@ -698,3 +698,92 @@ dfdffd
 [17-Jun-2024 22:47:31 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_DecLikes.php on line 29
 [17-Jun-2024 22:47:32 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
 [17-Jun-2024 22:47:33 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_DecLikes.php on line 29
+[25-Jun-2024 08:43:14 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[27-Jun-2024 00:15:26 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[27-Jun-2024 19:30:23 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[27-Jun-2024 19:30:23 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_DecLikes.php on line 29
+[27-Jun-2024 19:30:24 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[28-Jun-2024 18:06:22 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[30-Jun-2024 06:38:55 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[30-Jun-2024 07:12:01 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[30-Jun-2024 07:12:24 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[30-Jun-2024 07:17:22 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[30-Jun-2024 07:18:14 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[30-Jun-2024 07:18:22 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[30-Jun-2024 07:18:44 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[02-Jul-2024 02:20:21 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[02-Jul-2024 02:20:25 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[02-Jul-2024 02:20:34 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[02-Jul-2024 02:20:56 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[02-Jul-2024 02:21:18 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[02-Jul-2024 02:21:40 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[02-Jul-2024 02:28:57 UTC] PHP Notice:  Undefined variable: line in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 44
+[02-Jul-2024 02:35:24 UTC] PHP Notice:  Undefined index: mode in /home12/blogging/public_html/cart/Cart_CreateCSV.php on line 426
+[02-Jul-2024 02:35:24 UTC] PHP Notice:  Undefined index: mode in /home12/blogging/public_html/cart/Cart_CreateCSV.php on line 445
+[02-Jul-2024 02:35:24 UTC] PHP Notice:  Undefined index: mode in /home12/blogging/public_html/cart/Cart_CreateCSV.php on line 454
+[06-Jul-2024 18:23:45 UTC] PHP Notice:  Undefined index: replaceExistingGame in /home12/blogging/public_html/cart/Cart_UploadHEX.php on line 132
+[08-Jul-2024 17:15:04 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:16:00 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:16:04 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:16:17 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:16:28 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:16:32 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:16:47 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:17:03 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:17:18 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:17:31 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:17:34 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:17:38 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:17:49 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:17:53 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:18:04 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:18:21 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:18:26 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:18:37 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:18:50 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:18:59 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:19:03 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:19:10 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:19:16 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:19:22 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:19:45 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:19:59 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:20:07 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:20:18 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:20:22 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:20:43 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:20:47 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:21:05 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:21:11 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:21:18 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:21:30 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:21:33 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:22:12 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:22:17 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:22:36 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:22:39 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:23:00 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:23:07 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:23:37 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:23:42 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:23:56 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:24:11 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:24:19 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:24:25 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:24:37 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:24:49 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:24:56 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:25:00 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:25:18 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:25:21 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:25:24 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:25:30 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:25:33 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:25:40 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:26:12 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:26:17 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:26:22 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:26:27 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[08-Jul-2024 17:26:34 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in /home12/blogging/public_html/cart/Cart_IncLikes.php on line 28
+[12-Jul-2024 00:41:54 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'blogging_cart'@'localhost' (using password: YES) in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 14
+[12-Jul-2024 00:41:54 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, bool given in /home12/blogging/public_html/cart/Cart_GetLikes.php on line 15
