@@ -71,7 +71,7 @@ function badFile($filename, $ext)
   return $result;
 }
 
-if (($fileType != "text/csv" && $fileType != "application/vnd.ms-excel") || $fileSize > 131072) echo "Invalid File Wrong file format";
+if (($fileType != "text/csv" && $fileType != "application/vnd.ms-excel") || $fileSize > 250000) echo "Invalid File Wrong file format";
 else {
     $csv = explode("\n", file_get_contents($fileTmpLoc));
     $head = current($csv);

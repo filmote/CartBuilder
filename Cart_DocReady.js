@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.30
+// V2.35
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -194,7 +194,7 @@ $(document).ready(function () {
                 var mime = $('#fileNameCSV')[0].files[0].type;
                 var extension = $('#fileNameCSV').val().replace(/^.*\./, '');
 
-                if (size > 131072 || (mime != "text/csv" && mime != "application/vnd.ms-excel") || extension != "csv") {
+                if (size > 250000 || (mime != "text/csv" && mime != "application/vnd.ms-excel") || extension != "csv") {
                     name.addClass("ui-state-error");
                     updateTips(tips, "Invalid CSV file selected.");
                     valid = false;
@@ -766,6 +766,8 @@ $(document).ready(function () {
         if (fileName.toLowerCase()=="ppot_xl.csv")          { fileName = "./Cart_GetList.php?listId=5&filename=file"; }
         if (fileName.toLowerCase()=="ssd1306.csv")          { fileName = "./Cart_GetList.php?listId=6&filename=file"; }
         if (fileName.toLowerCase()=="arduboy-mini.csv")     { fileName = "./Cart_GetList.php?listId=7&filename=file"; }
+        if (fileName.toLowerCase()=="bigfx.csv")            { fileName = "./Cart_GetList.php?listId=8&filename=file"; }
+        if (fileName.toLowerCase()=="bigmini.csv")          { fileName = "./Cart_GetList.php?listId=9&filename=file"; }
 
         if (fileName.toLowerCase()=="flashcart-index")      { fileName = "./Cart_GetList.php?listId=1&filename=file"; }
         if (fileName.toLowerCase()=="ppot")                 { fileName = "./Cart_GetList.php?listId=2&filename=file"; }
@@ -774,6 +776,8 @@ $(document).ready(function () {
         if (fileName.toLowerCase()=="ppot_xl")              { fileName = "./Cart_GetList.php?listId=5&filename=file"; }
         if (fileName.toLowerCase()=="ssd1306")              { fileName = "./Cart_GetList.php?listId=6&filename=file"; }
         if (fileName.toLowerCase()=="arduboy-mini")         { fileName = "./Cart_GetList.php?listId=7&filename=file"; }
+        if (fileName.toLowerCase()=="bigfx")                { fileName = "./Cart_GetList.php?listId=8&filename=file"; }
+        if (fileName.toLowerCase()=="bigmini")              { fileName = "./Cart_GetList.php?listId=9&filename=file"; }
 
     }
 
@@ -788,6 +792,8 @@ $(document).ready(function () {
         if (fullList.toLowerCase()=="./ppot_xl.csv")          { fullList = "./Cart_GetList.php?listId=5&filename=full"; }
         if (fullList.toLowerCase()=="./ssd1306.csv")          { fullList = "./Cart_GetList.php?listId=6&filename=full"; }
         if (fullList.toLowerCase()=="./arduboy-mini.csv")     { fullList = "./Cart_GetList.php?listId=7&filename=full"; }
+        if (fullList.toLowerCase()=="./bigfx.csv")            { fullList = "./Cart_GetList.php?listId=8&filename=full"; }
+        if (fullList.toLowerCase()=="./bigmini.csv")          { fullList = "./Cart_GetList.php?listId=9&filename=full"; }
 
         if (fullList.toLowerCase()=="./flashcart-index")      { fullList = "./Cart_GetList.php?listId=1&filename=full"; }
         if (fullList.toLowerCase()=="./ppot")                 { fullList = "./Cart_GetList.php?listId=2&filename=full"; }
@@ -796,6 +802,8 @@ $(document).ready(function () {
         if (fullList.toLowerCase()=="./ppot_xl")              { fullList = "./Cart_GetList.php?listId=5&filename=full"; }
         if (fullList.toLowerCase()=="./ssd1306")              { fullList = "./Cart_GetList.php?listId=6&filename=full"; }
         if (fullList.toLowerCase()=="./arduboy-mini")         { fullList = "./Cart_GetList.php?listId=7&filename=full"; }
+        if (fullList.toLowerCase()=="./bigfx")                { fullList = "./Cart_GetList.php?listId=8&filename=full"; }
+        if (fullList.toLowerCase()=="./bigmini")              { fullList = "./Cart_GetList.php?listId=9&filename=full"; }
 
     }
     

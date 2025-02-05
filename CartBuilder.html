@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta charset="UTF-8">
+  <title>Cart Builder</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="Cart.css?v=V2.35" />
+  <link rel="stylesheet" href="style.css?v=V2.35" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+  <script src="zip.min.js"></script>
+  <script src="jszip.min.js"></script>
+</head>
+
+<body>
+
+
+  <div id="dlgEEPROMClashes" class="dlgEEPROMClashes" title="EEPROM Use and Clashes" style="font-size: 13px; overflow:hidden;" class="ui">
+    <div>
+      <div>
+      <input type="checkbox" id="chkHideWhalesFromView" class="chkHideWhalesFromView" onclick="toggleWhales();" checked="true"/>Hide large items (>256 bytes)
+      <table><tr><td width="219px">&nbsp;</td><td id="dlgEEPROMClashes_Ruler" class="dlgEEPROMClashes_Ruler" background="icons/Ruler_Small.png" style="width:520px;">&nbsp;</td></tr></table>
+      </div>
+      <div id="dlgBottom" class="dlgBottom" style="overflow-y:scroll;overflow-x:hidden;height:80vh;">
+      <span id="htmlEEPROMClashes" class="htmlEEPROMClashes">...</span>
+      </div>
+    </div>
+    <input type="hidden" id="tblClashesSelected" class="tblClashesSelected" />
+  </div>
+
+  <div id="dlgWhatNext" title="How to upload your BIN file" style="font-size: 13px;">
+    <p>In a few seconds time, a BIN file will automatically download. This needs to be flashed to your Arduboy using the following steps:</p>
+    <div style="height:2px;"></div>
+    <p><b style="font-size: 16px;">Installing Dependencies</b><br /><br />
+      <b>&bull;&nbsp;&nbsp;Install Python 3</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Download and install Python 3 from <a target="_new"
+        href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(for Windows, check option 'Add python.exe to path' when installing)<br /><br />
+      <b>&bull;&nbsp;&nbsp;Install PySerial</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Windows, run 'python -m pip install pyserial' from
+      command line.
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For
+      OSX, run 'easy_install pyserial' from a terminal window.<br /><br />
+      <b>&bull;&nbsp;&nbsp;Install Pillow</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Windows, run 'python -m pip
+      install pillow' from command
+      line.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For
+      OSX, run 'easy_install pillow' from a terminal window.<br />
+    </p>
+    <div style="height:2px;"></div>
+    <p><b style="font-size: 16px;">Download Mr.Blinky's Python Utilities</b><br /><br />Download the Python
+      Utilities from the GitHub repo, <a
+        href="https://github.com/MrBlinky/Arduboy-Python-Utilities/archive/refs/heads/master.zip">here</a>. This is a
+      zip file and can be expanded into a convenient directory.
+    </p>
+    <div style="height:2px;"></div>
+    <p><b style="font-size: 16px;">Flash the BIN file to the Arduboy</b><br /><br />
+      Open a command line and navigate to the Python Utilities directory that was created in the previous step. Ensure
+      your Arduboy is connected and powered on. Execute the command using the template below - you will need to
+      substitute the correct path and file name.
+<pre>
+python flashcart-writer.py {path to bin file}/flashcart-image.bin
+</pre>
+
+    </p>
+    You will see the flashing progress in the command window. Once successfully complete, enjoy your new cart!
+    </p>
+    <br/>
+  </div>
+
+  <div id="dlgCategory" title="Create new Category">
+    <p class="validateTips">Please enter a category name:</p>
+    <form name="frmCategoryForm" id="frmCategoryForm" action="Cart_CreateCSV.php" method="post">
+      <fieldset>
+        <br />
+        <label for="name">Name</label>&nbsp;&nbsp;
+        <input type="text" name="categoryName" id="categoryName" value=""
+          class="text ui-widget-content ui-corner-all" />
+        <input type="hidden" name="guid" id="guid" value="" />
+
+        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        <br />
+        <br />
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="dlgUploadCSV" title="Upload an Existing CSV">
+    <p class="validateTips">Please select a CSV file:</p>
+    <form name="frmUploadCSVForm" id="frmUploadCSVForm" enctype="multipart/form-data">
+      <fieldset>
+        <br />
+        <label for="name">Name</label>&nbsp;&nbsp;
+        <input type="file" name="fileNameCSV" id="fileNameCSV" value="" class="text ui-widget-content ui-corner-all" />
+        <input type="hidden" name="guid" id="guid" value="" />
+        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        <br />
+        <br />
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="dlgUploadHEX" title="Upload an Existing Game">
+    <input type="file" name="arduboyFileInput" id="arduboyFileInput" value="" accept=".arduboy" hidden>
+    <p class="validateTips">Please select a HEX and Graphic file:</p>
+    <form name="frmUploadHEXForm" id="frmUploadHEXForm" enctype="multipart/form-data" autocomplete="off">
+      <fieldset>
+        <br />
+        <table>
+          <tr>
+            <td colspan="2">
+              <div><b>Optional game info:</b></div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="gameTitle">Title</label></td>
+            <td><input type="text" name="gameTitle" id="gameTitle" value="" class="text ui-widget-content ui-corner-all" maxlength="25" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="versionNumber">Version</label></td>
+            <td><input type="text" name="versionNumber" id="versionNumber" value="" class="text ui-widget-content ui-corner-all" maxlength="10" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="developerName">Developer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+            <td><input type="text" name="developerName" id="developerName" value="" class="text ui-widget-content ui-corner-all" maxlength="30" />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><label for="description">Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+            <td><textarea type="text" name="description" id="description" value="" class="text ui-widget-content ui-corner-all" cols="30" rows ="5" style="width: 272px;"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div><br /><b>Mandatory files:</b></div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="hexName">Hex File</label></td>
+            <td><input type="file" name="hexName" id="hexName" value="" class="text ui-widget-content ui-corner-all" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="graphicName">PNG File</label></td>
+            <td><input type="file" name="graphicName" id="graphicName" value=""
+                class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div><br /><b>Optional FX files:</b></div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dataName">Data File</label></td>
+            <td><input type="file" name="dataName" id="dataName" value=""
+                class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+          <tr>
+            <td><label for="saveName">Save File</label></td>
+            <td><input type="file" name="saveName" id="saveName" value=""
+                class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td width="210px">
+              <div><br /><b>EEPROM Usage:</b></div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="usesEEPROM">Game uses the EEPROM?</label>&nbsp;&nbsp;
+              </td><td><input type="checkbox" name="usesEEPROM" id="usesEEPROM" class="text ui-widget-content ui-corner-all" onclick="document.getElementById('eepromInfo').style.display=this.checked?'block':'none';" /></td>
+          </tr>
+        </table>
+        <div style="height:6px;"></div>
+
+        <div id="eepromInfo" name="eepromInfo" style="display: none;">
+          <table>
+          <tr>
+              <td width="210px"><label for="start">Start address:</label>&nbsp;&nbsp;&nbsp;
+              </td><td><input type="text" name="start" id="start" class="text ui-widget-content ui-corner-all" /></td>
+            </tr>
+            <tr>
+              <td width="210px"><label for="end">End address:</label>&nbsp;&nbsp;&nbsp;
+              </td><td><input type="text" name="end" id="end" class="text ui-widget-content ui-corner-all" /></td>
+            </tr>
+            <tr><td colspan="2"></td></tr>
+            <tr>
+              <td><label for="hash">Hash protection:</label>&nbsp;&nbsp;&nbsp;
+              </td><td>
+                <select name="hash" id="hash" class="text ui-widget-content ui-corner-all" >
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                </select></td>
+            </tr>
+          </table>
+        </div>
+
+
+
+        <table>
+          <tr>
+            <td width="210px">
+              <div><br /><b>Add to Cart:</b></div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="addToRepo">Share with the community?</label>&nbsp;&nbsp;
+              </td><td><input type="checkbox" name="addToRepo" id="addToRepo" class="text ui-widget-content ui-corner-all" onclick="document.getElementById('repoInfo').style.display=this.checked?'block':'none';" /></td>
+          </tr>
+        </table>
+        <div style="height:6px;"></div>
+
+        <div id="repoInfo" name="repoInfo" style="display: none;">
+        <table>
+        <tr>
+            <td width="210px"><label for="replaceExistingGame">Replace existing game?</label>&nbsp;&nbsp;&nbsp;
+            </td><td><input type="checkbox" name="replaceExistingGame" id="replaceExistingGame" class="text ui-widget-content ui-corner-all" /></td>
+          </tr>
+          <tr><td colspan="2"></td></tr>
+          <tr>
+            <td><label for="platform">Game compiled for ..</label>&nbsp;&nbsp;&nbsp;
+            </td><td>
+              <select name="platform" id="platform" class="text ui-widget-content ui-corner-all" >
+                <option value="ArduboyFX">Arduboy FX</option>
+                <option value="8BitCadeXL">8BitCade XL</option>
+              </select></td>
+          </tr>
+        </table>
+        <div style="height:2px;"></div>
+        <table>
+          <tr>
+            <td width="120px"><label for="websiteURL">Website URL</label>&nbsp;&nbsp;&nbsp;
+            </td><td><input type="text" name="websiteURL" id="websiteURL" value="" class="text ui-widget-content ui-corner-all" style="width: 255px;" maxlength="255" />
+              </td>
+          </tr>
+          <tr><td colspan="2"></td></tr>
+          <tr>
+            <td><label for="sourceURL">Source URL</label>&nbsp;&nbsp;&nbsp;
+            </td><td><input type="text" name="sourceURL" id="sourceURL" value="" class="text ui-widget-content ui-corner-all" style="width: 255px;" maxlength="255" />
+              </td>
+          </tr>
+        </table>
+      </div>
+
+        <input type="hidden" name="guid" id="guid" value="" />
+        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="dlgErrorMessage" title="An Error Occurred">
+    <p id="errorMessage">sssss
+    </p>
+  </div>
+
+  <div id="dlgInfoPanel" title="Information">
+    <input type="hidden" name="itemId" id="itemId" />
+    <table>
+      <tr>
+        <td valign="top"><div style="height:4px;"></div><img class="infoImg" name="infoImg" id="infoImg" /></td>
+        <td>&nbsp;&nbsp;</td>
+        <td valign="top">
+          <div id="infoDeveloper" name="infoDeveloper" class="infoDeveloper"></div>
+          <div id="infoVersion" name="infoVersion" class="infoVersion"></div>
+          <p id="infoInfo" name="infoInfo" class="infoInfo">Version 1.0</p>
+          <input type="hidden" id="titleID" class="titleID" />
+          <table>
+            <tr><td style="padding: 0px;"><img id="likeImg" class="likeImg" src="icons/Like_None.png" style="width:25px;"></td><td style="font-size:12px; padding-bottom: 0px;"><span id="likeNumber" class="likeNumber" style="color:#3f3f3f">0 likes</span></td></tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <br/>
+    <iframe name="infoPreview" id="infoPreview" src="" width="512" height="256">
+    </iframe>
+    <br />
+    <table><tr>
+      <td width="99%"><p id="infoEEPROMUsage" name="infoEEPROMUsage" class="infoEEPROMUsage">Version 1.0</p></td>
+    </tr></table>
+
+    <table><tr>
+      <td width="99%"><span style="font-size:9px; color:#afafaf; font-weight: normal;">Use 'A/Z/CTRL' (A button), 'S/X/ALT' (B Button) and the arrows keys to play.<br>'F' for full screen, 'F6' to restart. 'P' make screenshot, 'R' start/stop recording.</sub></td>
+        <td><img id="deleteBin" src="icons/deleteBin.png" width="32px" style="opacity: .25;"/></td>
+        <td><a href="#" id="url" name="url" target="_new" title="Website"><img src="icons/url.png" width="32px" style="opacity: .25;"/></a></td>
+        <td><a href="#" id="source" name="source" target="_new" title="Source Code"><img src="icons/source.png" width="32px" style="opacity: .25;"/></a></td>
+        <td><a href="#" id="downloadLink" name="downloadLink" download title="Download Hex File"><img src="icons/download.png" width="32px" style="opacity: .25;"/></a></td>
+        <!-- FlashCode -->
+        <td>&nbsp;</td>
+        <td><img id="uploadToDeviceLink" src="icons/Zap.png" width="20px" style="opacity: .25;"/></td>
+      </tr></table>
+    
+  </div>
+
+
+  <!-- FlashCode -->
+
+  <div id="dlgUploadToDevice" title="Upload to Arduboy">
+  <center>
+    <br/>
+      <div id="progressBar" class="circular-progress" data-inner-circle-color="lightgrey" data-percentage="0" data-progress-color="#FBF157" data-bg-color="black">
+         <div class="inner-circle"></div>
+         <div class="progressHolder">
+            <div id="progressPercent"></div>
+            <div id="progressTime"></div>
+            <div id="uploadBtn">
+               <div id="uploadIco"></div>
+               <div id="uploadTxt">Upload</div>
+            </div>
+         </div>
+      </div>
+      <br/>
+      <div class="bottomContainer">
+         <div class="fileButtonWrapper">
+          <div id="fileName">x1</div>
+          <input type="hidden" id="dataFileName" />
+          <input type="hidden" id="saveFileName" />
+          <input type="hidden" id="hasDataFile" />
+          <input type="hidden" id="hasSaveFile" />
+        </div>
+      </div>
+      <h3>Instructions</h3>
+      <div id="instructions">Connect your Arduboy FX to USB and power on, then click the Upload button.<br/>The Arduboy FX must be in the bootloader menu to perform the upload.</div>
+      <br><br>
+      <div class="credits">Thank you to Mr. Blinky, Haloopdy and Benjamin Naigener!</div>
+ </center> 
+
+  </div>
+
+
+  <div id="dlgUploadToDevice_Start" title="Upload to Arduboy">
+    <center>
+      <br/>
+      <div id="progressBar" class="circular-progress" data-inner-circle-color="lightgrey" data-percentage="0" data-progress-color="#FBF157" data-bg-color="black">
+         <div class="inner-circle"></div>
+         <div class="progressHolder">
+            <div id="progressPercent"></div>
+            <div id="progressTime"></div>
+         </div>
+      </div>
+    <h3>One moment please ..</h3>
+    <img width="48px" src="icons/Wait.gif"><br/>
+    <br/>
+    <div id="instructions">Generating a unique cart image for you.<br/>This may take a while - depending on the number of games chosen!</div>
+    <br/>
+    <div id="instructions">Web Serial is a relatively new technology.<br/>Please ensure your version of Chrome is up to date.</div>
+    <br>
+   </center> 
+  
+    </div>
+
+
+  <form name="cartForm" id="cartForm" action="Cart_CreateCSV.php" method="post">
+
+    <div class="row" id="csv-display"></div>
+    <input type="hidden" id="output" name="output" />
+    <input type="hidden" id="mode" name="mode" />
+
+  </form>
+
+<div id="dvHidden" name="dvHidden" style="visibility: hidden;" >
+
+</div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+  var cats = [];
+  var items = [];
+  var catCount = 0;
+  var data;
+  var fullList;
+  var extraCats;
+</script>
+<script src="Cart_DocReady.js?V=V2.35"></script>
+<script src="Cart_GenerateHTML.js?V=V2.35"></script>
+<script src="Cart_Utils.js?V=V2.35"></script>
+<script src="Cart_ArduboyFile.js?V=V2.35"></script>
+<script src="Cart_UploadToDevice.js?V=V2.35"></script>
+
