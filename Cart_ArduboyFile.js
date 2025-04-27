@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.35
+// V2.45
 (() => {
 
 //const arduboyFileButton = document.getElementById("arduboyFileButton");
@@ -116,6 +116,11 @@ async function loadFiles() {
             const entrySave = entries.find(x => x.filename == info.binaries[0].flashsave);
             if(entrySave !== undefined)
                 saveName.files = await createFiles(entrySave, info.binaries[0].flashsave);
+        }
+        if('cartimage' in info.binaries[0]) {
+            const entryCartImage = entries.find(x => x.filename == info.binaries[0].cartimage);
+            if(entryCartImage !== undefined)
+                graphicName.files = await createFiles(entryCartImage, info.binaries[0].cartimage);
         }
     }
     if('screenshots' in info && info.screenshots.length > 0 && 'filename' in info.screenshots[0]) {

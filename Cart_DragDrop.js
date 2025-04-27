@@ -1,4 +1,4 @@
-// V1.0
+// V2.45
 
 function allowDrop(ev) {
   ev.preventDefault();
@@ -12,7 +12,7 @@ function drag(ev) {
 }
 
 function drop(ev) {
-
+  
   ev.preventDefault();
 
   var data = ev.dataTransfer.getData("imgID");

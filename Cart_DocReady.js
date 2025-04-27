@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.35
+// V2.45
 var categoryDialog;
 var uploadDialog;
 var uploadHEXDialog;
@@ -851,7 +851,7 @@ $(document).ready(function () {
                         urldata = response.replace(/\\/g, "/");
                         csvdata = $.csv.toArrays(urldata, options);
                         generateExtraCats(csvdata);
-                        resizeColumnHeights();
+                        resizeColumnHeights(false);
 
                     }
 
@@ -884,7 +884,7 @@ $(document).ready(function () {
                         $("#btnUploadHEXFile").on("click", function ()      { uploadHEXDialog.dialog("open"); });
                         $("#btnUploadHEXFile2").on("click", function ()     { uploadHEXDialog.dialog("open"); });
 
-                        resizeColumnHeights();
+                        resizeColumnHeights(false);
 
                     }
 
@@ -899,7 +899,7 @@ $(document).ready(function () {
                 $("#btnUploadHEXFile").on("click", function ()      { uploadHEXDialog.dialog("open"); });
                 $("#btnUploadHEXFile2").on("click", function ()     { uploadHEXDialog.dialog("open"); });
 
-                resizeColumnHeights();
+                resizeColumnHeights(false);
 
             }
 
@@ -940,8 +940,8 @@ $(document).ready(function () {
 
                 $("#col" + catCount).sortable({
                     connectWith: ".sortableColumn",
-                    receive : function (event, ui) {
-                        resizeColumnHeights();
+                    receive: function (event, ui) {
+                        resizeColumnHeights(true);
                     },
                     update: function(event, ui) {
                         suppressOpenInfoDlg = true;

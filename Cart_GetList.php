@@ -22,10 +22,10 @@ if (!$db_result = mysqli_select_db($connection_result, $databasename)) {
 $listId = (int)$_GET['listId'];
 $filename = (int)$_GET['filename'];
 
-$query = "select CategoryID, Title, Image, Hex, Data, Save, Version, Developer, Description, Likes, Website, Source, EEPROM_Start, EEPROM_End, EEPROM_Hash from vAll where listId = ".$listId;
+$query = "select CategoryID, Title, Image, Hex, Data, Save, Version, Developer, Description, Likes, Website, Source, EEPROM_Start, EEPROM_End, EEPROM_Hash, Size from vAll where listId = ".$listId;
 $export = mysqli_query ( $connection_result, $query ) or die ( "Sql error : " . mysqli_error($connection_result));
 
-$data = "CategoryID;Title;Image;Hex;Data;Save;Version;Developer;Description;Likes;Website;Source;EEPROM_Start;EEPROM_End;EEPROM_Hash\n";
+$data = "CategoryID;Title;Image;Hex;Data;Save;Version;Developer;Description;Likes;Website;Source;EEPROM_Start;EEPROM_End;EEPROM_Hash;Size\n";
 
 while( $row = mysqli_fetch_row( $export ) )
   {

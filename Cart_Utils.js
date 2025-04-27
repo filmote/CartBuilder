@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.35
+// V2.45
 
 var suppressOpenInfoDlg = false;
 
@@ -54,7 +54,7 @@ function deleteColumn(cell, columnID) {
         this.removeChild(this.cells[index]);
     });
 
-    resizeColumnHeights();
+    resizeColumnHeights(true);
 
 }
 
@@ -196,7 +196,7 @@ function openInfo(itemIndex) {
         if (item.name !="" || gameinfo != "") $('#ui-id-4').text(item.name + gameinfo);
         $('#infoImg').attr("src", item.screen);
         $('#infoDeveloper').text(item.developer);
-        if (item.version != "") $('#infoVersion').text("Version " + item.version);
+        if (item.version != "") $('#infoVersion').text("Version " + item.version + " (" + item.size.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " bytes)");
         $('#infoInfo').html(item.info);
         var data = item.data;
         if  (data != "") data = "&data=http://www.bloggingadeadhorse.com/cart/" + data;
@@ -360,7 +360,7 @@ function allHeadersOK(colCount) {
 }
 
 
-// Form valation, check length of field ..
+// Form validation, check length of field ..
 
 function checkLength(tip, o, n, min, max) {
 
@@ -376,7 +376,7 @@ function checkLength(tip, o, n, min, max) {
 }
 
 
-// Form valation, does field value match a regex ?
+// Form validation, does field value match a regex ?
 
 function checkRegexp(tip, o, regexp, n) {
 
@@ -406,7 +406,7 @@ function updateTips(tip, t) {
 }
 
 
-// Genereate a GUID (of sorts) to make items unique ..
+// Generate a GUID (of sorts) to make items unique ..
 
 function generateGUID() {
 
@@ -530,7 +530,7 @@ function createCSV(colCount) {
 
 }
 
-function resizeColumnHeights() {
+function resizeColumnHeights(recalc) {
 
     var maxHeight = 0;
     var colCount = $("#tab").find("tr:first th").length;
@@ -564,6 +564,59 @@ function resizeColumnHeights() {
         }
 
     }
+
+    if (recalc) {
+        var overallSize = calculateCartSize();
+        $("#cartSize").val(overallSize.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " (" + (Math.round((overallSize / 16777216)*1000)/10).toFixed(1) + "%)");
+
+        if (overallSize / 16777216 > 1) {
+
+            $("#btnFlashDevice").prop( "disabled", true );
+            $("#btnGetBin").prop( "disabled", true );
+            $("#cartSize").css({
+                "background-color": "#c24e4e",
+                "color": "white"
+            });
+
+        }
+        else {
+
+            $("#btnFlashDevice").prop( "disabled", false );
+            $("#btnGetBin").prop( "disabled", false );
+            $("#cartSize").css({
+                "background-color": "#45c4fa",
+                "color": "black"
+            });
+        }
+
+    }
+
+}
+
+
+function calculateCartSize() {
+
+    var colCount = $("#tab").find("tr:first th").length;
+
+    // If all OK, generate data ..
+
+    var overallSize = 0;
+
+    for (var i = 0; i < colCount - 2; i++) {
+
+        var ul = $("#tab").find("tr:last td:eq(" + (i + 2) + ") ul:first");
+        var idsInOrder = ul.sortable("toArray");
+        
+        for (const value of idsInOrder) {
+
+            var index = value.substring(2);
+            overallSize = overallSize + Number(items[index - 1].size);
+
+        }
+
+    }
+
+    return overallSize;
 
 }
 
@@ -651,7 +704,7 @@ function doSearch() {
 
   }
 
-  resizeColumnHeights();
+  resizeColumnHeights(7);
 
 }
 

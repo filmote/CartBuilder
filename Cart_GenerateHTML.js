@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.35
+// V2.45
 
 // First pass:  Render the categories and items used in the selected cart. 
 
@@ -51,13 +51,15 @@ function generateHtmlTable(data) {
     html += '<button type="button" id="btnUploadFile" class="buttonHeader" alt="Upload a previously saved custom cart CSV file">Upload CSV</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnFlashDevice" class="buttonHeader" alt="Upload a new game">Upload</button><div style="height:2px;"></div>';
 //    html += '<div style="height:28px;"></div>';
-    html += '<span class="search"><input type="checkbox" id="rtc" name="rtc" value="0" style="position:relative;left:-5px;width:11px;opacity:0.45"><label for="rtc" style="position:relative;left:-5px;">RTC</label>&nbsp;&nbsp;&nbsp;&nbsp;Boot menu:</span><div style="height:4px;"></div>';
+//    html += '<span class="search"><input type="checkbox" id="rtc" name="rtc" value="0" style="position:relative;left:-5px;width:11px;opacity:0.45"><label for="rtc" style="position:relative;left:-5px;">RTC</label>&nbsp;&nbsp;&nbsp;&nbsp;Boot menu:</span><div style="height:4px;"></div>';
+    html += '<span class="search"><input type="checkbox" id="rtc" name="rtc" value="0" style="position:relative;left:-5px;width:11px;opacity:0.45"><label for="rtc" style="position:relative;left:-5px;">RTC</label>&nbsp;&nbsp;&nbsp;&nbsp;Cart Size:</span><div style="height:4px;"></div>';
     html += '<span class="search" id="searchLabel" name="searchLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search Games:</span>';
     html += '</th><th valign="top" style="background-color: #25AAE2; column-width:600px;">';
     html += '<button type="button" id="btnAddCol" class="buttonHeader" alt="Add a new column to the cart">Add Column</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnGetBin" class="buttonHeader" alt="Download a BIN file for uploading to an Arduboy manually"h>Download BIN</button><div style="height:2px;"></div>';
     html += '<button type="button" id="btnEEPROMMap" class="buttonHeader" alt="Display a heat map of EEPROM use and collisions">EEPROM Map</button><div style="height:2px;"></div>';
-    html += '<select name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="arduboy-mini-loader.png">Arduboy Mini</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option><option value="SSD1306/arduboyloader.png">SSD1306</option><option value="category-screens/Wheezer_Homescreen.png">Wheezer</option></select><div style="height:2px;"></div>';
+    //html += '<select name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="arduboy-mini-loader.png">Arduboy Mini</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option><option value="SSD1306/arduboyloader.png">SSD1306</option><option value="category-screens/Wheezer_Homescreen.png">Wheezer</option></select><div style="height:2px;"></div>';
+    html += '<input readonly class="cartSize" id="cartSize" /><div style="height:2px;"></div>';
     html += '<input name="search" id="search" onInput="doSearch()" class="searchBox" onkeydown="return event.key != \'Enter\';"/>';
     html += '</th>';
 
@@ -157,7 +159,7 @@ function generateHtmlTable(data) {
                     var url = row[10];
                     var source = row[11];
 
-                    var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source, start: row[12], end: row[13], hash: row[14] };
+                    var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source, start: row[12], end: row[13], hash: row[14], size: row[15] };
                     items.push(item);
 
                 }
@@ -169,6 +171,7 @@ function generateHtmlTable(data) {
     });
 
     html += '</ul></td></tr></table>';
+    html += '<select hidden name="loader" id="loader" class="comboBox"><option value="arduboy-fx-loader.png">Arduboy</option><option value="arduboy-mini-loader.png">Arduboy Mini</option><option value="8bitcade_loader.png">8BitCade XL</option><option value="ppot_loader.png">PPOT</option><option value="SSD1306/arduboyloader.png">SSD1306</option><option value="category-screens/Wheezer_Homescreen.png">Wheezer</option></select>';
 
     $('#csv-display').append(html);
 
@@ -177,6 +180,9 @@ function generateHtmlTable(data) {
 
     $("#dvUnused").sortable({
         connectWith: ".sortableColumn",
+        receive: function (event, ui) {
+            resizeColumnHeights(true);
+        }        
     }).disableSelection();
 
     $("#dvHidden").sortable();
@@ -186,8 +192,8 @@ function generateHtmlTable(data) {
         var columnName = "#col" + i;
         $(columnName).sortable({
             connectWith: ".sortableColumn",
-            receive : function (event, ui) {
-                resizeColumnHeights();
+            receive: function (event, ui) {
+                resizeColumnHeights(true);
             },
             update: function(event, ui) {
                 suppressOpenInfoDlg = true;
@@ -200,6 +206,8 @@ function generateHtmlTable(data) {
 
         $("#loader").val(loader);
     }
+
+    resizeColumnHeights(true);
 
 }
 
@@ -290,7 +298,7 @@ function generateHtmlTable_FullList(data) {
                         var url = row[10];
                         var source = row[11];
 
-                        var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source, start: row[12], end: row[13], hash: row[14] };
+                        var item = { name: row[1], screen: row[2], hex: row[3], data: row[4], save: row[5], version: row[6], developer: row[7], info: row[8], url: url, source: source, start: row[12], end: row[13], hash: row[14], size: row[15] };
                         items.push(item);
 
                     };
