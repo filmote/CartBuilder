@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->query($sql) === TRUE) {
         // Redirect to another page with the ID as a parameter
         if(isset($_POST['submitOnly'])) {
-            header("Location: CreateComplete.php");
+            header("Location: CreateComplete.php?titleId=$title");
             exit();
         }
 

@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $bin2FileType = strtolower(pathinfo($bin2FileName, PATHINFO_EXTENSION));
 
             if (!empty($bin2FileName)) {
-                $bin2FileName = $directory . "/" . $bin2FileType;
+                $bin2FileName = $directory . "/" . $bin2FileName;
                 if ($bin2FileType != "bin") {
                     echo "Only BIN files are allowed for BIN2.";
                 } else {

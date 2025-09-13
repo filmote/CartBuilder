@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arduboy FX – Smart Organizer (Wrapper)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --brand:#25AAE2;
+      --panel:#16181c;
+      --panel2:#1d2127;
+      --text:#e8eaed;
+      --muted:#aab2bd;
+      --accent:#3ba6ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#0d1117;color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial}
+    iframe{display:none;width:100vw;height:100vh;border:none}
+
+    /* Control panel */
+    .panel{
+      position:fixed;top:16px;left:16px;z-index:10000;width:360px;
+      background:linear-gradient(180deg,var(--panel),var(--panel2));
+      border:1px solid #2a2f37;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.35);
+      user-select:none;
+    }
+    .panel-header{
+      padding:10px 12px;display:flex;align-items:center;justify-content:space-between;
+      border-bottom:1px solid #2a2f37;background:#0f141b;border-radius:14px 14px 0 0;
+      cursor:grab
+    }
+    .panel-header:active{cursor:grabbing}
+    .title{font-weight:700;font-size:14px;letter-spacing:.3px}
+    .panel-body{padding:12px}
+    .row{margin:8px 0}
+    .hint{color:var(--muted);font-size:12px}
+    select,button,input[type=range]{
+      width:100%;border:none;border-radius:10px;background:#1f2630;color:var(--text);
+      padding:10px 12px;font-size:14px;outline:none
+    }
+    button{background:var(--brand);font-weight:700;letter-spacing:.2px;cursor:pointer}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    .grid{
+      display:grid;gap:6px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      max-height:240px;overflow:auto;padding-right:2px
+    }
+    .check{
+      display:flex;gap:8px;align-items:center;background:#171b21;border:1px solid #2a2f37;
+      border-radius:10px;padding:8px 10px;font-size:13px
+    }
+    .check input{accent-color:var(--accent);transform:scale(1.1)}
+    .bar{width:200px;height:8px;background:#2a2f37;border-radius:4px;overflow:hidden}
+    .fill{height:100%;width:0;background:var(--brand);transition:width .3s}
+    .overlay{
+      position:fixed;inset:0;background:#000c;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9000
+    }
+    .spinner{width:42px;height:42px;border:4px solid #778; border-top-color:var(--brand);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:8px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .status{font-size:12px;color:var(--muted);margin-top:6px}
+    .split{display:flex;gap:8px}
+    .small{font-size:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+
+<!-- Control Panel -->
+<div class="panel" id="controlPanel">
+  <div class="panel-header" id="panelHandle">
+    <div class="title">Smart Organizer</div>
+    <div class="small" id="status">Waiting…</div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="hint">Template</div>
+      <div class="split">
+        <select id="cartTemplate" style="flex:1">
+          <option value="BigFX">BigFX (All)</option>
+          <option value="Curated.csv">Curated</option>
+          <option value="PPOT.csv">PPOT</option>
+          <option value="arduboy-mini.csv">Arduboy Mini</option>
+          <option value="8BitCadeXL.csv">8BitCade XL</option>
+        </select>
+        <button id="reloadBtn" style="width:120px">Reload</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="hint">Styles — choose as many as you like</div>
+      <div class="grid" id="styleChecks">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="hint">Match strength (higher = stricter match)</div>
+      <input type="range" id="strengthSlider" min="1" max="100" value="65">
+      <div class="small" id="strengthLabel">65% (≥2 keyword hits)</div>
+    </div>
+
+    <div class="row">
+      <button id="organizeBtn" disabled>Organize</button>
+    </div>
+  </div>
+</div>
+
+<!-- Loading Overlay -->
+<div class="overlay" id="overlay">
+  <div class="spinner"></div>
+  <div>Loading Cart Builder…</div>
+  <div class="bar" style="margin-top:10px"><div class="fill" id="fill"></div></div>
+</div>
+
+<!-- Cart Site -->
+<iframe id="cartIframe"></iframe>
+
+<script>
+(() => {
+  /* ==========================
+      1) Styles & Keywords
+     ========================== */
+  const STYLES = [
+    "Action","Arcade","Adventure","Platformer","Shooter","Racing","RPG","Strategy","Puzzle","Sports",
+    "Roguelike","Metroid","Stealth","Horror","Rhythm","Fighting","BulletHell","Space","Retro","Casual",
+    "Logic","Builder","Sim","Farming","Sandbox","Physics","Pinball","Breakout","Card","Board","Trivia","Word","Maze",
+    "TwinStick","TowerDef","Survival"
+  ];
+
+  // Short category display names (<=12 chars) for some long ones
+  const SHORT_NAME = {
+    Metroid: "Metroidvan",   // (will be trimmed to 12 anyway)
+    BulletHell: "BulletHell",
+    TwinStick: "TwinStick",
+    TowerDef: "Tower Def",
+  };
+
+  const KEYWORDS = {
+    Action: ["fight","brawl","ninja","war","warrior","arena","slash","strike","combat","clash","hero","run"],
+    Arcade: ["arcade","pong","coin","retro","pinball","highscore","cabinet","break"],
+    Adventure: ["quest","adventure","cave","forest","temple","treasure","mystery","island","explore","story"],
+    Platformer: ["jump","platform","bounce","ladder","leap","run","stage","trap","spike"],
+    Shooter: ["shoot","laser","blaster","invader","gun","bullet","missile","alien","rocket","rifle"],
+    Racing: ["race","rally","speed","car","drive","kart","track","lap","bike","drift"],
+    RPG: ["rpg","dragon","magic","mana","sword","legend","realm","fantasy","quest","dungeon","hero"],
+    Strategy: ["chess","tactics","war","plan","grid","board","conquer","empire","tile","build","unit"],
+    Puzzle: ["puzzle","block","cube","maze","logic","match","brain","slide","swap","tile","2048","merge"],
+    Sports: ["soccer","football","tennis","golf","basket","hockey","sport","ski","run"],
+    Roguelike: ["rogue","roguelike","procedural","permadeath","random","dungeon","crawl"],
+    Metroid: ["metroid","vania","explore","backtrack","ability","map","unlock","gate"],
+    Stealth: ["stealth","sneak","shadow","hide","silent","guard","alert","detect"],
+    Horror: ["horror","ghost","zombie","dark","spooky","fear","terror","haunt","night","grave"],
+    Rhythm: ["rhythm","beat","music","tempo","tap","note","dance"],
+    Fighting: ["fight","combo","punch","kick","dojo","karate","arena","versus","spar"],
+    BulletHell: ["bullet","hell","danmaku","swarm","dodge","pattern","wave"],
+    Space: ["space","galaxy","star","orbit","asteroid","comet","cosmo","nebula"],
+    Retro: ["retro","classic","vintage","8bit","oldschool","pixel"],
+    Casual: ["casual","easy","relax","idle","chill","simple"],
+    Logic: ["logic","riddle","calc","rule","deduce","proof","true","false"],
+    Builder: ["build","craft","make","construct","factory","engineer"],
+    Sim: ["sim","simulate","tycoon","manage","manager","life","city"],
+    Farming: ["farm","harvest","crop","seed","plant","ranch"],
+    Sandbox: ["sandbox","open","free","play","toy"],
+    Physics: ["physics","gravity","fall","spring","bounce","momentum"],
+    Pinball: ["pinball","flipper","bumper","table"],
+    Breakout: ["breakout","brick","paddle","bat","wall"],
+    Card: ["card","deck","poker","blackjack","solitaire","hand"],
+    Board: ["board","tile","go","draught","checkers"],
+    Trivia: ["trivia","quiz","question","answer","fact"],
+    Word: ["word","letter","anagram","spell","type"],
+    Maze: ["maze","labyrinth","path","crawl"],
+    TwinStick: ["twinstick","dual","twin","stick","twin-stick"],
+    TowerDef: ["tower","defense","defence","wave","spawn","towerdef"],
+    Survival: ["survival","survive","hunger","health","thirst","craft"]
+  };
+
+  /* ==========================
+      2) UI & Loading
+     ========================== */
+  const overlay = document.getElementById('overlay');
+  const fill = document.getElementById('fill');
+  const iframe = document.getElementById('cartIframe');
+  const statusEl = document.getElementById('status');
+
+  function setStatus(msg){ statusEl.textContent = msg; }
+  function prog(p){ fill.style.width = p + '%'; }
+
+  function buildURL(){
+    const t = document.getElementById('cartTemplate').value;
+    let url = 'https://www.bloggingadeadhorse.com/cart/CartBuilder.html';
+    if(t==='BigFX') url+='?file=flashcart-index&list=BigFX';
+    if(t==='Curated.csv') url+='?list=Curated.csv';
+    if(t==='PPOT.csv') url+='?file=PPOT.csv&list=Curated.csv&extraCats=PPOT_Cats.csv';
+    if(t==='arduboy-mini.csv') url+='?file=arduboy-mini.csv&list=BigMini';
+    if(t==='8BitCadeXL.csv') url+='?file=8BitCadeXL.csv&list=8BitCadeXL.csv';
+    return url;
+  }
+
+  function fillStyles(){
+    const grid = document.getElementById('styleChecks');
+    grid.innerHTML = '';
+    // default checked for common styles
+    const defaults = new Set(["Action","Puzzle","Arcade","Platformer","Shooter","RPG","Strategy"]);
+    STYLES.forEach(style=>{
+      const id = 'style_'+style;
+      const wrap = document.createElement('label');
+      wrap.className = 'check';
+      wrap.innerHTML = `
+        <input type="checkbox" id="${id}" value="${style}" ${defaults.has(style)?'checked':''}>
+        <span>${style}</span>
+      `;
+      grid.appendChild(wrap);
+    });
+  }
+
+  let cartLoaded = false;
+
+  function loadCartBuilder(){
+    overlay.style.display = 'flex'; prog(10); setStatus('Loading…');
+    iframe.onload = ()=>{
+      prog(100);
+      setTimeout(()=>{
+        overlay.style.display='none';
+        iframe.style.display='block';
+        cartLoaded = true;
+        document.getElementById('organizeBtn').disabled=false;
+        setStatus('Ready');
+      },250);
+    };
+    iframe.src = buildURL();
+  }
+
+  /* ==========================
+      3) Dragging (smooth)
+     ========================== */
+  (function makePanelDraggable(){
+    const panel = document.getElementById('controlPanel');
+    const handle = document.getElementById('panelHandle');
+
+    // restore last position
+    try{
+      const pos = JSON.parse(localStorage.getItem('panel-pos')||'null');
+      if(pos){ panel.style.left = pos.x+'px'; panel.style.top = pos.y+'px'; }
+    }catch{}
+
+    let startX=0, startY=0, baseX=0, baseY=0, moving=false, raf=0;
+
+    function clamp(val,min,max){ return Math.max(min,Math.min(max,val)); }
+
+    function onPointerDown(e){
+      if(e.button!==0) return;
+      moving=true;
+      panel.setPointerCapture?.(e.pointerId);
+      startX = e.clientX; startY = e.clientY;
+      const rect = panel.getBoundingClientRect();
+      baseX = rect.left; baseY = rect.top;
+      handle.style.cursor='grabbing';
+      document.body.style.userSelect='none';
+      e.preventDefault();
+    }
+    function onPointerMove(e){
+      if(!moving) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      const apply = ()=>{
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const rect = panel.getBoundingClientRect();
+        const w = rect.width, h = rect.height;
+        const nx = clamp(baseX+dx, 8, vw - w - 8);
+        const ny = clamp(baseY+dy, 8, vh - h - 8);
+        panel.style.left = nx+'px'; panel.style.top = ny+'px';
+      };
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(apply);
+    }
+    function onPointerUp(e){
+      if(!moving) return;
+      moving=false;
+      handle.style.cursor='grab';
+      document.body.style.userSelect='';
+      // persist
+      const rect = panel.getBoundingClientRect();
+      localStorage.setItem('panel-pos', JSON.stringify({x:rect.left,y:rect.top}));
+    }
+
+    handle.addEventListener('pointerdown', onPointerDown);
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+  })();
+
+  /* ==========================
+      4) Category logic
+     ========================== */
+
+  function sliderToMinScore(val){
+    // 1..100 → discrete min keyword hits
+    if(val <= 40) return 1;
+    if(val <= 75) return 2;
+    return 3;
+  }
+
+  function shortenName(name){
+    const s = SHORT_NAME[name] || name;
+    return s.length>12 ? s.slice(0,12) : s;
+  }
+
+  async function clearExisting(win){
+    const table = win.document.getElementById('tab');
+    if(!table) return;
+    const headerRow = table.tHead.rows[0];
+    const bodyRow = table.tBodies[0].rows[0];
+    while(headerRow.cells.length>2) headerRow.deleteCell(2);
+    while(bodyRow.cells.length>2) bodyRow.deleteCell(2);
+    try{ win.cats.length = 0; }catch{}
+    win.$(".sortableColumn").empty();
+  }
+
+  async function createCategory(win, name, index){
+    return new Promise(resolve=>{
+      const guid = Math.random().toString(36).slice(2);
+      const payload = { categoryName:name, guid, mode:"createCategory" };
+      const finalize = ()=>{
+        const img = "temp/"+guid+".png";
+        const table = win.document.getElementById('tab');
+        const headerRow = table.tHead.rows[0];
+        const bodyRow = table.tBodies[0].rows[0];
+        const thHTML = win.generateCatHeader(index, name, img, false);
+        headerRow.insertAdjacentHTML('beforeend', thHTML);
+        const td = bodyRow.insertCell(-1);
+        td.innerHTML = `<ul id="col${index}" class="sortableColumn"></ul>`;
+        win.$(`#col${index}`).sortable({connectWith:".sortableColumn"});
+        try{ win.cats.push({name,screen:img,hex:"",data:"",save:""}); }catch{}
+        resolve({index});
+      };
+      try{ win.$.post("Cart_CreateCSV.php", payload).always(()=>finalize()); }
+      catch(e){ finalize(); }
+    });
+  }
+
+  function matchScore(title, words){
+    let score = 0;
+    for(const w of words){
+      if(title.includes(w)) score++;
+    }
+    return score;
+  }
+
+  function bucketGames(games, selected, minHits){
+    const buckets = {};
+    const lowerSel = selected.filter(s => KEYWORDS[s]).map(s=>s);
+    games.forEach(g=>{
+      const title = ((g.hex||g.name||"")+" "+(g.info||"")).toLowerCase();
+      // compute best matching style
+      let best = null, bestScore = 0;
+      for(const style of lowerSel){
+        const sc = matchScore(title, KEYWORDS[style]);
+        if(sc > bestScore){ bestScore = sc; best = style; }
+      }
+      if(best && bestScore >= minHits){
+        (buckets[best] ||= []).push(g);
+      }
+    });
+    // sort games inside each bucket (stable)
+    for(const k in buckets){
+      buckets[k].sort((a,b)=>{
+        const sa = matchScore((a.hex||a.name||"").toLowerCase(), KEYWORDS[k]);
+        const sb = matchScore((b.hex||b.name||"").toLowerCase(), KEYWORDS[k]);
+        return sb - sa;
+      });
+    }
+    return buckets;
+  }
+
+  // Split a large bucket into sub-buckets using top keywords of that style
+  function splitBucket(style, games, wantParts=2){
+    const words = KEYWORDS[style]||[];
+    const wordCount = new Map();
+    games.forEach(g=>{
+      const t = ((g.hex||g.name||"")+" "+(g.info||"")).toLowerCase();
+      words.forEach(w=>{ if(t.includes(w)) wordCount.set(w,(wordCount.get(w)||0)+1); });
+    });
+    const top = [...wordCount.entries()].sort((a,b)=>b[1]-a[1]).slice(0, Math.min(4,wantParts+1)).map(x=>x[0]);
+    const sub = [];
+    top.forEach((w,i)=>{ sub[i] = { name: shortenName(w[0].toUpperCase()+w.slice(1)), list: [] }; });
+    // assign
+    games.forEach(g=>{
+      const t = ((g.hex||g.name||"")+" "+(g.info||"")).toLowerCase();
+      let bi = 0, bs = -1;
+      top.forEach((w,i)=>{
+        const s = t.includes(w) ? 1 : 0;
+        if(s>bs){ bs=s; bi=i; }
+      });
+      (sub[bi] ||= {name:shortenName(style), list:[]}).list.push(g);
+    });
+    // filter empties and cap names
+    return sub.filter(s=>s && s.list && s.list.length>0).map(s=>({name: shortenName(s.name), games: s.list}));
+  }
+
+  function pickCategories(buckets){
+    // entries sorted by size desc
+    let entries = Object.entries(buckets)
+      .map(([name,list])=>({name, list}))
+      .filter(x=>x.list.length>0)
+      .sort((a,b)=>b.list.length-a.list.length);
+
+    // Target category count in [6..11]
+    let target = Math.max(6, Math.min(11, entries.length));
+
+    // If too few, split the largest buckets to reach target
+    let i = 0;
+    while(entries.length < target && i < entries.length){
+      const big = entries[i];
+      const parts = splitBucket(big.name, big.list, 2);
+      if(parts.length>1){
+        // replace big with its first part, push others
+        entries.splice(i,1, {name:shortenName(parts[0].name), list:parts[0].games});
+        for(let k=1;k<parts.length && entries.length<target;k++){
+          entries.splice(i+k,0,{name:shortenName(parts[k].name), list:parts[k].games});
+        }
+      }else{
+        i++;
+      }
+    }
+
+    // If still too few, just duplicate top buckets with alternate split (ensures matched games)
+    i = 0;
+    while(entries.length < target && entries.length>0){
+      const big = entries[i % entries.length];
+      const half = Math.ceil(big.list.length/2);
+      if(big.list.length > 1){
+        const a = big.list.slice(0,half);
+        const b = big.list.slice(half);
+        entries.splice(i,1,
+          {name:shortenName(big.name), list:a},
+          {name:shortenName(big.name+" II"), list:b}
+        );
+      }else{
+        i++;
+      }
+    }
+
+    // Cap to 11 if too many
+    if(entries.length > 11) entries = entries.slice(0,11);
+
+    // final name trim
+    entries.forEach(e=>e.name = shortenName(e.name));
+    return entries;
+  }
+
+  async function placeCategories(win, chosen){
+    const table = win.document.getElementById('tab');
+    const bodyRow = table.tBodies[0].rows[0];
+
+    let col = 1;
+    for(const entry of chosen){
+      const name = shortenName(entry.name);
+      const {index} = await createCategory(win, name, col);
+      const ul = win.document.getElementById('col'+index);
+      entry.list.forEach((game, idx)=>{
+        const li = win.document.createElement('li');
+        li.id = "li"+Math.random().toString(36).slice(2);
+        li.innerHTML = `<img class="game" onclick="openInfo(${idx});" src="${game.screen}"/>`;
+        ul.appendChild(li);
+      });
+      col++;
+    }
+    win.resizeColumnHeights(true);
+  }
+
+  async function organizeNow(){
+    if(!cartLoaded){ alert('Load the cart first.'); return; }
+    const win = iframe.contentWindow;
+    const items = win.items || [];
+    if(!items.length){ alert('No games found in builder yet.'); return; }
+
+    // selected styles
+    const selected = Array.from(document.querySelectorAll('#styleChecks input:checked'))
+      .map(cb=>cb.value);
+    if(selected.length===0){
+      alert('Pick at least one style first.');
+      return;
+    }
+
+    const sliderVal = parseInt(document.getElementById('strengthSlider').value,10);
+    const minHits = sliderToMinScore(sliderVal);
+    document.getElementById('strengthLabel').textContent =
+      `${sliderVal}% (≥${minHits} keyword hit${minHits>1?'s':''})`;
+
+    setStatus('Organizing…');
+    // 1) clear existing categories
+    await clearExisting(win);
+
+    // 2) bucket by best style with min keyword hits
+    const buckets = bucketGames(items, selected, minHits);
+
+    // 3) choose 6..11 non-empty categories (and split big ones if needed)
+    const chosen = pickCategories(buckets);
+    if(chosen.length===0){
+      alert('No matches at this strength. Lower the match strength or pick more styles.');
+      setStatus('No matches');
+      return;
+    }
+
+    // 4) create categories (site’s own text→image) and place games
+    await placeCategories(win, chosen);
+
+    setStatus(`Done! Created ${chosen.length} categories with ${chosen.reduce((s,e)=>s+e.list.length,0)} games.`);
+    alert('Categories created with only matched games. No empty categories.');
+  }
+
+  /* ==========================
+      5) Wire up UI
+     ========================== */
+  document.getElementById('reloadBtn').onclick=()=>{
+    cartLoaded=false; document.getElementById('organizeBtn').disabled=true; loadCartBuilder();
+  };
+
+  const strengthSlider = document.getElementById('strengthSlider');
+  strengthSlider.oninput = (e)=>{
+    const v = parseInt(e.target.value,10);
+    const minHits = sliderToMinScore(v);
+    document.getElementById('strengthLabel').textContent =
+      `${v}% (≥${minHits} keyword hit${minHits>1?'s':''})`;
+  };
+
+  document.getElementById('organizeBtn').onclick=organizeNow;
+
+  // init styles and load
+  fillStyles();
+  window.addEventListener('load', loadCartBuilder);
+})();
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-// V2.45
+// V2.52
 
 function allowDrop(ev) {
   ev.preventDefault();

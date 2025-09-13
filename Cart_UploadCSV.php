@@ -86,7 +86,7 @@ else {
            (badFile($row[ID_HEXFILE] , ".hex" ))  ||
            (badFile($row[ID_DATAFILE], ".bin" ))  ||
            (badFile($row[ID_SAVEFILE], ".bin" ))  ) {
-                echo "Invalid File Check filenames at line " . ((int)key($csv) + 1);
+                echo "Invalid File Check filenames at line " . $row[ID_HEXFILE] . ((int)key($csv) + 1);
                 die();
             }
     }

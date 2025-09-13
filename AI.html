@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Arduboy FX — Smart Organizer (Wrapper)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --brand:#25AAE2;
+      --panel:#16181c;
+      --panel2:#1d2127;
+      --text:#e8eaed;
+      --muted:#aab2bd;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#0d1117;color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu}
+    iframe{display:none;width:100vw;height:100vh;border:none}
+    .panel{
+      position:fixed;top:16px;left:16px;z-index:10000;width:420px;
+      background:linear-gradient(180deg,var(--panel),var(--panel2));
+      border:1px solid #2a2f37;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.35);
+      user-select:none;
+    }
+    .panel-header{
+      padding:10px 12px;display:flex;align-items:center;justify-content:space-between;
+      border-bottom:1px solid #2a2f37;background:#0f141b;border-radius:14px 14px 0 0;cursor:grab;
+    }
+    .panel-body{padding:12px}
+    .row{margin:8px 0}
+    .hint{color:var(--muted);font-size:12px}
+    select,button,input[type=range]{width:100%;border:none;border-radius:10px;background:#1f2630;color:var(--text);padding:10px 12px;font-size:14px;outline:none}
+    button{background:var(--brand);font-weight:700;letter-spacing:.2px;cursor:pointer}
+    .grid{display:grid;gap:6px;grid-template-columns:repeat(2,minmax(0,1fr));max-height:240px;overflow:auto;padding-right:6px}
+    .check{display:flex;gap:8px;align-items:center;padding:8px;border-radius:10px;background:#171b21;border:1px solid #2a2f37}
+    .check input{accent-color:var(--brand)}
+    .overlay{position:fixed;inset:0;background:#000c;display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:9000}
+    .spinner{width:42px;height:42px;border:4px solid #778;border-top-color:var(--brand);border-radius:50%;animation:spin 1s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .small{font-size:12px;color:var(--muted)}
+    .note{font-size:12px;color:var(--muted);margin-top:8px}
+  </style>
+</head>
+<body>
+
+<!-- Control Panel -->
+<div class="panel" id="controlPanel">
+  <div class="panel-header" id="panelHandle">
+    <div style="font-weight:700">Smart Organizer</div>
+    <div class="small" id="status">Waiting…</div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="hint">Template</div>
+      <select id="cartTemplate">
+        <option value="BigFX">Arduboy FX</option>
+        <option value="Curated">Filmote's Curated List</option>
+        <option value="PPOT">PPOT</option>
+        <option value="arduboy-mini">Arduboy Mini</option>
+        <option value="8BitCadeXL">8BitCade XL</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="hint">Styles — choose as many as you like</div>
+      <div class="grid" id="styleChecks"></div>
+    </div>
+
+    <div class="row">
+      <div class="hint">Match strength (higher = stricter)</div>
+      <input type="range" id="strengthSlider" min="1" max="100" value="65">
+      <div class="small" id="strengthLabel">65% (≥2 keyword hits)</div>
+    </div>
+
+    <div class="row">
+      <button id="organizeBtn" disabled>Organize</button>
+      <div class="note">Unmatched games go into the Unsorted column so you can drag them.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Loading Overlay -->
+<div class="overlay" id="overlay">
+  <div class="spinner"></div>
+  <div style="margin-top:10px">Loading Cart Builder…</div>
+</div>
+
+<!-- Cart Site -->
+<iframe id="cartIframe"></iframe>
+
+<script>
+(() => {
+  // ---------- Expanded keywords ----------
+  const STYLES = [
+    "Action","Arcade","Adventure","Platformer","Shooter","Racing","RPG","Strategy","Puzzle","Sports",
+    "Roguelike","Stealth","Horror","Rhythm","Fighting","Space","Retro","Casual","Logic","Sim","Survival",
+    "Card","Board","Trivia","Word","Pinball","Breakout","Sandbox"
+  ];
+
+  const KEYWORDS = {
+    Action:["action","fight","brawl","slash","combat","hero","battle","attack","assault","melee"],
+    Arcade:["arcade","retro","coin","cabinet","classic","fast","reflex","highscore","oldschool"],
+    Adventure:["quest","adventure","explore","story","journey","treasure","island","cave","mystery"],
+    Platformer:["jump","platform","run","leap","ladder","bounce","side-scroller","spike","stage"],
+    Shooter:["shoot","gun","laser","blaster","bullet","rifle","missile","space-invader","alien"],
+    Racing:["race","rally","kart","speed","track","lap","drift","car","vehicle"],
+    RPG:["rpg","roleplay","dungeon","magic","dragon","sword","level","xp","mana","character"],
+    Strategy:["strategy","tactics","chess","tile","build","conquer","empire","tower","plan","defend"],
+    Puzzle:["puzzle","logic","match","block","tile","maze","riddle","brain","2048","merge","swap","slide"],
+    Sports:["sport","soccer","football","basketball","tennis","golf","hockey","race","ski"],
+    Roguelike:["rogue","roguelike","procedural","permadeath","random","dungeon","crawl"],
+    Stealth:["stealth","sneak","hide","shadow","silent","spy","infiltrate","assassin"],
+    Horror:["horror","ghost","zombie","scary","haunt","fear","dark","monster","terror"],
+    Rhythm:["rhythm","beat","music","tempo","tap","dance","song","note"],
+    Fighting:["fighting","fight","combo","punch","kick","karate","dojo","versus","spar"],
+    Space:["space","galaxy","star","orbit","asteroid","ship","cosmo","alien"],
+    Retro:["retro","8bit","pixel","vintage","classic","oldschool","nostalgia"],
+    Casual:["casual","easy","idle","relax","simple","tap","one-touch"],
+    Logic:["logic","deduce","solve","math","proof","reason","riddle"],
+    Sim:["sim","simulation","tycoon","manage","city","train","flight","farm"],
+    Survival:["survival","survive","craft","hunger","shelter","thirst","zombie","hardcore"],
+    Card:["card","deck","poker","solitaire","hand","blackjack","trick"],
+    Board:["board","tile","go","monopoly","checkers","chess"],
+    Trivia:["trivia","quiz","question","answer","fact","knowledge"],
+    Word:["word","letter","anagram","spell","type","vocab"],
+    Pinball:["pinball","flipper","bumper","table"],
+    Breakout:["breakout","brick","paddle","ball","bat","wall","smash"],
+    Sandbox:["sandbox","open","creative","toy","free","build","play"]
+  };
+
+  // ---------- UI refs ----------
+  const overlay = document.getElementById('overlay');
+  const iframe = document.getElementById('cartIframe');
+  const statusEl = document.getElementById('status');
+  const organizeBtn = document.getElementById('organizeBtn');
+
+  function setStatus(msg){ try{ statusEl.textContent = msg; }catch(e){} }
+  function sliderToMinHits(v){ if(v<=40) return 1; if(v<=75) return 2; return 3; }
+  function liIdForIndex(i){ return 'li' + (i + 1); } // items[0] -> li1
+
+  // ---------- Fill styles UI ----------
+  function fillStyles(){
+    const grid = document.getElementById('styleChecks'); grid.innerHTML = '';
+    const defaults = new Set(["Action","Puzzle","Arcade","Platformer","Shooter","RPG","Strategy"]);
+    STYLES.forEach(s=>{
+      const lbl = document.createElement('label');
+      lbl.className = 'check';
+      lbl.innerHTML = `<input type="checkbox" value="${s}" ${defaults.has(s)?'checked':''}><span>${s}</span>`;
+      grid.appendChild(lbl);
+    });
+  }
+
+  // ---------- Load CartBuilder iframe ----------
+  function buildURL(){
+    const t = document.getElementById('cartTemplate').value;
+    let url = 'https://www.bloggingadeadhorse.com/cart/CartBuilder.html';
+    if(t==='BigFX') url+='?v=V2.52&file=flashcart-index&list=BigFX';
+    if(t==='Curated') url+='?v=V2.52&file=Curated.csv&list=flashcart-index';
+    if(t==='PPOT') url+='?v=V2.52&file=PPOT.csv&list=Curated.csv&extraCats=PPOT_Cats.csv';
+    if(t==='arduboy-mini') url+='?v=V2.52&file=arduboy-mini.csv&list=BigMini';
+    if(t==='8BitCadeXL') url+='?v=V2.52&file=8BitCadeXL.csv&list=8BitCadeXL.csv';
+    return url;
+  }
+
+  iframe.onload = () => {
+    overlay.style.display = 'none';
+    iframe.style.display = 'block';
+    organizeBtn.disabled = false;
+    setStatus('Ready');
+  };
+  iframe.src = buildURL();
+
+  // ---------- Draggable panel ----------
+  (function draggable(){
+    const panel = document.getElementById('controlPanel');
+    const handle = document.getElementById('panelHandle');
+    let startX=0,startY=0,baseX=0,baseY=0,moving=false;
+    handle.addEventListener('pointerdown',e=>{
+      if(e.button!==0) return;
+      moving=true;
+      startX=e.clientX; startY=e.clientY;
+      const r = panel.getBoundingClientRect();
+      baseX=r.left; baseY=r.top;
+      handle.setPointerCapture?.(e.pointerId);
+      document.body.style.userSelect='none';
+    });
+    window.addEventListener('pointermove',e=>{
+      if(!moving) return;
+      const dx=e.clientX-startX, dy=e.clientY-startY;
+      const nx = Math.max(8, Math.min(window.innerWidth - panel.offsetWidth - 8, baseX + dx));
+      const ny = Math.max(8, Math.min(window.innerHeight - panel.offsetHeight - 8, baseY + dy));
+      panel.style.left = nx + 'px';
+      panel.style.top = ny + 'px';
+    });
+    window.addEventListener('pointerup', ()=>{ moving=false; document.body.style.userSelect=''; });
+  })();
+
+  // ---------- Helpers for safe DOM operations in iframe ----------
+  // find next free numeric column id by scanning existing 'colN' uls
+  function nextColId(win){
+    try{
+      const uls = win.document.querySelectorAll('ul.sortableColumn');
+      let max = 1;
+      uls.forEach(u=>{
+        if(u.id && u.id.startsWith('col')){
+          const n = parseInt(u.id.slice(3),10);
+          if(!Number.isNaN(n) && n > max) max = n;
+        }
+      });
+      return max + 1;
+    }catch(e){
+      return Math.floor(Math.random()*1000)+2;
+    }
+  }
+
+  // Move every <li> from all sortableColumn lists into dvUnused (so we don't lose nodes)
+  function consolidateToUnsorted(win){
+    try{
+      const $ = win.$;
+      if($){
+        const $dv = $('#dvUnused');
+        if($dv.length){
+          $('ul.sortableColumn').not('#dvUnused').each(function(){
+            $(this).children('li').appendTo($dv);
+          });
+        }
+      } else {
+        const dv = win.document.getElementById('dvUnused');
+        if(dv){
+          const uls = win.document.querySelectorAll('ul.sortableColumn');
+          uls.forEach(ul=>{
+            if(ul.id === 'dvUnused') return;
+            while(ul.firstChild) dv.appendChild(ul.firstChild);
+          });
+        }
+      }
+    }catch(e){ console.warn('consolidateToUnsorted failed', e); }
+  }
+
+  // Remove only generated thumbnails while preserving the Create Category button
+  function cleanupThumbnails(win){
+    try{
+      const dv = win.document.getElementById('dvCategories');
+      if(!dv) return;
+      Array.from(dv.children).forEach(ch=>{
+        // keep the Create Category button (it has id btnCreateCategory)
+        if(ch.id === 'btnCreateCategory') return;
+        // remove any node that wasn't the create button (thumbnails)
+        dv.removeChild(ch);
+      });
+    }catch(e){ console.warn('cleanupThumbnails failed', e); }
+  }
+
+  // Clear top-row headers & columns (but keep dvUnused items)
+  function clearCategoryColumns(win){
+    try{
+      const table = win.document.getElementById('tab');
+      if(!table) return;
+      const headerRow = table.tHead.rows[0];
+      const bodyRow = table.tBodies[0].rows[0];
+      // remove header/body cells beyond the first two
+      while(headerRow.cells.length > 2) headerRow.deleteCell(2);
+      while(bodyRow.cells.length > 2) bodyRow.deleteCell(2);
+      // reset cats array (site expects cats)
+      try{ win.cats.length = 0; }catch(e){}
+      // ensure sortable on dvUnused remains connected
+      try{ win.$ && win.$('.sortableColumn').sortable({connectWith:'.sortableColumn'}); }catch(e){}
+    }catch(e){ console.warn('clearCategoryColumns failed', e); }
+  }
+
+  // Full safe clear
+  function clearExisting(win){
+    consolidateToUnsorted(win);
+    cleanupThumbnails(win);
+    clearCategoryColumns(win);
+  }
+
+  // Create category header + column + left thumbnail using site's usual pattern.
+  // Returns Promise resolved with numeric col id
+  function createCategory(win, displayName){
+    return new Promise(resolve=>{
+      try{
+        const $ = win.$;
+        const colId = nextColId(win);
+        const guid = (typeof win.generateGUID === 'function') ? win.generateGUID() : Math.random().toString(36).slice(2);
+        const payload = { categoryName: displayName, guid: guid, mode: "createCategory" };
+        const finalize = ()=>{
+          try{
+            const img = "temp/" + guid + ".png";
+            const table = win.document.getElementById('tab');
+            const headerRow = table.tHead.rows[0];
+            const bodyRow = table.tBodies[0].rows[0];
+            // use site's header generator if present
+            try{
+              const th = win.generateCatHeader(colId, displayName, img, false);
+              headerRow.insertAdjacentHTML('beforeend', th);
+            }catch(e){
+              headerRow.insertAdjacentHTML('beforeend', `<th>${displayName}</th>`);
+            }
+            const td = bodyRow.insertCell(-1);
+            td.innerHTML = `<ul id="col${colId}" class="sortableColumn"></ul>`;
+            try{ win.$ && win.$(`#col${colId}`).sortable({connectWith:".sortableColumn"}); }catch(e){}
+            // left thumbnail
+            try{ win.$('#dvCategories').append(win.generateCatImage(displayName, img)); }catch(e){}
+            // push cats so site functions see it
+            try{ win.cats.push({ name: displayName, screen: img, hex: "", data: "", save: "" }); }catch(e){}
+          }catch(err){
+            console.warn('createCategory finalize error', err);
+          }
+          resolve(colId);
+        };
+
+        // Post to server if available to generate temp/guid.png image; .always to finalize even if server not reachable
+        if($ && $.post){
+          try{
+            $.post("Cart_CreateCSV.php", payload).always(finalize);
+          }catch(e){
+            finalize();
+          }
+        } else {
+          // no jQuery/post inside iframe — finalize immediately using fallback icon
+          finalize();
+        }
+      }catch(e){
+        console.warn('createCategory unexpected error', e);
+        resolve(null);
+      }
+    });
+  }
+
+  // Score & bucket
+  function matchScore(text, words){
+    let score = 0;
+    for(const w of words){
+      if(!w) continue;
+      if(text.indexOf(w) !== -1) score++;
+    }
+    return score;
+  }
+
+  function bucketGames(items, selectedStyles, minHits){
+    const buckets = {};
+    selectedStyles.forEach(s => buckets[s] = []);
+    items.forEach((it, idx)=>{
+      const text = ((it.name || it.title || it.hex || '') + ' ' + (it.info || '')).toLowerCase();
+      let best = null, bestScore = 0;
+      for(const s of selectedStyles){
+        const kws = KEYWORDS[s] || [];
+        const sc = matchScore(text, kws);
+        if(sc > bestScore){ bestScore = sc; best = s; }
+      }
+      if(best && bestScore >= minHits){
+        buckets[best].push(idx);
+      }
+    });
+    return buckets;
+  }
+
+  // Create unique trimmed display names (<=12 chars) and avoid duplicates
+  function trimName(name){
+    return name.length > 12 ? name.slice(0,12) : name;
+  }
+  function uniqueDisplayName(base, usedSet){
+    let t = trimName(base);
+    if(!usedSet.has(t)){ usedSet.add(t); return t; }
+    const variants = ["Mix","Alt","Plus","Pro","Max","X","One"];
+    for(const v of variants){
+      const c = trimName(base + " " + v);
+      if(!usedSet.has(c)){ usedSet.add(c); return c; }
+    }
+    let i = 2;
+    while(true){
+      const c = trimName(base + " " + i);
+      if(!usedSet.has(c)){ usedSet.add(c); return c; }
+      i++;
+    }
+  }
+
+  // Pick between 6..15 non-empty categories, splitting large buckets if needed
+  function pickCategories(buckets){
+    let entries = Object.entries(buckets).map(([n,l])=>({name:n,list:l})).filter(e=>e.list.length>0);
+    entries.sort((a,b)=>b.list.length - a.list.length);
+    const minCats = 6, maxCats = 15;
+    // target roughly totalMatched/3 but clamp to range
+    const totalMatched = entries.reduce((s,e)=>s+e.list.length,0);
+    let target = Math.max(minCats, Math.min(maxCats, Math.ceil(totalMatched / 3)));
+    target = Math.min(target, Math.max(minCats, entries.length)); // prefer existing buckets but allow splitting
+
+    // split largest buckets while entries < target
+    let safety = 0;
+    while(entries.length < target && safety++ < 200){
+      entries.sort((a,b)=>b.list.length - a.list.length);
+      const big = entries[0];
+      if(!big || big.list.length <= 1) break;
+      const half = Math.ceil(big.list.length / 2);
+      const a = big.list.slice(0, half);
+      const b = big.list.slice(half);
+      entries.splice(0,1, { name: big.name, list: a } );
+      if(b.length) entries.splice(1,0, { name: big.name, list: b } );
+    }
+
+    // clamp to maxCats
+    if(entries.length > maxCats) entries = entries.slice(0, maxCats);
+
+    // produce unique display names
+    const used = new Set();
+    return entries.map(e => ({ name: uniqueDisplayName(e.name, used), list: e.list }));
+  }
+
+  // Move nodes into created columns, unmatched -> dvUnused
+  async function placeAndDistribute(win, chosenEntries, items){
+    const moved = new Set();
+    for(const entry of chosenEntries){
+      const colId = await createCategory(win, entry.name);
+      if(!colId) continue;
+      const ul = win.document.getElementById('col' + colId);
+      if(!ul) continue;
+      for(const idx of entry.list){
+        const lid = liIdForIndex(idx);
+        const li = win.document.getElementById(lid);
+        if(li){
+          ul.appendChild(li);
+          moved.add(idx);
+        }
+      }
+    }
+
+    // move leftover items to dvUnused (second column)
+    const dvUnused = win.document.getElementById('dvUnused');
+    if(dvUnused){
+      for(let i=0;i<items.length;i++){
+        if(!moved.has(i)){
+          const li = win.document.getElementById(liIdForIndex(i));
+          if(li) dvUnused.appendChild(li);
+        }
+      }
+    } else {
+      // fallback to second column ul
+      const secondUl = win.document.querySelector('td:nth-child(2) ul.sortableColumn');
+      if(secondUl){
+        for(let i=0;i<items.length;i++){
+          if(!moved.has(i)){
+            const li = win.document.getElementById(liIdForIndex(i));
+            if(li) secondUl.appendChild(li);
+          }
+        }
+      }
+    }
+
+    try{ win.resizeColumnHeights(true); }catch(e){}
+  }
+
+  // ---------- Main organize function ----------
+  async function organizeNow(){
+    setStatus('Organizing…');
+    const win = iframe.contentWindow;
+    if(!win){ alert('Cart iframe not available yet.'); setStatus('Iframe not ready'); return; }
+
+    const items = win.items || [];
+    if(!items.length){ alert('No games loaded in the cart builder.'); setStatus('No games'); return; }
+
+    const selected = Array.from(document.querySelectorAll('#styleChecks input:checked')).map(cb=>cb.value);
+    if(selected.length === 0){ alert('Pick at least one style.'); setStatus('Pick styles'); return; }
+
+    const sliderVal = parseInt(document.getElementById('strengthSlider').value,10);
+    const minHits = sliderToMinHits(sliderVal);
+    document.getElementById('strengthLabel').textContent = `${sliderVal}% (≥${minHits} keyword hit${minHits>1?'s':''})`;
+
+    try{
+      // 1) safe clear: move all li to dvUnused and remove generated thumbnails / header columns
+      clearExisting(win);
+
+      // 2) bucket by keywords
+      const buckets = bucketGames(items, selected, minHits);
+      const totalMatched = Object.values(buckets).reduce((s,a)=>s + (a? a.length:0), 0);
+      if(totalMatched === 0){ alert('No matches — lower match strength or pick more styles'); setStatus('No matches'); return; }
+
+      // 3) choose categories
+      const chosen = pickCategories(buckets);
+      if(!chosen.length){ alert('No categories chosen'); setStatus('No categories'); return; }
+
+      // 4) create categories and move li elements
+      await placeAndDistribute(win, chosen, items);
+
+      setStatus(`Done — created ${chosen.length} categories, moved ${totalMatched} matched games. Unmatched in Unsorted.`);
+      //alert(`Done — created ${chosen.length} categories and moved ${totalMatched} matched games. Unmatched games are in the Unsorted (second) column.`);
+    }catch(err){
+      console.error('organizeNow error', err);
+      setStatus('Error during organization (console).');
+      alert('An error occurred - please check the browser console (Ctrl+Shift+K in Firefox) and paste the error here.');
+    }
+  }
+
+  // ---------- Wire up UI ----------
+  document.getElementById('organizeBtn').addEventListener('click', organizeNow);
+  document.getElementById('strengthSlider').addEventListener('input', e=>{
+    const v = parseInt(e.target.value,10);
+    const h = sliderToMinHits(v);
+    document.getElementById('strengthLabel').textContent = `${v}% (≥${h} keyword hit${h>1?'s':''})`;
+  });
+
+  document.getElementById('cartTemplate').addEventListener('change', () => { iframe.src = buildURL(); overlay.style.display = 'flex'; });
+  // Reload button behavior
+  document.getElementById('cartTemplate').value = 'BigFX';
+
+  // enable button when iframe ready (iframe.onload sets it)
+  fillStyles();
+  setStatus('Loading…');
+
+})();
+</script>
+</body>
+</html>

@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------- */
 
-// V2.45
+// V2.52
 
 var suppressOpenInfoDlg = false;
 
@@ -535,7 +535,7 @@ function resizeColumnHeights(recalc) {
     var maxHeight = 0;
     var colCount = $("#tab").find("tr:first th").length;
 
-    for (var i = 0; i < colCount; i++) {
+    for (var i = 0; i <= colCount; i++) {
 
         var numberOfImages = $("#tab").find("tr:last td:eq(" + i + ") img").length;
 
@@ -545,7 +545,7 @@ function resizeColumnHeights(recalc) {
 
     }
 
-    for (var i = 0; i < colCount; i++) {
+    for (var i = 0; i <= colCount; i++) {
 
         switch (i) {
 
